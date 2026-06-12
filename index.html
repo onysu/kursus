@@ -1,0 +1,2969 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kursus Program Office - Word, Excel, PowerPoint</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --word-color: #2b579a;
+        --word-light: #e8f0fe;
+        --excel-color: #217346;
+        --excel-light: #e8f5e9;
+        --powerpoint-color: #d24726;
+        --powerpoint-light: #fce4e0;
+      }
+      .nav-brand-logo {
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #1a237e 0%,
+          #283593 50%,
+          #3949ab 100%
+        );
+        color: #fff;
+        padding: 80px 0 60px;
+      }
+      .hero h1 {
+        font-weight: 800;
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1.15rem;
+        opacity: 0.9;
+        max-width: 700px;
+      }
+      .section-title {
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 2rem;
+      }
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #3949ab;
+        border-radius: 4px;
+        margin-top: 8px;
+      }
+      .card-program {
+        border: none;
+        border-radius: 16px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+      .card-program:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+      }
+      .card-program .card-header {
+        font-weight: 700;
+        font-size: 1.25rem;
+        padding: 1rem 1.5rem;
+        border-bottom: none;
+      }
+      .card-word {
+        border-top: 5px solid var(--word-color);
+      }
+      .card-excel {
+        border-top: 5px solid var(--excel-color);
+      }
+      .card-powerpoint {
+        border-top: 5px solid var(--powerpoint-color);
+      }
+      .badge-word {
+        background-color: var(--word-color);
+      }
+      .badge-excel {
+        background-color: var(--excel-color);
+      }
+      .badge-powerpoint {
+        background-color: var(--powerpoint-color);
+      }
+
+      .pertemuan-card {
+        border: none;
+        border-radius: 14px;
+        transition: box-shadow 0.2s ease;
+        margin-bottom: 1rem;
+      }
+      .pertemuan-card .card-header {
+        border-radius: 14px 14px 0 0 !important;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .pertemuan-card .card-header .bi-chevron-down {
+        transition: transform 0.3s ease;
+      }
+      .pertemuan-card .card-header[aria-expanded="true"] .bi-chevron-down {
+        transform: rotate(180deg);
+      }
+      .table-time th {
+        width: 18%;
+      }
+      .table-time td:first-child {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .contoh-box {
+        background: #f8f9fa;
+        border-left: 4px solid #3949ab;
+        border-radius: 0 8px 8px 0;
+        padding: 1rem 1.25rem;
+        margin-top: 1rem;
+      }
+      .contoh-box.contoh-word {
+        border-left-color: var(--word-color);
+      }
+      .contoh-box.contoh-excel {
+        border-left-color: var(--excel-color);
+      }
+      .contoh-box.contoh-powerpoint {
+        border-left-color: var(--powerpoint-color);
+      }
+
+      .program-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        font-size: 2rem;
+        color: #fff;
+        flex-shrink: 0;
+      }
+      .icon-word {
+        background: var(--word-color);
+      }
+      .icon-excel {
+        background: var(--excel-color);
+      }
+      .icon-powerpoint {
+        background: var(--powerpoint-color);
+      }
+
+      .progress-track {
+        position: relative;
+        padding-left: 2.5rem;
+      }
+      .progress-track:before {
+        content: "";
+        position: absolute;
+        left: 1.1rem;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #e0e0e0;
+      }
+      .progress-track .step {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+      .progress-track .step:before {
+        content: "";
+        position: absolute;
+        left: -2.3rem;
+        top: 0.3rem;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #3949ab;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 3px #3949ab;
+      }
+
+      footer {
+        background: #1a1a2e;
+        color: #adb5bd;
+      }
+      footer a {
+        color: #adb5bd;
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 576px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+        .hero {
+          padding: 50px 0 40px;
+        }
+        .table-time th,
+        .table-time td {
+          font-size: 0.8rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbarMain">
+    <!-- Navbar -->
+    <nav
+      id="navbarMain"
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand nav-brand-logo" href="#">
+          <i class="bi bi-laptop"></i> Kursus Office
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#instruktur">Instruktur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#program">Program</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#silabus">Silabus</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Materi</a
+              >
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="#word">Microsoft Word</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#excel">Microsoft Excel</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#powerpoint"
+                    >Microsoft PowerPoint</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero text-center">
+      <div class="container">
+        <h1><i class="bi bi-file-earmark-text"></i> Kursus Program Office</h1>
+        <p class="lead mx-auto">
+          Kuasai Microsoft Word, Excel, dan PowerPoint dalam 18 pertemuan
+          intensif. Dari pemula hingga siap kerja — setiap pertemuan 90 menit.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+          <a href="#silabus" class="btn btn-light btn-lg px-4"
+            ><i class="bi bi-calendar-check"></i> Lihat Silabus</a
+          >
+          <a href="#program" class="btn btn-outline-light btn-lg px-4"
+            ><i class="bi bi-info-circle"></i> Tentang Program</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Tentang Kursus Ini</h2>
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <p class="fs-5">
+              Kursus <strong>Program Office</strong> dirancang untuk membekali
+              Anda dengan <strong>3 aplikasi perkantoran</strong> paling penting
+              yang digunakan di hampir semua dunia kerja profesional.
+            </p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-4">
+                <div
+                  class="d-flex align-items-center gap-2 p-3 bg-white rounded-3 shadow-sm h-100"
+                >
+                  <i
+                    class="bi bi-filetype-docx fs-1"
+                    style="color: var(--word-color)"
+                  ></i>
+                  <div>
+                    <strong>Microsoft Word</strong><br /><small
+                      class="text-muted"
+                      >6 pertemuan</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="d-flex align-items-center gap-2 p-3 bg-white rounded-3 shadow-sm h-100"
+                >
+                  <i
+                    class="bi bi-filetype-xlsx fs-1"
+                    style="color: var(--excel-color)"
+                  ></i>
+                  <div>
+                    <strong>Microsoft Excel</strong><br /><small
+                      class="text-muted"
+                      >6 pertemuan</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="d-flex align-items-center gap-2 p-3 bg-white rounded-3 shadow-sm h-100"
+                >
+                  <i
+                    class="bi bi-filetype-pptx fs-1"
+                    style="color: var(--powerpoint-color)"
+                  ></i>
+                  <div>
+                    <strong>Microsoft PowerPoint</strong><br /><small
+                      class="text-muted"
+                      >6 pertemuan</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+              <h5 class="fw-bold">
+                <i class="bi bi-clipboard-data"></i> Detail Kursus
+              </h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <i class="bi bi-clock text-primary"></i> 18 Pertemuan
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-hourglass text-primary"></i> 90 menit /
+                  pertemuan
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-person-check text-primary"></i> Pemula — Mahir
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-laptop text-primary"></i> Praktik langsung
+                </li>
+                <li class="mb-0">
+                  <i class="bi bi-file-earmark-text text-primary"></i>
+                  Sertifikat kelulusan
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instruktur -->
+    <section id="instruktur" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Instruktur</h2>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-3 text-center">
+            <div
+              class="rounded-circle bg-dark mx-auto d-flex align-items-center justify-content-center"
+              style="width: 160px; height: 160px"
+            >
+              <i
+                class="bi bi-person-fill text-white"
+                style="font-size: 5rem"
+              ></i>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <h3 class="fw-bold mb-1">Ony</h3>
+            <p class="text-muted mb-2">
+              <i class="bi bi-envelope"></i> onydarrell@gmail.com &bull;
+              <i class="bi bi-whatsapp"></i> +62 8155509153
+            </p>
+            <p class="mb-0">
+              Instruktur berpengalaman di bidang pemrograman komputer dan
+              pengembangan web. Mengajar dengan pendekatan praktis,
+              step-by-step, dan langsung applicable di dunia kerja.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <div class="bg-light p-4 rounded-4">
+              <h6 class="fw-bold"><i class="bi bi-briefcase"></i> Profesi</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <i class="bi bi-code-slash text-primary"></i> Instruktur
+                  Pemrograman Komputer
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-globe text-primary"></i> Web Developer
+                </li>
+                <li class="mb-0">
+                  <i class="bi bi-gear text-primary"></i> Software Engineer
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program -->
+    <section id="program" class="py-5">
+      <div class="container">
+        <h2 class="section-title">3 Program Keahlian</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card card-program card-word h-100">
+              <div class="card-header bg-white d-flex align-items-center gap-3">
+                <div class="program-icon icon-word">
+                  <i class="bi bi-filetype-docx"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Microsoft Word</h5>
+                  <small class="text-muted">Pengolah Kata</small>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Pelajari pembuatan dokumen profesional — surat, laporan,
+                  makalah, brosur, dan mail merge. Kuasai formatting, tabel,
+                  header/footer, dan fitur review.
+                </p>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Format teks & paragraf
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Tabel, gambar & grafik
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Mail merge & template
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Daftar isi & review
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white border-top-0">
+                <span class="badge badge-word">6 Pertemuan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-program card-excel h-100">
+              <div class="card-header bg-white d-flex align-items-center gap-3">
+                <div class="program-icon icon-excel">
+                  <i class="bi bi-filetype-xlsx"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Microsoft Excel</h5>
+                  <small class="text-muted">Pengolah Angka</small>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Kuasai analisis data dengan formula, fungsi, pivot table, dan
+                  grafik. Cocok untuk laporan keuangan, inventory, dan
+                  dashboard.
+                </p>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Formula & fungsi dasar
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    VLOOKUP, IF, logika
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    PivotTable & Chart
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Analisis & validasi data
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white border-top-0">
+                <span class="badge badge-excel">6 Pertemuan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-program card-powerpoint h-100">
+              <div class="card-header bg-white d-flex align-items-center gap-3">
+                <div class="program-icon icon-powerpoint">
+                  <i class="bi bi-filetype-pptx"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Microsoft PowerPoint</h5>
+                  <small class="text-muted">Pembuat Presentasi</small>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Ciptakan presentasi memukau dengan slide yang profesional.
+                  Kuasai animasi, transisi, smartart, dan teknik presentasi
+                  efektif.
+                </p>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Slide master & template
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    SmartArt & shapes
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Animasi & transisi
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                    Teknik presentasi
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white border-top-0">
+                <span class="badge badge-powerpoint">6 Pertemuan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Silabus Ringkas -->
+    <section id="silabus" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Silabus 18 Pertemuan</h2>
+        <p class="text-muted mb-4">
+          Setiap pertemuan 90 menit. Klik judul pertemuan untuk melihat detail
+          lengkap materi dan contoh.
+        </p>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills mb-4 gap-2 flex-wrap" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              data-bs-toggle="pill"
+              data-bs-target="#tabAll"
+              type="button"
+            >
+              Semua
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tabWord"
+              type="button"
+            >
+              <i class="bi bi-filetype-docx"></i> Word
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tabExcel"
+              type="button"
+            >
+              <i class="bi bi-filetype-xlsx"></i> Excel
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tabPPt"
+              type="button"
+            >
+              <i class="bi bi-filetype-pptx"></i> PowerPoint
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#tabTime"
+              type="button"
+            >
+              <i class="bi bi-clock"></i> Pembagian Waktu
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- ALL -->
+          <div class="tab-pane fade show active" id="tabAll">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                  <div
+                    class="card-header bg-word text-white fw-bold"
+                    style="background: var(--word-color)"
+                  >
+                    Microsoft Word
+                  </div>
+                  <div class="list-group list-group-flush">
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p1"
+                    >
+                      1. Pengenalan Word
+                      <span class="badge bg-primary rounded-pill">1</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p2"
+                    >
+                      2. Format Paragraf
+                      <span class="badge bg-primary rounded-pill">2</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p3"
+                    >
+                      3. Tabel & Objek
+                      <span class="badge bg-primary rounded-pill">3</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p4"
+                    >
+                      4. Halaman & Layout
+                      <span class="badge bg-primary rounded-pill">4</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p5"
+                    >
+                      5. Mail Merge & Template
+                      <span class="badge bg-primary rounded-pill">5</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p6"
+                    >
+                      6. Review & Final
+                      <span class="badge bg-primary rounded-pill">6</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                  <div
+                    class="card-header bg-excel text-white fw-bold"
+                    style="background: var(--excel-color)"
+                  >
+                    Microsoft Excel
+                  </div>
+                  <div class="list-group list-group-flush">
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p7"
+                    >
+                      7. Pengenalan Excel
+                      <span class="badge bg-success rounded-pill">7</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p8"
+                    >
+                      8. Formula Dasar
+                      <span class="badge bg-success rounded-pill">8</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p9"
+                    >
+                      9. Fungsi Logika & Lookup
+                      <span class="badge bg-success rounded-pill">9</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p10"
+                    >
+                      10. Chart & Conditional Format
+                      <span class="badge bg-success rounded-pill">10</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p11"
+                    >
+                      11. PivotTable & Analisis
+                      <span class="badge bg-success rounded-pill">11</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p12"
+                    >
+                      12. Validasi & Final
+                      <span class="badge bg-success rounded-pill">12</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                  <div
+                    class="card-header bg-pp text-white fw-bold"
+                    style="background: var(--powerpoint-color)"
+                  >
+                    Microsoft PowerPoint
+                  </div>
+                  <div class="list-group list-group-flush">
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p13"
+                    >
+                      13. Pengenalan PowerPoint
+                      <span class="badge bg-danger rounded-pill">13</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p14"
+                    >
+                      14. Teks, SmartArt & Shapes
+                      <span class="badge bg-danger rounded-pill">14</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p15"
+                    >
+                      15. Media & Hyperlink
+                      <span class="badge bg-danger rounded-pill">15</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p16"
+                    >
+                      16. Animasi & Transisi
+                      <span class="badge bg-danger rounded-pill">16</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p17"
+                    >
+                      17. Slide Master & Template
+                      <span class="badge bg-danger rounded-pill">17</span>
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      href="#"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#p18"
+                    >
+                      18. Final Presentasi
+                      <span class="badge bg-danger rounded-pill">18</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WORD only -->
+          <div class="tab-pane fade" id="tabWord">
+            <div class="list-group">
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p1"
+                >Pertemuan 1 — Pengenalan & Dasar Mengetik
+                <span class="badge badge-word rounded-pill">Word</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p2"
+                >Pertemuan 2 — Format Paragraf & Bullets
+                <span class="badge badge-word rounded-pill">Word</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p3"
+                >Pertemuan 3 — Tabel, Gambar & Objek
+                <span class="badge badge-word rounded-pill">Word</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p4"
+                >Pertemuan 4 — Header/Footer & Layout Halaman
+                <span class="badge badge-word rounded-pill">Word</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p5"
+                >Pertemuan 5 — Mail Merge & Template
+                <span class="badge badge-word rounded-pill">Word</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p6"
+                >Pertemuan 6 — Review, Track Changes & Final
+                <span class="badge badge-word rounded-pill">Word</span></a
+              >
+            </div>
+          </div>
+          <!-- EXCEL only -->
+          <div class="tab-pane fade" id="tabExcel">
+            <div class="list-group">
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p7"
+                >Pertemuan 7 — Pengenalan Excel & Data Entry
+                <span class="badge badge-excel rounded-pill">Excel</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p8"
+                >Pertemuan 8 — Formula & Fungsi Dasar
+                <span class="badge badge-excel rounded-pill">Excel</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p9"
+                >Pertemuan 9 — Fungsi Logika & VLOOKUP
+                <span class="badge badge-excel rounded-pill">Excel</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p10"
+                >Pertemuan 10 — Chart & Conditional Format
+                <span class="badge badge-excel rounded-pill">Excel</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p11"
+                >Pertemuan 11 — PivotTable & Filter
+                <span class="badge badge-excel rounded-pill">Excel</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p12"
+                >Pertemuan 12 — Validasi Data & Final
+                <span class="badge badge-excel rounded-pill">Excel</span></a
+              >
+            </div>
+          </div>
+          <!-- PPT only -->
+          <div class="tab-pane fade" id="tabPPt">
+            <div class="list-group">
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p13"
+                >Pertemuan 13 — Pengenalan PowerPoint & Slide
+                <span class="badge badge-powerpoint rounded-pill">PPT</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p14"
+                >Pertemuan 14 — Teks, SmartArt & Shapes
+                <span class="badge badge-powerpoint rounded-pill">PPT</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p15"
+                >Pertemuan 15 — Gambar, Video & Hyperlink
+                <span class="badge badge-powerpoint rounded-pill">PPT</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p16"
+                >Pertemuan 16 — Animasi & Transisi
+                <span class="badge badge-powerpoint rounded-pill">PPT</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p17"
+                >Pertemuan 17 — Slide Master & Template Kustom
+                <span class="badge badge-powerpoint rounded-pill">PPT</span></a
+              >
+              <a
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#p18"
+                >Pertemuan 18 — Final Presentasi & Teknik Presentasi
+                <span class="badge badge-powerpoint rounded-pill">PPT</span></a
+              >
+            </div>
+          </div>
+
+          <!-- Time distribution template -->
+          <div class="tab-pane fade" id="tabTime">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">
+                  <i class="bi bi-clock"></i> Pembagian Waktu per Pertemuan (90
+                  Menit)
+                </h5>
+                <p>
+                  Setiap pertemuan dibagi menjadi 6 segmen dengan alokasi waktu
+                  sebagai berikut:
+                </p>
+                <div class="progress-track">
+                  <div class="step">
+                    <strong>10 menit</strong> — Pembukaan & Review
+                    <span class="text-muted"
+                      >(Doa, absensi, review pertemuan sebelumnya)</span
+                    >
+                  </div>
+                  <div class="step">
+                    <strong>20 menit</strong> — Materi Sesi 1
+                    <span class="text-muted"
+                      >(Teori + demonstrasi langsung)</span
+                    >
+                  </div>
+                  <div class="step">
+                    <strong>20 menit</strong> — Praktik Sesi 1
+                    <span class="text-muted"
+                      >(Peserta praktik dengan pendampingan)</span
+                    >
+                  </div>
+                  <div class="step">
+                    <strong>10 menit</strong> — Istirahat & Diskusi
+                    <span class="text-muted">(Tanya jawab, sharing)</span>
+                  </div>
+                  <div class="step">
+                    <strong>15 menit</strong> — Materi Sesi 2
+                    <span class="text-muted"
+                      >(Teori lanjutan + demonstrasi)</span
+                    >
+                  </div>
+                  <div class="step">
+                    <strong>15 menit</strong> — Praktik Sesi 2 & Penutup
+                    <span class="text-muted"
+                      >(Praktik mandiri, tugas, kesimpulan)</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MATERI LENGKAP ========== -->
+    <section id="materi" class="py-5">
+      <div class="container">
+        <!-- ============================== -->
+        <!-- MICROSOFT WORD                 -->
+        <!-- ============================== -->
+        <h2 id="word" class="section-title" style="color: var(--word-color)">
+          <i class="bi bi-filetype-docx"></i> Microsoft Word — 6 Pertemuan
+        </h2>
+
+        <!-- PERTEMUAN 1 -->
+        <div class="card pertemuan-card border shadow-sm" id="p1">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c1"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-word me-2">Pertemuan 1</span> Pengenalan
+              Microsoft Word & Dasar-Dasar Mengetik</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c1">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>
+                        Perkenalan, tujuan kursus, silabus Word, doa & absensi
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Antarmuka Word: Title bar, Ribbon, Quick Access Toolbar,
+                        Tab, Group, Ruler, Status bar, Backstage View (File)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuka/menyimpan dokumen (Ctrl+S, Save As), mengetik
+                        teks, navigasi dengan mouse & keyboard (Home, End, Page
+                        Up/Down)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi & tanya jawab</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Format teks dasar: Bold (Ctrl+B), Italic (Ctrl+I),
+                        Underline (Ctrl+U), font, font size, font color,
+                        highlight, Change Case
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Mengetik paragraf dengan variasi formatting teks,
+                        menyimpan dokumen dengan nama file
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-word">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat surat undangan sederhana. Tulis "Kepada Yth. Bapak/Ibu..."
+                dengan judul <strong>bold</strong> ukuran 14, isi surat dengan
+                font Times New Roman 12. Gunakan <em>italic</em> untuk nama
+                tempat dan <u>underline</u> untuk tanggal.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 2 -->
+        <div class="card pertemuan-card border shadow-sm" id="p2">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c2"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-word me-2">Pertemuan 2</span> Format
+              Paragraf, Bullets, Numbering, Borders & Shading</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c2">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 1, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Paragraph group: alignment (Left, Center, Right,
+                        Justify), indentation (Left/Right indent, First line),
+                        spacing (Before/After, Line spacing), tab stops
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Menulis 3 paragraf dengan alignment berbeda & line
+                        spacing 1.5, mengatur indentasi paragraf
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Bullets & Numbering (multilevel list), Borders (border
+                        style, color, width), Shading (background color
+                        paragraf)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat daftar dengan numbering bertingkat, memberi
+                        border dan shading pada paragraf tertentu
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-word">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat daftar isi sederhana dengan
+                <strong>multilevel list</strong> (1. Pendahuluan → 1.1 Latar
+                Belakang → 1.2 Tujuan). Buat kotak border untuk bagian
+                "Kesimpulan" dengan shading warna biru muda.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 3 -->
+        <div class="card pertemuan-card border shadow-sm" id="p3">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c3"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-word me-2">Pertemuan 3</span> Tabel,
+              Gambar, Shapes & WordArt</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c3">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 2, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Insert Table, merge/split cells, Table Design & Layout,
+                        column width, row height, table style, sorting dalam
+                        tabel
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat tabel jadwal pelajaran (5 kolom x 6 baris)
+                        dengan styling
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Insert Picture (wrap text), Shapes, SmartArt, WordArt,
+                        Text Box, Position & Size
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat brosur sederhana dengan tabel, gambar, dan
+                        WordArt
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-word">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>tabel daftar harga</strong> (No, Nama Barang,
+                Harga, Stok) dengan header berwarna. Tambahkan
+                <strong>gambar produk</strong> dengan text wrapping "Square".
+                Buat <strong>WordArt</strong> untuk judul "DAFTAR HARGA
+                TERBARU".
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 4 -->
+        <div class="card pertemuan-card border shadow-sm" id="p4">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c4"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-word me-2">Pertemuan 4</span> Header,
+              Footer, Page Number, Page Setup & Section Break</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c4">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 3, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Header & Footer (insert, edit, different first page),
+                        Page Number (format & position), Page Break, Column
+                        Break
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat header dengan teks "Laporan Keuangan" dan nomor
+                        halaman di footer
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Page Setup (margin, orientation, size), Section Break
+                        (Next page, Continuous), Columns (koran), Drop Cap
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat dokumen multi-section dengan orientasi berbeda
+                        (portrait + landscape), teks kolom koran
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-word">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>laporan 3 halaman</strong> dengan: Halaman 1
+                portrait untuk bab 1, Halaman 2 landscape untuk tabel besar,
+                Halaman 3 portrait untuk bab 2. Gunakan
+                <strong>section break</strong> agar nomor halaman berlanjut
+                otomatis. Tambahkan <strong>Drop Cap</strong> di awal paragraf
+                pertama.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 5 -->
+        <div class="card pertemuan-card border shadow-sm" id="p5">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c5"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-word me-2">Pertemuan 5</span> Mail
+              Merge, Template & Print</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c5">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 4, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Mail Merge concept, Data Source (Excel/Outlook), Insert
+                        Merge Field, Preview Results, Finish & Merge (individual
+                        letters, email)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat 10 surat undangan otomatis dari data Excel
+                        (nama, alamat, kota)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Template (.dotx), Quick Parts, Building Blocks, Print
+                        settings (print preview, page range, collate, duplex)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Menyimpan dokumen sebagai template koperasi, mencetak
+                        surat hasil mail merge
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-word">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>mail merge surat undangan rapat</strong> dengan
+                data 5 orang peserta. Gunakan field: Nama, Jabatan, Perusahaan,
+                Kota. Hasil merge ditampilkan sebagai dokumen baru. Buat
+                <strong>template kop surat</strong> yang bisa dipakai berulang
+                kali.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 6 -->
+        <div class="card pertemuan-card border shadow-sm" id="p6">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c6"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-word me-2">Pertemuan 6</span> Review,
+              Track Changes, Comments & Daftar Isi</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c6">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 5, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Proofing (Spelling & Grammar, Thesaurus, Word Count),
+                        AutoCorrect, Find & Replace (Ctrl+H), Go To
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Menjalankan spelling & grammar check, mencari &
+                        mengganti kata, menggunakan thesaurus
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Track Changes, Accept/Reject, Comments, Compare, Table
+                        of Contents (TOC) dari heading, Insert Caption,
+                        Cross-reference
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        <strong>Final Project Word:</strong> Membuat dokumen
+                        lengkap (min. 4 halaman) dengan TOC, header/footer,
+                        tabel, gambar, dan track changes
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-word">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>laporan lengkap</strong> dengan: Cover, Daftar Isi
+                (otomatis), Bab 1 (dengan tabel), Bab 2 (dengan gambar), Bab 3
+                (kesimpulan). Gunakan <strong>Heading 1, 2, 3</strong> untuk
+                hierarki. Aktifkan <strong>Track Changes</strong> dan minta
+                teman mereview dengan <strong>Comments</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- MICROSOFT EXCEL                -->
+        <!-- ============================== -->
+        <h2
+          id="excel"
+          class="section-title mt-5"
+          style="color: var(--excel-color)"
+        >
+          <i class="bi bi-filetype-xlsx"></i> Microsoft Excel — 6 Pertemuan
+        </h2>
+
+        <!-- PERTEMUAN 7 -->
+        <div class="card pertemuan-card border shadow-sm" id="p7">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c7"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-excel me-2">Pertemuan 7</span>
+              Pengenalan Microsoft Excel & Data Entry</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c7">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Perkenalan Excel, tujuan, silabus, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Antarmuka Excel: Workbook, Worksheet, Cell, Range,
+                        Column/Row, Formula Bar, Name Box, Sheet Tab, Status Bar
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Navigasi sel, input data teks/angka/tanggal, AutoFill
+                        (fill handle), Select All, rename sheet, move sheet
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi & tanya jawab</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Format sel: Number format (General, Number, Currency,
+                        Date, Percentage), Alignment (merge & center, wrap text,
+                        orientation), Font, Border, Fill Color, Format Painter
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat tabel data karyawan (Nama, Jabatan, Gaji,
+                        Tanggal Masuk) dengan formatting lengkap
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-excel">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>tabel data penjualan</strong> dengan kolom: No,
+                Nama Barang, Harga Satuan, Jumlah Terjual, Total Penjualan.
+                Gunakan format <strong>Currency</strong> untuk kolom harga,
+                format <strong>Date</strong> untuk tanggal, dan
+                <strong>Merge & Center</strong> untuk judul tabel.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 8 -->
+        <div class="card pertemuan-card border shadow-sm" id="p8">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c8"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-excel me-2">Pertemuan 8</span> Formula &
+              Fungsi Dasar</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c8">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 7, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Penulisan formula (=), operator (+, -, *, /, ^), cell
+                        reference (Relative A1, Absolute $A$1, Mixed $A1, A$1),
+                        AutoSum
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Menghitung total, rata-rata, selisih dengan referensi
+                        sel relatif dan absolut
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Fungsi: SUM, AVERAGE, COUNT, COUNTA, COUNTBLANK, MAX,
+                        MIN, LARGE, SMALL, ROUND, TODAY, NOW
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat laporan keuangan sederhana dengan fungsi SUM,
+                        AVERAGE, MAX, MIN, COUNT
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-excel">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>laporan penjualan bulanan</strong> dengan data 12
+                bulan. Hitung: <code>=SUM(B2:B13)</code> untuk total tahunan,
+                <code>=AVERAGE(B2:B13)</code> untuk rata-rata,
+                <code>=MAX(B2:B13)</code> untuk penjualan tertinggi. Gunakan
+                <strong>$ absolut</strong> untuk komisi: <code>=B2*$C$1</code>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 9 -->
+        <div class="card pertemuan-card border shadow-sm" id="p9">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c9"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-excel me-2">Pertemuan 9</span> Fungsi
+              Logika & VLOOKUP</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c9">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 8, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Fungsi Logika: IF (=IF(logical_test, value_if_true,
+                        value_if_false)), AND, OR, NOT, nested IF
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Menentukan status kelulusan (IF nilai), menentukan grade
+                        nilai (nested IF), bonus karyawan (AND)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        VLOOKUP (vertical lookup), HLOOKUP (horizontal lookup),
+                        IFERROR, INDEX+MATCH (pengantar)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Mengisi data gaji dan jabatan otomatis dari tabel
+                        referensi dengan VLOOKUP
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-excel">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                <br />
+                <strong>IF:</strong>
+                <code>=IF(B2>=75,"LULUS","TIDAK LULUS")</code> — menentukan
+                kelulusan siswa.<br />
+                <strong>Nested IF:</strong>
+                <code>=IF(B2>=90,"A",IF(B2>=80,"B",IF(B2>=70,"C","D")))</code> —
+                grade nilai.<br />
+                <strong>VLOOKUP:</strong>
+                <code>=VLOOKUP(D2,$A$2:$B$10,2,FALSE)</code> — mencari nama dari
+                kode karyawan.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 10 -->
+        <div class="card pertemuan-card border shadow-sm" id="p10">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c10"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-excel me-2">Pertemuan 10</span> Chart,
+              Grafik & Conditional Formatting</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c10">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 9, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Chart types: Column, Bar, Line, Pie, Area, Scatter.
+                        Elemen chart: title, legend, axis, data label,
+                        gridlines, Chart Design & Format tab
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat chart column penjualan per bulan, chart pie
+                        distribusi pasar, chart line tren pertumbuhan
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Conditional Formatting: Highlight Cell Rules, Top/Bottom
+                        Rules, Data Bars, Color Scales, Icon Sets, Manage Rules
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Memberi warna otomatis pada data penjualan (hijau untuk
+                        di atas target, merah untuk di bawah target), data bar,
+                        icon set
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-excel">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>dashboard penjualan</strong> dengan 3 chart: (1)
+                Column Chart untuk penjualan per bulan, (2) Pie Chart untuk
+                komposisi produk, (3) Line Chart untuk tren keuntungan. Gunakan
+                <strong>Conditional Formatting</strong>: warna merah untuk sales
+                &lt; 100, kuning 100-200, hijau &gt; 200. Gunakan
+                <strong>Data Bars</strong> untuk visualisasi cepat.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 11 -->
+        <div class="card pertemuan-card border shadow-sm" id="p11">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c11"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-excel me-2">Pertemuan 11</span>
+              PivotTable, Sorting & Filtering</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c11">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 10, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Sort (single/multi-level, custom sort), Filter
+                        (AutoFilter, text/number/date filter, Advanced Filter),
+                        Subtotal
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Mengurutkan & menyaring data penjualan (filter by
+                        region, sort by total)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        PivotTable: Create, Rows/Columns/Values/Filter,
+                        PivotTable Analyze & Design, PivotChart, Slicer,
+                        Timeline
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat PivotTable untuk rekap penjualan per region per
+                        bulan, dengan slicer interaktif
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-excel">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Gunakan <strong>data penjualan 200 baris</strong> (Tanggal,
+                Region, Produk, Qty, Harga, Total). Buat
+                <strong>PivotTable</strong> yang menampilkan total penjualan per
+                region (baris) per produk (kolom). Tambahkan
+                <strong>Slicer</strong> untuk bulan. Buat
+                <strong>PivotChart</strong> dari PivotTable tersebut.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 12 -->
+        <div class="card pertemuan-card border shadow-sm" id="p12">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c12"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-excel me-2">Pertemuan 12</span> Data
+              Validation, What-If Analysis & Final Project</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c12">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 11, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Data Validation (list, whole number, date, custom),
+                        Input Message, Error Alert, Remove Duplicates,
+                        Consolidate
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat dropdown list untuk input data, validasi nomor
+                        telepon, peringatan error
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        What-If Analysis: Goal Seek, Scenario Manager, Data
+                        Table. Hyperlink, Protect Sheet/Workbook, Freeze Panes
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        <strong>Final Project Excel:</strong> Membuat laporan
+                        keuangan lengkap dengan PivotTable, Chart, Conditional
+                        Formatting, dan Data Validation
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-excel">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat
+                <strong>aplikasi pencatatan pengeluaran pribadi</strong> dengan:
+                (1) Dropdown kategori (Makanan, Transport, Hiburan, dll), (2)
+                Validasi tanggal & jumlah, (3) PivotTable rekap per kategori,
+                (4) Chart pie per kategori, (5) Conditional Formatting untuk
+                pengeluaran di atas rata-rata. Gunakan
+                <strong>Goal Seek</strong> untuk mencari target tabungan.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- MICROSOFT POWERPOINT           -->
+        <!-- ============================== -->
+        <h2
+          id="powerpoint"
+          class="section-title mt-5"
+          style="color: var(--powerpoint-color)"
+        >
+          <i class="bi bi-filetype-pptx"></i> Microsoft PowerPoint — 6 Pertemuan
+        </h2>
+
+        <!-- PERTEMUAN 13 -->
+        <div class="card pertemuan-card border shadow-sm" id="p13">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c13"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-powerpoint me-2">Pertemuan 13</span>
+              Pengenalan PowerPoint & Membuat Slide Pertama</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c13">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Perkenalan PowerPoint, tujuan, silabus, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Antarmuka PowerPoint: Slide pane, Outline view, Notes,
+                        Slide Sorter, Themes, Variants, Layout slide (Title,
+                        Title+Content, Blank, dll)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat 4 slide dengan layout berbeda, mengganti tema,
+                        mengatur background
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi & tanya jawab</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Menambah/menghapus slide, mengatur ukuran slide
+                        (Standard 4:3, Widescreen 16:9), Slide Number, Slide
+                        Orientation, Notes Page
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat presentasi 5 slide tentang profil perusahaan
+                        (Cover, Visi-Misi, Produk, Tim, Kontak)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-powerpoint">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>presentasi profil perusahaan</strong> dengan 5
+                slide: (1) Slide judul "PT. Maju Jaya", (2) Visi & Misi (layout
+                Title+Content), (3) Produk Unggulan, (4) Struktur Tim, (5)
+                Kontak. Gunakan tema <strong>Ion Boardroom</strong> atau tema
+                netral lainnya.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 14 -->
+        <div class="card pertemuan-card border shadow-sm" id="p14">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c14"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-powerpoint me-2">Pertemuan 14</span>
+              Teks, SmartArt, Shapes & Diagram</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c14">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 13, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Format teks lanjutan: Font, Paragraph, Bullets &
+                        Numbering, Text Direction, Align Text, Columns dalam
+                        Text Box, WordArt styling
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat slide dengan berbagai formatting teks, bullet
+                        points, numbering bertingkat
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Insert Shapes (Rectangle, Circle, Arrow, Line,
+                        Flowchart), Format Shape (fill, outline, effects,
+                        shadow, 3D), SmartArt (List, Process, Cycle, Hierarchy,
+                        Matrix, Pyramid), Group/Ungroup
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat diagram organisasi dengan SmartArt Hierarchy,
+                        membuat flowchart proses
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-powerpoint">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>struktur organisasi perusahaan</strong> menggunakan
+                SmartArt Hierarchy. Buat
+                <strong>diagram proses bisnis</strong> dengan shapes (Rectangle
+                → Decision → Arrow → Terminator). Gunakan
+                <strong>SmartArt Cycle</strong> untuk siklus penjualan (Prospek
+                → Penawaran → Negosiasi → Deal).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 15 -->
+        <div class="card pertemuan-card border shadow-sm" id="p15">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c15"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-powerpoint me-2">Pertemuan 15</span>
+              Gambar, Video, Audio & Hyperlink</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c15">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 14, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Insert Picture (This Device, Stock Images, Online
+                        Pictures), Picture Format (Remove Background,
+                        Corrections, Color, Artistic Effects, Compress), Crop,
+                        Wrap Text
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Menyisipkan gambar, menghapus background, memberi efek
+                        artistik, cropping
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Insert Video (online/offline), Insert Audio (background
+                        music, narration), Hyperlink (ke slide lain, file,
+                        website), Action Button
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat presentasi interaktif dengan hyperlink navigasi,
+                        tombol aksi, dan video
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-powerpoint">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>presentasi interaktif</strong> dengan: (1) Slide
+                menu utama, (2) Hyperlink dari menu ke slide masing-masing bab,
+                (3) <strong>Action Button</strong> "Kembali" di setiap slide,
+                (4) Video produk dari file lokal, (5) Gambar produk dengan
+                <strong>background dihapus</strong> (Remove Background).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 16 -->
+        <div class="card pertemuan-card border shadow-sm" id="p16">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c16"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-powerpoint me-2">Pertemuan 16</span>
+              Animasi & Transisi</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c16">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 15, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Transisi slide: jenis (Fade, Push, Wipe, Morph, dll),
+                        Effect Options, Duration, Sound, On Mouse Click / After,
+                        Apply To All
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Menerapkan variasi transisi pada setiap slide, mengatur
+                        durasi dan timing
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Animasi: Entrance, Emphasis, Exit, Motion Path.
+                        Animation Pane, Trigger, Start (On Click, With Previous,
+                        After Previous), Duration, Delay, Multiple animation,
+                        Morph transition
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat animasi urutan proses bisnis (muncul satu per
+                        satu), animasi kustom dengan Motion Path
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-powerpoint">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>animasi proses penjualan</strong>: (1) Teks
+                "Prospek" muncul — klik, (2) Panah muncul menunjuk ke
+                "Penawaran", (3) "Penawaran" muncul — klik, (4) Panah ke
+                "Negosiasi", (5) "Negosiasi" muncul — klik, (6) Jika deal →
+                "Sukses" (warna hijau), jika tidak → "Gagal" (warna merah).
+                Gunakan <strong>Morph transition</strong> untuk perpindahan
+                antar slide yang halus.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 17 -->
+        <div class="card pertemuan-card border shadow-sm" id="p17">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c17"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-powerpoint me-2">Pertemuan 17</span>
+              Slide Master, Template Kustom & Custom Show</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c17">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 16, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Slide Master View: edit master slide, layout slide,
+                        placeholder, font/color/effect theme, background styles,
+                        Save as template (.potx)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Membuat template kustom perusahaan (logo, warna, font,
+                        layout khusus)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Diskusi</td>
+                    </tr>
+                    <tr>
+                      <td>60-75'</td>
+                      <td>15'</td>
+                      <td>Materi Sesi 2</td>
+                      <td>
+                        Custom Slide Show (menyembunyikan slide, custom show
+                        untuk audiens berbeda), Set Up Show (presenter mode,
+                        loop, show type), Export (PDF, video, handout, picture)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>75-90'</td>
+                      <td>15'</td>
+                      <td>Praktik Sesi 2</td>
+                      <td>
+                        Membuat 2 versi custom show (untuk investor dan untuk
+                        tim internal) dari 1 file, export sebagai video
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-powerpoint">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong
+                >
+                Buat <strong>template perusahaan</strong> dengan: (1) Logo di
+                pojok kanan atas semua slide, (2) Warna korporat (biru tua +
+                abu-abu), (3) Font konsisten (Calibri), (4) Layout kustom "Judul
+                + Gambar Kiri" dan "Konten + Kutipan". Buat
+                <strong>2 Custom Show</strong>: "Pitch Investor" (slide 1-5, 8,
+                10) dan "Full Presentation" (semua slide).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERTEMUAN 18 -->
+        <div class="card pertemuan-card border shadow-sm" id="p18">
+          <div
+            class="card-header bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#c18"
+            aria-expanded="false"
+          >
+            <span
+              ><span class="badge badge-powerpoint me-2">Pertemuan 18</span>
+              Final Presentasi & Teknik Presentasi</span
+            >
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="collapse" id="c18">
+            <div class="card-body p-4">
+              <h6 class="fw-bold">
+                <i class="bi bi-clock"></i> Pembagian Waktu (90 menit)
+              </h6>
+              <div class="table-responsive">
+                <table class="table table-bordered table-time">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Waktu</th>
+                      <th>Durasi</th>
+                      <th>Kegiatan</th>
+                      <th>Detail Materi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-10'</td>
+                      <td>10'</td>
+                      <td>Pembukaan</td>
+                      <td>Review pertemuan 17, absensi</td>
+                    </tr>
+                    <tr>
+                      <td>10-30'</td>
+                      <td>20'</td>
+                      <td>Materi Sesi 1</td>
+                      <td>
+                        Teknik presentasi: Presenter View (notes, slide preview,
+                        pen tools), keyboard shortcuts (B/W screen, F5,
+                        Shift+F5), Timing rehearsal, Record Slide Show
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30-50'</td>
+                      <td>20'</td>
+                      <td>Praktik Sesi 1</td>
+                      <td>
+                        Rehearsal timing untuk presentasi 5 menit, menggunakan
+                        Presenter View, latihan pointer & highlighter
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>50-60'</td>
+                      <td>10'</td>
+                      <td>Istirahat</td>
+                      <td>Persiapan final</td>
+                    </tr>
+                    <tr>
+                      <td>60-90'</td>
+                      <td>30'</td>
+                      <td>Final Project</td>
+                      <td>
+                        <strong>Final Project PowerPoint:</strong> Setiap
+                        peserta membuat & mempresentasikan presentasi 5-7 slide
+                        tentang topik pilihan. Penilaian: konten, desain,
+                        animasi, teknik presentasi.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contoh-box contoh-powerpoint">
+                <strong
+                  ><i class="bi bi-file-earmark"></i> Contoh Tugas
+                  Final:</strong
+                >
+                Buat <strong>presentasi business pitch</strong> (7 slide): (1)
+                Cover produk, (2) Masalah & Solusi, (3) Produk (dengan gambar),
+                (4) Market Size (dengan chart), (5) Business Model, (6) Tim
+                (dengan SmartArt), (7) Call to Action. Gunakan: template kustom,
+                transisi Morph, animasi Entrance, hyperlink navigasi, dan
+                Presenter View saat presentasi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ringkasan Waktu -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Ringkasan Program</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm text-center h-100 p-4">
+              <div class="display-4 fw-bold" style="color: var(--word-color)">
+                6
+              </div>
+              <h5 class="fw-bold">Microsoft Word</h5>
+              <p class="text-muted mb-0">Pertemuan 1-6<br />540 menit total</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm text-center h-100 p-4">
+              <div class="display-4 fw-bold" style="color: var(--excel-color)">
+                6
+              </div>
+              <h5 class="fw-bold">Microsoft Excel</h5>
+              <p class="text-muted mb-0">Pertemuan 7-12<br />540 menit total</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm text-center h-100 p-4">
+              <div
+                class="display-4 fw-bold"
+                style="color: var(--powerpoint-color)"
+              >
+                6
+              </div>
+              <h5 class="fw-bold">Microsoft PowerPoint</h5>
+              <p class="text-muted mb-0">
+                Pertemuan 13-18<br />540 menit total
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <div class="d-inline-block bg-white px-5 py-3 rounded-4 shadow-sm">
+            <span class="fs-4 fw-bold"
+              >Total: 18 Pertemuan × 90 Menit =
+              <span class="text-primary">1.620 Menit (27 Jam)</span></span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <span class="fw-bold text-white">Kursus Program Office</span><br />
+            <small
+              >Microsoft Word &bull; Microsoft Excel &bull; Microsoft
+              PowerPoint</small
+            >
+          </div>
+          <div class="col-md-3 text-center text-md-start mb-2 mb-md-0">
+            <small
+              ><i class="bi bi-person"></i>
+              <strong class="text-white">Ony</strong><br />
+              <i class="bi bi-envelope"></i> onydarrell@gmail.com &bull;
+              <i class="bi bi-whatsapp"></i> +62 8155509153</small
+            >
+          </div>
+          <div class="col-md-3 text-center text-md-end">
+            <small
+              >&copy; 2026 Kursus Program Office. All rights reserved.</small
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button
+      id="scrollTop"
+      class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+      style="width: 48px; height: 48px; z-index: 1050"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Scroll to top
+      window.addEventListener("scroll", function () {
+        const btn = document.getElementById("scrollTop");
+        if (window.scrollY > 400) btn.classList.remove("d-none");
+        else btn.classList.add("d-none");
+      });
+      document
+        .getElementById("scrollTop")
+        .addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+      // Auto close navbar after click on mobile
+      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const nav = document.querySelector(".navbar-collapse");
+          if (nav.classList.contains("show")) {
+            const btn = document.querySelector(".navbar-toggler");
+            btn.click();
+          }
+        });
+      });
+
+      // Accordion - open first card per tab when switching filter tabs
+      document.querySelectorAll('[data-bs-toggle="pill"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", function (e) {
+          const target = document.querySelector(
+            e.target.getAttribute("data-bs-target"),
+          );
+          if (target) {
+            const firstCollapse = target.querySelector(".collapse");
+            if (firstCollapse && !firstCollapse.classList.contains("show")) {
+              // just scroll into view
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
