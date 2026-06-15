@@ -243,6 +243,32 @@
     .accordion-button {
       padding: 0.5rem 1rem;
     }
+
+    .bd-content .bd-code-snippet {
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .bd-code-snippet {
+        margin-right: 0;
+        margin-left: 0;
+        border-width: 1px;
+        border-radius: var(--bs-border-radius);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .highlight {
+        padding: .75rem 1.25rem;
+        border-radius: calc(var(--bs-border-radius) - 1px);
+      }
+    }
+
+    .highlight {
+      position: relative;
+      padding: .75rem 1.5rem;
+      background-color: var(--bs-tertiary-bg);
+    }
   </style>
 </head>
 
@@ -1042,14 +1068,65 @@
                             <p>
                               <strong>LAPORAN PERUSAHAAN</strong> <br>
                               Pendahuluan <br>
-                              
+
                               Laporan ini disusun untuk memberikan gambaran
                               perkembangan penjualan perusahaan selama
                               semester pertama tahun 2026. Penjualan
                               menunjukkan tren positif pada berbagai kategori
                               produk dengan peningkatan sebesar 18% dibandingkan
                               periode sebelumnya.
+                            </p>
                           </div>
+                          <div class="mb-3">
+                            <strong># Langkah 2</strong> — Jangan Gunakan Page Break <br>
+                            Banyak peserta melakukan <code>Ctrl + Enter</code> <i>(Ini SALAH untuk latihan ini, karena
+                              Page Break hanya pindah halaman).</i> <br>
+                            Yang dibutuhkan adalah: Section Break <br>
+                          </div>
+
+                          <div class="mb-3">
+                            <strong># Langkah 3</strong> — Membuat Section Break <br>
+                            Letakkan kursor di akhir halaman pertama. <br>
+                            Pilih:
+                            <ul class="dash-list">
+                              <li>Layout</li>
+                              <li>Breaks</li>
+                              <li>Section Breaks</li>
+                              <li>Next Page <i>(di bawah Section Breaks)</i></li>
+                            </ul>
+                            Hasil: <br>
+                            <div class="highlight">
+                              <pre><code class="language-plaintext">Section 1 (Portrait)
+─────────────────
+LAPORAN PERUSAHAAN
+Pendahuluan
+Laporan ini disusun untuk memberikan gambaran perkembangan penjualan perusahaan selama semester pertama tahun 2026. <br> Penjualan menunjukkan tren positif pada berbagai kategori produk dengan peningkatan sebesar 18% dibandingkan periode sebelumnya.
+─────────────────
+Halaman 1
+
+Section 2 (Landscape)
+─────────────────
+LAPORAN PENJUALAN
+
+<table class="table table-bordered">
+  <td>Produk</td>
+  <td>Jan</td>
+      <td>Feb</td>
+      <td>Mar</td>
+      <td>Apr</td>
+      <td>Mei</td>
+      <td>Jun</td>
+      <td>Jul</td>
+      <td>Ags</td>
+  <tr>
+</table>
+─────────────────
+Tabel Penjualan
+</code></pre>
+                            </div>
+                            Sekarang Word menganggap halaman kedua sebagai dokumen baru dalam file yang sama.
+                          </div>
+
                         </div>
                       </div>
                     </div>
