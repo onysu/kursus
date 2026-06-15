@@ -1250,53 +1250,54 @@ Footer: Tabel Penjualan
                             Surat untuk Dewi <br>
                             Surat untuk Rina
                           </p>
-
-                          Struktur Latihan: <br>
-                          File 1: Excel <i>(Data Source, buka di Microsoft Excel)</i> <br>
-                          Buat file: peserta.xlsx <br>
-                          Isi dengan data peserta: Nama, Perusahaan, Kota, Jabatan <br>
-                          <table class="table table-bordered mt-2">
-                            <tr>
-                              <th>Nama</th>
-                              <th>Perusahaan</th>
-                              <th>Kota</th>
-                              <th>Jabatan</th>
-                            </tr>
-                            <tr>
-                              <td>Budi Santoso</td>
-                              <td>PT. Maju Jaya</td>
-                              <td>Jakarta</td>
-                              <td>Manager</td>
-                            </tr>
-                            <tr>
-                              <td>Siti Aminah</td>
-                              <td>CV. Sukses Selalu</td>
-                              <td>Bandung</td>
-                              <td>Direktur</td>
-                            </tr>
-                            <tr>
-                              <td>Andi Wijaya</td>
-                              <td>PT. Sejahtera Abadi</td>
-                              <td>Surabaya</td>
-                              <td>Supervisor</td>
-                            </tr>
-                            <tr>
-                              <td>Dewi Lestari</td>
-                              <td>PT. Makmur Sentosa</td>
-                              <td>Medan</td>
-                              <td>Kepala Divisi</td>
-                            </tr>
-                            <tr>
-                              <td>Rina Kurniawan</td>
-                              <td>CV. Gemilang Bersama</td>
-                              <td>Yogyakarta</td>
-                              <td>Staf Administrasi</td>
-                            </tr>
-                          </table>
-                          File 2: Surat Undangan <i>(Buka di Microsoft Word)</i> <br>
-                          Buat surat seperti biasa: <br>
-                          <div class="highlight">
-                            <pre><code class="language-plaintext">
+                          <div class="mb-3">
+                            <strong>Struktur Latihan:</strong> <br>
+                            File 1: Excel <i>(Data Source, buka di Microsoft Excel)</i> <br>
+                            Buat file: peserta.xlsx <br>
+                            Isi dengan data peserta: Nama, Perusahaan, Kota, Jabatan <br>
+                            <table class="table table-bordered mt-2">
+                              <tr>
+                                <th>Nama</th>
+                                <th>Perusahaan</th>
+                                <th>Kota</th>
+                                <th>Jabatan</th>
+                              </tr>
+                              <tr>
+                                <td>Budi Santoso</td>
+                                <td>PT. Maju Jaya</td>
+                                <td>Jakarta</td>
+                                <td>Manager</td>
+                              </tr>
+                              <tr>
+                                <td>Siti Aminah</td>
+                                <td>CV. Sukses Selalu</td>
+                                <td>Bandung</td>
+                                <td>Direktur</td>
+                              </tr>
+                              <tr>
+                                <td>Andi Wijaya</td>
+                                <td>PT. Sejahtera Abadi</td>
+                                <td>Surabaya</td>
+                                <td>Supervisor</td>
+                              </tr>
+                              <tr>
+                                <td>Dewi Lestari</td>
+                                <td>PT. Makmur Sentosa</td>
+                                <td>Medan</td>
+                                <td>Kepala Divisi</td>
+                              </tr>
+                              <tr>
+                                <td>Rina Kurniawan</td>
+                                <td>CV. Gemilang Bersama</td>
+                                <td>Yogyakarta</td>
+                                <td>Staf Administrasi</td>
+                              </tr>
+                            </table>
+                            File 2: Surat Undangan <i>(Buka di Microsoft Word)</i> <br>
+                            Buat file: Surat Undangan.docx <br>
+                            Buat surat seperti biasa: <br>
+                            <div class="highlight">
+                              <pre><code class="language-plaintext">
 PT MAJU BERSAMA INDONESIA
 
 Perihal : Undangan Seminar Bisnis
@@ -1316,22 +1317,100 @@ Hormat kami,
 
 Panitia
 </code></pre>
+                            </div> <!-- /highlight -->
+                            Perhatikan: <br>
+                            Tanda <code>&lt;&lt; &gt;&gt;</code> menunjukkan merge field yang akan digantikan dengan
+                            data dari Excel. <br>
                           </div>
+                          <div class="mb-3">
+                            <strong># Langkah 1</strong> — Memulai Mail Merge <br>
+                            Di Word, pilih:
+                            <ul class="dash-list">
+                              <li>Mailings</li>
+                              <li>Select Recipients</li>
+                              <li>Use Existing List</li>
+                            </ul>
+                            Pilih: peserta.xlsx <br>
+                            Klik: Sheet1$ <i>(atau nama sheet yang sesuai)</i>. <br>
+                          </div>
+                          <div class="mb-3">
+                            <strong># Langkah 2</strong> — Insert Merge Field <br>
+                            Letakkan kursor pada bagian: Yth. <i>(atau dibawahnya)</i> <br>
+                            Pilih:
+                            <ul class="dash-list">
+                              <li>Mailings</li>
+                              <li>Insert Merge Field</li>
+                            </ul>
+                          </div>
+                          Masukkan:
+                          <ul class="dash-list">
+                            <li>&lt;&lt;Nama&gt;&gt;</li>
+                            <li>&lt;&lt;Jabatan&gt;&gt;</li>
+                            <li>&lt;&lt;Perusahaan&gt;&gt;</li>
+                            <li>&lt;&lt;Kota&gt;&gt;</li>
+                          </ul>
+                          Hasil: <br>
+                          <div class="highlight">
+                            <pre><code class="language-plaintext">PT MAJU BERSAMA INDONESIA
+Perihal : Undangan Seminar Bisnis
+Yth.
+&lt;&lt;Nama&gt;&gt;
+&lt;&lt;Jabatan&gt;&gt;
+&lt;&lt;Perusahaan&gt;&gt;
+Di &lt;&lt;Kota&gt;&gt;
+Dengan hormat,
+Kami mengundang Bapak/Ibu untuk menghadiri Seminar Bisnis Nasional 2026.
+Hormat kami,
+Panitia
+</code></pre>
+
+                          </div><!-- /highlight -->
+                          <div class="mb-3">
+                            <strong># Langkah 3</strong> — Preview Results <br>
+                            Pilih:
+                            <ul class="dash-list">
+                              <li>Mailings</li>
+                              <li>Preview Results</li>
+                            </ul>
+
+                            Sekarang Word mengganti field otomatis. <br>
+
+                            Contoh:
+                            <div class="highlight">
+                              <pre><code class="language-plaintext">
+Yth.
+Budi Santoso
+Manager
+PT Maju Jaya
+Di Surabaya
+</code></pre>
+                            </div>
+
+                            Tekan:
+                            ▶ Next Record
+
+                            Maka berubah menjadi:
+                            Yth.
+                            Siti Aminah
+                            Direktur
+                            PT Sejahtera
+                            Di Jakarta
+                          </div>
+
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <!-- file download -->
-                  <div class="py-2">
-                    <a class="btn btn-sm btn-outline-secondary"
-                      style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                      href="assets/files/Surat_Undangan.docx" role="button" download><i
-                        class="bi bi-file-earmark-word-fill"></i> Contoh Surat Undangan</a>
-                    <a class="btn btn-sm btn-outline-secondary"
-                      style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                      href="assets/files/peserta.xlsx" role="button" download><i
-                        class="bi bi-file-earmark-word-fill"></i> Contoh Data Source</a>
-                  </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                        href="assets/files/Surat_Undangan.docx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh Surat Undangan</a>
+                      <a class="btn btn-sm btn-outline-secondary"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                        href="assets/files/peserta.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh Data Source</a>
+                    </div>
                 </li>
               </ol>
             </div>
