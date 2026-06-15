@@ -14,6 +14,11 @@
       --powerpoint-color: #d24726;
     }
 
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.2);
+    }
+
     .nav-brand-logo {
       font-weight: 800;
       letter-spacing: -0.5px;
@@ -216,6 +221,23 @@
       .hero {
         padding: 50px 0 40px;
       }
+    }
+
+    .dash-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .dash-list li::before {
+      content: "- ";
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #eee;
     }
   </style>
 </head>
@@ -594,12 +616,12 @@
                   <ol class="mb-2">
                     <li>Font: Times New Roman 12 pt.</li>
                     <li>Kop surat:</li>
-                    <ul>
+                    <ul class="dash-list">
                       <li>Judul Bold 14 pt.</li>
                       <li>Rata tengah.</li>
                     </ul>
                     <li>Isi surat:</li>
-                    <ul>
+                    <ul class="dash-list">
                       <li>Rata kiri-kanan (Justify).</li>
                       <li><em>italic</em> untuk tempat dan agenda rapat.</li>
                       <li><u>underline</u> untuk tanggal</li>
@@ -868,7 +890,7 @@
                           <div class="mb-3">
                             <strong># Langkah 1</strong> — Atur Ukuran Kertas A4 <br>
                             Pilih:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Layout</li>
                               <li>Size</li>
                               <li>A4</li>
@@ -877,13 +899,13 @@
                           <div class="mb-3">
                             <strong># Langkah 2</strong> — Atur Margin <br>
                             Pilih:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Layout</li>
                               <li>Margins</li>
                               <li>Custom Margins</li>
                             </ul>
                             Isi:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Top : 2,5 cm</li>
                               <li>Bottom : 2,5 cm</li>
                               <li>Left : 2,5 cm</li>
@@ -894,13 +916,13 @@
                           <div class="mb-3">
                             <strong># Langkah 3</strong> — Membuat Header <br>
                             Pilih:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Insert</li>
                               <li>Header</li>
                               <li>Blank</li>
                             </ul>
                             Ketik:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Laporan Perusahaan</li>
                               <li>Bold</li>
                               <li>12 pt</li>
@@ -915,7 +937,7 @@
                           <div class="mb-3">
                             <strong># Langkah 4</strong> — Membuat Footer <br>
                             Pilih:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Insert</li>
                               <li>Footer</li>
                               <li>Blank</li>
@@ -926,20 +948,20 @@
                             <strong># Langkah 5</strong> — Membuat Nomor Halaman <br>
                             Di area footer: ketik "Page " <i>(dengan spasi di belakangnya)</i>. <br>
                             Pilih:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Insert</li>
                               <li>Quick Parts</li>
                               <li>Field</li>
                             </ul>
                             atau
-                            <ul>
+                            <ul class="dash-list">
                               <li>Insert</li>
                               <li>Page Number</li>
                               <li>Current Position (untuk nomor halaman saat ini.)</li>
                             </ul>
                             Lanjutkan mengetik: dari <i>(dengan spasi di depan dan belakangnya)</i>. <br>
                             Tambahkan jumlah halaman:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Insert</li>
                               <li>Quick Parts</li>
                               <li>Field</li>
@@ -996,7 +1018,8 @@
                   <div class="py-2">
                     <a class="btn btn-sm btn-outline-secondary"
                       style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                      href="assets/files/laporan_dengan_Section_Break.docx" role="button" download>Contoh Laporan dengan Section Break</a>
+                      href="assets/files/laporan_dengan_Section_Break.docx" role="button" download>Contoh Laporan dengan
+                      Section Break</a>
                   </div>
                 </li>
                 <li>
