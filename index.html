@@ -1056,6 +1056,7 @@
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
+
                           <div class="mb-3">
                             <strong># Langkah 1</strong> — Buat Halaman Pertama <br>
                             Pilih:
@@ -1077,6 +1078,7 @@
                               periode sebelumnya.
                             </p>
                           </div>
+
                           <div class="mb-3">
                             <strong># Langkah 2</strong> — Jangan Gunakan Page Break <br>
                             Banyak peserta melakukan <code>Ctrl + Enter</code> <i>(Ini <span
@@ -1109,6 +1111,7 @@ Halaman 2
                             </div>
                             Sekarang Word menganggap halaman kedua sebagai dokumen baru dalam file yang sama.
                           </div>
+
                           <div class="mb-3">
                             <strong># Langkah 4</strong> — Ubah Halaman Kedua Menjadi Landscape <br>
                             Klik di halaman kedua. <br>
@@ -1143,7 +1146,7 @@ Halaman 2 (Landscape)
                             </ul>
                             Buat tabel dengan 10 kolom dan 1 baris. <br>
                             Atur lebar kolom agar memenuhi halaman landscape. <br>
-                            Hasil: 
+                            Hasil:
                             <div class="highlight">
                               Laporan Penjualan
                               <table class="table table-bordered mt-2">
@@ -1173,39 +1176,58 @@ Halaman 2 (Landscape)
                             <code>Header -Section 2-</code> <br>
                             <code>Footer -Section 2-</code> <br>
                             Biasanya ada tulisan: <br>
-                            <code>Same as Previous</code> <i>(artinya header/footer halaman kedua sama dengan halaman pertama)</i>. <br>
-                            Di tab Header & Footer, klik "Link to Previous" <i>(agar header halaman kedua tidak sama dengan halaman pertama)</i>. <br>
-                            Di Header Ketik: "LAPORAN PERUSAHAAN" di header halaman kedua. <br>
-                            Di Footer Ketik: "Tabel Penjualan" di footer halaman kedua. <br>
+                            <code>Same as Previous</code> <i>(artinya header/footer halaman kedua sama dengan halaman
+                              pertama)</i>. <br>
+                            Di tab Header & Footer, klik "Link to Previous" <i>(non-aktifkan agar header halaman kedua
+                              tidak sama dengan halaman pertama)</i>. <br>
+                            Di Header Ketik: "LAPORAN PENJUALAN" di header halaman kedua. <br>
                             Hasil: <br>
                             <div class="highlight">
-                              <pre><code class="language-plaintext">Section 1
+                              <pre><code class="language-plaintext">
+Section 1 / Halaman 1
 ──────────
-Halaman 1
+Header: LAPORAN PERUSAHAAN
+
+Section 2 / Halaman 2
+──────────
+Header: LAPORAN PENJUALAN
+</code></pre>
+                            </div>
+                          </div>
+
+                          <div class="mb-3">
+                            <strong># Langkah 7</strong> — Footer Berbeda Tiap Section <br>
+                            Masuk ke Footer halaman kedua. Double klik area Footer. <br>
+                            Klik "Link to Previous" <i>(non-aktifkan agar footer halaman kedua tidak sama dengan
+                              halaman pertama)</i>. <br>
+                            Ketik: "Tabel Penjualan" di footer halaman kedua. <br>
+                            Hasil: <br>
+                            <div class="highlight">
+                              <pre><code class="language-plaintext">
+Section 1 / Halaman 1
+──────────
 Header: LAPORAN PERUSAHAAN
 Footer: Halaman 1
-Section 2
+
+Section 2 / Halaman 2
 ──────────
-Halaman 2
-Header: LAPORAN PERUSAHAAN
+Header: LAPORAN PENJUALAN
 Footer: Tabel Penjualan
 </code></pre>
-
+                            </div>
                           </div>
 
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  <!-- file download -->
-                  <div class="py-2">
-                    <a class="btn btn-sm btn-outline-secondary"
-                      style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                      href="assets/files/laporan_dengan_Section_Break.docx" role="button" download><i
-                        class="bi bi-file-earmark-word-fill"></i> Contoh Laporan dengan
-                      Section Break</a>
-                  </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                        href="assets/files/laporan_dengan_Section_Break.docx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh Laporan dengan
+                        Section Break</a>
+                    </div>
                 </li>
                 <li>
                   <strong class="text-danger">Lanjutan:</strong> Mail merge
