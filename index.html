@@ -1236,19 +1236,87 @@ Footer: Tabel Penjualan
                       </h2>
                       <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          Mail Merge menggabungkan 2 Program Microsoft Word & Microsoft Excel. <br>
-                          Yang penting dipahami dulu: <br>
-                          Mail Merge = 1 Dokumen + Banyak Penerima <br>
-                          <br>
-                          Contoh: <br>
-                          Anda membuat 1 surat undangan secara otomatis menghasilkan: <br>
-                          <br>
-                          Surat untuk Budi <br>
-                          Surat untuk Siti <br>
-                          Surat untuk Andi <br>
-                          Surat untuk Dewi <br>
-                          Surat untuk Rina <br>
+                          <p>
+                            Yang penting dipahami dulu: <br>
+                            Mail Merge menggabungkan 2 Program Microsoft Word & Microsoft Excel. <br>
+                            Mail Merge = 1 Dokumen + Banyak Penerima <br>
+                            <br>
+                            Contoh: <br>
+                            Anda membuat 1 surat undangan secara otomatis menghasilkan: <br>
+                            <br>
+                            Surat untuk Budi <br>
+                            Surat untuk Siti <br>
+                            Surat untuk Andi <br>
+                            Surat untuk Dewi <br>
+                            Surat untuk Rina
+                          </p>
 
+                          Struktur Latihan: <br>
+                          File 1: Excel <i>(Data Source, buka di Microsoft Excel)</i> <br>
+                          Buat file: peserta.xlsx <br>
+                          Isi dengan data peserta: Nama, Perusahaan, Kota, Jabatan <br>
+                          <table class="table table-bordered mt-2">
+                            <tr>
+                              <th>Nama</th>
+                              <th>Perusahaan</th>
+                              <th>Kota</th>
+                              <th>Jabatan</th>
+                            </tr>
+                            <tr>
+                              <td>Budi Santoso</td>
+                              <td>PT. Maju Jaya</td>
+                              <td>Jakarta</td>
+                              <td>Manager</td>
+                            </tr>
+                            <tr>
+                              <td>Siti Aminah</td>
+                              <td>CV. Sukses Selalu</td>
+                              <td>Bandung</td>
+                              <td>Direktur</td>
+                            </tr>
+                            <tr>
+                              <td>Andi Wijaya</td>
+                              <td>PT. Sejahtera Abadi</td>
+                              <td>Surabaya</td>
+                              <td>Supervisor</td>
+                            </tr>
+                            <tr>
+                              <td>Dewi Lestari</td>
+                              <td>PT. Makmur Sentosa</td>
+                              <td>Medan</td>
+                              <td>Kepala Divisi</td>
+                            </tr>
+                            <tr>
+                              <td>Rina Kurniawan</td>
+                              <td>CV. Gemilang Bersama</td>
+                              <td>Yogyakarta</td>
+                              <td>Staf Administrasi</td>
+                            </tr>
+                          </table>
+                          File 2: Surat Undangan <i>(Buka di Microsoft Word)</i> <br>
+                          Buat surat seperti biasa: <br>
+                          <div class="highlight">
+                            <pre><code class="language-plaintext">
+PT MAJU BERSAMA INDONESIA
+
+Perihal : Undangan Seminar Bisnis
+
+Yth.
+&lt;&lt;Nama&gt;&gt;
+&lt;&lt;Jabatan&gt;&gt;
+&lt;&lt;Perusahaan&gt;&gt;
+Di &lt;&lt;Kota&gt;&gt;
+
+Dengan hormat,
+
+Kami mengundang Bapak/Ibu untuk menghadiri
+Seminar Bisnis Nasional 2026.
+
+Hormat kami,
+
+Panitia
+</code></pre>
+                          </div>
                         </div>
                       </div>
                     </div>
