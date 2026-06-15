@@ -1128,8 +1128,69 @@ Section 2
 ──────────
 Halaman 2 (Landscape)
 </code></pre>
-</div>
-<p>Karena sudah ada Section Break, Hanya halaman kedua yang berubah.</p>
+                            </div>
+                            <p>Karena sudah ada Section Break, Hanya halaman kedua yang berubah.</p>
+                          </div>
+
+                          <div class="mb-3">
+                            <strong># Langkah 5</strong> — Membuat Tabel Lebar <br>
+                            Di halaman kedua: <br>
+                            Pilih:
+                            <ul class="dash-list">
+                              <li>Insert</li>
+                              <li>Table</li>
+                              <li>Insert Table</li>
+                            </ul>
+                            Buat tabel dengan 10 kolom dan 1 baris. <br>
+                            Atur lebar kolom agar memenuhi halaman landscape. <br>
+                            Hasil: 
+                            <div class="highlight">
+                              Laporan Penjualan
+                              <table class="table table-bordered mt-2">
+                                <tr>
+                                  <td>Produk</td>
+                                  <td>Jan</td>
+                                  <td>Feb</td>
+                                  <td>Mar</td>
+                                  <td>Apr</td>
+                                  <td>Mei</td>
+                                  <td>Juni</td>
+                                  <td>Jul</td>
+                                  <td>Agustus</td>
+                                  <td>Sept</td>
+                                </tr>
+                              </table>
+                              Tabel Penjualan
+                            </div>
+                            Tabel lebar yang hanya ada di halaman kedua. <br>
+                            Tabel ini biasanya terlalu lebar untuk Portrait, karena itu kita memakai Landscape.
+                          </div>
+
+                          <div class="mb-3">
+                            <strong># Langkah 6</strong> — Header Berbeda Tiap Section <br>
+                            Masuk ke Header halaman kedua. Double klik area Header. <br>
+                            Muncul: <br>
+                            <code>Header -Section 2-</code> <br>
+                            <code>Footer -Section 2-</code> <br>
+                            Biasanya ada tulisan: <br>
+                            <code>Same as Previous</code> <i>(artinya header/footer halaman kedua sama dengan halaman pertama)</i>. <br>
+                            Di tab Header & Footer, klik "Link to Previous" <i>(agar header halaman kedua tidak sama dengan halaman pertama)</i>. <br>
+                            Di Header Ketik: "LAPORAN PERUSAHAAN" di header halaman kedua. <br>
+                            Di Footer Ketik: "Tabel Penjualan" di footer halaman kedua. <br>
+                            Hasil: <br>
+                            <div class="highlight">
+                              <pre><code class="language-plaintext">Section 1
+──────────
+Halaman 1
+Header: LAPORAN PERUSAHAAN
+Footer: Halaman 1
+Section 2
+──────────
+Halaman 2
+Header: LAPORAN PERUSAHAAN
+Footer: Tabel Penjualan
+</code></pre>
+
                           </div>
 
                         </div>
