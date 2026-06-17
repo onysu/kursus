@@ -272,6 +272,21 @@
       background-color: var(--bs-tertiary-bg);
       margin-top: .5rem !important;
       margin-bottom: .5rem !important;
+      overflow-x: auto;
+    }
+
+    .highlight pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-x: visible;
+    }
+
+    .highlight code {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-word;
     }
   </style>
 </head>
@@ -1444,16 +1459,21 @@ terus berupaya meningkatkan kualitas layanan dan kepuasan pelanggan.
                             Komentar muncul di sisi kanan dokumen. <br>
                           </div>
                           <div class="mb-3">
-                           👉 Setelah menjalankan Praktik 1 dan Praktik 2, kemudian lakukan penyimpanan dokumen dengan menggunakan <strong>Save As</strong> contoh dengan nama <i>Menggunakan_Track_Changes_Revisi.docx</i>
+                            👉 Setelah menjalankan Praktik 1 dan Praktik 2, kemudian lakukan penyimpanan dokumen dengan
+                            menggunakan <strong>Save As</strong> contoh dengan nama
+                            <i>Menggunakan_Track_Changes_Revisi.docx</i>
                           </div>
                           <div class="mb-3">
                             <strong>Praktik 3 – Membandingkan Dua Dokumen (Compare)</strong> <br>
                             Tujuan: Mengetahui perbedaan antara dokumen asli dan dokumen hasil revisi. <br>
-                            Misalnya Anda memiliki dua versi laporan: "Menggunakan_Track_Changes.docx" dan "Menggunakan_Track_Changes_Revisi.docx". Anda ingin
+                            Misalnya Anda memiliki dua versi laporan: "Menggunakan_Track_Changes.docx" dan
+                            "Menggunakan_Track_Changes_Revisi.docx". Anda ingin
                             mengetahui perubahan apa saja yang terjadi antara kedua dokumen tersebut. <br>
                             <ul class="dash-list">
                               <li>Simpan dokumen awal dengan nama: <i>Menggunakan_Track_Changes.docx</i></li>
-                              <li>Simpan dokumen yang sudah direvisi dengan nama: <i>Menggunakan_Track_Changes_Revisi.docx</i></li>
+                              <li>Simpan dokumen yang sudah direvisi dengan nama:
+                                <i>Menggunakan_Track_Changes_Revisi.docx</i>
+                              </li>
                               <li>Pilih tab <strong>Review</strong>.</li>
                               <li>Klik: <strong>Compare</strong> → <strong>Compare...</strong></li>
                               <li>Pada bagian: Original Document
@@ -1498,6 +1518,7 @@ terus berupaya meningkatkan kualitas layanan dan kepuasan pelanggan.
                     header/footer berbeda tiap section. Gunakan Section Break
                     untuk landscape di halaman tabel. Track Changes diaktifkan
                     selama pengerjaan.
+
                     <div class="accordion-item mt-2 small">
                       <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1507,43 +1528,23 @@ terus berupaya meningkatkan kualitas layanan dan kepuasan pelanggan.
                       </h2>
                       <div id="sesi4lanjutan" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
+
                           <div class="mb-3">
-                            <strong>Praktik Lanjutan (Final)</strong> <br>
-                            Tujuan: Peserta mampu membuat dokumen profesional menggunakan berbagai fitur Microsoft Word
-                            secara terintegrasi. <br>
-                          </div>
-                          <div class="mb-3">
-                            <strong>Studi Kasus</strong> <br>
-                            Membuat sebuah makalah mini dengan judul: "Pemanfaatan Teknologi Informasi dalam Dunia
-                            Kerja"<br>
-                            Dokumen terdiri dari: <br>
-                            <ul class="dash-list">
-                              <li>Cover</li>
-                              <li>Daftar Isi Otomatis</li>
-                              <li>Isi Makalah</li>
-                              <li>Tabel Data</li>
-                              <li>Gambar Ilustrasi</li>
-                              <li>Header dan Footer berbeda setiap section</li>
-                              <li>Halaman khusus tabel menggunakan orientasi Landscape</li>
-                              <li>Track Changes aktif selama pengerjaan</li>
-                            </ul>
-                          </div>
-                          <div class="mb-3">
-                            Target panjang dokumen: Minimal 3 halaman isi (tidak termasuk cover).
-                          </div>
-                          <div class="mb-3">
-                            <strong>Bagian 1 – Membuat Cover</strong> <br>
+                            <strong>Langkah 1 – Membuat Cover</strong> <br>
                             Buat halaman cover dengan format berikut: <br>
-                            Judul: "PEMANFAATAN TEKNOLOGI INFORMASI DALAM DUNIA KERJA"
+
                             <div class="highlight">
                               <pre><code class="language-plaintext">
+PEMANFAATAN TEKNOLOGI INFORMASI
+DALAM DUNIA KERJA
+
+
+
 Disusun Oleh:
+Nama Peserta
 
-[Nama Peserta]
-
-Kursus Microsoft Office Word
-
-[Tahun]
+Kursus Microsoft Word
+2026
 </code></pre>
                             </div><!-- highlight -->
                             <div class="mb-3">
@@ -1554,6 +1555,45 @@ Kursus Microsoft Office Word
                                 <li>Tidak menampilkan nomor halaman.</li>
                               </ul>
                             </div>
+                            <div class="mb-3">
+                              <strong>Langkah 2 - Akhiri Cover</strong> <br>
+                              Posisikan kursor di akhir cover. <br>
+                              Pilih: <strong>Layout</strong> → <strong>Breaks</strong> → <strong>Next Page</strong>
+                            </div>
+                            <div class="mb-3">
+                              Ini akan menghasilkan:
+                              <ul class="dash-list">
+                                <li>Section 1 (halaman 1) = Cover</li>
+                                <li>Section 2 (halaman 2) = Isi Dokumen</li>
+                              </ul>
+                            </div>
+                            <div class="mb-3">
+                              <strong>Langkah 3 - Buat Daftar Isi</strong> <br>
+                              Di halaman berikutnya (halaman 2) ketik: <strong>DAFTAR ISI</strong> <br>
+                              Tekan: <code>Ctrl + Enter</code> <i>(BUKAN Section Break).</i> <br>
+                              Akn pindah ke halaman berikutnya.
+                            </div>
+                            <div class="mb-3">
+                              <strong>Langkah 4 - Buat Isi Dokumen</strong> <br>
+                              Ketik: <strong>PENDAHULUAN</strong> <br>
+                              Blok Judul PENDAHULUAN. <br>
+                              Pilih: <strong>Home</strong> → <strong>Heading 1</strong> <br>
+                              Kemudian ketik: <strong>Latar Belakang</strong> <br>
+                              Blok SubJudul Latar Belakang. <br>
+                              Pilih: <strong>Heading 2</strong> <br>
+                              Bisa lanjut untuk Isi beberapa paragraf. <br>
+                              Contoh:
+                              <div class="highlight">
+<pre><code class="language-plaintext">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.
+Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.
+In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
+</code></pre>
+                            </div><!-- highlight -->
+                            </div>
+
+
+
                             <div class="mb-3">
                               <strong>Bagian 2 – Membuat Daftar Isi Otomatis</strong> <br>
                               Setelah cover:
