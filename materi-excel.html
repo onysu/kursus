@@ -375,6 +375,18 @@
                       <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                           <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>AutoFill data bulanan.</li>
+                              <li>Fungsi `SUM()`.</li>
+                              <li>Fungsi `AVERAGE()`.</li>
+                              <li>Fungsi `MAX()`.</li>
+                              <li>Referensi absolut `$C$1`.</li>
+                              <li>Format mata uang (Currency/Accounting).</li>
+                              <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
                             <strong>Tabel Penjualan Tahunan</strong> <br>
                             <img src="assets/files/sesi1menengah.png" alt="">
                           </div>
@@ -393,6 +405,31 @@
                             Pada sel <strong>B17</strong>: =MAX(B2:B13) <br>
                             Hasil: 18500000 atau Rp 18.500.000
                           </div>
+                          <div class="mb-3">
+                            Menghitung Komisi (Referensi Absolut) <br>
+                            Tambahkan kolom Komisi pada kolom <strong>E</strong> (lihat di gambar). <br>
+
+                            Pada sel <strong>C2</strong> ketik: =B2*$C$1 <br>
+                            Lalu salin ke bawah hingga <strong>C13</strong>. <br>
+                            Mengapa menggunakan `$C$1`? <br>
+
+                            Tanda `$` membuat referensi menjadi absolut, sehingga saat rumus disalin ke bawah, Excel
+                            <br>
+                            tetap mengambil nilai komisi dari sel <strong>E1</strong>. <br>
+
+                            Contoh: <br>
+                            =B3*$C$1 <br>
+                            =B4*$C$1 <br>
+                            =B5*$C$1
+                          </div>
+                          <strong>Format Currency</strong>
+                          <ol>
+                            <li>Blok sel B2:C13.</li>
+                            <li>Tab Home → grup Number.</li>
+                            <li>Pilih Currency atau Accounting.</li>
+                            <li>Pilih simbol Rp (Indonesian Rupiah).</li>
+                            <li>Atur jumlah desimal sesuai kebutuhan (biasanya 0 atau 2).</li>
+                          </ol>
                         </div>
                       </div>
                     </div>
