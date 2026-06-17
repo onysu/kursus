@@ -14,6 +14,11 @@
       --powerpoint-color: #d24726;
     }
 
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.2);
+    }
+
     .nav-brand-logo {
       font-weight: 800;
       letter-spacing: -0.5px;
@@ -21,9 +26,9 @@
 
     .hero {
       background: linear-gradient(135deg,
-          #1a5e2e 0%,
-          #217346 50%,
-          #2e8b57 100%);
+          #1a237e 0%,
+          #283593 50%,
+          #3949ab 100%);
       color: #fff;
       padding: 80px 0 60px;
     }
@@ -50,9 +55,35 @@
       display: block;
       width: 60px;
       height: 4px;
-      background: var(--excel-color);
+      background: #3949ab;
       border-radius: 4px;
       margin-top: 8px;
+    }
+
+    .card-program {
+      border: none;
+      border-radius: 16px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card-program:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-word {
+      border-top: 5px solid var(--word-color);
+    }
+
+    .card-excel {
+      border-top: 5px solid var(--excel-color);
+    }
+
+    .card-powerpoint {
+      border-top: 5px solid var(--powerpoint-color);
     }
 
     .badge-word {
@@ -102,10 +133,46 @@
 
     .contoh-box {
       background: #f8f9fa;
-      border-left: 4px solid var(--excel-color);
+      /* border-left: 4px solid #3949ab; */
       border-radius: 0 8px 8px 0;
       padding: 1rem 1.25rem;
-      margin-top: 1rem;
+      /* margin-top: 1rem; */
+    }
+
+    .contoh-box.contoh-word {
+      border-left-color: var(--word-color);
+    }
+
+    .contoh-box.contoh-excel {
+      border-left-color: var(--excel-color);
+    }
+
+    .contoh-box.contoh-powerpoint {
+      border-left-color: var(--powerpoint-color);
+    }
+
+    .program-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      font-size: 2rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .icon-word {
+      background: var(--word-color);
+    }
+
+    .icon-excel {
+      background: var(--excel-color);
+    }
+
+    .icon-powerpoint {
+      background: var(--powerpoint-color);
     }
 
     .progress-track {
@@ -136,9 +203,9 @@
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      background: var(--excel-color);
+      background: #3949ab;
       border: 3px solid #fff;
-      box-shadow: 0 0 0 3px var(--excel-color);
+      box-shadow: 0 0 0 3px #3949ab;
     }
 
     footer {
@@ -154,6 +221,72 @@
       .hero {
         padding: 50px 0 40px;
       }
+    }
+
+    .dash-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .dash-list li::before {
+      content: "- ";
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #eee;
+    }
+
+    .accordion-button {
+      padding: 0.5rem 1rem;
+    }
+
+    .bd-content .bd-code-snippet {
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .bd-code-snippet {
+        margin-right: 0;
+        margin-left: 0;
+        border-width: 1px;
+        border-radius: var(--bs-border-radius);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .highlight {
+        padding: .75rem 1.25rem;
+        border-radius: calc(var(--bs-border-radius) - 1px);
+        margin-top: .5rem !important;
+        margin-bottom: .5rem !important;
+      }
+    }
+
+    .highlight {
+      position: relative;
+      padding: .75rem 1.5rem;
+      background-color: var(--bs-tertiary-bg);
+      margin-top: .5rem !important;
+      margin-bottom: .5rem !important;
+      overflow-x: auto;
+    }
+
+    .highlight pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-x: visible;
+    }
+
+    .highlight code {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-word;
     }
   </style>
 </head>
@@ -424,10 +557,10 @@
                           </div>
                           <strong>Format Currency</strong>
                           <ol>
-                            <li>Blok sel B2:C13.</li>
-                            <li>Tab Home → grup Number.</li>
-                            <li>Pilih Currency atau Accounting.</li>
-                            <li>Pilih simbol Rp (Indonesian Rupiah).</li>
+                            <li>Blok sel <strong>B2:C13</strong>.</li>
+                            <li>Tab <strong>Home</strong> → grup Number.</li>
+                            <li>Pilih <strong>Currency</strong> atau <strong>Accounting</strong>.</li>
+                            <li>Pilih simbol <strong>Rp (Indonesian Rupiah)</strong>.</li>
                             <li>Atur jumlah desimal sesuai kebutuhan (biasanya 0 atau 2).</li>
                           </ol>
                         </div>
@@ -448,7 +581,7 @@
                     sel
                     negatif (merah).
 
-                    <div class="accordion-item mt-2">
+                    <div class="accordion-item mt-2 small">
                       <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
@@ -457,12 +590,15 @@
                       </h2>
                       <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
-                          collapse plugin adds the appropriate classes that we use to style each element. These classes
-                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                          modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                          does limit overflow.
+                          <strong>Tujuan</strong> <br>
+                          Murid dapat menggunakan: <br>
+                          <ul class="dash-list">
+                            <li>Fungsi `TODAY()`</li>
+                            <li>Fungsi `ROUND()`</li>
+                            <li>Fungsi `COUNTIF()`</li>
+                            <li>Conditional Formatting</li>
+                            <li>Format Currency</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
