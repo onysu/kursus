@@ -1,701 +1,680 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kursus Microsoft Excel — 4 Pertemuan</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --word-color: #2b579a;
-        --excel-color: #217346;
-        --powerpoint-color: #d24726;
-      }
-      .nav-brand-logo {
-        font-weight: 800;
-        letter-spacing: -0.5px;
-      }
-      .hero {
-        background: linear-gradient(
-          135deg,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kursus Microsoft Excel — 4 Pertemuan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root {
+      --word-color: #2b579a;
+      --excel-color: #217346;
+      --powerpoint-color: #d24726;
+    }
+
+    .nav-brand-logo {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg,
           #1a5e2e 0%,
           #217346 50%,
-          #2e8b57 100%
-        );
-        color: #fff;
-        padding: 80px 0 60px;
-      }
+          #2e8b57 100%);
+      color: #fff;
+      padding: 80px 0 60px;
+    }
+
+    .hero h1 {
+      font-weight: 800;
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 700px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .section-title:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--excel-color);
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+
+    .badge-word {
+      background-color: var(--word-color);
+    }
+
+    .badge-excel {
+      background-color: var(--excel-color);
+    }
+
+    .badge-powerpoint {
+      background-color: var(--powerpoint-color);
+    }
+
+    .pertemuan-card {
+      border: none;
+      border-radius: 14px;
+      transition: box-shadow 0.2s ease;
+      margin-bottom: 1rem;
+    }
+
+    .pertemuan-card .card-header {
+      border-radius: 14px 14px 0 0 !important;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pertemuan-card .card-header .bi-chevron-down {
+      transition: transform 0.3s ease;
+    }
+
+    .pertemuan-card .card-header[aria-expanded="true"] .bi-chevron-down {
+      transform: rotate(180deg);
+    }
+
+    .table-time th {
+      width: 18%;
+    }
+
+    .table-time td:first-child {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .contoh-box {
+      background: #f8f9fa;
+      border-left: 4px solid var(--excel-color);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .progress-track {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+
+    .progress-track:before {
+      content: "";
+      position: absolute;
+      left: 1.1rem;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #e0e0e0;
+    }
+
+    .progress-track .step {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-track .step:before {
+      content: "";
+      position: absolute;
+      left: -2.3rem;
+      top: 0.3rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--excel-color);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px var(--excel-color);
+    }
+
+    footer {
+      background: #1a1a2e;
+      color: #adb5bd;
+    }
+
+    @media (max-width: 576px) {
       .hero h1 {
-        font-weight: 800;
-        font-size: 2.8rem;
+        font-size: 1.8rem;
       }
-      .hero p {
-        font-size: 1.15rem;
-        opacity: 0.9;
-        max-width: 700px;
+
+      .hero {
+        padding: 50px 0 40px;
       }
-      .section-title {
-        font-weight: 700;
-        position: relative;
-        margin-bottom: 2rem;
-      }
-      .section-title:after {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: var(--excel-color);
-        border-radius: 4px;
-        margin-top: 8px;
-      }
-      .badge-word {
-        background-color: var(--word-color);
-      }
-      .badge-excel {
-        background-color: var(--excel-color);
-      }
-      .badge-powerpoint {
-        background-color: var(--powerpoint-color);
-      }
-      .pertemuan-card {
-        border: none;
-        border-radius: 14px;
-        transition: box-shadow 0.2s ease;
-        margin-bottom: 1rem;
-      }
-      .pertemuan-card .card-header {
-        border-radius: 14px 14px 0 0 !important;
-        font-weight: 600;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .pertemuan-card .card-header .bi-chevron-down {
-        transition: transform 0.3s ease;
-      }
-      .pertemuan-card .card-header[aria-expanded="true"] .bi-chevron-down {
-        transform: rotate(180deg);
-      }
-      .table-time th {
-        width: 18%;
-      }
-      .table-time td:first-child {
-        font-weight: 600;
-        white-space: nowrap;
-      }
-      .contoh-box {
-        background: #f8f9fa;
-        border-left: 4px solid var(--excel-color);
-        border-radius: 0 8px 8px 0;
-        padding: 1rem 1.25rem;
-        margin-top: 1rem;
-      }
-      .progress-track {
-        position: relative;
-        padding-left: 2.5rem;
-      }
-      .progress-track:before {
-        content: "";
-        position: absolute;
-        left: 1.1rem;
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        background: #e0e0e0;
-      }
-      .progress-track .step {
-        position: relative;
-        margin-bottom: 1.5rem;
-      }
-      .progress-track .step:before {
-        content: "";
-        position: absolute;
-        left: -2.3rem;
-        top: 0.3rem;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: var(--excel-color);
-        border: 3px solid #fff;
-        box-shadow: 0 0 0 3px var(--excel-color);
-      }
-      footer {
-        background: #1a1a2e;
-        color: #adb5bd;
-      }
-      @media (max-width: 576px) {
-        .hero h1 {
-          font-size: 1.8rem;
-        }
-        .hero {
-          padding: 50px 0 40px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav
-      id="navbarMain"
-      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
-    >
-      <div class="container">
-        <a class="navbar-brand nav-brand-logo" href="index.html">
-          <i class="bi bi-filetype-xlsx"></i> Kursus Excel
-          <span class="badge bg-warning text-dark ms-1">4 Pertemuan</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Beranda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#tentang">Tentang</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#instruktur">Instruktur</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#silabus">Silabus</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >Menu Lain</a
-              >
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="index.html"><i class="bi bi-filetype-docx"></i> Microsoft Word</a></li>
-                <li><a class="dropdown-item" href="materi-powerpoint.html"><i class="bi bi-filetype-pptx"></i> Microsoft PowerPoint</a></li>
-              </ul>
-            </li>
-          </ul>
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbarMain" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand nav-brand-logo" href="index.html">
+        <i class="bi bi-filetype-xlsx"></i> Kursus Excel
+        <span class="badge bg-warning text-dark ms-1">4 Pertemuan</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#tentang">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#instruktur">Instruktur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#silabus">Silabus</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu Lain</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-filetype-docx"></i> Microsoft Word</a></li>
+              <li><a class="dropdown-item" href="materi-powerpoint.html"><i class="bi bi-filetype-pptx"></i> Microsoft
+                  PowerPoint</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1><i class="bi bi-filetype-xlsx"></i> Kursus Microsoft Excel</h1>
+      <p class="lead mx-auto">
+        <strong>4 Pertemuan</strong> — dari data entry hingga dashboard
+        interaktif. Formula, fungsi, pivot, dan chart dalam 4 sesi padat.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a href="#silabus" class="btn btn-light btn-lg px-4"><i class="bi bi-calendar-check"></i> Lihat Silabus</a>
+        <a href="index.html" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-filetype-docx"></i> Kursus
+          Word</a>
+        <a href="materi-powerpoint.html" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-filetype-pptx"></i>
+          Kursus PowerPoint</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Silabus -->
+  <!-- <section id="silabus" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Silabus Microsoft Excel — 4 Pertemuan</h2>
+      <p class="text-muted mb-4">
+        Klik judul pertemuan untuk melihat detail materi, alokasi waktu, dan
+        contoh praktik.
+      </p>
+
+      <div class="list-group mb-4">
+        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#"
+          data-bs-toggle="collapse" data-bs-target="#p1">Pertemuan 1 — Data Entry &amp; Formula Dasar
+          <span class="badge badge-excel rounded-pill">Excel</span></a>
+        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#"
+          data-bs-toggle="collapse" data-bs-target="#p2">Pertemuan 2 — IF, VLOOKUP &amp; Fungsi Logika
+          <span class="badge badge-excel rounded-pill">Excel</span></a>
+        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#"
+          data-bs-toggle="collapse" data-bs-target="#p3">Pertemuan 3 — Chart &amp; Conditional Formatting
+          <span class="badge badge-excel rounded-pill">Excel</span></a>
+        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#"
+          data-bs-toggle="collapse" data-bs-target="#p4">Pertemuan 4 — PivotTable, Sorting, Filter &amp; Final Project
+          <span class="badge badge-excel rounded-pill">Excel</span></a>
+      </div>
+
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-3">
+            <i class="bi bi-clock"></i> Pembagian Waktu per Pertemuan (90 Menit)
+          </h5>
+          <div class="progress-track">
+            <div class="step">
+              <strong>10 menit</strong> — Pembukaan &amp; Review
+            </div>
+            <div class="step">
+              <strong>25 menit</strong> — Materi Sesi 1 (teori + demo)
+            </div>
+            <div class="step">
+              <strong>20 menit</strong> — Praktik Sesi 1
+            </div>
+            <div class="step">
+              <strong>10 menit</strong> — Istirahat &amp; Diskusi
+            </div>
+            <div class="step">
+              <strong>15 menit</strong> — Materi Sesi 2 (teori lanjutan)
+            </div>
+            <div class="step">
+              <strong>10 menit</strong> — Praktik Sesi 2 &amp; Penutup
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </section> -->
 
-    <!-- Hero -->
-    <section class="hero text-center">
-      <div class="container">
-        <h1><i class="bi bi-filetype-xlsx"></i> Kursus Microsoft Excel</h1>
-        <p class="lead mx-auto">
-          <strong>4 Pertemuan</strong> — dari data entry hingga dashboard
-          interaktif. Formula, fungsi, pivot, dan chart dalam 4 sesi padat.
-        </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-          <a href="#silabus" class="btn btn-light btn-lg px-4"
-            ><i class="bi bi-calendar-check"></i> Lihat Silabus</a
-          >
-          <a href="index.html" class="btn btn-outline-light btn-lg px-4"
-            ><i class="bi bi-filetype-docx"></i> Kursus Word</a
-          >
-          <a href="materi-powerpoint.html" class="btn btn-outline-light btn-lg px-4"
-            ><i class="bi bi-filetype-pptx"></i> Kursus PowerPoint</a
-          >
+  <!-- ========== MATERI LENGKAP ========== -->
+  <section id="materi" class="py-5">
+    <div class="container">
+      <h2 class="section-title" style="color: var(--excel-color)">
+        <i class="bi bi-filetype-xlsx"></i> Materi Lengkap
+      </h2>
+
+      <!-- PERTEMUAN 1 (Excel) -->
+      <div class="card pertemuan-card border shadow-sm" id="p1">
+        <div class="card-header bg-white" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="false">
+          <span><span class="badge badge-excel me-2">Pertemuan 1</span>
+            Pengenalan, Data Entry &amp; Formula Dasar</span>
+          <i class="bi bi-chevron-down"></i>
         </div>
-      </div>
-    </section>
-
-    <!-- Silabus -->
-    <section id="silabus" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="section-title">Silabus Microsoft Excel — 4 Pertemuan</h2>
-        <p class="text-muted mb-4">
-          Klik judul pertemuan untuk melihat detail materi, alokasi waktu, dan
-          contoh praktik.
-        </p>
-
-        <div class="list-group mb-4">
-          <a
-            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-            href="#"
-            data-bs-toggle="collapse"
-            data-bs-target="#p1"
-            >Pertemuan 1 — Data Entry &amp; Formula Dasar
-            <span class="badge badge-excel rounded-pill">Excel</span></a
-          >
-          <a
-            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-            href="#"
-            data-bs-toggle="collapse"
-            data-bs-target="#p2"
-            >Pertemuan 2 — IF, VLOOKUP &amp; Fungsi Logika
-            <span class="badge badge-excel rounded-pill">Excel</span></a
-          >
-          <a
-            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-            href="#"
-            data-bs-toggle="collapse"
-            data-bs-target="#p3"
-            >Pertemuan 3 — Chart &amp; Conditional Formatting
-            <span class="badge badge-excel rounded-pill">Excel</span></a
-          >
-          <a
-            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-            href="#"
-            data-bs-toggle="collapse"
-            data-bs-target="#p4"
-            >Pertemuan 4 — PivotTable, Sorting, Filter &amp; Final Project
-            <span class="badge badge-excel rounded-pill">Excel</span></a
-          >
-        </div>
-
-        <div class="card border-0 shadow-sm">
+        <div class="collapse" id="c1">
           <div class="card-body p-4">
-            <h5 class="fw-bold mb-3">
-              <i class="bi bi-clock"></i> Pembagian Waktu per Pertemuan (90 Menit)
-            </h5>
-            <div class="progress-track">
-              <div class="step">
-                <strong>10 menit</strong> — Pembukaan &amp; Review
-              </div>
-              <div class="step">
-                <strong>25 menit</strong> — Materi Sesi 1 (teori + demo)
-              </div>
-              <div class="step">
-                <strong>20 menit</strong> — Praktik Sesi 1
-              </div>
-              <div class="step">
-                <strong>10 menit</strong> — Istirahat &amp; Diskusi
-              </div>
-              <div class="step">
-                <strong>15 menit</strong> — Materi Sesi 2 (teori lanjutan)
-              </div>
-              <div class="step">
-                <strong>10 menit</strong> — Praktik Sesi 2 &amp; Penutup
-              </div>
+            <div class="table-responsive">
+              <table class="table table-bordered table-time">
+                <thead class="table-light">
+                  <tr>
+                    <th>Waktu</th>
+                    <th>Durasi</th>
+                    <th>Kegiatan</th>
+                    <th>Detail Materi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0-10'</td>
+                    <td>10'</td>
+                    <td>Pembukaan</td>
+                    <td>Perkenalan Excel, antarmuka (workbook, worksheet, cell, range, formula bar)</td>
+                  </tr>
+                  <tr>
+                    <td>10-35'</td>
+                    <td>25'</td>
+                    <td>Materi Sesi 1</td>
+                    <td>Navigasi, input data, AutoFill, Format sel (Number, Currency, Date, Percentage), Alignment,
+                      Merge &amp; Center</td>
+                  </tr>
+                  <tr>
+                    <td>35-55'</td>
+                    <td>20'</td>
+                    <td>Praktik Sesi 1</td>
+                    <td>Membuat tabel data karyawan dengan formatting lengkap, AutoFill no urut</td>
+                  </tr>
+                  <tr>
+                    <td>55-65'</td>
+                    <td>10'</td>
+                    <td>Istirahat</td>
+                    <td>Diskusi &amp; tanya jawab</td>
+                  </tr>
+                  <tr>
+                    <td>65-80'</td>
+                    <td>15'</td>
+                    <td>Materi Sesi 2</td>
+                    <td>Formula: operator (+,-,*,/,^), cell reference (relatif $ absolut), AutoSum. Fungsi: SUM,
+                      AVERAGE, COUNT, MAX, MIN, ROUND, TODAY</td>
+                  </tr>
+                  <tr>
+                    <td>80-90'</td>
+                    <td>10'</td>
+                    <td>Praktik Sesi 2</td>
+                    <td>Laporan penjualan: total, rata-rata, tertinggi, komisi (dengan $ absolut)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="contoh-box">
+              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <ol class="mt-2 mb-0 ps-3">
+                <li><strong class="text-success">Dasar:</strong> Buat tabel data siswa 10 baris (Nama, Kelas, Nilai).
+                  Gunakan AutoFill untuk no urut. Format kolom Nilai dengan Number 2 desimal. Hitung total nilai dengan
+                  <code>=SUM(C2:C11)</code>.</li>
+                <li><strong class="text-warning">Menengah:</strong> Buat tabel penjualan 12 bulan. Hitung total tahunan
+                  <code>=SUM(B2:B13)</code>, rata-rata <code>=AVERAGE(B2:B13)</code>, tertinggi
+                  <code>=MAX(B2:B13)</code>. Komisi <code>=B2*$C$1</code> (absolut). Format currency.</li>
+                <li><strong class="text-danger">Lanjutan:</strong> Buat laporan keuangan pribadi 1 bulan. Gunakan
+                  <code>=ROUND</code> untuk pembulatan, <code>=TODAY()</code> untuk tanggal otomatis,
+                  <code>=COUNTIF</code> untuk menghitung kategori pengeluaran. Terapkan Conditional Formatting untuk sel
+                  negatif (merah).</li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ========== MATERI LENGKAP ========== -->
-    <section id="materi" class="py-5">
-      <div class="container">
-        <h2 class="section-title" style="color: var(--excel-color)">
-          <i class="bi bi-filetype-xlsx"></i> Materi Lengkap
-        </h2>
-
-        <!-- PERTEMUAN 1 (Excel) -->
-        <div class="card pertemuan-card border shadow-sm" id="p1">
-          <div
-            class="card-header bg-white"
-            data-bs-toggle="collapse"
-            data-bs-target="#c1"
-            aria-expanded="false"
-          >
-            <span
-              ><span class="badge badge-excel me-2">Pertemuan 1</span>
-              Pengenalan, Data Entry &amp; Formula Dasar</span
-            >
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="collapse" id="c1">
-            <div class="card-body p-4">
-              <div class="table-responsive">
-                <table class="table table-bordered table-time">
-                  <thead class="table-light">
-                    <tr>
-                      <th>Waktu</th>
-                      <th>Durasi</th>
-                      <th>Kegiatan</th>
-                      <th>Detail Materi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0-10'</td>
-                      <td>10'</td>
-                      <td>Pembukaan</td>
-                      <td>Perkenalan Excel, antarmuka (workbook, worksheet, cell, range, formula bar)</td>
-                    </tr>
-                    <tr>
-                      <td>10-35'</td>
-                      <td>25'</td>
-                      <td>Materi Sesi 1</td>
-                      <td>Navigasi, input data, AutoFill, Format sel (Number, Currency, Date, Percentage), Alignment, Merge &amp; Center</td>
-                    </tr>
-                    <tr>
-                      <td>35-55'</td>
-                      <td>20'</td>
-                      <td>Praktik Sesi 1</td>
-                      <td>Membuat tabel data karyawan dengan formatting lengkap, AutoFill no urut</td>
-                    </tr>
-                    <tr>
-                      <td>55-65'</td>
-                      <td>10'</td>
-                      <td>Istirahat</td>
-                      <td>Diskusi &amp; tanya jawab</td>
-                    </tr>
-                    <tr>
-                      <td>65-80'</td>
-                      <td>15'</td>
-                      <td>Materi Sesi 2</td>
-                      <td>Formula: operator (+,-,*,/,^), cell reference (relatif $ absolut), AutoSum. Fungsi: SUM, AVERAGE, COUNT, MAX, MIN, ROUND, TODAY</td>
-                    </tr>
-                    <tr>
-                      <td>80-90'</td>
-                      <td>10'</td>
-                      <td>Praktik Sesi 2</td>
-                      <td>Laporan penjualan: total, rata-rata, tertinggi, komisi (dengan $ absolut)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
-                <ol class="mt-2 mb-0 ps-3">
-                  <li><strong class="text-success">Dasar:</strong> Buat tabel data siswa 10 baris (Nama, Kelas, Nilai). Gunakan AutoFill untuk no urut. Format kolom Nilai dengan Number 2 desimal. Hitung total nilai dengan <code>=SUM(C2:C11)</code>.</li>
-                  <li><strong class="text-warning">Menengah:</strong> Buat tabel penjualan 12 bulan. Hitung total tahunan <code>=SUM(B2:B13)</code>, rata-rata <code>=AVERAGE(B2:B13)</code>, tertinggi <code>=MAX(B2:B13)</code>. Komisi <code>=B2*$C$1</code> (absolut). Format currency.</li>
-                  <li><strong class="text-danger">Lanjutan:</strong> Buat laporan keuangan pribadi 1 bulan. Gunakan <code>=ROUND</code> untuk pembulatan, <code>=TODAY()</code> untuk tanggal otomatis, <code>=COUNTIF</code> untuk menghitung kategori pengeluaran. Terapkan Conditional Formatting untuk sel negatif (merah).</li>
-                </ol>
-              </div>
-            </div>
-          </div>
+      <!-- PERTEMUAN 2 (Excel) -->
+      <div class="card pertemuan-card border shadow-sm" id="p2">
+        <div class="card-header bg-white" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false">
+          <span><span class="badge badge-excel me-2">Pertemuan 2</span> IF,
+            VLOOKUP &amp; Fungsi Logika</span>
+          <i class="bi bi-chevron-down"></i>
         </div>
-
-        <!-- PERTEMUAN 2 (Excel) -->
-        <div class="card pertemuan-card border shadow-sm" id="p2">
-          <div
-            class="card-header bg-white"
-            data-bs-toggle="collapse"
-            data-bs-target="#c2"
-            aria-expanded="false"
-          >
-            <span
-              ><span class="badge badge-excel me-2">Pertemuan 2</span> IF,
-              VLOOKUP &amp; Fungsi Logika</span
-            >
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="collapse" id="c2">
-            <div class="card-body p-4">
-              <div class="table-responsive">
-                <table class="table table-bordered table-time">
-                  <thead class="table-light">
-                    <tr>
-                      <th>Waktu</th>
-                      <th>Durasi</th>
-                      <th>Kegiatan</th>
-                      <th>Detail Materi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0-10'</td>
-                      <td>10'</td>
-                      <td>Pembukaan</td>
-                      <td>Review formula dasar (pertemuan 1)</td>
-                    </tr>
-                    <tr>
-                      <td>10-35'</td>
-                      <td>25'</td>
-                      <td>Materi Sesi 1</td>
-                      <td>Fungsi IF: <code>=IF(logical_test, value_if_true, value_if_false)</code>, nested IF. AND, OR</td>
-                    </tr>
-                    <tr>
-                      <td>35-55'</td>
-                      <td>20'</td>
-                      <td>Praktik Sesi 1</td>
-                      <td>Menentukan kelulusan (IF nilai), grade nilai (nested IF), bonus karyawan (AND)</td>
-                    </tr>
-                    <tr>
-                      <td>55-65'</td>
-                      <td>10'</td>
-                      <td>Istirahat</td>
-                      <td>Diskusi</td>
-                    </tr>
-                    <tr>
-                      <td>65-80'</td>
-                      <td>15'</td>
-                      <td>Materi Sesi 2</td>
-                      <td>VLOOKUP, HLOOKUP, IFERROR. Kombinasi IF + VLOOKUP</td>
-                    </tr>
-                    <tr>
-                      <td>80-90'</td>
-                      <td>10'</td>
-                      <td>Praktik Sesi 2</td>
-                      <td>Mengisi gaji &amp; jabatan otomatis dari tabel referensi dengan VLOOKUP</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
-                <ol class="mt-2 mb-0 ps-3">
-                  <li><strong class="text-success">Dasar:</strong> Buat tabel nilai 10 siswa. Gunakan <code>=IF(B2>=75,"LULUS","TIDAK LULUS")</code>. Hitung jumlah lulus dengan <code>=COUNTIF</code>.</li>
-                  <li><strong class="text-warning">Menengah:</strong> Buat nested IF untuk grade: <code>=IF(B2>=90,"A",IF(B2>=80,"B",IF(B2>=70,"C","D")))</code>. Gabungkan dengan AND untuk bonus: <code>=IF(AND(B2>=80,C2="Aktif"),"Bonus","-")</code>.</li>
-                  <li><strong class="text-danger">Lanjutan:</strong> Buat sistem penggajian: tabel karyawan dengan kode, nama, golongan. Tabel referensi golongan &amp; gaji. Gunakan <code>=VLOOKUP(D2,$A$2:$B$10,2,FALSE)</code> untuk mengisi gaji otomatis. Tambahkan IFERROR untuk menangani data tidak ditemukan.</li>
-                </ol>
-              </div>
+        <div class="collapse" id="c2">
+          <div class="card-body p-4">
+            <div class="table-responsive">
+              <table class="table table-bordered table-time">
+                <thead class="table-light">
+                  <tr>
+                    <th>Waktu</th>
+                    <th>Durasi</th>
+                    <th>Kegiatan</th>
+                    <th>Detail Materi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0-10'</td>
+                    <td>10'</td>
+                    <td>Pembukaan</td>
+                    <td>Review formula dasar (pertemuan 1)</td>
+                  </tr>
+                  <tr>
+                    <td>10-35'</td>
+                    <td>25'</td>
+                    <td>Materi Sesi 1</td>
+                    <td>Fungsi IF: <code>=IF(logical_test, value_if_true, value_if_false)</code>, nested IF. AND, OR
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>35-55'</td>
+                    <td>20'</td>
+                    <td>Praktik Sesi 1</td>
+                    <td>Menentukan kelulusan (IF nilai), grade nilai (nested IF), bonus karyawan (AND)</td>
+                  </tr>
+                  <tr>
+                    <td>55-65'</td>
+                    <td>10'</td>
+                    <td>Istirahat</td>
+                    <td>Diskusi</td>
+                  </tr>
+                  <tr>
+                    <td>65-80'</td>
+                    <td>15'</td>
+                    <td>Materi Sesi 2</td>
+                    <td>VLOOKUP, HLOOKUP, IFERROR. Kombinasi IF + VLOOKUP</td>
+                  </tr>
+                  <tr>
+                    <td>80-90'</td>
+                    <td>10'</td>
+                    <td>Praktik Sesi 2</td>
+                    <td>Mengisi gaji &amp; jabatan otomatis dari tabel referensi dengan VLOOKUP</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
-        </div>
-
-        <!-- PERTEMUAN 3 (Excel) -->
-        <div class="card pertemuan-card border shadow-sm" id="p3">
-          <div
-            class="card-header bg-white"
-            data-bs-toggle="collapse"
-            data-bs-target="#c3"
-            aria-expanded="false"
-          >
-            <span
-              ><span class="badge badge-excel me-2">Pertemuan 3</span> Chart,
-              Grafik &amp; Conditional Formatting</span
-            >
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="collapse" id="c3">
-            <div class="card-body p-4">
-              <div class="table-responsive">
-                <table class="table table-bordered table-time">
-                  <thead class="table-light">
-                    <tr>
-                      <th>Waktu</th>
-                      <th>Durasi</th>
-                      <th>Kegiatan</th>
-                      <th>Detail Materi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0-10'</td>
-                      <td>10'</td>
-                      <td>Pembukaan</td>
-                      <td>Review IF &amp; VLOOKUP</td>
-                    </tr>
-                    <tr>
-                      <td>10-35'</td>
-                      <td>25'</td>
-                      <td>Materi Sesi 1</td>
-                      <td>Chart types: Column, Bar, Line, Pie. Elemen chart (title, legend, axis, data label). Chart Design &amp; Format tab</td>
-                    </tr>
-                    <tr>
-                      <td>35-55'</td>
-                      <td>20'</td>
-                      <td>Praktik Sesi 1</td>
-                      <td>Membuat Column chart penjualan, Pie chart komposisi, Line chart tren</td>
-                    </tr>
-                    <tr>
-                      <td>55-65'</td>
-                      <td>10'</td>
-                      <td>Istirahat</td>
-                      <td>Diskusi</td>
-                    </tr>
-                    <tr>
-                      <td>65-80'</td>
-                      <td>15'</td>
-                      <td>Materi Sesi 2</td>
-                      <td>Conditional Formatting: Highlight Cell, Top/Bottom, Data Bars, Color Scales, Icon Sets, Manage Rules</td>
-                    </tr>
-                    <tr>
-                      <td>80-90'</td>
-                      <td>10'</td>
-                      <td>Praktik Sesi 2</td>
-                      <td>Warna otomatis data penjualan (merah &lt; target, hijau ≥ target) + Data Bars</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
-                <ol class="mt-2 mb-0 ps-3">
-                  <li><strong class="text-success">Dasar:</strong> Buat Column chart penjualan 6 bulan. Tambahkan judul, label sumbu, dan data label. Ubah warna kolom menjadi biru gradasi.</li>
-                  <li><strong class="text-warning">Menengah:</strong> Buat multi-series chart (Column + Line) untuk target vs realisasi. Terapkan Data Bars pada sel realisasi. Gunakan Icon Sets (hijau ≥ target, kuning = 90%, merah &lt; 90%).</li>
-                  <li><strong class="text-danger">Lanjutan:</strong> Buat mini dashboard 1 sheet: Line chart tren penjualan, Pie chart komposisi produk, Bar chart per region. Tambahkan Color Scales gradasi pada data. Gunakan Slicer untuk memfilter chart secara interaktif.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PERTEMUAN 4 (Excel) -->
-        <div class="card pertemuan-card border shadow-sm" id="p4">
-          <div
-            class="card-header bg-white"
-            data-bs-toggle="collapse"
-            data-bs-target="#c4"
-            aria-expanded="false"
-          >
-            <span
-              ><span class="badge badge-excel me-2">Pertemuan 4</span>
-              PivotTable, Sorting, Filter &amp; Final Project</span
-            >
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="collapse" id="c4">
-            <div class="card-body p-4">
-              <div class="table-responsive">
-                <table class="table table-bordered table-time">
-                  <thead class="table-light">
-                    <tr>
-                      <th>Waktu</th>
-                      <th>Durasi</th>
-                      <th>Kegiatan</th>
-                      <th>Detail Materi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0-10'</td>
-                      <td>10'</td>
-                      <td>Pembukaan</td>
-                      <td>Review chart &amp; conditional format</td>
-                    </tr>
-                    <tr>
-                      <td>10-35'</td>
-                      <td>25'</td>
-                      <td>Materi Sesi 1</td>
-                      <td>Sort (multi-level), Filter, PivotTable (rows, columns, values, filter), PivotChart, Slicer</td>
-                    </tr>
-                    <tr>
-                      <td>35-55'</td>
-                      <td>20'</td>
-                      <td>Praktik Sesi 1</td>
-                      <td>PivotTable rekap penjualan per region per produk + Slicer interaktif</td>
-                    </tr>
-                    <tr>
-                      <td>55-65'</td>
-                      <td>10'</td>
-                      <td>Istirahat</td>
-                      <td>Diskusi</td>
-                    </tr>
-                    <tr>
-                      <td>65-90'</td>
-                      <td>25'</td>
-                      <td>Final Project Excel</td>
-                      <td>Buat laporan keuangan lengkap: data entry, formula, IF, VLOOKUP, PivotTable, Chart, Conditional Formatting. Kumpulkan!</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
-                <ol class="mt-2 mb-0 ps-3">
-                  <li><strong class="text-success">Dasar:</strong> Buat tabel data 20 baris. Lakukan sorting A-Z berdasarkan nama, lalu sorting multi-level (kota → nama). Gunakan Filter untuk menampilkan data tertentu.</li>
-                  <li><strong class="text-warning">Menengah:</strong> Buat PivotTable dari data penjualan: rekap total per region &amp; per produk. Tambahkan PivotChart Column. Gunakan Slicer untuk filter region interaktif.</li>
-                  <li><strong class="text-danger">Lanjutan (Final):</strong> Buat aplikasi pencatatan pengeluaran (20+ baris): dropdown kategori (Data Validation), IF untuk kategori otomatis, PivotTable rekap per kategori + Pie chart + Conditional Formatting (merah jika &gt; rata-rata). Gunakan Slicer untuk filter bulan.</li>
-                </ol>
-              </div>
+            <div class="contoh-box">
+              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <ol class="mt-2 mb-0 ps-3">
+                <li><strong class="text-success">Dasar:</strong> Buat tabel nilai 10 siswa. Gunakan
+                  <code>=IF(B2>=75,"LULUS","TIDAK LULUS")</code>. Hitung jumlah lulus dengan <code>=COUNTIF</code>.</li>
+                <li><strong class="text-warning">Menengah:</strong> Buat nested IF untuk grade:
+                  <code>=IF(B2>=90,"A",IF(B2>=80,"B",IF(B2>=70,"C","D")))</code>. Gabungkan dengan AND untuk bonus:
+                  <code>=IF(AND(B2>=80,C2="Aktif"),"Bonus","-")</code>.</li>
+                <li><strong class="text-danger">Lanjutan:</strong> Buat sistem penggajian: tabel karyawan dengan kode,
+                  nama, golongan. Tabel referensi golongan &amp; gaji. Gunakan
+                  <code>=VLOOKUP(D2,$A$2:$B$10,2,FALSE)</code> untuk mengisi gaji otomatis. Tambahkan IFERROR untuk
+                  menangani data tidak ditemukan.</li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Ringkasan -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <h2 class="section-title">Ringkasan</h2>
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-4">
-            <a href="index.html" class="text-decoration-none">
-              <div class="card border-0 shadow-sm text-center h-100 p-4">
-                <div class="display-4 fw-bold" style="color: var(--word-color)">
-                  4
-                </div>
-                <h5 class="fw-bold">Microsoft Word</h5>
-                <p class="text-muted mb-0">Klik untuk lihat &rarr;</p>
-              </div>
-            </a>
+      <!-- PERTEMUAN 3 (Excel) -->
+      <div class="card pertemuan-card border shadow-sm" id="p3">
+        <div class="card-header bg-white" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false">
+          <span><span class="badge badge-excel me-2">Pertemuan 3</span> Chart,
+            Grafik &amp; Conditional Formatting</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <div class="collapse" id="c3">
+          <div class="card-body p-4">
+            <div class="table-responsive">
+              <table class="table table-bordered table-time">
+                <thead class="table-light">
+                  <tr>
+                    <th>Waktu</th>
+                    <th>Durasi</th>
+                    <th>Kegiatan</th>
+                    <th>Detail Materi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0-10'</td>
+                    <td>10'</td>
+                    <td>Pembukaan</td>
+                    <td>Review IF &amp; VLOOKUP</td>
+                  </tr>
+                  <tr>
+                    <td>10-35'</td>
+                    <td>25'</td>
+                    <td>Materi Sesi 1</td>
+                    <td>Chart types: Column, Bar, Line, Pie. Elemen chart (title, legend, axis, data label). Chart
+                      Design &amp; Format tab</td>
+                  </tr>
+                  <tr>
+                    <td>35-55'</td>
+                    <td>20'</td>
+                    <td>Praktik Sesi 1</td>
+                    <td>Membuat Column chart penjualan, Pie chart komposisi, Line chart tren</td>
+                  </tr>
+                  <tr>
+                    <td>55-65'</td>
+                    <td>10'</td>
+                    <td>Istirahat</td>
+                    <td>Diskusi</td>
+                  </tr>
+                  <tr>
+                    <td>65-80'</td>
+                    <td>15'</td>
+                    <td>Materi Sesi 2</td>
+                    <td>Conditional Formatting: Highlight Cell, Top/Bottom, Data Bars, Color Scales, Icon Sets, Manage
+                      Rules</td>
+                  </tr>
+                  <tr>
+                    <td>80-90'</td>
+                    <td>10'</td>
+                    <td>Praktik Sesi 2</td>
+                    <td>Warna otomatis data penjualan (merah &lt; target, hijau ≥ target) + Data Bars</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="contoh-box">
+              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <ol class="mt-2 mb-0 ps-3">
+                <li><strong class="text-success">Dasar:</strong> Buat Column chart penjualan 6 bulan. Tambahkan judul,
+                  label sumbu, dan data label. Ubah warna kolom menjadi biru gradasi.</li>
+                <li><strong class="text-warning">Menengah:</strong> Buat multi-series chart (Column + Line) untuk target
+                  vs realisasi. Terapkan Data Bars pada sel realisasi. Gunakan Icon Sets (hijau ≥ target, kuning = 90%,
+                  merah &lt; 90%).</li>
+                <li><strong class="text-danger">Lanjutan:</strong> Buat mini dashboard 1 sheet: Line chart tren
+                  penjualan, Pie chart komposisi produk, Bar chart per region. Tambahkan Color Scales gradasi pada data.
+                  Gunakan Slicer untuk memfilter chart secara interaktif.</li>
+              </ol>
+            </div>
           </div>
-          <div class="col-md-4">
+        </div>
+      </div>
+
+      <!-- PERTEMUAN 4 (Excel) -->
+      <div class="card pertemuan-card border shadow-sm" id="p4">
+        <div class="card-header bg-white" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false">
+          <span><span class="badge badge-excel me-2">Pertemuan 4</span>
+            PivotTable, Sorting, Filter &amp; Final Project</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <div class="collapse" id="c4">
+          <div class="card-body p-4">
+            <div class="table-responsive">
+              <table class="table table-bordered table-time">
+                <thead class="table-light">
+                  <tr>
+                    <th>Waktu</th>
+                    <th>Durasi</th>
+                    <th>Kegiatan</th>
+                    <th>Detail Materi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0-10'</td>
+                    <td>10'</td>
+                    <td>Pembukaan</td>
+                    <td>Review chart &amp; conditional format</td>
+                  </tr>
+                  <tr>
+                    <td>10-35'</td>
+                    <td>25'</td>
+                    <td>Materi Sesi 1</td>
+                    <td>Sort (multi-level), Filter, PivotTable (rows, columns, values, filter), PivotChart, Slicer</td>
+                  </tr>
+                  <tr>
+                    <td>35-55'</td>
+                    <td>20'</td>
+                    <td>Praktik Sesi 1</td>
+                    <td>PivotTable rekap penjualan per region per produk + Slicer interaktif</td>
+                  </tr>
+                  <tr>
+                    <td>55-65'</td>
+                    <td>10'</td>
+                    <td>Istirahat</td>
+                    <td>Diskusi</td>
+                  </tr>
+                  <tr>
+                    <td>65-90'</td>
+                    <td>25'</td>
+                    <td>Final Project Excel</td>
+                    <td>Buat laporan keuangan lengkap: data entry, formula, IF, VLOOKUP, PivotTable, Chart, Conditional
+                      Formatting. Kumpulkan!</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="contoh-box">
+              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <ol class="mt-2 mb-0 ps-3">
+                <li><strong class="text-success">Dasar:</strong> Buat tabel data 20 baris. Lakukan sorting A-Z
+                  berdasarkan nama, lalu sorting multi-level (kota → nama). Gunakan Filter untuk menampilkan data
+                  tertentu.</li>
+                <li><strong class="text-warning">Menengah:</strong> Buat PivotTable dari data penjualan: rekap total per
+                  region &amp; per produk. Tambahkan PivotChart Column. Gunakan Slicer untuk filter region interaktif.
+                </li>
+                <li><strong class="text-danger">Lanjutan (Final):</strong> Buat aplikasi pencatatan pengeluaran (20+
+                  baris): dropdown kategori (Data Validation), IF untuk kategori otomatis, PivotTable rekap per kategori
+                  + Pie chart + Conditional Formatting (merah jika &gt; rata-rata). Gunakan Slicer untuk filter bulan.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ringkasan -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Ringkasan</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <a href="index.html" class="text-decoration-none">
             <div class="card border-0 shadow-sm text-center h-100 p-4">
-              <div class="display-4 fw-bold" style="color: var(--excel-color)">
+              <div class="display-4 fw-bold" style="color: var(--word-color)">
                 4
               </div>
-              <h5 class="fw-bold">Microsoft Excel</h5>
-              <p class="text-muted mb-0">Pertemuan 1-4<br />360 menit total</p>
+              <h5 class="fw-bold">Microsoft Word</h5>
+              <p class="text-muted mb-0">Klik untuk lihat &rarr;</p>
             </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm text-center h-100 p-4">
+            <div class="display-4 fw-bold" style="color: var(--excel-color)">
+              4
+            </div>
+            <h5 class="fw-bold">Microsoft Excel</h5>
+            <p class="text-muted mb-0">Pertemuan 1-4<br />360 menit total</p>
           </div>
-          <div class="col-md-4">
-            <a href="materi-powerpoint.html" class="text-decoration-none">
-              <div class="card border-0 shadow-sm text-center h-100 p-4">
-                <div class="display-4 fw-bold" style="color: var(--powerpoint-color)">
-                  4
-                </div>
-                <h5 class="fw-bold">Microsoft PowerPoint</h5>
-                <p class="text-muted mb-0">Klik untuk lihat &rarr;</p>
+        </div>
+        <div class="col-md-4">
+          <a href="materi-powerpoint.html" class="text-decoration-none">
+            <div class="card border-0 shadow-sm text-center h-100 p-4">
+              <div class="display-4 fw-bold" style="color: var(--powerpoint-color)">
+                4
               </div>
-            </a>
-          </div>
+              <h5 class="fw-bold">Microsoft PowerPoint</h5>
+              <p class="text-muted mb-0">Klik untuk lihat &rarr;</p>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="py-4">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5 text-center text-md-start mb-2 mb-md-0">
-            <span class="fw-bold text-white">Kursus Microsoft Excel</span><br />
-            <small>4 Pertemuan &bull; 360 Menit</small>
-          </div>
-          <div class="col-md-4 text-center text-md-start mb-2 mb-md-0">
-            <small
-              ><i class="bi bi-person"></i>
-              <strong class="text-white">Ony</strong><br />
-              <i class="bi bi-envelope"></i> onydarrell@gmail.com &bull;
-              <i class="bi bi-whatsapp"></i> +62 8155509153</small
-            >
-          </div>
-          <div class="col-md-3 text-center text-md-end">
-            <small>
-              <a href="index.html" class="text-white-50 me-2">Word</a> &bull;
-              <a href="materi-powerpoint.html" class="text-white-50 ms-2">PowerPoint</a>
-            </small>
-          </div>
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-5 text-center text-md-start mb-2 mb-md-0">
+          <span class="fw-bold text-white">Kursus Microsoft Excel</span><br />
+          <small>4 Pertemuan &bull; 360 Menit</small>
+        </div>
+        <div class="col-md-4 text-center text-md-start mb-2 mb-md-0">
+          <small><i class="bi bi-person"></i>
+            <strong class="text-white">Ony</strong><br />
+            <i class="bi bi-envelope"></i> onydarrell@gmail.com &bull;
+            <i class="bi bi-whatsapp"></i> +62 8155509153</small>
+        </div>
+        <div class="col-md-3 text-center text-md-end">
+          <small>
+            <a href="index.html" class="text-white-50 me-2">Word</a> &bull;
+            <a href="materi-powerpoint.html" class="text-white-50 ms-2">PowerPoint</a>
+          </small>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <button
-      id="scrollTop"
-      class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
-      style="width: 48px; height: 48px; z-index: 1050"
-    >
-      <i class="bi bi-arrow-up"></i>
-    </button>
+  <button id="scrollTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+    style="width: 48px; height: 48px; z-index: 1050">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      window.addEventListener("scroll", function () {
-        document
-          .getElementById("scrollTop")
-          .classList.toggle("d-none", window.scrollY <= 400);
-      });
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener("scroll", function () {
       document
         .getElementById("scrollTop")
-        .addEventListener("click", function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          const nav = document.querySelector(".navbar-collapse");
-          if (nav.classList.contains("show"))
-            document.querySelector(".navbar-toggler").click();
-        });
+        .classList.toggle("d-none", window.scrollY <= 400);
+    });
+    document
+      .getElementById("scrollTop")
+      .addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
-    </script>
-  </body>
+    document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        const nav = document.querySelector(".navbar-collapse");
+        if (nav.classList.contains("show"))
+          document.querySelector(".navbar-toggler").click();
+      });
+    });
+  </script>
+</body>
+
 </html>
