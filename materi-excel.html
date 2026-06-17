@@ -286,15 +286,37 @@
                 Pengenalan, Data Entry &amp; Formula Dasar</span>
             </button>
           </h2>
+
           <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#programexcel">
-            <div class="accordion-body">
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+            <div class="accordion-body p-0">
+              <div class="contoh-box mt-0">
+                <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
                 <ol class="mt-2 mb-0 ps-3">
+                  <!-- Dasar -->
                   <li><strong class="text-success">Dasar:</strong> Buat tabel data siswa 10 baris (Nama, Kelas, Nilai).
                     Gunakan AutoFill untuk no urut. Format kolom Nilai dengan Number 2 desimal. Hitung total nilai
                     dengan
                     <code>=SUM(D2:D11)</code>.
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It’s also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
                     <div class="py-2">
                       <a class="btn btn-sm btn-outline-secondary"
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
@@ -302,10 +324,31 @@
                           class="bi bi-file-earmark-word-fill"></i> Contoh Latihan</a>
                     </div>
                   </li>
+                  <!-- Menengah -->
                   <li><strong class="text-warning">Menengah:</strong> Buat tabel penjualan 12 bulan. Hitung total
                     tahunan
                     <code>=SUM(B2:B13)</code>, rata-rata <code>=AVERAGE(B2:B13)</code>, tertinggi
                     <code>=MAX(B2:B13)</code>. Komisi <code>=B2*$C$1</code> (absolut). Format currency.
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It’s also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
                     <div class="py-2">
                       <a class="btn btn-sm btn-outline-secondary"
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
@@ -313,11 +356,32 @@
                           class="bi bi-file-earmark-word-fill"></i> Contoh Latihan</a>
                     </div>
                   </li>
+                  <!-- Lanjutan -->
                   <li><strong class="text-danger">Lanjutan:</strong> Buat laporan keuangan pribadi 1 bulan. Gunakan
                     <code>=ROUND</code> untuk pembulatan, <code>=TODAY()</code> untuk tanggal otomatis,
                     <code>=COUNTIF</code> untuk menghitung kategori pengeluaran. Terapkan Conditional Formatting untuk
                     sel
                     negatif (merah).
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It’s also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
                     <div class="py-2">
                       <a class="btn btn-sm btn-outline-secondary"
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
@@ -341,8 +405,8 @@
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#programexcel">
             <div class="accordion-body">
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <div class="contoh-box mt-0">
+                <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
                 <ol class="mt-2 mb-0 ps-3">
                   <li><strong class="text-success">Dasar:</strong> Buat tabel nilai 10 siswa. Gunakan
                     <code>=IF(B2>=75,"LULUS","TIDAK LULUS")</code>. Hitung jumlah lulus dengan <code>=COUNTIF</code>.
@@ -372,8 +436,8 @@
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#programexcel">
             <div class="accordion-body">
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <div class="contoh-box mt-0">
+                <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
                 <ol class="mt-2 mb-0 ps-3">
                   <li><strong class="text-success">Dasar:</strong> Buat Column chart penjualan 6 bulan. Tambahkan judul,
                     label sumbu, dan data label. Ubah warna kolom menjadi biru gradasi.</li>
@@ -402,8 +466,8 @@
           </h2>
           <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#programexcel">
             <div class="accordion-body">
-              <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <div class="contoh-box mt-0">
+                <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
                 <ol class="mt-2 mb-0 ps-3">
                   <li><strong class="text-success">Dasar:</strong> Buat tabel data 20 baris. Lakukan sorting A-Z
                     berdasarkan nama, lalu sorting multi-level (kota → nama). Gunakan Filter untuk menampilkan data
@@ -486,8 +550,8 @@
                 </tbody>
               </table>
             </div>
-            <div class="contoh-box">
-              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+            <div class="contoh-box mt-0">
+              <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
               <ol class="mt-2 mb-0 ps-3">
                 <li><strong class="text-success">Dasar:</strong> Buat tabel data siswa 10 baris (Nama, Kelas, Nilai).
                   Gunakan AutoFill untuk no urut. Format kolom Nilai dengan Number 2 desimal. Hitung total nilai dengan
@@ -575,7 +639,7 @@
               </table>
             </div>
             <div class="contoh-box">
-              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
               <ol class="mt-2 mb-0 ps-3">
                 <li><strong class="text-success">Dasar:</strong> Buat tabel nilai 10 siswa. Gunakan
                   <code>=IF(B2>=75,"LULUS","TIDAK LULUS")</code>. Hitung jumlah lulus dengan <code>=COUNTIF</code>.
@@ -657,7 +721,7 @@
               </table>
             </div>
             <div class="contoh-box">
-              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
               <ol class="mt-2 mb-0 ps-3">
                 <li><strong class="text-success">Dasar:</strong> Buat Column chart penjualan 6 bulan. Tambahkan judul,
                   label sumbu, dan data label. Ubah warna kolom menjadi biru gradasi.</li>
@@ -728,7 +792,7 @@
               </table>
             </div>
             <div class="contoh-box">
-              <strong><i class="bi bi-file-earmark"></i> Contoh Praktik:</strong>
+              <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
               <ol class="mt-2 mb-0 ps-3">
                 <li><strong class="text-success">Dasar:</strong> Buat tabel data 20 baris. Lakukan sorting A-Z
                   berdasarkan nama, lalu sorting multi-level (kota → nama). Gunakan Filter untuk menampilkan data
