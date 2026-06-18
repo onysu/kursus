@@ -756,22 +756,238 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#programexcel">
-            <div class="accordion-body">
+            <div class="accordion-body p-0">
               <div class="contoh-box mt-0">
                 <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
                 <ol class="mt-2 mb-0 ps-3">
+                  <!-- Dasar -->
                   <li>
                     <strong class="text-success">Dasar:</strong> Buat tabel
                     nilai 10 siswa. Gunakan
                     <code>=IF(B2>=75,"LULUS","TIDAK LULUS")</code>. Hitung
                     jumlah lulus dengan <code>=COUNTIF</code>.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>IF()</code> untuk menentukan kelulusan.</li>
+                              <li>Fungsi <code>COUNTIF()</code> untuk menghitung jumlah lulus.</li>
+                              <li>Referensi relatif sel.</li>
+                              <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Nilai Siswa</strong> <br />
+                            <img src="assets/files/sesi2dasar.png" alt="Tabel data nilai siswa" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat judul kolom:</strong>
+                                <ul>
+                                  <li>A1: No</li>
+                                  <li>B1: Nama</li>
+                                  <li>C1: Nilai</li>
+                                  <li>D1: Keterangan</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi nomor urut (A2:A11):</strong> AutoFill seperti pertemuan sebelumnya.
+                              </li>
+                              <li>
+                                <strong>Masukkan data nama dan nilai</strong> 10 siswa pada kolom B dan C.
+                                <br />Contoh data:
+                                <ul>
+                                  <li>Andi — 80</li>
+                                  <li>Budi — 65</li>
+                                  <li>Cici — 90</li>
+                                  <li>Dodi — 72</li>
+                                  <li>Eka — 88</li>
+                                  <li>Fani — 55</li>
+                                  <li>Gita — 78</li>
+                                  <li>Hadi — 60</li>
+                                  <li>Indah — 95</li>
+                                  <li>Joko — 70</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tentukan kelulusan dengan IF:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>D2</strong> ketik:
+                                    <code>=IF(C2&gt;=75,"LULUS","TIDAK LULUS")</code>
+                                  </li>
+                                  <li>Tekan Enter, maka akan muncul hasil "LULUS" jika nilai ≥ 75, atau "TIDAK LULUS" jika kurang.</li>
+                                  <li>Salin rumus ke bawah hingga <strong>D11</strong> menggunakan Fill Handle.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Hitung jumlah siswa lulus:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>D13</strong> ketik:
+                                    <code>=COUNTIF(D2:D11,"LULUS")</code>
+                                  </li>
+                                  <li>Tekan Enter.</li>
+                                </ul>
+                                Hasil: 6 siswa lulus (dari contoh data di atas).
+                              </li>
+                              <li>
+                                <strong>Hitung jumlah siswa tidak lulus:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>D14</strong> ketik:
+                                    <code>=COUNTIF(D2:D11,"TIDAK LULUS")</code>
+                                  </li>
+                                  <li>Tekan Enter.</li>
+                                </ul>
+                                Hasil: 4 siswa tidak lulus.
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Penjelasan Rumus:</strong>
+                            <ul>
+                              <li><code>=IF(C2&gt;=75,"LULUS","TIDAK LULUS")</code> — Jika nilai di C2 ≥ 75, tampilkan "LULUS", jika tidak tampilkan "TIDAK LULUS".</li>
+                              <li><code>=COUNTIF(D2:D11,"LULUS")</code> — Hitung berapa banyak sel dalam range D2:D11 yang berisi teks "LULUS".</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/data_nilai_siswa.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
+                  <!-- Menengah -->
                   <li>
                     <strong class="text-warning">Menengah:</strong> Buat
                     nested IF untuk grade:
                     <code>=IF(B2>=90,"A",IF(B2>=80,"B",IF(B2>=70,"C","D")))</code>. Gabungkan dengan AND untuk bonus:
                     <code>=IF(AND(B2>=80,C2="Aktif"),"Bonus","-")</code>.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>IF()</code> bersarang (nested IF).</li>
+                              <li>Fungsi <code>AND()</code> untuk kondisi ganda.</li>
+                              <li>Kombinasi <code>IF</code> + <code>AND</code>.</li>
+                              <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Nilai &amp; Status Siswa</strong> <br />
+                            <img src="assets/files/sesi2menengah.png" alt="Tabel nested IF grade" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat judul kolom:</strong>
+                                <ul>
+                                  <li>A1: No</li>
+                                  <li>B1: Nama</li>
+                                  <li>C1: Nilai</li>
+                                  <li>D1: Grade</li>
+                                  <li>E1: Status</li>
+                                  <li>F1: Bonus</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data 10 siswa</strong> (Nama, Nilai, Status).
+                                <br />Contoh:
+                                <ul>
+                                  <li>Andi — 92 — Aktif</li>
+                                  <li>Budi — 85 — Aktif</li>
+                                  <li>Cici — 78 — Aktif</li>
+                                  <li>Dodi — 65 — Aktif</li>
+                                  <li>Eka — 90 — Tidak Aktif</li>
+                                  <li>Fani — 55 — Aktif</li>
+                                  <li>Gita — 88 — Aktif</li>
+                                  <li>Hadi — 70 — Tidak Aktif</li>
+                                  <li>Indah — 95 — Aktif</li>
+                                  <li>Joko — 60 — Aktif</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tentukan Grade dengan Nested IF:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>D2</strong> ketik:
+                                    <code>=IF(C2&gt;=90,"A",IF(C2&gt;=80,"B",IF(C2&gt;=70,"C","D")))</code>
+                                  </li>
+                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>D11</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tentukan Bonus dengan IF + AND:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>F2</strong> ketik:
+                                    <code>=IF(AND(C2&gt;=80,E2="Aktif"),"Bonus","-")</code>
+                                  </li>
+                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>F11</strong>.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Penjelasan Rumus:</strong>
+                            <ul>
+                              <li><strong>Nested IF:</strong>
+                                <code>=IF(C2&gt;=90,"A",IF(C2&gt;=80,"B",IF(C2&gt;=70,"C","D")))</code>
+                                <br />→ Jika nilai ≥ 90 → A, jika ≥ 80 → B, jika ≥ 70 → C, selain itu → D.
+                              </li>
+                              <li><strong>IF + AND:</strong>
+                                <code>=IF(AND(C2&gt;=80,E2="Aktif"),"Bonus","-")</code>
+                                <br />→ Jika nilai ≥ 80 DAN status "Aktif", maka dapat "Bonus", jika tidak tampilkan "-".
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Hasil Contoh:</strong>
+                            <ul>
+                              <li>Andi (92, Aktif) → Grade A, Bonus: Bonus</li>
+                              <li>Eka (90, Tidak Aktif) → Grade A, Bonus: - (karena tidak aktif)</li>
+                              <li>Fani (55, Aktif) → Grade D, Bonus: - (karena nilai &lt; 80)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/nested_if_grade.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
+                  <!-- Lanjutan -->
                   <li>
                     <strong class="text-danger">Lanjutan:</strong> Buat sistem
                     penggajian: tabel karyawan dengan kode, nama, golongan.
@@ -779,6 +995,132 @@
                     <code>=VLOOKUP(D2,$A$2:$B$10,2,FALSE)</code> untuk mengisi
                     gaji otomatis. Tambahkan IFERROR untuk menangani data
                     tidak ditemukan.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>VLOOKUP()</code> untuk mencari data dari tabel referensi.</li>
+                              <li>Fungsi <code>IFERROR()</code> untuk menangani error.</li>
+                              <li>Referensi absolut <code>$</code> pada tabel lookup.</li>
+                              <li>Membuat tabel referensi di sheet yang sama.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Referensi Gaji</strong> <br />
+                            <img src="assets/files/sesi2lanjutan_ref.png" alt="Tabel referensi golongan" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Karyawan</strong> <br />
+                            <img src="assets/files/sesi2lanjutan.png" alt="Tabel data karyawan" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat tabel referensi golongan &amp; gaji</strong> (misal di sheet "Referensi" atau di kolom I:J):
+                                <ul>
+                                  <li>I1: Kode Gol, J1: Gaji Pokok</li>
+                                  <li>I2: I, J2: 5000000</li>
+                                  <li>I3: II, J3: 7000000</li>
+                                  <li>I4: III, J4: 9000000</li>
+                                  <li>I5: IV, J5: 12000000</li>
+                                  <li>I6: V, J6: 15000000</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat tabel data karyawan</strong> (mulai dari A1):
+                                <ul>
+                                  <li>A1: Kode, B1: Nama, C1: Golongan, D1: Gaji Pokok</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data karyawan</strong> (contoh 8-10 baris):
+                                <ul>
+                                  <li>K001 — Andi — III</li>
+                                  <li>K002 — Budi — II</li>
+                                  <li>K003 — Cici — V</li>
+                                  <li>K004 — Dodi — I</li>
+                                  <li>K005 — Eka — IV</li>
+                                  <li>K006 — Fani — III</li>
+                                  <li>K007 — Gita — II (sengaja salah ketik "II" bukan golongan valid) → untuk demo IFERROR</li>
+                                  <li>K008 — Hadi — VI (golongan tidak ada di referensi) → menampilkan error</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>D2</strong> ketik:
+                                    <code>=VLOOKUP(C2,$I$2:$J$6,2,FALSE)</code>
+                                  </li>
+                                  <li>Salin ke bawah hingga <strong>D9</strong>.</li>
+                                  <li>Perhatikan: data "II" (dengan spasi) dan "VI" akan menghasilkan error <code>#N/A</code> karena tidak ditemukan di tabel referensi.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan IFERROR untuk menangani error:</strong>
+                                <ul>
+                                  <li>Ubah rumus di <strong>D2</strong> menjadi:
+                                    <code>=IFERROR(VLOOKUP(C2,$I$2:$J$6,2,FALSE),"Golongan tidak ditemukan")</code>
+                                  </li>
+                                  <li>Salin ke bawah hingga <strong>D9</strong>.</li>
+                                  <li>Sekarang data "II" dan "VI" akan menampilkan teks "Golongan tidak ditemukan" bukan error <code>#N/A</code>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Format Gaji:</strong>
+                                <ul>
+                                  <li>Blok sel D2:D9.</li>
+                                  <li>Tab Home → Number → pilih Currency atau Accounting dengan simbol Rp.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Penjelasan Rumus:</strong>
+                            <ul>
+                              <li><strong>VLOOKUP:</strong>
+                                <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
+                                <br />→ <code>C2</code> = nilai yang dicari (golongan)
+                                <br />→ <code>$I$2:$J$6</code> = tabel referensi (absolut agar tidak berubah saat disalin)
+                                <br />→ <code>2</code> = kolom ke-2 dari tabel referensi (Gaji Pokok)
+                                <br />→ <code>FALSE</code> = mencari kecocokan tepat (exact match)
+                              </li>
+                              <li><strong>IFERROR:</strong>
+                                <code>=IFERROR(value, value_if_error)</code>
+                                <br />→ Jika VLOOKUP menghasilkan error (#N/A), tampilkan teks "Golongan tidak ditemukan".
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tips:</strong>
+                            <ul>
+                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match, terutama untuk kode/golongan.</li>
+                              <li>Gunakan referensi absolut <code>$</code> pada tabel referensi agar tidak bergeser saat rumus disalin.</li>
+                              <li>IFERROR sangat berguna untuk membuat laporan yang rapi tanpa menampilkan error.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/sistem_penggajian.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
                 </ol>
               </div>
