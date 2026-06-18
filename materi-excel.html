@@ -1137,27 +1137,335 @@
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#programexcel">
-            <div class="accordion-body">
+            <div class="accordion-body p-0">
               <div class="contoh-box mt-0">
                 <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
                 <ol class="mt-2 mb-0 ps-3">
+                  <!-- Dasar -->
                   <li>
                     <strong class="text-success">Dasar:</strong> Buat Column
                     chart penjualan 6 bulan. Tambahkan judul, label sumbu, dan
                     data label. Ubah warna kolom menjadi biru gradasi.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Membuat Column chart dari data tabel.</li>
+                              <li>Menambahkan judul chart, label sumbu, dan data label.</li>
+                              <li>Mengubah warna dan gaya chart.</li>
+                              <li>Memformat chart agar profesional.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Penjualan 6 Bulan</strong> <br />
+                            <img src="assets/files/sesi3dasar.png" alt="Tabel data penjualan 6 bulan" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat tabel data:</strong>
+                                <ul>
+                                  <li>A1: Bulan, B1: Penjualan</li>
+                                  <li>A2:A7: Jan, Feb, Mar, Apr, Mei, Jun</li>
+                                  <li>B2:B7: 12000000, 15000000, 11000000, 18000000, 14000000, 16000000</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Blok data A1:B7.</strong>
+                              </li>
+                              <li>
+                                <strong>Insert Column Chart:</strong>
+                                <ul>
+                                  <li>Tab <strong>Insert</strong> → grup Charts → pilih <strong>Clustered Column</strong> (kolom pertama).</li>
+                                  <li>Chart akan langsung muncul di sheet.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan judul chart:</strong>
+                                <ul>
+                                  <li>Klik judul chart (default: "Chart Title").</li>
+                                  <li>Ketik: <strong>"Penjualan 6 Bulan Pertama"</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan label sumbu:</strong>
+                                <ul>
+                                  <li>Klik chart → <strong>Chart Design</strong> → <strong>Add Chart Element</strong>.</li>
+                                  <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Horizontal</strong> → ketik: Bulan.</li>
+                                  <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Vertical</strong> → ketik: Nominal (Rp).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan Data Label:</strong>
+                                <ul>
+                                  <li>Klik chart → <strong>Chart Design</strong> → <strong>Add Chart Element</strong>.</li>
+                                  <li>Pilih <strong>Data Labels</strong> → <strong>Outside End</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Ubah warna kolom menjadi biru gradasi:</strong>
+                                <ul>
+                                  <li>Klik salah satu kolom (semua kolom akan terseleksi).</li>
+                                  <li>Klik kanan → pilih <strong>Format Data Series</strong>.</li>
+                                  <li>Pilih <strong>Fill</strong> → <strong>Gradient fill</strong>.</li>
+                                  <li>Atur warna: <strong>Light Blue</strong> ke <strong>Dark Blue</strong>.</li>
+                                  <li>Atur arah gradasi (misal: Linear Down).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Rapikan chart:</strong>
+                                <ul>
+                                  <li>Tambahkan border pada chart area jika perlu.</li>
+                                  <li>Sesuaikan ukuran font judul dan label.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/chart_penjualan.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
+                  <!-- Menengah -->
                   <li>
                     <strong class="text-warning">Menengah:</strong> Buat
                     multi-series chart (Column + Line) untuk target vs
                     realisasi. Terapkan Data Bars pada sel realisasi. Gunakan
                     Icon Sets (hijau ≥ target, kuning = 90%, merah &lt; 90%).
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Membuat combo chart (Column + Line) / multi-series chart.</li>
+                              <li>Conditional Formatting: Data Bars.</li>
+                              <li>Conditional Formatting: Icon Sets.</li>
+                              <li>Mengelola beberapa series dalam satu chart.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Target vs Realisasi</strong> <br />
+                            <img src="assets/files/sesi3menengah.png" alt="Tabel target vs realisasi" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat tabel data:</strong>
+                                <ul>
+                                  <li>A1: Bulan, B1: Target, C1: Realisasi</li>
+                                  <li>A2:A7: Jan - Jun</li>
+                                  <li>B2:B7: 15000000, 15000000, 15000000, 20000000, 20000000, 20000000</li>
+                                  <li>C2:C7: 14000000, 16000000, 13500000, 19000000, 18000000, 21000000</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat Column Chart:</strong>
+                                <ul>
+                                  <li>Blok A1:C7 → Insert → Clustered Column.</li>
+                                  <li>Target dan Realisasi tampil sebagai 2 kolom berbeda.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Ubah seri Realisasi menjadi Line:</strong>
+                                <ul>
+                                  <li>Klik kanan pada kolom Realisasi → <strong>Change Series Chart Type</strong>.</li>
+                                  <li>Pilih <strong>Line with Markers</strong> untuk seri Realisasi.</li>
+                                  <li>Klik OK.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan judul chart:</strong> "Target vs Realisasi 2025".
+                              </li>
+                              <li>
+                                <strong>Tambahkan Axis Titles &amp; Data Labels</strong> seperti praktik dasar.
+                              </li>
+                              <li>
+                                <strong>Terapkan Data Bars pada sel Realisasi:</strong>
+                                <ul>
+                                  <li>Blok C2:C7.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
+                                  <li>Pilih <strong>Data Bars</strong> → pilih warna misal <strong>Blue Data Bar</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Terapkan Icon Sets pada sel Target:</strong>
+                                <ul>
+                                  <li>Blok B2:B7.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
+                                  <li>Pilih <strong>Icon Sets</strong> → pilih <strong>3 Traffic Lights (Unrimmed)</strong> atau <strong>3 Symbols (Circled)</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat aturan Icon Sets berdasarkan persentase realisasi terhadap target:</strong>
+                                <ul>
+                                  <li>Blok kolom Realisasi (C2:C7) atau buat kolom bantu D dengan rumus <code>=C2/B2</code> (format %).</li>
+                                  <li>Tab Home → Conditional Formatting → <strong>Manage Rules</strong>.</li>
+                                  <li>Pilih <strong>New Rule</strong> → <strong>Format all cells based on their values</strong>.</li>
+                                  <li>Format Style: <strong>Icon Sets</strong>.</li>
+                                  <li>Atur: hijau jika ≥ 100%, kuning jika ≥ 90%, merah jika &lt; 90%.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/target_realisasi.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
+                  <!-- Lanjutan -->
                   <li>
                     <strong class="text-danger">Lanjutan:</strong> Buat mini
                     dashboard 1 sheet: Line chart tren penjualan, Pie chart
                     komposisi produk, Bar chart per region. Tambahkan Color
                     Scales gradasi pada data. Gunakan Slicer untuk memfilter
                     chart secara interaktif.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Membuat Line chart, Pie chart, dan Bar chart.</li>
+                              <li>Color Scales (Conditional Formatting).</li>
+                              <li>Menggunakan Slicer untuk interaktivitas chart.</li>
+                              <li>Merancang tata letak mini dashboard dalam 1 sheet.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Data Penjualan Multi-Dimensi</strong> <br />
+                            <img src="assets/files/sesi3lanjutan_data.png" alt="Data penjualan multi-dimensi" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat data tabel dengan kolom:</strong>
+                                <ul>
+                                  <li>A1: Bulan, B1: Region, C1: Produk, D1: Penjualan</li>
+                                  <li>Isi 20+ baris data, misal:
+                                    <ul>
+                                      <li>Jan — Jakarta — Laptop — 50000000</li>
+                                      <li>Jan — Jakarta — HP — 30000000</li>
+                                      <li>Jan — Bandung — Laptop — 25000000</li>
+                                      <li>Jan — Bandung — HP — 20000000</li>
+                                      <li>Feb — Jakarta — Laptop — 55000000</li>
+                                      <li>Feb — Jakarta — HP — 28000000</li>
+                                      <li>... dan seterusnya untuk 3-4 bulan</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat Line Chart (tren penjualan per bulan):</strong>
+                                <ul>
+                                  <li>Buat tabel rekap total penjualan per bulan (gunakan SUMIF atau PivotTable sederhana).</li>
+                                  <li>Blok data → Insert → Line Chart.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat Pie Chart (komposisi per produk):</strong>
+                                <ul>
+                                  <li>Buat tabel rekap total penjualan per produk.</li>
+                                  <li>Blok data → Insert → Pie Chart.</li>
+                                  <li>Tambahkan Data Labels → pilih <strong>Percentage</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat Bar Chart (penjualan per region):</strong>
+                                <ul>
+                                  <li>Buat tabel rekap total penjualan per region.</li>
+                                  <li>Blok data → Insert → Bar Chart (Clustered Bar).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Atur tata letak dashboard:</strong>
+                                <ul>
+                                  <li>Pindahkan chart-chart ke posisi yang rapi dalam 1 sheet.</li>
+                                  <li>Beri judul masing-masing chart.</li>
+                                  <li>Sembunyikan gridlines agar tampak seperti dashboard (View → Gridlines).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Terapkan Color Scales:</strong>
+                                <ul>
+                                  <li>Blok kolom Penjualan (D2:D21).</li>
+                                  <li>Tab Home → Conditional Formatting → <strong>Color Scales</strong>.</li>
+                                  <li>Pilih <strong>Green - Yellow - Red Color Scale</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan Slicer untuk filter interaktif:</strong>
+                                <ul>
+                                  <li>Klik salah satu chart → Tab <strong>Chart Design</strong> → <strong>Add Chart Element</strong>.</li>
+                                  <li>Atau: Klik di area kosong → Tab <strong>Insert</strong> → <strong>Slicer</strong>.</li>
+                                  <li>Centang <strong>Region</strong> dan <strong>Produk</strong>.</li>
+                                  <li>Klik OK → Slicer akan muncul.</li>
+                                  <li>Klik item di Slicer (misal "Jakarta") → semua chart akan otomatis terfilter.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tampilan Mini Dashboard:</strong> <br />
+                            <img src="assets/files/sesi3lanjutan.png" alt="Mini dashboard" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/mini_dashboard.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
                 </ol>
               </div>
@@ -1174,22 +1482,209 @@
             </button>
           </h2>
           <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#programexcel">
-            <div class="accordion-body">
+            <div class="accordion-body p-0">
               <div class="contoh-box mt-0">
                 <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
                 <ol class="mt-2 mb-0 ps-3">
+                  <!-- Dasar -->
                   <li>
                     <strong class="text-success">Dasar:</strong> Buat tabel
                     data 20 baris. Lakukan sorting A-Z berdasarkan nama, lalu
                     sorting multi-level (kota → nama). Gunakan Filter untuk
                     menampilkan data tertentu.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Sorting data A-Z / Z-A.</li>
+                              <li>Multi-level sorting (Kota → Nama).</li>
+                              <li>Filter data untuk menampilkan baris tertentu.</li>
+                              <li>Mengelola data tabel dengan cepat.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Karyawan 20 Baris</strong> <br />
+                            <img src="assets/files/sesi4dasar.png" alt="Tabel data karyawan" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat tabel data dengan judul kolom:</strong>
+                                <ul>
+                                  <li>A1: No, B1: Nama, C1: Kota, D1: Usia, E1: Divisi</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi 20 baris data karyawan fiktif:</strong>
+                                <ul>
+                                  <li>Andi — Jakarta — 28 — IT</li>
+                                  <li>Budi — Bandung — 32 — Marketing</li>
+                                  <li>Cici — Jakarta — 25 — HRD</li>
+                                  <li>Dodi — Surabaya — 30 — IT</li>
+                                  <li>Eka — Bandung — 27 — Marketing</li>
+                                  <li>... dan seterusnya hingga 20 baris.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Sorting A-Z berdasarkan Nama:</strong>
+                                <ul>
+                                  <li>Blok seluruh data (A1:E21) atau klik di dalam tabel.</li>
+                                  <li>Tab <strong>Data</strong> → <strong>Sort A to Z</strong> (ikon A↓Z).</li>
+                                  <li>Data akan terurut berdasarkan nama secara alfabet.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Sorting multi-level (Kota → Nama):</strong>
+                                <ul>
+                                  <li>Klik di dalam tabel → Tab <strong>Data</strong> → <strong>Sort</strong>.</li>
+                                  <li>Pada dialog Sort:
+                                    <ul>
+                                      <li>Sort by: <strong>Kota</strong> → A to Z.</li>
+                                      <li>Klik <strong>Add Level</strong>.</li>
+                                      <li>Then by: <strong>Nama</strong> → A to Z.</li>
+                                    </ul>
+                                  </li>
+                                  <li>Klik OK → data akan diurutkan berdasarkan kota, lalu per nama dalam kota yang sama.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Gunakan Filter:</strong>
+                                <ul>
+                                  <li>Klik di dalam tabel → Tab <strong>Data</strong> → <strong>Filter</strong> (ikon corong).</li>
+                                  <li>Panah filter akan muncul di setiap header kolom.</li>
+                                  <li>Klik panah pada kolom <strong>Kota</strong> → centang hanya <strong>Jakarta</strong> → OK.</li>
+                                  <li>Data hanya menampilkan karyawan dari Jakarta.</li>
+                                  <li>Klik panah pada kolom <strong>Divisi</strong> → centang hanya <strong>IT</strong> → OK.</li>
+                                  <li>Sekarang data menampilkan karyawan IT dari Jakarta.</li>
+                                  <li>Untuk menghapus filter: klik panah → <strong>Clear Filter from ...</strong>.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/data_karyawan.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
+                  <!-- Menengah -->
                   <li>
                     <strong class="text-warning">Menengah:</strong> Buat
                     PivotTable dari data penjualan: rekap total per region
                     &amp; per produk. Tambahkan PivotChart Column. Gunakan
                     Slicer untuk filter region interaktif.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Membuat PivotTable dari data mentah.</li>
+                              <li>Mengatur Row, Column, Values, dan Filter di PivotTable.</li>
+                              <li>Membuat PivotChart dari PivotTable.</li>
+                              <li>Menambahkan Slicer untuk filter interaktif.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Data Penjualan per Region &amp; Produk</strong> <br />
+                            <img src="assets/files/sesi4menengah_data.png" alt="Data penjualan" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat data penjualan dengan kolom:</strong>
+                                <ul>
+                                  <li>A1: Tanggal, B1: Region, C1: Produk, D1: Qty, E1: Harga Satuan, F1: Total</li>
+                                  <li>Isi 20+ baris data, misal:
+                                    <ul>
+                                      <li>01/01/2025 — Jakarta — Laptop — 2 — 10000000 — =D2*E2</li>
+                                      <li>05/01/2025 — Bandung — HP — 5 — 3000000 — =D3*E3</li>
+                                      <li>... dan seterusnya.</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat PivotTable:</strong>
+                                <ul>
+                                  <li>Klik di dalam tabel data → Tab <strong>Insert</strong> → <strong>PivotTable</strong>.</li>
+                                  <li>Pilih <strong>New Worksheet</strong> → OK.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Atur PivotTable Fields:</strong>
+                                <ul>
+                                  <li>Drag <strong>Region</strong> ke <strong>Rows</strong>.</li>
+                                  <li>Drag <strong>Produk</strong> ke <strong>Columns</strong>.</li>
+                                  <li>Drag <strong>Total</strong> ke <strong>Values</strong> (pastikan fungsinya Sum).</li>
+                                  <li>Sekarang PivotTable menampilkan total penjualan per region (baris) dan per produk (kolom).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat PivotChart:</strong>
+                                <ul>
+                                  <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> → <strong>PivotChart</strong>.</li>
+                                  <li>Pilih <strong>Clustered Column</strong> → OK.</li>
+                                  <li>Chart akan menampilkan perbandingan penjualan per region per produk.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan Slicer untuk filter region:</strong>
+                                <ul>
+                                  <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> → <strong>Insert Slicer</strong>.</li>
+                                  <li>Centang <strong>Region</strong> → OK.</li>
+                                  <li>Slicer akan muncul sebagai kotak dengan tombol region.</li>
+                                  <li>Klik "Jakarta" → PivotTable dan PivotChart akan menampilkan hanya data Jakarta.</li>
+                                  <li>Klik tombol dengan ikon silang di Slicer untuk menghapus filter.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Hasil Akhir:</strong> <br />
+                            <img src="assets/files/sesi4menengah.png" alt="PivotTable dan PivotChart" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/pivot_penjualan.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
+                  <!-- Lanjutan (Final) -->
                   <li>
                     <strong class="text-danger">Lanjutan (Final):</strong>
                     Buat aplikasi pencatatan pengeluaran (20+ baris): dropdown
@@ -1197,6 +1692,132 @@
                     PivotTable rekap per kategori + Pie chart + Conditional
                     Formatting (merah jika &gt; rata-rata). Gunakan Slicer
                     untuk filter bulan.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Data Validation (Dropdown list).</li>
+                              <li>Fungsi IF untuk kategori otomatis.</li>
+                              <li>PivotTable dan PivotChart (Pie).</li>
+                              <li>Conditional Formatting (merah jika &gt; rata-rata).</li>
+                              <li>Slicer untuk filter bulan interaktif.</li>
+                              <li>Menggabungkan semua skill Excel dalam satu project.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Struktur Aplikasi Pencatatan Pengeluaran</strong> <br />
+                            <img src="assets/files/sesi4lanjutan_struktur.png" alt="Struktur aplikasi pengeluaran" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat sheet utama "Data Pengeluaran" dengan kolom:</strong>
+                                <ul>
+                                  <li>A1: Tanggal, B1: Kategori, C1: Deskripsi, D1: Jumlah</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat dropdown kategori dengan Data Validation:</strong>
+                                <ul>
+                                  <li>Di sel terpisah (misal F1:F5) ketik daftar kategori: Makanan, Transport, Belanja, Tagihan, Hiburan.</li>
+                                  <li>Blok B2:B30 → Tab <strong>Data</strong> → <strong>Data Validation</strong>.</li>
+                                  <li>Allow: <strong>List</strong> → Source: <strong>=$F$1:$F$5</strong> → OK.</li>
+                                  <li>Sekarang kolom Kategori memiliki dropdown pilihan.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi 20+ baris data pengeluaran:</strong>
+                                <ul>
+                                  <li>01/01/2025 — Makanan — Nasi goreng — 25000</li>
+                                  <li>02/01/2025 — Transport — Bensin — 50000</li>
+                                  <li>03/01/2025 — Belanja — Sabun — 15000</li>
+                                  <li>... dan seterusnya untuk 2-3 bulan (Januari, Februari, Maret).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat kolom bantu untuk Bulan (opsional jika ingin filter per bulan):</strong>
+                                <ul>
+                                  <li>Pada E1 ketik: Bulan</li>
+                                  <li>Pada E2 ketik: <code>=TEXT(A2,"MMMM")</code> → salin ke bawah.</li>
+                                  <li>Ini akan menghasilkan nama bulan dari kolom Tanggal.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat PivotTable rekap per kategori:</strong>
+                                <ul>
+                                  <li>Insert → PivotTable → New Worksheet.</li>
+                                  <li>Drag <strong>Kategori</strong> ke Rows.</li>
+                                  <li>Drag <strong>Jumlah</strong> ke Values (Sum).</li>
+                                  <li>Sort PivotTable descending berdasarkan nilai untuk melihat kategori pengeluaran terbesar.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat Pie Chart dari PivotTable:</strong>
+                                <ul>
+                                  <li>Klik PivotTable → PivotTable Analyze → PivotChart.</li>
+                                  <li>Pilih <strong>Pie</strong> → OK.</li>
+                                  <li>Tambahkan Data Labels → <strong>Percentage</strong> dan <strong>Category Name</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Terapkan Conditional Formatting (merah jika &gt; rata-rata):</strong>
+                                <ul>
+                                  <li>Blok kolom Jumlah (D2:D30) di sheet data.</li>
+                                  <li>Tab Home → Conditional Formatting → <strong>Top/Bottom Rules</strong>.</li>
+                                  <li>Pilih <strong>Above Average</strong>.</li>
+                                  <li>Pilih format <strong>Light Red Fill with Dark Red Text</strong>.</li>
+                                  <li>Klik OK → semua pengeluaran di atas rata-rata akan berwarna merah.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tambahkan Slicer untuk filter bulan:</strong>
+                                <ul>
+                                  <li>Klik di dalam PivotTable → PivotTable Analyze → Insert Slicer.</li>
+                                  <li>Centang <strong>Bulan</strong> (dari kolom bantu) → OK.</li>
+                                  <li>Klik "Januari" → PivotTable dan Pie chart menampilkan hanya data Januari.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Hasil Akhir Final Project:</strong> <br />
+                            <img src="assets/files/sesi4lanjutan.png" alt="Final project dashboard" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Ringkasan Skill yang Digunakan:</strong>
+                            <ul>
+                              <li>Data Entry &amp; Formatting (Pertemuan 1)</li>
+                              <li>Fungsi IF, TEXT (Pertemuan 2)</li>
+                              <li>Chart &amp; Conditional Formatting (Pertemuan 3)</li>
+                              <li>PivotTable, Slicer, Data Validation (Pertemuan 4)</li>
+                            </ul>
+                            <p class="mt-2 mb-0 text-muted fst-italic">
+                              Project ini menggabungkan seluruh materi dari Pertemuan 1-4.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/pencatatan_pengeluaran.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
                   </li>
                 </ol>
               </div>
