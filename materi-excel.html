@@ -1021,73 +1021,99 @@
                             </ol>
                           </div>
                           <div class="mb-3">
-                            <strong>Contoh Tabel</strong> <br />
-                            <img src="assets/files/sistem_penggajian.png" alt="Tabel data karyawan" />
-                          </div>
-                          <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
                               <li>
-                                <strong>Buat tabel referensi golongan &amp; gaji</strong> (misal di sheet "Referensi"
-                                atau di kolom I:J):
-                                <ul>
-                                  <li>I1: Kode Gol, J1: Gaji Pokok</li>
-                                  <li>I2: I, J2: 5000000</li>
-                                  <li>I3: II, J3: 7000000</li>
-                                  <li>I4: III, J4: 9000000</li>
-                                  <li>I5: IV, J5: 12000000</li>
-                                  <li>I6: V, J6: 15000000</li>
-                                </ul>
+                                <p><strong>Buat tabel referensi golongan &amp; gaji</strong> (misal di sheet "Referensi"
+                                  atau di kolom F:G):</p>
+                                <div class="mb-3">
+                                  <img src="assets/files/tabel_referensi_golongan_&_gaji.png" alt="">
+                                  <ul>
+                                    <li>F2: <strong>Kode Golongan</strong>, G2: <strong>Gaji Pokok</strong></li>
+                                    <li>F3: I, G3: 5000000</li>
+                                    <li>F4: II, G4: 7000000</li>
+                                    <li>F5: III, G5: 9000000</li>
+                                    <li>F6: IV, G6: 12000000</li>
+                                    <li>F7: V, G7: 15000000</li>
+                                  </ul>
+                                </div>
+
                               </li>
                               <li>
-                                <strong>Buat tabel data karyawan</strong> (mulai dari A1):
-                                <ul>
-                                  <li>A1: Kode, B1: Nama, C1: Golongan, D1: Gaji Pokok</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Isi data karyawan</strong> (contoh 8-10 baris):
-                                <ul>
-                                  <li>K001 — Andi — III</li>
-                                  <li>K002 — Budi — II</li>
-                                  <li>K003 — Cici — V</li>
-                                  <li>K004 — Dodi — I</li>
-                                  <li>K005 — Eka — IV</li>
-                                  <li>K006 — Fani — III</li>
-                                  <li>K007 — Gita — II (sengaja salah ketik "II" bukan golongan valid) → untuk demo
-                                    IFERROR</li>
-                                  <li>K008 — Hadi — VI (golongan tidak ada di referensi) → menampilkan error</li>
-                                </ul>
+                                <p><strong>Buat tabel data karyawan</strong> (mulai dari A2):</p>
+                                <div class="mb-3">
+                                  <img src="assets/files/tabel_data_karyawan.png" alt="">
+                                  <ul>
+                                    <li>A2: <strong>Kode</strong>, B2: <strong>Nama</strong>, C2:
+                                      <strong>Golongan</strong>, D2: <strong>Gaji Pokok</strong>
+                                    </li>
+                                  </ul>
+                                  <strong>Isi data karyawan</strong> (contoh 8-10 baris):
+                                  <ul>
+                                    <li>K001 — Andi — III</li>
+                                    <li>K002 — Budi — II</li>
+                                    <li>K003 — Cici — V</li>
+                                    <li>K004 — Dodi — I</li>
+                                    <li>K005 — Eka — IV</li>
+                                    <li>K006 — Fani — III</li>
+                                    <li>K007 — Gita — ll (sengaja salah ketik "II" bukan golongan valid) → untuk demo
+                                      IFERROR</li>
+                                    <li>K008 — Hadi — VI (golongan tidak ada di referensi) → menampilkan error</li>
+                                  </ul>
+                                </div>
                               </li>
                               <li>
                                 <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
                                 <ul>
-                                  <li>Pada sel <strong>D2</strong> ketik:
-                                    <code>=VLOOKUP(C2;$A$12:$B$16;2;)</code>
+                                  <li>Pada sel <strong>D3</strong> ketik:
+                                    <code>=VLOOKUP(C3;$F$3:$G$7;2;FALSE)</code>
                                   </li>
-                                  <li>Salin ke bawah hingga <strong>D9</strong> atau klik 2x pada kotak kecil di pojok kanan bawah sel.</li>
+                                  <li>Salin sel <strong>D3</strong> - <strong>D10</strong> atau klik 2x pada kotak kecil
+                                    di pojok
+                                    kanan di sel <strong>D3</strong>.
+                                  </li>
                                   <li>Perhatikan: data "II" (dengan spasi) dan "VI" akan menghasilkan error
-                                    <code>#N/A</code> karena tidak ditemukan di tabel referensi.</li>
+                                    <code>#N/A</code> karena tidak ditemukan di tabel referensi.
+                                  </li>
+                                  <li>
+                                    <div class="my-3">
+                                      <img src="assets/files/tabel_data_karyawan_vlookup.png" alt="">
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="my-3">
+                                      <strong>Format Gaji:</strong>
+                                      <ul>
+                                        <li>Blok sel <strong>D3</strong>-<strong>D10</strong>.</li>
+                                        <li>Tab <strong>Home</strong> → <strong>Number</strong> → pilih
+                                          <strong>Currency</strong> atau <strong>Accounting</strong> dengan simbol Rp.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Tambahkan IFERROR untuk menangani error:</strong>
                                 <ul>
-                                  <li>Ubah rumus di <strong>D2</strong> menjadi:
-                                    <code>=IFERROR(VLOOKUP(C2,$I$2:$J$6,2,FALSE),"Golongan tidak ditemukan")</code>
+                                  <li>Ubah rumus di <strong>D15</strong> menjadi:
+                                    <code>=IFERROR(VLOOKUP(C15;$F$15:$G$19;2;FALSE);"Golongan tidak ditemukan")</code>
                                   </li>
-                                  <li>Salin ke bawah hingga <strong>D9</strong>.</li>
-                                  <li>Sekarang data "II" dan "VI" akan menampilkan teks "Golongan tidak ditemukan" bukan
-                                    error <code>#N/A</code>.</li>
+                                  <li>Salin sel <strong>D15</strong> - <strong>D22</strong> atau klik 2x pada kotak
+                                    kecil di pojok
+                                    kanan di sel <strong>D15</strong>.
+                                  </li>
+                                  <li>SeGarang data "II" dan "VI" akan menampilkan teks "Golongan tidak ditemukan" bukan
+                                    error <code>#N/A</code>
+                                  </li>
+                                  <li>
+                                    <div class="my-3">
+                                      <img src="assets/files/tabel_data_karyawan_iferror.png" alt="">
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
-                              <li>
-                                <strong>Format Gaji:</strong>
-                                <ul>
-                                  <li>Blok sel D2:D9.</li>
-                                  <li>Tab Home → Number → pilih Currency atau Accounting dengan simbol Rp.</li>
-                                </ul>
-                              </li>
+
                             </ol>
                           </div>
                           <div class="mb-3">
@@ -1167,7 +1193,8 @@
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
                               <li>
-                                <strong>Buat tabel referensi horizontal untuk predikat nilai</strong> (misal di baris 1-2):
+                                <strong>Buat tabel referensi horizontal untuk predikat nilai</strong> (misal di baris
+                                1-2):
                                 <ul>
                                   <li>A1: 0, B1: 60, C1: 70, D1: 80, E1: 90</li>
                                   <li>A2: E, B2: D, C2: C, D2: B, E2: A</li>
@@ -1177,7 +1204,8 @@
                               <li>
                                 <strong>Buat tabel data siswa</strong> (mulai dari A4):
                                 <ul>
-                                  <li>A4: No, B4: Nama, C4: Nilai, D4: Predikat (HLOOKUP), E4: Nilai Huruf (INDEX-MATCH),
+                                  <li>A4: No, B4: Nama, C4: Nilai, D4: Predikat (HLOOKUP), E4: Nilai Huruf
+                                    (INDEX-MATCH),
                                     F4: Status (XLOOKUP)</li>
                                 </ul>
                               </li>
@@ -1201,7 +1229,8 @@
                                     <code>=HLOOKUP(C5,$A$1:$E$2,2,TRUE)</code>
                                   </li>
                                   <li>Salin ke bawah hingga <strong>D12</strong>.</li>
-                                  <li>Parameter <code>TRUE</code> (range lookup) karena nilai dicocokkan ke dalam rentang
+                                  <li>Parameter <code>TRUE</code> (range lookup) karena nilai dicocokkan ke dalam
+                                    rentang
                                     (0-59, 60-69, 70-79, 80-89, 90+).</li>
                                 </ul>
                               </li>
@@ -1259,7 +1288,8 @@
                               <li><strong>XLOOKUP:</strong>
                                 <code>=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code>
                                 <br />→ Fungsi modern pengganti VLOOKUP/HLOOKUP (tersedia Excel 365/2021+).
-                                <br />→ <code>match_mode</code>: 0 = exact, -1 = exact atau terdekat lebih kecil, 1 = exact
+                                <br />→ <code>match_mode</code>: 0 = exact, -1 = exact atau terdekat lebih kecil, 1 =
+                                exact
                                 atau terdekat lebih besar, 2 = wildcard.
                                 <br />→ Tidak memerlukan referensi absolut yang rumit dan bisa mencari ke kiri.
                               </li>
@@ -1297,7 +1327,8 @@
                           <div class="mb-3">
                             <strong>Tips:</strong>
                             <ul>
-                              <li>Gunakan <code>TRUE</code> pada HLOOKUP jika data referensi berupa rentang nilai (seperti
+                              <li>Gunakan <code>TRUE</code> pada HLOOKUP jika data referensi berupa rentang nilai
+                                (seperti
                                 predikat).</li>
                               <li>INDEX+MATCH sangat berguna untuk two-way lookup (mencari berdasarkan baris DAN kolom).
                               </li>
@@ -1532,7 +1563,8 @@
                                 <strong>Buat aturan Icon Sets berdasarkan persentase realisasi terhadap target:</strong>
                                 <ul>
                                   <li>Blok kolom Realisasi (C2:C7) atau buat kolom bantu D dengan rumus
-                                    <code>=C2/B2</code> (format %).</li>
+                                    <code>=C2/B2</code> (format %).
+                                  </li>
                                   <li>Tab Home → Conditional Formatting → <strong>Manage Rules</strong>.</li>
                                   <li>Pilih <strong>New Rule</strong> → <strong>Format all cells based on their
                                       values</strong>.</li>
@@ -1775,7 +1807,8 @@
                                     corong).</li>
                                   <li>Panah filter akan muncul di setiap header kolom.</li>
                                   <li>Klik panah pada kolom <strong>Kota</strong> → centang hanya
-                                    <strong>Jakarta</strong> → OK.</li>
+                                    <strong>Jakarta</strong> → OK.
+                                  </li>
                                   <li>Data hanya menampilkan karyawan dari Jakarta.</li>
                                   <li>Klik panah pada kolom <strong>Divisi</strong> → centang hanya <strong>IT</strong>
                                     → OK.</li>
@@ -1848,7 +1881,8 @@
                                 <strong>Buat PivotTable:</strong>
                                 <ul>
                                   <li>Klik di dalam tabel data → Tab <strong>Insert</strong> →
-                                    <strong>PivotTable</strong>.</li>
+                                    <strong>PivotTable</strong>.
+                                  </li>
                                   <li>Pilih <strong>New Worksheet</strong> → OK.</li>
                                 </ul>
                               </li>
@@ -1867,7 +1901,8 @@
                                 <strong>Buat PivotChart:</strong>
                                 <ul>
                                   <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> →
-                                    <strong>PivotChart</strong>.</li>
+                                    <strong>PivotChart</strong>.
+                                  </li>
                                   <li>Pilih <strong>Clustered Column</strong> → OK.</li>
                                   <li>Chart akan menampilkan perbandingan penjualan per region per produk.</li>
                                 </ul>
@@ -1876,7 +1911,8 @@
                                 <strong>Tambahkan Slicer untuk filter region:</strong>
                                 <ul>
                                   <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> →
-                                    <strong>Insert Slicer</strong>.</li>
+                                    <strong>Insert Slicer</strong>.
+                                  </li>
                                   <li>Centang <strong>Region</strong> → OK.</li>
                                   <li>Slicer akan muncul sebagai kotak dengan tombol region.</li>
                                   <li>Klik "Jakarta" → PivotTable dan PivotChart akan menampilkan hanya data Jakarta.
@@ -2048,7 +2084,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
 
