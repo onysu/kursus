@@ -1132,6 +1132,194 @@
                         Latihan</a>
                     </div>
                   </li>
+                  <!-- Lanjutan 2: HLOOKUP, INDEX-MATCH, XLOOKUP -->
+                  <li>
+                    <strong class="text-danger">Lanjutan:</strong> Buat tabel
+                    data nilai siswa dengan tabel referensi nilai dalam bentuk
+                    horizontal. Gunakan <code>=HLOOKUP</code> untuk mencari
+                    predikat, <code>=INDEX + MATCH</code> untuk pencarian
+                    dua-arah (two-way lookup), dan
+                    <code>=XLOOKUP</code> untuk pencarian modern.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse6b" aria-expanded="false" aria-controls="collapse6b">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse6b" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>HLOOKUP()</code> untuk pencarian horizontal.</li>
+                              <li>Fungsi <code>INDEX()</code> + <code>MATCH()</code> untuk two-way lookup.</li>
+                              <li>Fungsi <code>XLOOKUP()</code> alternatif modern VLOOKUP/HLOOKUP.</li>
+                              <li>Perbandingan ketiga metode pencarian.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Contoh Tabel Data Siswa &amp; Referensi</strong> <br />
+                            <img src="assets/files/hlookup_index_match.png" alt="Tabel HLOOKUP INDEX MATCH" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat tabel referensi horizontal untuk predikat nilai</strong> (misal di baris 1-2):
+                                <ul>
+                                  <li>A1: 0, B1: 60, C1: 70, D1: 80, E1: 90</li>
+                                  <li>A2: E, B2: D, C2: C, D2: B, E2: A</li>
+                                </ul>
+                                Range referensi: <code>$A$1:$E$2</code>
+                              </li>
+                              <li>
+                                <strong>Buat tabel data siswa</strong> (mulai dari A4):
+                                <ul>
+                                  <li>A4: No, B4: Nama, C4: Nilai, D4: Predikat (HLOOKUP), E4: Nilai Huruf (INDEX-MATCH),
+                                    F4: Status (XLOOKUP)</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data siswa</strong> (contoh 8 baris):
+                                <ul>
+                                  <li>Andi — 85</li>
+                                  <li>Budi — 92</li>
+                                  <li>Cici — 67</li>
+                                  <li>Dodi — 45</li>
+                                  <li>Eka — 78</li>
+                                  <li>Fani — 55</li>
+                                  <li>Gita — 73</li>
+                                  <li>Hadi — 88</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Gunakan HLOOKUP untuk predikat:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>D5</strong> ketik:
+                                    <code>=HLOOKUP(C5,$A$1:$E$2,2,TRUE)</code>
+                                  </li>
+                                  <li>Salin ke bawah hingga <strong>D12</strong>.</li>
+                                  <li>Parameter <code>TRUE</code> (range lookup) karena nilai dicocokkan ke dalam rentang
+                                    (0-59, 60-69, 70-79, 80-89, 90+).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Gunakan INDEX + MATCH untuk two-way lookup (Nilai Huruf):</strong>
+                                <ul>
+                                  <li>Buat tabel referensi dua dimensi di <strong>$A$15:$E$19</strong>:
+                                    <ul>
+                                      <li>Baris 15: , A, B, C, D</li>
+                                      <li>B16: Andi, 85, 90, 78, 92</li>
+                                      <li>B17: Budi, 80, 88, 75, 85</li>
+                                      <li>... dan seterusnya.</li>
+                                    </ul>
+                                  </li>
+                                  <li>Pada sel <strong>E5</strong> ketik:
+                                    <code>=INDEX($B$16:$E$19,MATCH(B5,$A$16:$A$19,0),MATCH("C",$B$15:$E$15,0))</code>
+                                  </li>
+                                  <li>Penjelasan: INDEX mengambil nilai dari range tabel, MATCH pertama mencari baris
+                                    berdasarkan nama, MATCH kedua mencari kolom berdasarkan kategori.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Gunakan XLOOKUP untuk status kelulusan:</strong>
+                                <ul>
+                                  <li>Pada sel <strong>F5</strong> ketik:
+                                    <code>=XLOOKUP(C5,$G$5:$G$9,$H$5:$H$9,"Tidak Valid",-1)</code>
+                                  </li>
+                                  <li>Atau contoh yang lebih sederhana:
+                                    <code>=XLOOKUP(C5,{0,60,70,80,90};{"E","D","C","B","A"})</code>
+                                  </li>
+                                  <li>Penjelasan: XLOOKUP mencari nilai C5 dalam array lookup, mengembalikan nilai
+                                    koresponden dari array return. Parameter -1 berarti pencarian exact match atau
+                                    terdekat lebih kecil (mirip TRUE di VLOOKUP).</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Penjelasan Rumus:</strong>
+                            <ul>
+                              <li><strong>HLOOKUP:</strong>
+                                <code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code>
+                                <br />→ Mirip VLOOKUP tetapi mencari secara horizontal (baris pertama tabel sebagai
+                                kunci).
+                                <br />→ <code>TRUE</code> untuk pencarian perkiraan (range), <code>FALSE</code> untuk
+                                exact match.
+                              </li>
+                              <li><strong>INDEX + MATCH:</strong>
+                                <code>=INDEX(array, MATCH(row_value, row_array, 0), MATCH(col_value, col_array, 0))</code>
+                                <br />→ Kombinasi ini lebih fleksibel daripada VLOOKUP karena bisa mencari ke kiri atau
+                                ke kanan.
+                                <br />→ <code>INDEX</code> mengambil nilai dari array pada baris dan kolom tertentu.
+                                <br />→ <code>MATCH</code> mencari posisi (baris/kolom) dari nilai yang dicari.
+                              </li>
+                              <li><strong>XLOOKUP:</strong>
+                                <code>=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code>
+                                <br />→ Fungsi modern pengganti VLOOKUP/HLOOKUP (tersedia Excel 365/2021+).
+                                <br />→ <code>match_mode</code>: 0 = exact, -1 = exact atau terdekat lebih kecil, 1 = exact
+                                atau terdekat lebih besar, 2 = wildcard.
+                                <br />→ Tidak memerlukan referensi absolut yang rumit dan bisa mencari ke kiri.
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Perbandingan:</strong>
+                            <table class="table table-bordered table-sm small">
+                              <thead>
+                                <tr>
+                                  <th>Fungsi</th>
+                                  <th>Kelebihan</th>
+                                  <th>Kekurangan</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>HLOOKUP</td>
+                                  <td>Sederhana untuk data horizontal</td>
+                                  <td>Hanya lookup di baris pertama; tidak bisa ke kiri</td>
+                                </tr>
+                                <tr>
+                                  <td>INDEX+MATCH</td>
+                                  <td>Fleksibel (two-way, lookup ke kiri)</td>
+                                  <td>Rumus lebih panjang; kurangi readable</td>
+                                </tr>
+                                <tr>
+                                  <td>XLOOKUP</td>
+                                  <td>Modern, fleksibel, built-in error handling</td>
+                                  <td>Hanya di Excel 365/2021+</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tips:</strong>
+                            <ul>
+                              <li>Gunakan <code>TRUE</code> pada HLOOKUP jika data referensi berupa rentang nilai (seperti
+                                predikat).</li>
+                              <li>INDEX+MATCH sangat berguna untuk two-way lookup (mencari berdasarkan baris DAN kolom).
+                              </li>
+                              <li>XLOOKUP adalah rekomendasi terbaru — dukung dengan catatan versi Excel yang
+                                mendukung.</li>
+                              <li>Selalu gunakan referensi absolut <code>$</code> pada tabel referensi.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/hlookup_index_match.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
+                  </li>
                 </ol>
               </div>
             </div>
