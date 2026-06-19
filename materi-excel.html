@@ -1103,7 +1103,7 @@
                                 <strong>Tambahkan IFERROR untuk menangani error:</strong>
                                 <ul>
                                   <li>Ubah rumus di <strong>D15</strong> menjadi:
-                                    <code>=IFERROR(VLOOKUP(C15;$F$15:$G$19;2;FALSE);"Golongan tidak ditemukan")</code>
+                                    <code>=IFERROR(VLOOKUP(C16;$F$16:$G$20;2;FALSE);"Golongan tidak ditemukan")</code>
                                   </li>
                                   <li>Salin sel <strong>D15</strong> - <strong>D22</strong> atau klik 2x pada kotak
                                     kecil di pojok
@@ -1128,7 +1128,7 @@
                               <li><strong>VLOOKUP:</strong>
                                 <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
                                 <br />→ <code>C15</code> = nilai yang dicari (golongan)
-                                <br />→ <code>$F$15:$G$19</code> = tabel referensi (absolut agar tidak berubah saat
+                                <br />→ <code>$F$16:$G$20</code> = tabel referensi (absolut agar tidak berubah saat
                                 disalin)
                                 <br />→ <code>2</code> = kolom ke-2 dari tabel referensi (Gaji Pokok)
                                 <br />→ <code>FALSE</code> = mencari kecocokan tepat (exact match)
