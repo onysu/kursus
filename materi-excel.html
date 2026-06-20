@@ -1289,6 +1289,19 @@
                               <div class="my-3">
                                 <img src="assets/files/sesi2_lanjutan2_hlookup.png" alt="Tabel HLOOKUP" />
                               </div>
+                              <div class="mb-3">
+                                <strong>Penjelasan Rumus:</strong>
+                                <ul class="dash-list">
+                                  <li><strong>HLOOKUP:</strong>
+                                    <code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code>
+                                    <br />→ Mirip VLOOKUP tetapi mencari secara horizontal (baris pertama tabel sebagai
+                                    kunci).
+                                    <br />→ <code>TRUE</code> untuk pencarian perkiraan (range), <code>FALSE</code>
+                                    untuk
+                                    exact match.
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                             <li>
                               <strong>Gunakan INDEX + MATCH untuk two-way lookup (Nilai Huruf):</strong>
@@ -1304,11 +1317,26 @@
                                 <li>Pada sel <strong>E3</strong> ketik:
                                   <code>=INDEX($B$18:$F$25,MATCH(B5,$A$18:$A$25,0),MATCH("C",$B$17:$E$17,0))</code>
                                 </li>
-                                <li>Penjelasan: <strong>INDEX</strong> mengambil nilai dari range tabel, <strong>MATCH</strong> pertama mencari baris
-                                  berdasarkan nama, <strong>MATCH</strong> kedua mencari kolom berdasarkan kategori.</li>
+                                <li>Penjelasan: <strong>INDEX</strong> mengambil nilai dari range tabel,
+                                  <strong>MATCH</strong> pertama mencari baris
+                                  berdasarkan nama, <strong>MATCH</strong> kedua mencari kolom berdasarkan kategori.
+                                </li>
                               </ul>
                               <div class="my-3">
                                 <img src="assets/files/sesi2_lanjutan2_index_match.png" alt="Tabel HLOOKUP" />
+                              </div>
+                              <div class="mb-3">
+                                <strong>Penjelasan Rumus:</strong>
+                                <ul class="dash-list">
+                                  <li><strong>INDEX + MATCH:</strong>
+                                    <code>=INDEX(array, MATCH(row_value, row_array, 0), MATCH(col_value, col_array, 0))</code>
+                                    <br />→ Kombinasi ini lebih fleksibel daripada VLOOKUP karena bisa mencari ke kiri
+                                    atau
+                                    ke kanan.
+                                    <br />→ <code>INDEX</code> mengambil nilai dari array pada baris dan kolom tertentu.
+                                    <br />→ <code>MATCH</code> mencari posisi (baris/kolom) dari nilai yang dicari.
+                                  </li>
+                                </ul>
                               </div>
                             </li>
                             <li>
@@ -1347,10 +1375,24 @@
                               <div class="my-3">
                                 <img src="assets/files/sesi2_lanjutan2_xlookup.png" alt="Tabel HLOOKUP" />
                               </div>
+                              <div class="mb-3">
+                                <strong>Penjelasan Rumus:</strong>
+                                <ul class="dash-list">
+                                  <li><strong>XLOOKUP:</strong>
+                                    <code>=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code>
+                                    <br />→ Fungsi modern pengganti VLOOKUP/HLOOKUP (tersedia Excel 365/2021+).
+                                    <br />→ <code>match_mode</code>: 0 = exact, -1 = exact atau terdekat lebih kecil, 1
+                                    =
+                                    exact
+                                    atau terdekat lebih besar, 2 = wildcard.
+                                    <br />→ Tidak memerlukan referensi absolut yang rumit dan bisa mencari ke kiri.
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                           </ol>
                           <!-- </div> -->
-                          <div class="mb-3">
+                          <!-- <div class="mb-3">
                             <strong>Penjelasan Rumus:</strong>
                             <ul class="dash-list">
                               <li><strong>HLOOKUP:</strong>
@@ -1376,7 +1418,7 @@
                                 <br />→ Tidak memerlukan referensi absolut yang rumit dan bisa mencari ke kiri.
                               </li>
                             </ul>
-                          </div>
+                          </div> -->
                           <div class="mb-3">
                             <strong>Perbandingan:</strong>
                             <table class="table table-bordered table-sm small">
