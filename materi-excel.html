@@ -1088,7 +1088,7 @@
                                 <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
                                 <ul class="dash-list">
                                   <li>Pada sel <strong>D4</strong> ketik:
-                                    <code>=VLOOKUP(C3;$F$3:$G$7;2;FALSE)</code>
+                                    <code>=VLOOKUP(C4;$F$4:$G$8;2;FALSE)</code>
                                   </li>
                                   <li>Salin sel <strong>D4</strong> - <strong>D11</strong> atau klik 2x pada kotak kecil
                                     di pojok
@@ -1096,14 +1096,12 @@
                                   </li>
                                   <li>Perhatikan: data "II" (dengan spasi) dan "VI" akan menghasilkan error
                                     <code>#N/A</code> karena tidak ditemukan di tabel referensi.
-                                  </li>
-                                  <li>
-                                    <!-- <div class="mb-3"> -->
-                                    <img src="assets/files/tabel_data_karyawan_vlookup.png" alt="">
-                                    <!-- </div> -->
-                                  </li>
-                                  <li>
                                     <div class="my-3">
+                                      <img src="assets/files/tabel_data_karyawan_vlookup.png" alt="">
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="mb-3">
                                       <strong>Format Gaji:</strong>
                                       <ul class="dash-list">
                                         <li>Blok sel <strong>D4</strong>-<strong>D11</strong>.</li>
@@ -1124,7 +1122,7 @@
                                       saat
                                       disalin)
                                       <br />→ <code>2</code> = kolom ke-2 dari tabel referensi (Gaji Pokok)
-                                      <br />→ <code>FALSE</code> = mencari kecocokan tepat (exact match)
+                                      <br />→ <code>FALSE</code> = mencari kecocokan tepat (exact match (cocok persis))
                                     </li>
                                   </ul>
                                 </div>
@@ -1186,7 +1184,7 @@
                           <div class="mb-3">
                             <strong>Tips:</strong>
                             <ul class="dash-list">
-                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match (cocok
+                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match (cocok persis) (cocok
                                 persis), terutama
                                 untuk kode/golongan.</li>
                               <li>Gunakan referensi absolut <code>$</code> pada tabel referensi agar tidak bergeser saat
@@ -1299,7 +1297,7 @@
                                     kunci).
                                     <br />→ <code>TRUE</code> untuk pencarian perkiraan (range), <code>FALSE</code>
                                     untuk
-                                    exact match.
+                                    exact match (cocok persis).
                                   </li>
                                 </ul>
                               </div>
@@ -1360,7 +1358,7 @@
                                     <li>XLOOKUP mencari nilai <code>C3</code> (85) di <code>$H$4:$H$8</code>.</li>
                                     <li>Karena tidak ada nilai 85 tepat di kolom G, dengan <code>-1</code> ia mencari
                                       nilai terdekat yang lebih kecil — yaitu 75 → mengembalikan "Lulus Baik".</li>
-                                    <li>Parameter <code>-1</code> (match_mode) berarti exact match atau terdekat lebih
+                                    <li>Parameter <code>-1</code> (match_mode) berarti exact match (cocok persis) atau terdekat lebih
                                       kecil — sama seperti <code>TRUE</code> di VLOOKUP untuk rentang nilai.</li>
                                     <li>Jika nilai di bawah 0, mengembalikan "Tidak Valid".</li>
                                   </ul>
@@ -1401,7 +1399,7 @@
                                 <br />→ Mirip VLOOKUP tetapi mencari secara horizontal (baris pertama tabel sebagai
                                 kunci).
                                 <br />→ <code>TRUE</code> untuk pencarian perkiraan (range), <code>FALSE</code> untuk
-                                exact match.
+                                exact match (cocok persis).
                               </li>
                               <li><strong>INDEX + MATCH:</strong>
                                 <code>=INDEX(array, MATCH(row_value, row_array, 0), MATCH(col_value, col_array, 0))</code>
