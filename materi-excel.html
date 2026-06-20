@@ -462,7 +462,7 @@
                           <ol>
                             <li>
                               <strong>Buat judul kolom:</strong>
-                              <ul>
+                              <ul class="dash-list">
                                 <li>A1: No</li>
                                 <li>B1: Nama</li>
                                 <li>C1: Kelas</li>
@@ -471,7 +471,7 @@
                             </li>
                             <li>
                               <strong>Isi nomor urut:</strong>
-                              <ul>
+                              <ul class="dash-list">
                                 <li>Ketik 1 pada A2.</li>
                                 <li>Ketik 2 pada A3.</li>
                                 <li>
@@ -488,7 +488,7 @@
                             <li>
                               <strong>Format kolom Nilai menjadi 2 angka
                                 desimal:</strong>
-                              <ul>
+                              <ul class="dash-list">
                                 <li>Blok D2:D11.</li>
                                 <li>Klik tab Home → grup Number.</li>
                                 <li>Pilih Number.</li>
@@ -497,7 +497,7 @@
                             </li>
                             <li>
                               <strong>Hitung total nilai:</strong>
-                              <ul>
+                              <ul class="dash-list">
                                 <li>Pada sel D12 ketik: =SUM(D2:D11)</li>
                                 <li>Tekan Enter.</li>
                               </ul>
@@ -669,7 +669,7 @@
                                 Hasil akan menampilkan tanggal hari ini secara
                                 otomatis. <br />
                                 Formatkan sebagai Short Date
-                                <ul>
+                                <ul class="dash-list">
                                   <li>
                                     Pada Tab <strong>Home</strong> di bagian
                                     group <strong>Number</strong>
@@ -808,7 +808,7 @@
                             <ol>
                               <li>
                                 <strong>Buat judul kolom:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: No</li>
                                   <li>B1: Nama</li>
                                   <li>C1: Nilai</li>
@@ -821,7 +821,7 @@
                               <li>
                                 <strong>Masukkan data nama dan nilai</strong> 10 siswa pada kolom B dan C.
                                 <br />Contoh data:
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Andi — 80</li>
                                   <li>Budi — 65</li>
                                   <li>Cici — 90</li>
@@ -836,7 +836,7 @@
                               </li>
                               <li>
                                 <strong>Tentukan kelulusan dengan IF:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>D2</strong> ketik:
                                     <code>=IF(C2&gt;=75,"LULUS","TIDAK LULUS")</code>
                                   </li>
@@ -847,7 +847,7 @@
                               </li>
                               <li>
                                 <strong>Hitung jumlah siswa lulus:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>D13</strong> ketik:
                                     <code>=COUNTIF(D2:D11,"LULUS")</code>
                                   </li>
@@ -857,7 +857,7 @@
                               </li>
                               <li>
                                 <strong>Hitung jumlah siswa tidak lulus:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>D14</strong> ketik:
                                     <code>=COUNTIF(D2:D11,"TIDAK LULUS")</code>
                                   </li>
@@ -869,7 +869,7 @@
                           </div>
                           <div class="mb-3">
                             <strong>Penjelasan Rumus:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li><code>=IF(C2&gt;=75,"LULUS","TIDAK LULUS")</code> — Jika nilai di C2 ≥ 75, tampilkan
                                 "LULUS", jika tidak tampilkan "TIDAK LULUS".</li>
                               <li><code>=COUNTIF(D2:D11,"LULUS")</code> — Hitung berapa banyak sel dalam range D2:D11
@@ -924,7 +924,7 @@
                             <ol>
                               <li>
                                 <strong>Buat judul kolom:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: No</li>
                                   <li>B1: Nama</li>
                                   <li>C1: Nilai</li>
@@ -936,7 +936,7 @@
                               <li>
                                 <strong>Isi data 10 siswa</strong> (Nama, Nilai, Status).
                                 <br />Contoh:
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Andi — 92 — Aktif</li>
                                   <li>Budi — 85 — Aktif</li>
                                   <li>Cici — 78 — Aktif</li>
@@ -951,7 +951,7 @@
                               </li>
                               <li>
                                 <strong>Tentukan Grade dengan Nested IF:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>D2</strong> ketik:
                                     <code>=IF(C2&gt;=90,"A",IF(C2&gt;=80,"B",IF(C2&gt;=70,"C","D")))</code>
                                   </li>
@@ -960,7 +960,7 @@
                               </li>
                               <li>
                                 <strong>Tentukan Bonus dengan IF + AND:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>F2</strong> ketik:
                                     <code>=IF(AND(C2&gt;=80,E2="Aktif"),"Bonus","-")</code>
                                   </li>
@@ -971,7 +971,7 @@
                           </div>
                           <div class="mb-3">
                             <strong>Penjelasan Rumus:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li><strong>Nested IF:</strong>
                                 <code>=IF(C2&gt;=90,"A",IF(C2&gt;=80,"B",IF(C2&gt;=70,"C","D")))</code>
                                 <br />→ Jika nilai ≥ 90 → A, jika ≥ 80 → B, jika ≥ 70 → C, selain itu → D.
@@ -985,7 +985,7 @@
                           </div>
                           <div class="mb-3">
                             <strong>Hasil Contoh:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Andi (92, Aktif) → Grade A, Bonus: Bonus</li>
                               <li>Eka (90, Tidak Aktif) → Grade A, Bonus: - (karena tidak aktif)</li>
                               <li>Fani (55, Aktif) → Grade D, Bonus: - (karena nilai &lt; 80)</li>
@@ -1040,7 +1040,7 @@
                                   atau di kolom F:G):</p>
                                 <div class="mb-3">
                                   <img src="assets/files/tabel_referensi_golongan_&_gaji.png" alt="">
-                                  <ul>
+                                  <ul class="dash-list">
                                     <li>F1: judul <strong>TABLE REFERENSI GAJI</strong>, blok <strong>F1</strong> -
                                       <strong>G1</strong> klik <strong>Merge & Center</strong>
                                       <img src="assets/files/merge_center.png" alt="">
@@ -1059,7 +1059,7 @@
                                 <p><strong>Buat tabel data karyawan</strong> (mulai dari <strong>A2</strong>):</p>
                                 <div class="mb-3">
                                   <img src="assets/files/tabel_data_karyawan.png" alt="">
-                                  <ul>
+                                  <ul class="dash-list">
                                     <li>A1: judul <strong>TABEL DATA KARYAWAN</strong>, blok <strong>A1</strong> -
                                       <strong>D1</strong> klik <strong>Merge & Center</strong>
                                       <img src="assets/files/merge_center.png" alt="">
@@ -1069,7 +1069,7 @@
                                     </li>
                                   </ul>
                                   <strong>Isi data karyawan</strong> (contoh 8-10 baris):
-                                  <ul>
+                                  <ul class="dash-list">
                                     <li>A3: K001 — Andi — III</li>
                                     <li>A4: K002 — Budi — II</li>
                                     <li>A5: K003 — Cici — V</li>
@@ -1085,7 +1085,7 @@
                               </li>
                               <li>
                                 <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>D4</strong> ketik:
                                     <code>=VLOOKUP(C3;$F$3:$G$7;2;FALSE)</code>
                                   </li>
@@ -1104,7 +1104,7 @@
                                   <li>
                                     <div class="my-3">
                                       <strong>Format Gaji:</strong>
-                                      <ul>
+                                      <ul class="dash-list">
                                         <li>Blok sel <strong>D4</strong>-<strong>D11</strong>.</li>
                                         <li>Tab <strong>Home</strong> → <strong>Number</strong> → pilih
                                           <strong>Currency</strong> atau <strong>Accounting</strong> dengan simbol Rp.
@@ -1115,7 +1115,7 @@
                                 </ul>
                                 <div class="mb-3">
                                   <strong>Penjelasan Rumus:</strong>
-                                  <ul>
+                                  <ul class="dash-list">
                                     <li><strong>VLOOKUP:</strong>
                                       <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
                                       <br />→ <code>C4</code> = nilai yang dicari (golongan)
@@ -1130,7 +1130,7 @@
                               </li>
                               <li>
                                 <strong>Tambahkan IFERROR untuk menangani error:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Ubah rumus di <strong>D16</strong> menjadi:
                                     <code>=IFERROR(VLOOKUP(C16;$F$16:$G$20;2;FALSE);"Golongan tidak ditemukan")</code>
                                   </li>
@@ -1149,7 +1149,7 @@
                                 </ul>
                                 <div class="mb-3">
                                   <strong>Penjelasan Rumus:</strong>
-                                  <ul>
+                                  <ul class="dash-list">
                                     <li><strong>IFERROR:</strong>
                                       <code>=IFERROR(value, value_if_error)</code>
                                       <br />→ Jika <strong>VLOOKUP:</strong> menghasilkan error (#N/A), tampilkan teks
@@ -1161,7 +1161,7 @@
                               </li>
                               <li>
                                 <strong>Menampilkan ERROR typo dan Golongan tidak ditemukan</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Ubah rumus di <strong>D28</strong> menjadi:
                                     <code>=IF(COUNTIF($F$28:$G$32;C28)=0;"Golongan '"&C28&"' tidak ditemukan";VLOOKUP(C28;$F$28:$G$32;2;FALSE))</code>
                                   </li>
@@ -1174,19 +1174,23 @@
                                     error <code>#N/A</code>
                                   </li>
                                 </ul>
-                                <img src="assets/files/Menampilkan_ERROR_typo_dan_Golongan_tidak_ditemukan.png" alt="">
+                                <div class="my-3">
+                                  <img src="assets/files/Menampilkan_ERROR_typo_dan_Golongan_tidak_ditemukan.png"
+                                    alt="">
+                                </div>
                               </li>
                             </ol>
                           </div>
 
                           <div class="mb-3">
                             <strong>Tips:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match (cocok
                                 persis), terutama
                                 untuk kode/golongan.</li>
                               <li>Gunakan referensi absolut <code>$</code> pada tabel referensi agar tidak bergeser saat
-                                rumus disalin.</li>
+                                rumus disalin. Untuk cara cepat absolut <code>$</code>, drag range kemudian tekan
+                                <strong>F4</strong></li>
                               <li>IFERROR sangat berguna untuk membuat laporan yang rapi tanpa menampilkan error.</li>
                             </ul>
                           </div>
@@ -1241,7 +1245,7 @@
                               <li>
                                 <strong>Buat tabel referensi horizontal untuk predikat nilai</strong> (misal di baris
                                 1-2):
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: 0, B1: 60, C1: 70, D1: 80, E1: 90</li>
                                   <li>A2: E, B2: D, C2: C, D2: B, E2: A</li>
                                 </ul>
@@ -1249,7 +1253,7 @@
                               </li>
                               <li>
                                 <strong>Buat tabel data siswa</strong> (mulai dari A4):
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A4: No, B4: Nama, C4: Nilai, D4: Predikat (HLOOKUP), E4: Nilai Huruf
                                     (INDEX-MATCH),
                                     F4: Status (XLOOKUP)</li>
@@ -1257,7 +1261,7 @@
                               </li>
                               <li>
                                 <strong>Isi data siswa</strong> (contoh 8 baris):
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Andi — 85</li>
                                   <li>Budi — 92</li>
                                   <li>Cici — 67</li>
@@ -1270,7 +1274,7 @@
                               </li>
                               <li>
                                 <strong>Gunakan HLOOKUP untuk predikat:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>D5</strong> ketik:
                                     <code>=HLOOKUP(C5,$A$1:$E$2,2,TRUE)</code>
                                   </li>
@@ -1282,9 +1286,9 @@
                               </li>
                               <li>
                                 <strong>Gunakan INDEX + MATCH untuk two-way lookup (Nilai Huruf):</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Buat tabel referensi dua dimensi di <strong>$A$15:$E$19</strong>:
-                                    <ul>
+                                    <ul class="dash-list">
                                       <li>Baris 15: , A, B, C, D</li>
                                       <li>B16: Andi, 85, 90, 78, 92</li>
                                       <li>B17: Budi, 80, 88, 75, 85</li>
@@ -1300,7 +1304,7 @@
                               </li>
                               <li>
                                 <strong>Gunakan XLOOKUP untuk status kelulusan:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada sel <strong>F5</strong> ketik:
                                     <code>=XLOOKUP(C5,$G$5:$G$9,$H$5:$H$9,"Tidak Valid",-1)</code>
                                   </li>
@@ -1316,7 +1320,7 @@
                           </div>
                           <div class="mb-3">
                             <strong>Penjelasan Rumus:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li><strong>HLOOKUP:</strong>
                                 <code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code>
                                 <br />→ Mirip VLOOKUP tetapi mencari secara horizontal (baris pertama tabel sebagai
@@ -1372,7 +1376,7 @@
                           </div>
                           <div class="mb-3">
                             <strong>Tips:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Gunakan <code>TRUE</code> pada HLOOKUP jika data referensi berupa rentang nilai
                                 (seperti
                                 predikat).</li>
@@ -1449,7 +1453,7 @@
                             <ol>
                               <li>
                                 <strong>Buat tabel data:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: Bulan, B1: Penjualan</li>
                                   <li>A2:A7: Jan, Feb, Mar, Apr, Mei, Jun</li>
                                   <li>B2:B7: 12000000, 15000000, 11000000, 18000000, 14000000, 16000000</li>
@@ -1460,7 +1464,7 @@
                               </li>
                               <li>
                                 <strong>Insert Column Chart:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Tab <strong>Insert</strong> → grup Charts → pilih <strong>Clustered
                                       Column</strong> (kolom pertama).</li>
                                   <li>Chart akan langsung muncul di sheet.</li>
@@ -1468,14 +1472,14 @@
                               </li>
                               <li>
                                 <strong>Tambahkan judul chart:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik judul chart (default: "Chart Title").</li>
                                   <li>Ketik: <strong>"Penjualan 6 Bulan Pertama"</strong>.</li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Tambahkan label sumbu:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik chart → <strong>Chart Design</strong> → <strong>Add Chart Element</strong>.
                                   </li>
                                   <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Horizontal</strong> → ketik:
@@ -1486,7 +1490,7 @@
                               </li>
                               <li>
                                 <strong>Tambahkan Data Label:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik chart → <strong>Chart Design</strong> → <strong>Add Chart Element</strong>.
                                   </li>
                                   <li>Pilih <strong>Data Labels</strong> → <strong>Outside End</strong>.</li>
@@ -1494,7 +1498,7 @@
                               </li>
                               <li>
                                 <strong>Ubah warna kolom menjadi biru gradasi:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik salah satu kolom (semua kolom akan terseleksi).</li>
                                   <li>Klik kanan → pilih <strong>Format Data Series</strong>.</li>
                                   <li>Pilih <strong>Fill</strong> → <strong>Gradient fill</strong>.</li>
@@ -1504,7 +1508,7 @@
                               </li>
                               <li>
                                 <strong>Rapikan chart:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Tambahkan border pada chart area jika perlu.</li>
                                   <li>Sesuaikan ukuran font judul dan label.</li>
                                 </ul>
@@ -1559,7 +1563,7 @@
                             <ol>
                               <li>
                                 <strong>Buat tabel data:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: Bulan, B1: Target, C1: Realisasi</li>
                                   <li>A2:A7: Jan - Jun</li>
                                   <li>B2:B7: 15000000, 15000000, 15000000, 20000000, 20000000, 20000000</li>
@@ -1568,14 +1572,14 @@
                               </li>
                               <li>
                                 <strong>Buat Column Chart:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Blok A1:C7 → Insert → Clustered Column.</li>
                                   <li>Target dan Realisasi tampil sebagai 2 kolom berbeda.</li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Ubah seri Realisasi menjadi Line:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik kanan pada kolom Realisasi → <strong>Change Series Chart Type</strong>.</li>
                                   <li>Pilih <strong>Line with Markers</strong> untuk seri Realisasi.</li>
                                   <li>Klik OK.</li>
@@ -1589,7 +1593,7 @@
                               </li>
                               <li>
                                 <strong>Terapkan Data Bars pada sel Realisasi:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Blok C2:C7.</li>
                                   <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
                                   <li>Pilih <strong>Data Bars</strong> → pilih warna misal <strong>Blue Data
@@ -1598,7 +1602,7 @@
                               </li>
                               <li>
                                 <strong>Terapkan Icon Sets pada sel Target:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Blok B2:B7.</li>
                                   <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
                                   <li>Pilih <strong>Icon Sets</strong> → pilih <strong>3 Traffic Lights
@@ -1607,7 +1611,7 @@
                               </li>
                               <li>
                                 <strong>Buat aturan Icon Sets berdasarkan persentase realisasi terhadap target:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Blok kolom Realisasi (C2:C7) atau buat kolom bantu D dengan rumus
                                     <code>=C2/B2</code> (format %).
                                   </li>
@@ -1669,10 +1673,10 @@
                             <ol>
                               <li>
                                 <strong>Buat data tabel dengan kolom:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: Bulan, B1: Region, C1: Produk, D1: Penjualan</li>
                                   <li>Isi 20+ baris data, misal:
-                                    <ul>
+                                    <ul class="dash-list">
                                       <li>Jan — Jakarta — Laptop — 50000000</li>
                                       <li>Jan — Jakarta — HP — 30000000</li>
                                       <li>Jan — Bandung — Laptop — 25000000</li>
@@ -1686,7 +1690,7 @@
                               </li>
                               <li>
                                 <strong>Buat Line Chart (tren penjualan per bulan):</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Buat tabel rekap total penjualan per bulan (gunakan SUMIF atau PivotTable
                                     sederhana).</li>
                                   <li>Blok data → Insert → Line Chart.</li>
@@ -1694,7 +1698,7 @@
                               </li>
                               <li>
                                 <strong>Buat Pie Chart (komposisi per produk):</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Buat tabel rekap total penjualan per produk.</li>
                                   <li>Blok data → Insert → Pie Chart.</li>
                                   <li>Tambahkan Data Labels → pilih <strong>Percentage</strong>.</li>
@@ -1702,14 +1706,14 @@
                               </li>
                               <li>
                                 <strong>Buat Bar Chart (penjualan per region):</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Buat tabel rekap total penjualan per region.</li>
                                   <li>Blok data → Insert → Bar Chart (Clustered Bar).</li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Atur tata letak dashboard:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pindahkan chart-chart ke posisi yang rapi dalam 1 sheet.</li>
                                   <li>Beri judul masing-masing chart.</li>
                                   <li>Sembunyikan gridlines agar tampak seperti dashboard (View → Gridlines).</li>
@@ -1717,7 +1721,7 @@
                               </li>
                               <li>
                                 <strong>Terapkan Color Scales:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Blok kolom Penjualan (D2:D21).</li>
                                   <li>Tab Home → Conditional Formatting → <strong>Color Scales</strong>.</li>
                                   <li>Pilih <strong>Green - Yellow - Red Color Scale</strong>.</li>
@@ -1725,7 +1729,7 @@
                               </li>
                               <li>
                                 <strong>Tambahkan Slicer untuk filter interaktif:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik salah satu chart → Tab <strong>Chart Design</strong> → <strong>Add Chart
                                       Element</strong>.</li>
                                   <li>Atau: Klik di area kosong → Tab <strong>Insert</strong> → <strong>Slicer</strong>.
@@ -1808,13 +1812,13 @@
                             <ol>
                               <li>
                                 <strong>Buat tabel data dengan judul kolom:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: No, B1: Nama, C1: Kota, D1: Usia, E1: Divisi</li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Isi 20 baris data karyawan fiktif:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Andi — Jakarta — 28 — IT</li>
                                   <li>Budi — Bandung — 32 — Marketing</li>
                                   <li>Cici — Jakarta — 25 — HRD</li>
@@ -1825,7 +1829,7 @@
                               </li>
                               <li>
                                 <strong>Sorting A-Z berdasarkan Nama:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Blok seluruh data (A1:E21) atau klik di dalam tabel.</li>
                                   <li>Tab <strong>Data</strong> → <strong>Sort A to Z</strong> (ikon A↓Z).</li>
                                   <li>Data akan terurut berdasarkan nama secara alfabet.</li>
@@ -1833,10 +1837,10 @@
                               </li>
                               <li>
                                 <strong>Sorting multi-level (Kota → Nama):</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik di dalam tabel → Tab <strong>Data</strong> → <strong>Sort</strong>.</li>
                                   <li>Pada dialog Sort:
-                                    <ul>
+                                    <ul class="dash-list">
                                       <li>Sort by: <strong>Kota</strong> → A to Z.</li>
                                       <li>Klik <strong>Add Level</strong>.</li>
                                       <li>Then by: <strong>Nama</strong> → A to Z.</li>
@@ -1848,7 +1852,7 @@
                               </li>
                               <li>
                                 <strong>Gunakan Filter:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik di dalam tabel → Tab <strong>Data</strong> → <strong>Filter</strong> (ikon
                                     corong).</li>
                                   <li>Panah filter akan muncul di setiap header kolom.</li>
@@ -1912,10 +1916,10 @@
                             <ol>
                               <li>
                                 <strong>Buat data penjualan dengan kolom:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: Tanggal, B1: Region, C1: Produk, D1: Qty, E1: Harga Satuan, F1: Total</li>
                                   <li>Isi 20+ baris data, misal:
-                                    <ul>
+                                    <ul class="dash-list">
                                       <li>01/01/2025 — Jakarta — Laptop — 2 — 10000000 — =D2*E2</li>
                                       <li>05/01/2025 — Bandung — HP — 5 — 3000000 — =D3*E3</li>
                                       <li>... dan seterusnya.</li>
@@ -1925,7 +1929,7 @@
                               </li>
                               <li>
                                 <strong>Buat PivotTable:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik di dalam tabel data → Tab <strong>Insert</strong> →
                                     <strong>PivotTable</strong>.
                                   </li>
@@ -1934,7 +1938,7 @@
                               </li>
                               <li>
                                 <strong>Atur PivotTable Fields:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Drag <strong>Region</strong> ke <strong>Rows</strong>.</li>
                                   <li>Drag <strong>Produk</strong> ke <strong>Columns</strong>.</li>
                                   <li>Drag <strong>Total</strong> ke <strong>Values</strong> (pastikan fungsinya Sum).
@@ -1945,7 +1949,7 @@
                               </li>
                               <li>
                                 <strong>Buat PivotChart:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> →
                                     <strong>PivotChart</strong>.
                                   </li>
@@ -1955,7 +1959,7 @@
                               </li>
                               <li>
                                 <strong>Tambahkan Slicer untuk filter region:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> →
                                     <strong>Insert Slicer</strong>.
                                   </li>
@@ -2024,13 +2028,13 @@
                             <ol>
                               <li>
                                 <strong>Buat sheet utama "Data Pengeluaran" dengan kolom:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>A1: Tanggal, B1: Kategori, C1: Deskripsi, D1: Jumlah</li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Buat dropdown kategori dengan Data Validation:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Di sel terpisah (misal F1:F5) ketik daftar kategori: Makanan, Transport, Belanja,
                                     Tagihan, Hiburan.</li>
                                   <li>Blok B2:B30 → Tab <strong>Data</strong> → <strong>Data Validation</strong>.</li>
@@ -2040,7 +2044,7 @@
                               </li>
                               <li>
                                 <strong>Isi 20+ baris data pengeluaran:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>01/01/2025 — Makanan — Nasi goreng — 25000</li>
                                   <li>02/01/2025 — Transport — Bensin — 50000</li>
                                   <li>03/01/2025 — Belanja — Sabun — 15000</li>
@@ -2049,7 +2053,7 @@
                               </li>
                               <li>
                                 <strong>Buat kolom bantu untuk Bulan (opsional jika ingin filter per bulan):</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Pada E1 ketik: Bulan</li>
                                   <li>Pada E2 ketik: <code>=TEXT(A2,"MMMM")</code> → salin ke bawah.</li>
                                   <li>Ini akan menghasilkan nama bulan dari kolom Tanggal.</li>
@@ -2057,7 +2061,7 @@
                               </li>
                               <li>
                                 <strong>Buat PivotTable rekap per kategori:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Insert → PivotTable → New Worksheet.</li>
                                   <li>Drag <strong>Kategori</strong> ke Rows.</li>
                                   <li>Drag <strong>Jumlah</strong> ke Values (Sum).</li>
@@ -2067,7 +2071,7 @@
                               </li>
                               <li>
                                 <strong>Buat Pie Chart dari PivotTable:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik PivotTable → PivotTable Analyze → PivotChart.</li>
                                   <li>Pilih <strong>Pie</strong> → OK.</li>
                                   <li>Tambahkan Data Labels → <strong>Percentage</strong> dan <strong>Category
@@ -2076,7 +2080,7 @@
                               </li>
                               <li>
                                 <strong>Terapkan Conditional Formatting (merah jika &gt; rata-rata):</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Blok kolom Jumlah (D2:D30) di sheet data.</li>
                                   <li>Tab Home → Conditional Formatting → <strong>Top/Bottom Rules</strong>.</li>
                                   <li>Pilih <strong>Above Average</strong>.</li>
@@ -2086,7 +2090,7 @@
                               </li>
                               <li>
                                 <strong>Tambahkan Slicer untuk filter bulan:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik di dalam PivotTable → PivotTable Analyze → Insert Slicer.</li>
                                   <li>Centang <strong>Bulan</strong> (dari kolom bantu) → OK.</li>
                                   <li>Klik "Januari" → PivotTable dan Pie chart menampilkan hanya data Januari.</li>
@@ -2100,7 +2104,7 @@
                           </div>
                           <div class="mb-3">
                             <strong>Ringkasan Skill yang Digunakan:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Data Entry &amp; Formatting (Pertemuan 1)</li>
                               <li>Fungsi IF, TEXT (Pertemuan 2)</li>
                               <li>Chart &amp; Conditional Formatting (Pertemuan 3)</li>
