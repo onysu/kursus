@@ -1149,7 +1149,6 @@
                               </li>
                               <li>
                                 <strong>Menampilkan ERROR typo dan Golongan tidak ditemukan</strong>
-                                <strong>Tambahkan IFERROR untuk menangani error:</strong>
                                 <ul>
                                   <li>Ubah rumus di <strong>D28</strong> menjadi:
                                     <code>=IF(COUNTIF($F$28:$G$32;C28)=0;"Golongan '"&C28&"' tidak ditemukan";VLOOKUP(C28;$F$28:$G$32;2;FALSE))</code>
