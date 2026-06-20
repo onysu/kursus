@@ -1305,15 +1305,35 @@
                               <li>
                                 <strong>Gunakan XLOOKUP untuk status kelulusan:</strong>
                                 <ul class="dash-list">
+                                  <li>Buat tabel referensi status di <strong>$G$5:$H$9</strong>:
+                                    <ul class="dash-list">
+                                      <li>G5: 0, H5: Tidak Lulus</li>
+                                      <li>G6: 60, H6: Lulus</li>
+                                      <li>G7: 75, H7: Lulus Baik</li>
+                                      <li>G8: 85, H8: Lulus Memuaskan</li>
+                                      <li>G9: 95, H9: Lulus Terpuji</li>
+                                    </ul>
+                                  </li>
                                   <li>Pada sel <strong>F5</strong> ketik:
                                     <code>=XLOOKUP(C5,$G$5:$G$9,$H$5:$H$9,"Tidak Valid",-1)</code>
                                   </li>
-                                  <li>Atau contoh yang lebih sederhana:
-                                    <code>=XLOOKUP(C5,{0,60,70,80,90};{"E","D","C","B","A"})</code>
+                                  <li>Penjelasan singkat:
+                                    <ul class="dash-list">
+                                      <li>XLOOKUP mencari nilai <code>C5</code> (85) di <code>$G$5:$G$9</code>.</li>
+                                      <li>Karena tidak ada nilai 85 tepat di kolom G, dengan <code>-1</code> ia mencari
+                                        nilai terdekat yang lebih kecil — yaitu 75 → mengembalikan "Lulus Baik".</li>
+                                      <li>Parameter <code>-1</code> (match_mode) berarti exact match atau terdekat lebih
+                                        kecil — sama seperti <code>TRUE</code> di VLOOKUP untuk rentang nilai.</li>
+                                      <li>Jika nilai di bawah 0, mengembalikan "Tidak Valid".</li>
+                                    </ul>
                                   </li>
-                                  <li>Penjelasan: XLOOKUP mencari nilai C5 dalam array lookup, mengembalikan nilai
-                                    koresponden dari array return. Parameter -1 berarti pencarian exact match atau
-                                    terdekat lebih kecil (mirip TRUE di VLOOKUP).</li>
+                                  <li>Atau contoh array tetap (tanpa tabel referensi):
+                                    <code>=XLOOKUP(C5,{0,60,75,85,95},{"E","D","C","B","A"})</code>
+                                    <ul class="dash-list">
+                                      <li>Array <code>{0,60,75,85,95}</code> dan <code>{"E","D","C","B","A"}</code>
+                                        harus sama-sama horizontal (pakai koma) dan sama panjang.</li>
+                                    </ul>
+                                  </li>
                                 </ul>
                               </li>
                             </ol>
