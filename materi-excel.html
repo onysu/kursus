@@ -1304,8 +1304,8 @@
                                 <li>Pada sel <strong>E3</strong> ketik:
                                   <code>=INDEX($B$18:$F$25,MATCH(B5,$A$18:$A$25,0),MATCH("C",$B$17:$E$17,0))</code>
                                 </li>
-                                <li>Penjelasan: INDEX mengambil nilai dari range tabel, MATCH pertama mencari baris
-                                  berdasarkan nama, MATCH kedua mencari kolom berdasarkan kategori.</li>
+                                <li>Penjelasan: <strong>INDEX</strong> mengambil nilai dari range tabel, <strong>MATCH</strong> pertama mencari baris
+                                  berdasarkan nama, <strong>MATCH</strong> kedua mencari kolom berdasarkan kategori.</li>
                               </ul>
                               <div class="my-3">
                                 <img src="assets/files/sesi2_lanjutan2_index_match.png" alt="Tabel HLOOKUP" />
@@ -1314,7 +1314,7 @@
                             <li>
                               <strong>Gunakan XLOOKUP untuk status kelulusan:</strong>
                               <ul class="dash-list">
-                                <li>Buat tabel referensi status di <strong>$G$5:$H$9</strong>:
+                                <!-- <li>Buat tabel referensi status di <strong>$G$5:$H$9</strong>:
                                   <ul class="dash-list">
                                     <li>G5: 0, H5: Tidak Lulus</li>
                                     <li>G6: 60, H6: Lulus</li>
@@ -1322,13 +1322,13 @@
                                     <li>G8: 85, H8: Lulus Memuaskan</li>
                                     <li>G9: 95, H9: Lulus Terpuji</li>
                                   </ul>
-                                </li>
-                                <li>Pada sel <strong>F5</strong> ketik:
-                                  <code>=XLOOKUP(C5,$G$5:$G$9,$H$5:$H$9,"Tidak Valid",-1)</code>
+                                </li> -->
+                                <li>Pada sel <strong>F3</strong> ketik:
+                                  <code>=XLOOKUP(C3;$H$4:$H$8;$I$4:$I$8;"Tidak Valid";-1)</code>
                                 </li>
                                 <li>Penjelasan singkat:
                                   <ul class="dash-list">
-                                    <li>XLOOKUP mencari nilai <code>C5</code> (85) di <code>$G$5:$G$9</code>.</li>
+                                    <li>XLOOKUP mencari nilai <code>C3</code> (85) di <code>$H$4:$H$8</code>.</li>
                                     <li>Karena tidak ada nilai 85 tepat di kolom G, dengan <code>-1</code> ia mencari
                                       nilai terdekat yang lebih kecil — yaitu 75 → mengembalikan "Lulus Baik".</li>
                                     <li>Parameter <code>-1</code> (match_mode) berarti exact match atau terdekat lebih
@@ -1336,14 +1336,17 @@
                                     <li>Jika nilai di bawah 0, mengembalikan "Tidak Valid".</li>
                                   </ul>
                                 </li>
-                                <li>Atau contoh array tetap (tanpa tabel referensi):
-                                  <code>=XLOOKUP(C5,{0,60,75,85,95},{"E","D","C","B","A"})</code>
+                                <!-- <li>Atau contoh array tetap (tanpa tabel referensi):
+                                  <code>=XLOOKUP(C3,{0,60,75,85,95},{"E","D","C","B","A"})</code>
                                   <ul class="dash-list">
                                     <li>Array <code>{0,60,75,85,95}</code> dan <code>{"E","D","C","B","A"}</code>
                                       harus sama-sama horizontal (pakai koma) dan sama panjang.</li>
                                   </ul>
-                                </li>
+                                </li> -->
                               </ul>
+                              <div class="my-3">
+                                <img src="assets/files/sesi2_lanjutan2_xlookup.png" alt="Tabel HLOOKUP" />
+                              </div>
                             </li>
                           </ol>
                           <!-- </div> -->
