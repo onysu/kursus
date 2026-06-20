@@ -993,7 +993,7 @@
                         Latihan</a>
                     </div>
                   </li>
-                  <!-- Lanjutan : VLOOKUP, IFERROR -->
+                  <!-- Lanjutan 1 : VLOOKUP, IFERROR -->
                   <li>
                     <strong class="text-danger">Lanjutan 1:</strong> Buat sistem
                     penggajian: tabel karyawan dengan kode, nama, golongan.
@@ -1029,8 +1029,9 @@
                                 <div class="mb-3">
                                   <img src="assets/files/tabel_referensi_golongan_&_gaji.png" alt="">
                                   <ul>
-                                    <li>F1: judul <strong>TABLE REFERENSI GAJI</strong>, blok <strong>F1</strong> - <strong>G1</strong> klik <strong>Merge & Center</strong>
-                                    <img src="assets/files/merge_center.png" alt="">
+                                    <li>F1: judul <strong>TABLE REFERENSI GAJI</strong>, blok <strong>F1</strong> -
+                                      <strong>G1</strong> klik <strong>Merge & Center</strong>
+                                      <img src="assets/files/merge_center.png" alt="">
                                     </li>
                                     <li>F2: <strong>Kode Golongan</strong>, G2: <strong>Gaji Pokok</strong></li>
                                     <li>F3: I, G3: 5000000</li>
@@ -1047,8 +1048,9 @@
                                 <div class="mb-3">
                                   <img src="assets/files/tabel_data_karyawan.png" alt="">
                                   <ul>
-                                    <li>A1: judul <strong>TABEL DATA KARYAWAN</strong>, blok <strong>A1</strong> - <strong>D1</strong> klik <strong>Merge & Center</strong>
-                                    <img src="assets/files/merge_center.png" alt="">
+                                    <li>A1: judul <strong>TABEL DATA KARYAWAN</strong>, blok <strong>A1</strong> -
+                                      <strong>D1</strong> klik <strong>Merge & Center</strong>
+                                      <img src="assets/files/merge_center.png" alt="">
                                     </li>
                                     <li>A2: <strong>Kode</strong>, B2: <strong>Nama</strong>, C2:
                                       <strong>Golongan</strong>, D2: <strong>Gaji Pokok</strong>
@@ -1062,7 +1064,8 @@
                                     <li>A6: 004 — Dodi — I</li>
                                     <li>A7: K005 — Eka — IV</li>
                                     <li>A8: K006 — Fani — III</li>
-                                    <li>A9: K007 — Gita — ll (sengaja salah ketik "II" bukan golongan valid) → untuk demo
+                                    <li>A9: K007 — Gita — ll (sengaja salah ketik "II" bukan golongan valid) → untuk
+                                      demo
                                       IFERROR</li>
                                     <li>A10: K008 — Hadi — VI (golongan tidak ada di referensi) → menampilkan error</li>
                                   </ul>
@@ -1071,26 +1074,26 @@
                               <li>
                                 <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
                                 <ul>
-                                  <li>Pada sel <strong>D3</strong> ketik:
+                                  <li>Pada sel <strong>D4</strong> ketik:
                                     <code>=VLOOKUP(C3;$F$3:$G$7;2;FALSE)</code>
                                   </li>
-                                  <li>Salin sel <strong>D3</strong> - <strong>D10</strong> atau klik 2x pada kotak kecil
+                                  <li>Salin sel <strong>D4</strong> - <strong>D11</strong> atau klik 2x pada kotak kecil
                                     di pojok
-                                    kanan di sel <strong>D3</strong>.
+                                    kanan di sel <strong>D4</strong>.
                                   </li>
                                   <li>Perhatikan: data "II" (dengan spasi) dan "VI" akan menghasilkan error
                                     <code>#N/A</code> karena tidak ditemukan di tabel referensi.
                                   </li>
                                   <li>
-                                    <div class="my-3">
-                                      <img src="assets/files/tabel_data_karyawan_vlookup.png" alt="">
-                                    </div>
+                                    <!-- <div class="mb-3"> -->
+                                    <img src="assets/files/tabel_data_karyawan_vlookup.png" alt="">
+                                    <!-- </div> -->
                                   </li>
                                   <li>
                                     <div class="my-3">
                                       <strong>Format Gaji:</strong>
                                       <ul>
-                                        <li>Blok sel <strong>D3</strong>-<strong>D10</strong>.</li>
+                                        <li>Blok sel <strong>D4</strong>-<strong>D11</strong>.</li>
                                         <li>Tab <strong>Home</strong> → <strong>Number</strong> → pilih
                                           <strong>Currency</strong> atau <strong>Accounting</strong> dengan simbol Rp.
                                         </li>
@@ -1098,6 +1101,20 @@
                                     </div>
                                   </li>
                                 </ul>
+                                <div class="mb-3">
+                                  <strong>Penjelasan Rumus:</strong>
+                                  <ul>
+                                    <li><strong>VLOOKUP:</strong>
+                                      <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
+                                      <br />→ <code>C4</code> = nilai yang dicari (golongan)
+                                      <br />→ <code>$F$4:$G$4</code> = tabel referensi (absolut agar tidak berubah
+                                      saat
+                                      disalin)
+                                      <br />→ <code>2</code> = kolom ke-2 dari tabel referensi (Gaji Pokok)
+                                      <br />→ <code>FALSE</code> = mencari kecocokan tepat (exact match)
+                                    </li>
+                                  </ul>
+                                </div>
                               </li>
                               <li>
                                 <strong>Tambahkan IFERROR untuk menangani error:</strong>
@@ -1118,32 +1135,30 @@
                                     </div>
                                   </li>
                                 </ul>
+                                <div class="mb-3">
+                                  <strong>Penjelasan Rumus:</strong>
+                                  <ul>
+                                    <li><strong>IFERROR:</strong>
+                                      <code>=IFERROR(value, value_if_error)</code>
+                                      <br />→ Jika <strong>VLOOKUP:</strong> menghasilkan error (#N/A), tampilkan teks
+                                      "Golongan tidak
+                                      ditemukan".
+                                    </li>
+                                  </ul>
+                                </div>
                               </li>
-
+                              <li>
+                                <strong>Menampilkan ERROR typo dan Golongan tidak ditemukan</strong>
+                                <img src="assets/files/Menampilkan_ERROR_typo_dan_Golongan_tidak_ditemukan.png" alt="">
+                              </li>
                             </ol>
                           </div>
-                          <div class="mb-3">
-                            <strong>Penjelasan Rumus:</strong>
-                            <ul>
-                              <li><strong>VLOOKUP:</strong>
-                                <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
-                                <br />→ <code>C15</code> = nilai yang dicari (golongan)
-                                <br />→ <code>$F$16:$G$20</code> = tabel referensi (absolut agar tidak berubah saat
-                                disalin)
-                                <br />→ <code>2</code> = kolom ke-2 dari tabel referensi (Gaji Pokok)
-                                <br />→ <code>FALSE</code> = mencari kecocokan tepat (exact match)
-                              </li>
-                              <li><strong>IFERROR:</strong>
-                                <code>=IFERROR(value, value_if_error)</code>
-                                <br />→ Jika <strong>VLOOKUP:</strong> menghasilkan error (#N/A), tampilkan teks "Golongan tidak
-                                ditemukan".
-                              </li>
-                            </ul>
-                          </div>
+
                           <div class="mb-3">
                             <strong>Tips:</strong>
                             <ul>
-                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match, terutama
+                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match (cocok
+                                persis), terutama
                                 untuk kode/golongan.</li>
                               <li>Gunakan referensi absolut <code>$</code> pada tabel referensi agar tidak bergeser saat
                                 rumus disalin.</li>
