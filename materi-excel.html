@@ -1149,6 +1149,19 @@
                               </li>
                               <li>
                                 <strong>Menampilkan ERROR typo dan Golongan tidak ditemukan</strong>
+                                <strong>Tambahkan IFERROR untuk menangani error:</strong>
+                                <ul>
+                                  <li>Ubah rumus di <strong>D28</strong> menjadi:
+                                    <code>=IF(COUNTIF($F$28:$G$32;C28)=0;"Golongan '"&C28&"' tidak ditemukan";VLOOKUP(C28;$F$28:$G$32;2;FALSE))</code>
+                                  </li>
+                                  <li>Salin sel <strong>D28</strong> - <strong>D35</strong> atau klik 2x pada kotak
+                                    kecil di pojok
+                                    kanan di sel <strong>D28</strong>.
+                                  </li>
+                                  <li>Sekarang data "II" dan "VI" akan tidak lagi menampilkan teks "Golongan tidak ditemukan" dan bukan
+                                    error <code>#N/A</code>
+                                  </li>
+                                </ul>
                                 <img src="assets/files/Menampilkan_ERROR_typo_dan_Golongan_tidak_ditemukan.png" alt="">
                               </li>
                             </ol>
