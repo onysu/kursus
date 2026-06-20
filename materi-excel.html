@@ -924,7 +924,7 @@
                           <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
-                              <li>
+                              <!-- <li>
                                 <strong>Buat judul kolom:</strong>
                                 <ul class="dash-list">
                                   <li>A1: No</li>
@@ -950,23 +950,23 @@
                                   <li>Indah — 95 — Aktif</li>
                                   <li>Joko — 60 — Aktif</li>
                                 </ul>
-                              </li>
+                              </li> -->
                               <li>
                                 <strong>Tentukan Grade dengan Nested IF:</strong>
                                 <ul class="dash-list">
-                                  <li>Pada sel <strong>D2</strong> ketik:
-                                    <code>=IF(C2&gt;=90,"A",IF(C2&gt;=80,"B",IF(C2&gt;=70,"C","D")))</code>
+                                  <li>Pada sel <strong>D3</strong> ketik:
+                                    <code>=IF(C3>=90;"A";IF(C3>=80;"B";IF(C3>=70;"C";"D")))</code>
                                   </li>
-                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>D11</strong>.</li>
+                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>D12</strong>.</li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Tentukan Bonus dengan IF + AND:</strong>
                                 <ul class="dash-list">
-                                  <li>Pada sel <strong>F2</strong> ketik:
-                                    <code>=IF(AND(C2&gt;=80,E2="Aktif"),"Bonus","-")</code>
+                                  <li>Pada sel <strong>F3</strong> ketik:
+                                    <code>=IF(AND(C3>=80;E3="Aktif");"Bonus";"-")</code>
                                   </li>
-                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>F11</strong>.</li>
+                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>F12</strong>.</li>
                                 </ul>
                               </li>
                             </ol>
@@ -975,11 +975,11 @@
                             <strong>Penjelasan Rumus:</strong>
                             <ul class="dash-list">
                               <li><strong>Nested IF:</strong>
-                                <code>=IF(C2&gt;=90,"A",IF(C2&gt;=80,"B",IF(C2&gt;=70,"C","D")))</code>
+                                <code>=IF(C3>=90;"A";IF(C3>=80;"B";IF(C3>=70;"C";"D")))</code>
                                 <br />→ Jika nilai ≥ 90 → A, jika ≥ 80 → B, jika ≥ 70 → C, selain itu → D.
                               </li>
                               <li><strong>IF + AND:</strong>
-                                <code>=IF(AND(C2&gt;=80,E2="Aktif"),"Bonus","-")</code>
+                                <code>=IF(AND(C3>=80;E3="Aktif");"Bonus";"-")</code>
                                 <br />→ Jika nilai ≥ 80 DAN status "Aktif", maka dapat "Bonus", jika tidak tampilkan
                                 "-".
                               </li>
