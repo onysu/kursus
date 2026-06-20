@@ -1190,7 +1190,8 @@
                                 untuk kode/golongan.</li>
                               <li>Gunakan referensi absolut <code>$</code> pada tabel referensi agar tidak bergeser saat
                                 rumus disalin. Untuk cara cepat absolut <code>$</code>, drag range kemudian tekan
-                                <strong>F4</strong></li>
+                                <strong>F4</strong>
+                              </li>
                               <li>IFERROR sangat berguna untuk membuat laporan yang rapi tanpa menampilkan error.</li>
                             </ul>
                           </div>
@@ -1236,13 +1237,15 @@
                             </ol>
                           </div>
                           <div class="mb-3">
-                            <strong>Contoh Tabel Data Siswa &amp; Referensi</strong> <br />
-                            <img src="assets/files/hlookup_index_match.png" alt="Tabel HLOOKUP INDEX MATCH" />
+                            <strong>Contoh Tabel Data Siswa &amp; Referensi</strong>
                           </div>
                           <div class="mb-3">
-                            <strong>Langkah Pengerjaan:</strong>
-                            <ol>
-                              <li>
+                            <img src="assets/files/sesi2_lanjutan2.png" alt="Tabel HLOOKUP INDEX MATCH" />
+                          </div>
+                          <!-- <div class="mb-3"> -->
+                          <strong>Langkah Pengerjaan:</strong>
+                          <ol>
+                            <!-- <li>
                                 <strong>Buat tabel referensi horizontal untuk predikat nilai</strong> (misal di baris
                                 1-2):
                                 <ul class="dash-list">
@@ -1271,73 +1274,79 @@
                                   <li>Gita — 73</li>
                                   <li>Hadi — 88</li>
                                 </ul>
-                              </li>
-                              <li>
-                                <strong>Gunakan HLOOKUP untuk predikat:</strong>
-                                <ul class="dash-list">
-                                  <li>Pada sel <strong>D5</strong> ketik:
-                                    <code>=HLOOKUP(C5,$A$1:$E$2,2,TRUE)</code>
-                                  </li>
-                                  <li>Salin ke bawah hingga <strong>D12</strong>.</li>
-                                  <li>Parameter <code>TRUE</code> (range lookup) karena nilai dicocokkan ke dalam
-                                    rentang
-                                    (0-59, 60-69, 70-79, 80-89, 90+).</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Gunakan INDEX + MATCH untuk two-way lookup (Nilai Huruf):</strong>
-                                <ul class="dash-list">
-                                  <li>Buat tabel referensi dua dimensi di <strong>$A$15:$E$19</strong>:
-                                    <ul class="dash-list">
-                                      <li>Baris 15: , A, B, C, D</li>
-                                      <li>B16: Andi, 85, 90, 78, 92</li>
-                                      <li>B17: Budi, 80, 88, 75, 85</li>
-                                      <li>... dan seterusnya.</li>
-                                    </ul>
-                                  </li>
-                                  <li>Pada sel <strong>E5</strong> ketik:
-                                    <code>=INDEX($B$16:$E$19,MATCH(B5,$A$16:$A$19,0),MATCH("C",$B$15:$E$15,0))</code>
-                                  </li>
-                                  <li>Penjelasan: INDEX mengambil nilai dari range tabel, MATCH pertama mencari baris
-                                    berdasarkan nama, MATCH kedua mencari kolom berdasarkan kategori.</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Gunakan XLOOKUP untuk status kelulusan:</strong>
-                                <ul class="dash-list">
-                                  <li>Buat tabel referensi status di <strong>$G$5:$H$9</strong>:
-                                    <ul class="dash-list">
-                                      <li>G5: 0, H5: Tidak Lulus</li>
-                                      <li>G6: 60, H6: Lulus</li>
-                                      <li>G7: 75, H7: Lulus Baik</li>
-                                      <li>G8: 85, H8: Lulus Memuaskan</li>
-                                      <li>G9: 95, H9: Lulus Terpuji</li>
-                                    </ul>
-                                  </li>
-                                  <li>Pada sel <strong>F5</strong> ketik:
-                                    <code>=XLOOKUP(C5,$G$5:$G$9,$H$5:$H$9,"Tidak Valid",-1)</code>
-                                  </li>
-                                  <li>Penjelasan singkat:
-                                    <ul class="dash-list">
-                                      <li>XLOOKUP mencari nilai <code>C5</code> (85) di <code>$G$5:$G$9</code>.</li>
-                                      <li>Karena tidak ada nilai 85 tepat di kolom G, dengan <code>-1</code> ia mencari
-                                        nilai terdekat yang lebih kecil — yaitu 75 → mengembalikan "Lulus Baik".</li>
-                                      <li>Parameter <code>-1</code> (match_mode) berarti exact match atau terdekat lebih
-                                        kecil — sama seperti <code>TRUE</code> di VLOOKUP untuk rentang nilai.</li>
-                                      <li>Jika nilai di bawah 0, mengembalikan "Tidak Valid".</li>
-                                    </ul>
-                                  </li>
-                                  <li>Atau contoh array tetap (tanpa tabel referensi):
-                                    <code>=XLOOKUP(C5,{0,60,75,85,95},{"E","D","C","B","A"})</code>
-                                    <ul class="dash-list">
-                                      <li>Array <code>{0,60,75,85,95}</code> dan <code>{"E","D","C","B","A"}</code>
-                                        harus sama-sama horizontal (pakai koma) dan sama panjang.</li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ol>
-                          </div>
+                              </li> -->
+                            <li>
+                              <strong>Gunakan HLOOKUP untuk predikat:</strong>
+                              <ul class="dash-list">
+                                <li>Pada sel <strong>D3</strong> ketik:
+                                  <code>=HLOOKUP(C3;$A$13:$E$14;2;TRUE)</code>
+                                </li>
+                                <li>Salin ke bawah hingga <strong>D10</strong>.</li>
+                                <li>Parameter <code>TRUE</code> (range lookup) karena nilai dicocokkan ke dalam
+                                  rentang
+                                  (0-59, 60-69, 70-79, 80-89, 90+).</li>
+                              </ul>
+                              <div class="my-3">
+                                <img src="assets/files/sesi2_lanjutan2_hlookup.png" alt="Tabel HLOOKUP" />
+                              </div>
+                            </li>
+                            <li>
+                              <strong>Gunakan INDEX + MATCH untuk two-way lookup (Nilai Huruf):</strong>
+                              <ul class="dash-list">
+                                <!-- <li>Buat tabel referensi dua dimensi di <strong>$A$15:$E$19</strong>:
+                                  <ul class="dash-list">
+                                    <li>Baris 15: , A, B, C, D</li>
+                                    <li>B16: Andi, 85, 90, 78, 92</li>
+                                    <li>B17: Budi, 80, 88, 75, 85</li>
+                                    <li>... dan seterusnya.</li>
+                                  </ul>
+                                </li> -->
+                                <li>Pada sel <strong>E3</strong> ketik:
+                                  <code>=INDEX($B$18:$F$25,MATCH(B5,$A$18:$A$25,0),MATCH("C",$B$17:$E$17,0))</code>
+                                </li>
+                                <li>Penjelasan: INDEX mengambil nilai dari range tabel, MATCH pertama mencari baris
+                                  berdasarkan nama, MATCH kedua mencari kolom berdasarkan kategori.</li>
+                              </ul>
+                              <div class="my-3">
+                                <img src="assets/files/sesi2_lanjutan2_index_match.png" alt="Tabel HLOOKUP" />
+                              </div>
+                            </li>
+                            <li>
+                              <strong>Gunakan XLOOKUP untuk status kelulusan:</strong>
+                              <ul class="dash-list">
+                                <li>Buat tabel referensi status di <strong>$G$5:$H$9</strong>:
+                                  <ul class="dash-list">
+                                    <li>G5: 0, H5: Tidak Lulus</li>
+                                    <li>G6: 60, H6: Lulus</li>
+                                    <li>G7: 75, H7: Lulus Baik</li>
+                                    <li>G8: 85, H8: Lulus Memuaskan</li>
+                                    <li>G9: 95, H9: Lulus Terpuji</li>
+                                  </ul>
+                                </li>
+                                <li>Pada sel <strong>F5</strong> ketik:
+                                  <code>=XLOOKUP(C5,$G$5:$G$9,$H$5:$H$9,"Tidak Valid",-1)</code>
+                                </li>
+                                <li>Penjelasan singkat:
+                                  <ul class="dash-list">
+                                    <li>XLOOKUP mencari nilai <code>C5</code> (85) di <code>$G$5:$G$9</code>.</li>
+                                    <li>Karena tidak ada nilai 85 tepat di kolom G, dengan <code>-1</code> ia mencari
+                                      nilai terdekat yang lebih kecil — yaitu 75 → mengembalikan "Lulus Baik".</li>
+                                    <li>Parameter <code>-1</code> (match_mode) berarti exact match atau terdekat lebih
+                                      kecil — sama seperti <code>TRUE</code> di VLOOKUP untuk rentang nilai.</li>
+                                    <li>Jika nilai di bawah 0, mengembalikan "Tidak Valid".</li>
+                                  </ul>
+                                </li>
+                                <li>Atau contoh array tetap (tanpa tabel referensi):
+                                  <code>=XLOOKUP(C5,{0,60,75,85,95},{"E","D","C","B","A"})</code>
+                                  <ul class="dash-list">
+                                    <li>Array <code>{0,60,75,85,95}</code> dan <code>{"E","D","C","B","A"}</code>
+                                      harus sama-sama horizontal (pakai koma) dan sama panjang.</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ol>
+                          <!-- </div> -->
                           <div class="mb-3">
                             <strong>Penjelasan Rumus:</strong>
                             <ul class="dash-list">
@@ -1416,7 +1425,7 @@
                             --bs-btn-padding-y: 0.25rem;
                             --bs-btn-padding-x: 0.5rem;
                             --bs-btn-font-size: 0.75rem;
-                          " href="assets/files/hlookup_index_match.xlsx" role="button" download><i
+                          " href="assets/files/Tabel_HLOOKUP_INDEX_MATCH_XLOOKUP.xlsx" role="button" download><i
                           class="bi bi-file-earmark-word-fill"></i> Contoh
                         Latihan</a>
                     </div>
