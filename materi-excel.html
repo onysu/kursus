@@ -806,7 +806,7 @@
                           <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
-                              <li>
+                              <!-- <li>
                                 <strong>Buat judul kolom:</strong>
                                 <ul class="dash-list">
                                   <li>A1: No</li>
@@ -833,12 +833,12 @@
                                   <li>Indah — 95</li>
                                   <li>Joko — 70</li>
                                 </ul>
-                              </li>
+                              </li> -->
                               <li>
                                 <strong>Tentukan kelulusan dengan IF:</strong>
                                 <ul class="dash-list">
-                                  <li>Pada sel <strong>D2</strong> ketik:
-                                    <code>=IF(C2&gt;=75,"LULUS","TIDAK LULUS")</code>
+                                  <li>Pada sel <strong>D3</strong> ketik:
+                                    <code>=IF(C3&gt;=75,"LULUS","TIDAK LULUS")</code>
                                   </li>
                                   <li>Tekan Enter, maka akan muncul hasil "LULUS" jika nilai ≥ 75, atau "TIDAK LULUS"
                                     jika kurang.</li>
@@ -848,22 +848,22 @@
                               <li>
                                 <strong>Hitung jumlah siswa lulus:</strong>
                                 <ul class="dash-list">
-                                  <li>Pada sel <strong>D13</strong> ketik:
-                                    <code>=COUNTIF(D2:D11,"LULUS")</code>
+                                  <li>Pada sel <strong>B14</strong> ketik:
+                                    <code>=COUNTIF(D3:D11,"LULUS")</code>
                                   </li>
                                   <li>Tekan Enter.</li>
                                 </ul>
-                                Hasil: 6 siswa lulus (dari contoh data di atas).
+                                Hasil: 5 siswa lulus (dari contoh data di atas).
                               </li>
                               <li>
                                 <strong>Hitung jumlah siswa tidak lulus:</strong>
                                 <ul class="dash-list">
-                                  <li>Pada sel <strong>D14</strong> ketik:
-                                    <code>=COUNTIF(D2:D11,"TIDAK LULUS")</code>
+                                  <li>Pada sel <strong>B15</strong> ketik:
+                                    <code>=COUNTIF(D3:D11,"TIDAK LULUS")</code>
                                   </li>
                                   <li>Tekan Enter.</li>
                                 </ul>
-                                Hasil: 4 siswa tidak lulus.
+                                Hasil: 5 siswa tidak lulus.
                               </li>
                             </ol>
                           </div>
