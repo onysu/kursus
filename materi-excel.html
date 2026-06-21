@@ -1661,11 +1661,18 @@
                               <li>
                                 <strong>Buat Column Chart:</strong>
                                 <ul class="dash-list">
-                                  <li>Blok A1:C7 → Insert → Clustered Column.</li>
+                                  <li>Blok <strong>A1</strong>:<strong>C7</strong> → <strong>Insert</strong> →
+                                    <strong>Clustered Column</strong>.
+                                    <div class="my-2">
+                                      <img src="assets/img/Clustered_Column.png" alt="">
+                                    </div>
+                                  </li>
                                   <li>Target dan Realisasi tampil sebagai 2 kolom berbeda.</li>
                                 </ul>
+                                <div class="my-2">
+                                  <img src="assets/img/hasil_chart.png" alt="">
+                                </div>
                               </li>
-
                               <li>
                                 <strong>Ubah seri Realisasi menjadi Line:</strong>
                                 <ul class="dash-list">
@@ -1681,6 +1688,11 @@
                                     </div>
                                   </li>
                                   <li>Klik <strong>OK</strong>.</li>
+                                  <li>Hasil:
+                                    <div class="my-2">
+                                      <img src="assets/img/hasil_ubah_chart.png" alt="">
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
                               <li>
@@ -1699,6 +1711,11 @@
                                     Bulan.</li>
                                   <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Vertical</strong> → ketik:
                                     Nominal (Rp).</li>
+                                  <li>Hasil:
+                                    <div class="my-2">
+                                      <img src="assets/img/hasil_chart2.png" alt="">
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
                               <!-- <li>
@@ -1712,7 +1729,7 @@
                               <li>
                                 <strong>Terapkan Data Bars pada sel Realisasi:</strong>
                                 <ul class="dash-list">
-                                  <li>Blok C2:C7.</li>
+                                  <li>Blok <strong>C2</strong>:<strong>C7</strong>.</li>
                                   <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
                                   <li>Pilih <strong>Data Bars</strong> → pilih warna misal <strong>Blue Data
                                       Bar</strong>.</li>
@@ -1724,21 +1741,52 @@
                                   <li>Pada sel <strong>D1</strong> ketik: <strong>%</strong></li>
                                   <li>Pada sel <strong>D2</strong> ketik rumus: <code>=C2/B2</code></li>
                                   <li>Salin rumus ke bawah hingga sel <strong>D7</strong>.</li>
-                                  <li>Blok D2:D7 → Tab <strong>Home</strong> → grup <strong>Number</strong> → pilih <strong>%</strong>.</li>
+                                  <li>Blok <strong>D2</strong>:<strong>D7</strong> → Tab <strong>Home</strong> → grup
+                                    <strong>Number</strong> → pilih <strong>% Percentage</strong>.
+                                  </li>
                                 </ul>
+                                <div class="my-2">
+                                  <img src="assets/img/Tabel_Data_Target_vs_Realisasi_kolom_bantu.png" alt="">
+                                </div>
                               </li>
                               <li>
                                 <strong>Terapkan Icon Sets pada kolom persentase:</strong>
                                 <ul class="dash-list">
-                                  <li>Blok D2:D7.</li>
-                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong> → <strong>Icon Sets</strong> → pilih <strong>3 Traffic Lights (Unrimmed)</strong>.</li>
-                                  <li>Klik <strong>Conditional Formatting</strong> → <strong>Manage Rules</strong> → pilih rule → <strong>Edit Rule</strong>.</li>
-                                  <li>Ubah <strong>Type</strong> menjadi <strong>Percent</strong> untuk semua threshold.</li>
-                                  <li>Atur: hijau ≥ <strong>100</strong>, kuning ≥ <strong>90</strong>, merah &lt; <strong>90</strong>.</li>
+                                  <li>Blok <strong>D2</strong>:<strong>D7</strong>.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong> → <strong>Icon
+                                      Sets</strong> → pilih <strong>3 Traffic Lights (Unrimmed)</strong>.</li>
+                                  <li>Klik <strong>Conditional Formatting</strong> → <strong>Manage Rules</strong> →
+                                    pilih rule → <strong>Edit Rule</strong>.</li>
+                                  <li>Ubah <strong>Type</strong> menjadi <strong>Percent</strong> untuk semua threshold.
+                                  </li>
+                                  <li>Atur: hijau ≥ <strong>100</strong>, kuning ≥ <strong>90</strong>, merah &lt;
+                                    <strong>90</strong>.
+                                  </li>
                                   <li>Klik <strong>OK</strong>.</li>
+                                  <li>Hasil:
+                                    <div class="my-2">
+                                      <img src="assets/img/Tabel_Data_Target_vs_Realisasi_kolom_bantu_icon.png" alt="">
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
                             </ol>
+                          </div>
+                          <div class="mb-3 p-3 bg-light border-start border-4 border-success rounded">
+                            <strong>Penjelasan:</strong>
+                            <ul class="mb-0 dash-list">
+                              <li><strong>Target</strong> — Nilai penjualan yang direncanakan/ditargetkan per bulan
+                                (angka acuan).</li>
+                              <li><strong>Realisasi</strong> — Nilai penjualan yang benar-benar tercapai pada bulan
+                                tersebut (kenyataan di lapangan).</li>
+                              <li><strong>% (Persentase)</strong> — Perbandingan realisasi terhadap target, dihitung
+                                dengan rumus <code>=Realisasi/Target</code>.
+                                <br>→ <strong class="text-success">≥ 100%</strong> = target tercapai atau terlampaui.
+                                <br>→ <strong class="text-warning">90% – 99%</strong> = hampir mencapai target.
+                                <br>→ <strong class="text-danger">&lt; 90%</strong> = belum mencapai target, perlu
+                                evaluasi.
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
