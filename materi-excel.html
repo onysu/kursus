@@ -1826,88 +1826,143 @@
                               <li>Color Scales (Conditional Formatting).</li>
                               <li>Menggunakan Slicer untuk interaktivitas chart.</li>
                               <li>Merancang tata letak mini dashboard dalam 1 sheet.</li>
+                              <li>Fungsi SUMIF untuk membuat tabel rekap.</li>
                             </ol>
                           </div>
+                          <div class="mb-3 p-3 bg-light border-start border-4 border-danger rounded">
+                            <strong>Apa itu Mini Dashboard?</strong>
+                            <p class="mb-1 small">Mini dashboard adalah kumpulan beberapa chart dalam 1 sheet untuk melihat data dari berbagai sudut pandang sekaligus.</p>
+                            <ul class="mb-0 small dash-list">
+                              <li><strong>Line chart</strong> — melihat tren naik/turun penjualan dari bulan ke bulan.</li>
+                              <li><strong>Pie chart</strong> — melihat komposisi/kontribusi tiap produk terhadap total penjualan.</li>
+                              <li><strong>Bar chart</strong> — membandingkan penjualan antar region secara visual.</li>
+                              <li><strong>Slicer</strong> — tombol filter interaktif; klik region/produk, semua chart langsung berubah.</li>
+                            </ul>
+                          </div>
                           <div class="mb-3">
-                            <strong>Data Penjualan Multi-Dimensi</strong> <br />
-                            <img src="assets/files/sesi3lanjutan_data.png" alt="Data penjualan multi-dimensi" />
+                            <strong>Data Penjualan Multi-Dimensi</strong>
+                            <div class="my-2">
+                              <img src="assets/img/Data-Penjualan-Multi-Dimensi.png"
+                                alt="Data penjualan multi-dimensi" />
+                            </div>
                           </div>
                           <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
                               <li>
-                                <strong>Buat data tabel dengan kolom:</strong>
+                                <strong>Siapkan data tabel (A1:D13):</strong>
                                 <ul class="dash-list">
-                                  <li>A1: Bulan, B1: Region, C1: Produk, D1: Penjualan</li>
-                                  <li>Isi 20+ baris data, misal:
-                                    <ul class="dash-list">
-                                      <li>Jan — Jakarta — Laptop — 50000000</li>
-                                      <li>Jan — Jakarta — HP — 30000000</li>
-                                      <li>Jan — Bandung — Laptop — 25000000</li>
-                                      <li>Jan — Bandung — HP — 20000000</li>
-                                      <li>Feb — Jakarta — Laptop — 55000000</li>
-                                      <li>Feb — Jakarta — HP — 28000000</li>
-                                      <li>... dan seterusnya untuk 3-4 bulan</li>
-                                    </ul>
+                                  <li>Buat judul kolom: A1: <strong>Bulan</strong>, B1: <strong>Region</strong>, C1: <strong>Produk</strong>, D1: <strong>Penjualan</strong>.</li>
+                                  <li>Isi 12 baris data berikut:
+                                    <div class="row small mt-1">
+                                      <div class="col-6">
+                                        Jan — Jakarta — Laptop — 50000000<br>
+                                        Jan — Jakarta — HP — 30000000<br>
+                                        Jan — Bandung — Laptop — 25000000<br>
+                                        Jan — Bandung — HP — 20000000<br>
+                                        Feb — Jakarta — Laptop — 55000000<br>
+                                        Feb — Jakarta — HP — 28000000
+                                      </div>
+                                      <div class="col-6">
+                                        Feb — Bandung — Laptop — 27000000<br>
+                                        Feb — Bandung — HP — 22000000<br>
+                                        Mar — Jakarta — Laptop — 60000000<br>
+                                        Mar — Jakarta — HP — 32000000<br>
+                                        Mar — Bandung — Laptop — 30000000<br>
+                                        Mar — Bandung — HP — 25000000
+                                      </div>
+                                    </div>
                                   </li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Buat Line Chart (tren penjualan per bulan):</strong>
+                                <strong>Buat tabel rekap per bulan (untuk Line Chart):</strong>
                                 <ul class="dash-list">
-                                  <li>Buat tabel rekap total penjualan per bulan (gunakan SUMIF atau PivotTable
-                                    sederhana).</li>
-                                  <li>Blok data → Insert → Line Chart.</li>
+                                  <li>F1: <strong>Bulan</strong>, G1: <strong>Total</strong></li>
+                                  <li>F2: Jan, F3: Feb, F4: Mar</li>
+                                  <li>G2 ketik: <code>=SUMIF($A$2:$A$13;F2;$D$2:$D$13)</code></li>
+                                  <li>Salin G2 ke G3 dan G4 → hasil total penjualan Jan–Mar.</li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Buat Pie Chart (komposisi per produk):</strong>
+                                <strong>Buat Line Chart:</strong>
                                 <ul class="dash-list">
-                                  <li>Buat tabel rekap total penjualan per produk.</li>
-                                  <li>Blok data → Insert → Pie Chart.</li>
-                                  <li>Tambahkan Data Labels → pilih <strong>Percentage</strong>.</li>
+                                  <li>Blok F1:G4 → Tab <strong>Insert</strong> → pilih <strong>Line Chart</strong>.</li>
+                                  <li>Klik 2x judul chart → ganti: <strong>Tren Penjualan per Bulan</strong>.</li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Buat Bar Chart (penjualan per region):</strong>
+                                <strong>Buat tabel rekap per produk (untuk Pie Chart):</strong>
                                 <ul class="dash-list">
-                                  <li>Buat tabel rekap total penjualan per region.</li>
-                                  <li>Blok data → Insert → Bar Chart (Clustered Bar).</li>
+                                  <li>I1: <strong>Produk</strong>, J1: <strong>Total</strong></li>
+                                  <li>I2: Laptop, I3: HP</li>
+                                  <li>J2 ketik: <code>=SUMIF($C$2:$C$13;I2;$D$2:$D$13)</code></li>
+                                  <li>Salin J2 ke J3.</li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Atur tata letak dashboard:</strong>
+                                <strong>Buat Pie Chart:</strong>
                                 <ul class="dash-list">
-                                  <li>Pindahkan chart-chart ke posisi yang rapi dalam 1 sheet.</li>
-                                  <li>Beri judul masing-masing chart.</li>
-                                  <li>Sembunyikan gridlines agar tampak seperti dashboard (View → Gridlines).</li>
+                                  <li>Blok I1:J3 → <strong>Insert</strong> → <strong>Pie Chart</strong>.</li>
+                                  <li>Ganti judul: <strong>Komposisi Penjualan per Produk</strong>.</li>
+                                  <li>Klik kanan chart → <strong>Add Data Labels</strong> → pilih <strong>Percentage</strong>.</li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Terapkan Color Scales:</strong>
+                                <strong>Buat tabel rekap per region (untuk Bar Chart):</strong>
                                 <ul class="dash-list">
-                                  <li>Blok kolom Penjualan (D2:D21).</li>
-                                  <li>Tab Home → Conditional Formatting → <strong>Color Scales</strong>.</li>
+                                  <li>L1: <strong>Region</strong>, M1: <strong>Total</strong></li>
+                                  <li>L2: Jakarta, L3: Bandung</li>
+                                  <li>M2 ketik: <code>=SUMIF($B$2:$B$13;L2;$D$2:$D$13)</code></li>
+                                  <li>Salin M2 ke M3.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat Bar Chart:</strong>
+                                <ul class="dash-list">
+                                  <li>Blok L1:M3 → <strong>Insert</strong> → pilih <strong>Clustered Bar</strong> (ikon bar horizontal).</li>
+                                  <li>Ganti judul: <strong>Penjualan per Region</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Atur tata letak dashboard dalam 1 sheet:</strong>
+                                <ul class="dash-list">
+                                  <li>Seret chart ke posisi: Line di kiri atas, Pie di kanan atas, Bar di kiri bawah.</li>
+                                  <li>Beri jarak rapi, sesuaikan ukuran chart agar proporsional.</li>
+                                  <li>Tab <strong>View</strong> → hilangkan centang <strong>Gridlines</strong> agar tampak seperti dashboard.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Terapkan Color Scales pada data Penjualan:</strong>
+                                <ul class="dash-list">
+                                  <li>Blok D2:D13.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong> → <strong>Color Scales</strong>.</li>
                                   <li>Pilih <strong>Green - Yellow - Red Color Scale</strong>.</li>
+                                  <li>Otomatis: nilai tertinggi hijau, sedang kuning, terendah merah.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Ubah data menjadi Table (syarat Slicer):</strong>
+                                <ul class="dash-list">
+                                  <li>Blok A1:D13 → tekan <strong>Ctrl+T</strong> → klik OK.</li>
+                                  <li>Sekarang data berbentuk Table (ada ikon filter di setiap header).</li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Tambahkan Slicer untuk filter interaktif:</strong>
                                 <ul class="dash-list">
-                                  <li>Klik salah satu chart → Tab <strong>Chart Design</strong> → <strong>Add Chart
-                                      Element</strong>.</li>
-                                  <li>Atau: Klik di area kosong → Tab <strong>Insert</strong> → <strong>Slicer</strong>.
-                                  </li>
-                                  <li>Centang <strong>Region</strong> dan <strong>Produk</strong>.</li>
-                                  <li>Klik OK → Slicer akan muncul.</li>
-                                  <li>Klik item di Slicer (misal "Jakarta") → semua chart akan otomatis terfilter.</li>
+                                  <li>Klik di dalam Table → Tab <strong>Table Design</strong> → <strong>Insert Slicer</strong>.</li>
+                                  <li>Centang <strong>Region</strong> dan <strong>Produk</strong> → klik OK.</li>
+                                  <li>Akan muncul 2 kotak Slicer: Region dan Produk.</li>
+                                  <li>Coba klik <strong>"Jakarta"</strong> di Slicer Region → semua chart otomatis menampilkan data Jakarta saja.</li>
+                                  <li>Klik ikon <strong>filter silang</strong> di pojok kanan atas Slicer untuk menghapus filter.</li>
                                 </ul>
                               </li>
                             </ol>
                           </div>
                           <div class="mb-3">
                             <strong>Tampilan Mini Dashboard:</strong> <br />
-                            <img src="assets/files/sesi3lanjutan.png" alt="Mini dashboard" />
+                            <img src="assets/img/Mini-Dashboard.png" alt="Mini dashboard" />
                           </div>
                         </div>
                       </div>
