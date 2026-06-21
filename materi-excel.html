@@ -1522,7 +1522,8 @@
                           <div class="mb-3">
                             <strong>Tabel Data Penjualan 6 Bulan</strong>
                             <div class="my-2">
-                            <img src="assets/files/Tabel_Data_Penjualan_6_Bulan.png" alt="Tabel data penjualan 6 bulan" />
+                              <img src="assets/files/Tabel_Data_Penjualan_6_Bulan.png"
+                                alt="Tabel data penjualan 6 bulan" />
                             </div>
                           </div>
                           <div class="mb-3">
@@ -1554,7 +1555,7 @@
                               <li>
                                 <strong>Tambahkan judul chart:</strong>
                                 <ul class="dash-list">
-                                  <li>Klik judul chart (default: "Chart Title").</li>
+                                  <li>Klik 2x pada judul chart (default: "Chart Title").</li>
                                   <li>Ketik: <strong>"Penjualan 6 Bulan Pertama"</strong>.</li>
                                 </ul>
                               </li>
@@ -1641,7 +1642,8 @@
                           <div class="mb-3">
                             <strong>Tabel Data Target vs Realisasi</strong>
                             <div class="my-2">
-                              <img src="assets/files/Tabel_Data_Target_vs_Realisasi.png" alt="Tabel target vs realisasi" />
+                              <img src="assets/img/Tabel_Data_Target_vs_Realisasi.png"
+                                alt="Tabel target vs realisasi" />
                             </div>
                           </div>
                           <div class="mb-3">
@@ -1663,20 +1665,50 @@
                                   <li>Target dan Realisasi tampil sebagai 2 kolom berbeda.</li>
                                 </ul>
                               </li>
+
                               <li>
                                 <strong>Ubah seri Realisasi menjadi Line:</strong>
                                 <ul class="dash-list">
-                                  <li>Klik kanan pada kolom Realisasi → <strong>Change Series Chart Type</strong>.</li>
-                                  <li>Pilih <strong>Line with Markers</strong> untuk seri Realisasi.</li>
-                                  <li>Klik OK.</li>
+                                  <li>Klik kanan pada Chart → Tab <strong>Chart Design</strong> → <strong>Change Chart
+                                      Type</strong>.
+                                    <div class="my-2">
+                                      <img src="assets/img/Change_Chart_Type.png" alt="">
+                                    </div>
+                                  </li>
+                                  <li>Pilih <strong>Line with Markers</strong> untuk seri Realisasi.
+                                    <div class="my-2">
+                                      <img src="assets/img/Line_with_Markers.png" alt="">
+                                    </div>
+                                  </li>
+                                  <li>Klik <strong>OK</strong>.</li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Tambahkan judul chart:</strong> "Target vs Realisasi 2025".
+                                <strong>Tambahkan judul chart:</strong>
+                                <ul class="dash-list">
+                                  <li>Klik 2x pada judul chart (default: "Chart Title").</li>
+                                  <li>Ketik: <strong>Target vs Realisasi 2025</strong>.</li>
+                                </ul>
                               </li>
                               <li>
-                                <strong>Tambahkan Axis Titles &amp; Data Labels</strong> seperti praktik dasar.
+                                <strong>Tambahkan label sumbu:</strong>
+                                <ul class="dash-list">
+                                  <li>Klik chart → <strong>Chart Design</strong> → <strong>Add Chart Element</strong>.
+                                  </li>
+                                  <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Horizontal</strong> → ketik:
+                                    Bulan.</li>
+                                  <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Vertical</strong> → ketik:
+                                    Nominal (Rp).</li>
+                                </ul>
                               </li>
+                              <!-- <li>
+                                <strong>Tambahkan Data Label:</strong>
+                                <ul class="dash-list">
+                                  <li>Klik chart → <strong>Chart Design</strong> → <strong>Add Chart Element</strong>.
+                                  </li>
+                                  <li>Pilih <strong>Data Labels</strong> → <strong>Outside End</strong>.</li>
+                                </ul>
+                              </li> -->
                               <li>
                                 <strong>Terapkan Data Bars pada sel Realisasi:</strong>
                                 <ul class="dash-list">
@@ -1687,25 +1719,23 @@
                                 </ul>
                               </li>
                               <li>
-                                <strong>Terapkan Icon Sets pada sel Target:</strong>
+                                <strong>Buat kolom bantu persentase pencapaian:</strong>
                                 <ul class="dash-list">
-                                  <li>Blok B2:B7.</li>
-                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
-                                  <li>Pilih <strong>Icon Sets</strong> → pilih <strong>3 Traffic Lights
-                                      (Unrimmed)</strong> atau <strong>3 Symbols (Circled)</strong>.</li>
+                                  <li>Pada sel <strong>D1</strong> ketik: <strong>%</strong></li>
+                                  <li>Pada sel <strong>D2</strong> ketik rumus: <code>=C2/B2</code></li>
+                                  <li>Salin rumus ke bawah hingga sel <strong>D7</strong>.</li>
+                                  <li>Blok D2:D7 → Tab <strong>Home</strong> → grup <strong>Number</strong> → pilih <strong>%</strong>.</li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Buat aturan Icon Sets berdasarkan persentase realisasi terhadap target:</strong>
+                                <strong>Terapkan Icon Sets pada kolom persentase:</strong>
                                 <ul class="dash-list">
-                                  <li>Blok kolom Realisasi (C2:C7) atau buat kolom bantu D dengan rumus
-                                    <code>=C2/B2</code> (format %).
-                                  </li>
-                                  <li>Tab Home → Conditional Formatting → <strong>Manage Rules</strong>.</li>
-                                  <li>Pilih <strong>New Rule</strong> → <strong>Format all cells based on their
-                                      values</strong>.</li>
-                                  <li>Format Style: <strong>Icon Sets</strong>.</li>
-                                  <li>Atur: hijau jika ≥ 100%, kuning jika ≥ 90%, merah jika &lt; 90%.</li>
+                                  <li>Blok D2:D7.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong> → <strong>Icon Sets</strong> → pilih <strong>3 Traffic Lights (Unrimmed)</strong>.</li>
+                                  <li>Klik <strong>Conditional Formatting</strong> → <strong>Manage Rules</strong> → pilih rule → <strong>Edit Rule</strong>.</li>
+                                  <li>Ubah <strong>Type</strong> menjadi <strong>Percent</strong> untuk semua threshold.</li>
+                                  <li>Atur: hijau ≥ <strong>100</strong>, kuning ≥ <strong>90</strong>, merah &lt; <strong>90</strong>.</li>
+                                  <li>Klik <strong>OK</strong>.</li>
                                 </ul>
                               </li>
                             </ol>
