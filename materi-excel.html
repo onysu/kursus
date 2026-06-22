@@ -2406,8 +2406,15 @@
                             </ol>
                           </div>
                           <div class="mb-3">
-                            <strong>Struktur Aplikasi Pencatatan Pengeluaran</strong> <br />
-                            <img src="assets/files/sesi4lanjutan_struktur.png" alt="Struktur aplikasi pengeluaran" />
+                            <strong>Struktur Aplikasi Pencatatan Pengeluaran</strong>
+                            <p class="mb-1 mt-1">Aplikasi terdiri dari beberapa bagian:</p>
+                            <ul class="dash-list mb-0">
+                              <li><strong>Sheet "Data Pengeluaran"</strong>: kolom Tanggal, Kategori (dropdown), Deskripsi, Jumlah, Bulan (TEXT), Jenis (IF).</li>
+                              <li><strong>PivotTable</strong> di sheet terpisah: rekap jumlah per kategori.</li>
+                              <li><strong>Pie Chart</strong> dari PivotTable: visualisasi proporsi pengeluaran.</li>
+                              <li><strong>Slicer</strong>: filter interaktif berdasarkan bulan.</li>
+                              <li><strong>Conditional Formatting</strong>: sorot merah pengeluaran di atas rata-rata.</li>
+                            </ul>
                           </div>
                           <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
@@ -2421,10 +2428,11 @@
                               <li>
                                 <strong>Buat dropdown kategori dengan Data Validation:</strong>
                                 <ul class="dash-list">
-                                  <li>Di sel terpisah (misal F1:F5) ketik daftar kategori: Makanan, Transport, Belanja,
+                                  <li>Di sel terpisah (misal H1:H5) ketik daftar kategori: Makanan, Transport, Belanja,
                                     Tagihan, Hiburan.</li>
-                                  <li>Blok B2:B30 → Tab <strong>Data</strong> → <strong>Data Validation</strong>.</li>
-                                  <li>Allow: <strong>List</strong> → Source: <strong>=$F$1:$F$5</strong> → OK.</li>
+                                  <li>Blok B2:B30 → Tab <strong>Data</strong> → cari grup <strong>Data Tools</strong> → klik <strong>Data Validation</strong> (ikon centang di kotak).</li>
+                                  <li class="text-muted small"><i class="bi bi-info-circle"></i> <strong>Tips Excel 2024:</strong> Jika tidak menemukan tombolnya, gunakan shortcut <kbd>Alt</kbd> + <kbd>A</kbd> + <kbd>V</kbd> (tekan berurutan), atau ketik "Data Validation" di <strong>Tell Me</strong> (kotak search di atas ribbon).</li>
+                                  <li>Allow: <strong>List</strong> → Source: <strong>=$H$1:$H$5</strong> → OK.</li>
                                   <li>Sekarang kolom Kategori memiliki dropdown pilihan.</li>
                                 </ul>
                               </li>
@@ -2446,9 +2454,17 @@
                                 </ul>
                               </li>
                               <li>
+                                <strong>Buat kolom "Jenis" dengan IF untuk kategori otomatis:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada F1 ketik: <strong>Jenis</strong></li>
+                                  <li>Pada F2 ketik: <code>=IF(OR(B2="Makanan",B2="Tagihan",B2="Transport"),"Kebutuhan","Keinginan")</code> → Enter, lalu salin ke bawah.</li>
+                                  <li>IF ini otomatis mengelompokkan: <strong>"Kebutuhan"</strong> (Makanan, Tagihan, Transport) atau <strong>"Keinginan"</strong> (Belanja, Hiburan).</li>
+                                </ul>
+                              </li>
+                              <li>
                                 <strong>Buat PivotTable rekap per kategori:</strong>
                                 <ul class="dash-list">
-                                  <li>Insert → PivotTable → New Worksheet.</li>
+                                  <li>Klik di dalam tabel data (pastikan range mencakup kolom A sampai F) → Insert → PivotTable → New Worksheet → OK.</li>
                                   <li>Drag <strong>Kategori</strong> ke Rows.</li>
                                   <li>Drag <strong>Jumlah</strong> ke Values (Sum).</li>
                                   <li>Sort PivotTable descending berdasarkan nilai untuk melihat kategori pengeluaran
@@ -2485,8 +2501,19 @@
                             </ol>
                           </div>
                           <div class="mb-3">
-                            <strong>Hasil Akhir Final Project:</strong> <br />
-                            <img src="assets/files/sesi4lanjutan.png" alt="Final project dashboard" />
+                            <strong>Hasil Akhir Final Project:</strong>
+                            <p class="mb-1">Setelah selesai, Anda akan memiliki:</p>
+                            <ul class="dash-list mb-0">
+                              <li>Data pengeluaran 20+ baris dengan dropdown kategori dan kolom bantu otomatis (Bulan, Jenis).</li>
+                              <li>PivotTable rekap total pengeluaran per kategori, diurutkan dari terbesar.</li>
+                              <li>Pie Chart dengan label persentase dan nama kategori.</li>
+                              <li>Conditional Formatting merah pada sel Jumlah yang di atas rata-rata.</li>
+                              <li>Slicer untuk memfilter PivotTable dan Chart per bulan.
+                                <div class="my-2">
+                                  <img class="img-fluid" src="assets/img/Struktur-Aplikasi-Pencatatan-Pengeluaran.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
                           </div>
                           <div class="mb-3">
                             <strong>Ringkasan Skill yang Digunakan:</strong>
@@ -2505,13 +2532,7 @@
                     </div>
                     <!-- file download -->
                     <div class="py-2">
-                      <a class="btn btn-sm btn-outline-secondary" style="
-                            --bs-btn-padding-y: 0.25rem;
-                            --bs-btn-padding-x: 0.5rem;
-                            --bs-btn-font-size: 0.75rem;
-                          " href="assets/files/pencatatan_pengeluaran.xlsx" role="button" download><i
-                          class="bi bi-file-earmark-word-fill"></i> Contoh
-                        Latihan</a>
+                      <span class="text-muted small"><i class="bi bi-info-circle"></i> Project ini dibuat sendiri dengan mengikuti langkah-langkah di atas. Tidak ada file download — semua dikerjakan dari awal.</span>
                     </div>
                   </li>
                 </ol>
