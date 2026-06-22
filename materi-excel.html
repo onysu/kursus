@@ -1897,7 +1897,7 @@
                           <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
-                              <li>
+                              <!-- <li>
                                 <strong>Siapkan data tabel (A1:D13):</strong>
                                 <ul class="dash-list">
                                   <li>Buat judul kolom: A1: <strong>Bulan</strong>, B1: <strong>Region</strong>, C1:
@@ -1924,7 +1924,7 @@
                                     </div>
                                   </li>
                                 </ul>
-                              </li>
+                              </li> -->
                               <li>
                                 <strong>Buat tabel rekap per bulan (untuk Line Chart):</strong>
                                 <ul class="dash-list">
@@ -1932,12 +1932,17 @@
                                   <li>F2: Jan, F3: Feb, F4: Mar</li>
                                   <li>G2 ketik: <code>=SUMIF($A$2:$A$13;F2;$D$2:$D$13)</code></li>
                                   <li>Salin G2 ke G3 dan G4 → hasil total penjualan Jan–Mar.</li>
+                                  <li>Hasil:
+                                    <div class="my-2">
+                                      <img src="assets/img/tabel-rekap-per-bulan.png" alt="">
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
                               <li>
                                 <strong>Buat Line Chart:</strong>
                                 <ul class="dash-list">
-                                  <li>Blok F1:G4 → Tab <strong>Insert</strong> → pilih <strong>Line Chart</strong>.
+                                  <li>Blok <strong>F1</strong>:<strong>G4</strong> → Tab <strong>Insert</strong> → pilih <strong>Line Chart</strong>.
                                     <div class="my-2">
                                       <img src="assets/img/Line-Chart.png" alt="">
                                     </div>
@@ -1957,6 +1962,11 @@
                                   <li>I2: Laptop, I3: HP</li>
                                   <li>J2 ketik: <code>=SUMIF($C$2:$C$13;I2;$D$2:$D$13)</code></li>
                                   <li>Salin J2 ke J3.</li>
+                                  <li>Hasil:
+                                    <div class="my-2">
+                                      <img src="assets/img/tabel-rekap-per-produk.png" alt="">
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
                               <li>
@@ -2003,6 +2013,11 @@
                                   <li>L2: Jakarta, L3: Bandung</li>
                                   <li>M2 ketik: <code>=SUMIF($B$2:$B$13;L2;$D$2:$D$13)</code></li>
                                   <li>Salin M2 ke M3.</li>
+                                  <li>Hasil:
+                                    <div class="my-2">
+                                      <img src="assets/img/tabel-rekap-per-region.png" alt="">
+                                    </div>
+                                  </li>
                                 </ul>
                               </li>
                               <li>
