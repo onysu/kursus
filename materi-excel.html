@@ -2296,28 +2296,23 @@
                           <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
-                              <li>
-                                <strong>Buat data penjualan dengan kolom:</strong>
-                                <ul class="dash-list">
-                                  <li>A1: Tanggal, B1: Region, C1: Produk, D1: Qty, E1: Harga Satuan, F1: Total</li>
-                                  <li>Isi 20+ baris data, misal:
-                                    <ul class="dash-list">
-                                      <li>01/01/2025 — Jakarta — Laptop — 2 — 10000000 — =D2*E2</li>
-                                      <li>05/01/2025 — Bandung — HP — 5 — 3000000 — =D3*E3</li>
-                                      <li>... dan seterusnya.</li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Buat PivotTable:</strong>
-                                <ul class="dash-list">
-                                  <li>Klik di dalam tabel data → Tab <strong>Insert</strong> →
-                                    <strong>PivotTable</strong>.
-                                  </li>
-                                  <li>Pilih <strong>New Worksheet</strong> → OK.</li>
-                                </ul>
-                              </li>
+                               <li>
+                                 <strong>Download & buka file latihan:</strong>
+                                 <ul class="dash-list">
+                                   <li>Klik tombol <strong>"Contoh Latihan"</strong> di bawah halaman ini.</li>
+                                   <li>Buka file <code>Data-Penjualan-per-Region-dan-Produk.xlsx</code> yang sudah didownload.</li>
+                                   <li>File berisi data penjualan dengan kolom: Tanggal, Region, Produk, Qty, Harga Satuan, dan Total (20+ baris).</li>
+                                 </ul>
+                               </li>
+                               <li>
+                                 <strong>Buat PivotTable:</strong>
+                                 <ul class="dash-list">
+                                   <li>Klik di dalam tabel data → Tab <strong>Insert</strong> →
+                                     <strong>PivotTable</strong>.
+                                   </li>
+                                   <li>Pilih <strong>New Worksheet</strong> → OK.</li>
+                                 </ul>
+                               </li>
                               <li>
                                 <strong>Atur PivotTable Fields:</strong>
                                 <ul class="dash-list">
@@ -2356,9 +2351,16 @@
                           </div>
                           <div class="mb-3">
                             <strong>Hasil Akhir:</strong>
-                            <div class="my-2">
-                              <img src="assets/img/PivotTable-dan-PivotChart.png" alt="PivotTable dan PivotChart" />
-                            </div>
+                            <p class="mb-1">Setelah selesai, Anda akan memiliki:</p>
+                            <ul class="dash-list mb-0">
+                              <li>PivotTable yang merangkum total penjualan per Region (baris) dan per Produk (kolom).</li>
+                              <li>PivotChart Column yang menampilkan perbandingan visual penjualan.</li>
+                              <li>Slicer untuk menyaring data berdasarkan Region secara interaktif.
+                                <div class="my-2">
+                                  <img src="assets/img/PivotTable.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -2369,7 +2371,7 @@
                             --bs-btn-padding-y: 0.25rem;
                             --bs-btn-padding-x: 0.5rem;
                             --bs-btn-font-size: 0.75rem;
-                          " href="assets/files/pivot_penjualan.xlsx" role="button" download><i
+                          " href="assets/files/Data-Penjualan-per-Region-dan-Produk.xlsx" role="button" download><i
                           class="bi bi-file-earmark-word-fill"></i> Contoh
                         Latihan</a>
                     </div>
