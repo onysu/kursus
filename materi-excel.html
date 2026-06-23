@@ -990,7 +990,7 @@
                     <strong class="text-danger">Lanjutan 1:</strong> Buat sistem
                     penggajian: tabel karyawan dengan kode, nama, golongan.
                     Tabel referensi golongan &amp; gaji. Gunakan
-                    <code>=VLOOKUP(D2,$A$2:$B$10,2,FALSE)</code> untuk mengisi
+                    <code>=VLOOKUP(C4;$F$4:$G$8;2;FALSE)</code> untuk mengisi
                     gaji otomatis. Tambahkan IFERROR untuk menangani data
                     tidak ditemukan.
 
@@ -1016,51 +1016,50 @@
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
                               <li>
-                                <p><strong>Buat tabel referensi golongan &amp; gaji</strong>:</p>
-                                <div class="mb-3">
-                                  <img src="assets/files/tabel_referensi_golongan_&_gaji.png" alt="">
-                                  <ul class="dash-list">
-                                    <li>F1: judul <strong>TABLE REFERENSI GAJI</strong>, blok <strong>F1</strong> -
-                                      <strong>G1</strong> klik <strong>Merge & Center</strong>
-                                      <img src="assets/files/merge_center.png" alt="">
-                                    </li>
-                                    <li>F2: <strong>Kode Golongan</strong>, G2: <strong>Gaji Pokok</strong></li>
-                                    <li>F3: I, G3: 5000000</li>
-                                    <li>F4: II, G4: 7000000</li>
-                                    <li>F5: III, G5: 9000000</li>
-                                    <li>F6: IV, G6: 12000000</li>
-                                    <li>F7: V, G7: 15000000</li>
-                                  </ul>
-                                </div>
-
-                              </li>
-                              <li>
                                 <p><strong>Buat tabel data karyawan</strong>:</p>
                                 <div class="mb-3">
-                                  <img src="assets/files/tabel_data_karyawan.png" alt="">
-                                  <ul class="dash-list">
-                                    <li>A1: judul <strong>TABEL DATA KARYAWAN</strong>, blok <strong>A1</strong> -
-                                      <strong>D1</strong> klik <strong>Merge & Center</strong>
-                                      <img src="assets/files/merge_center.png" alt="">
-                                    </li>
-                                    <li>A2: <strong>Kode</strong>, B2: <strong>Nama</strong>, C2:
-                                      <strong>Golongan</strong>, D2: <strong>Gaji Pokok</strong>
-                                    </li>
-                                  </ul>
-                                  <strong>Isi data karyawan</strong> (contoh 8-10 baris):
-                                  <ul class="dash-list">
-                                    <li>A3: K001 — Andi — III</li>
-                                    <li>A4: K002 — Budi — II</li>
-                                    <li>A5: K003 — Cici — V</li>
-                                    <li>A6: 004 — Dodi — I</li>
-                                    <li>A7: K005 — Eka — IV</li>
-                                    <li>A8: K006 — Fani — III</li>
-                                    <li>A9: K007 — Gita — ll (sengaja salah ketik "II" bukan golongan valid) → untuk
-                                      demo
-                                      IFERROR</li>
-                                    <li>A10: K008 — Hadi — VI (golongan tidak ada di referensi) → menampilkan error</li>
-                                  </ul>
+                                  <img src="assets/img/tabel_data_karyawan.png" alt="">
                                 </div>
+                                <!-- <ul class="dash-list">
+                                  <li>A2: judul <strong>TABEL DATA KARYAWAN</strong>, blok <strong>A2</strong> -
+                                    <strong>D2</strong> klik <strong>Merge & Center</strong>
+                                    <img src="assets/files/merge_center.png" alt="">
+                                  </li>
+                                  <li>A3: <strong>Kode</strong>, B3: <strong>Nama</strong>, C3:
+                                    <strong>Golongan</strong>, D3: <strong>Gaji Pokok</strong>
+                                  </li>
+                                </ul>
+                                <strong>Isi data karyawan</strong> (contoh 8-10 baris):
+                                <ul class="dash-list">
+                                  <li>A4: K001 — Andi — III</li>
+                                  <li>A5: K002 — Budi — II</li>
+                                  <li>A6: K003 — Cici — V</li>
+                                  <li>A7: 004 — Dodi — I</li>
+                                  <li>A8: K005 — Eka — IV</li>
+                                  <li>A9: K006 — Fani — III</li>
+                                  <li>A10: K007 — Gita — ll (sengaja salah ketik "II" bukan golongan valid) → untuk
+                                    demo
+                                    IFERROR</li>
+                                  <li>A11: K008 — Hadi — VI (golongan tidak ada di referensi) → menampilkan error</li>
+                                </ul> -->
+                              </li>
+                              <li>
+                                <p><strong>Buat tabel referensi golongan &amp; gaji</strong>:</p>
+                                <div class="mb-3">
+                                  <img src="assets/img/tabel_referensi_golongan_&_gaji.png" alt="">
+                                </div>
+                                <!-- <ul class="dash-list">
+                                  <li>F2: judul <strong>TABLE REFERENSI GAJI</strong>, blok <strong>F2</strong> -
+                                    <strong>G2</strong> klik <strong>Merge & Center</strong>
+                                    <img src="assets/files/merge_center.png" alt="">
+                                  </li>
+                                  <li>F3: <strong>Kode Golongan</strong>, G3: <strong>Gaji Pokok</strong></li>
+                                  <li>F4: I, G4: 5000000</li>
+                                  <li>F5: II, G5: 7000000</li>
+                                  <li>F6: III, G6: 9000000</li>
+                                  <li>F7: IV, G7: 12000000</li>
+                                  <li>F8: V, G8: 15000000</li>
+                                </ul> -->
                               </li>
                               <li>
                                 <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
@@ -1075,19 +1074,19 @@
                                   <li>Perhatikan: data "II" (dengan spasi) dan "VI" akan menghasilkan error
                                     <code>#N/A</code> karena tidak ditemukan di tabel referensi.
                                     <div class="my-3">
-                                      <img src="assets/files/tabel_data_karyawan_vlookup.png" alt="">
+                                      <img src="assets/img/tabel_data_karyawan_vlookup.png" alt="">
                                     </div>
                                   </li>
-                                  <li>
-                                    <div class="mb-3">
-                                      <strong>Format Gaji:</strong>
-                                      <ul class="dash-list">
-                                        <li>Blok sel <strong>D4</strong>-<strong>D11</strong>.</li>
-                                        <li>Tab <strong>Home</strong> → <strong>Number</strong> → pilih
-                                          <strong>Currency</strong> atau <strong>Accounting</strong> dengan simbol Rp.
-                                        </li>
-                                      </ul>
-                                    </div>
+
+                                </ul>
+
+                              </li>
+                              <li>
+                                <strong>Format Gaji:</strong>
+                                <ul class="dash-list">
+                                  <li>Blok sel <strong>D4</strong>-<strong>D11</strong>.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Number</strong> → pilih
+                                    <strong>Currency</strong> atau <strong>Accounting</strong> dengan simbol Rp.
                                   </li>
                                 </ul>
                                 <div class="mb-3">
@@ -1117,8 +1116,6 @@
                                   </li>
                                   <li>Sekarang data "II" dan "VI" akan menampilkan teks "Golongan tidak ditemukan" bukan
                                     error <code>#N/A</code>
-                                  </li>
-                                  <li>
                                     <div class="my-3">
                                       <img src="assets/files/tabel_data_karyawan_iferror.png" alt="">
                                     </div>
@@ -1158,7 +1155,6 @@
                               </li>
                             </ol>
                           </div>
-
                           <div class="mb-3">
                             <strong>Tips:</strong>
                             <ul class="dash-list">
