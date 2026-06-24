@@ -166,9 +166,13 @@
     }
 
     .accordion-button {
-      align-items: baseline;
-      padding: 0.9rem;
-      /* display: grid; */
+      align-items: unset;
+      padding: 0.5rem 0.9rem;
+      display: grid;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: transparent;
     }
   </style>
 </head>
@@ -308,401 +312,400 @@
             </button>
           </h2>
           <div id="pertemuan1" class="accordion-collapse collapse" data-bs-parent="#accordionPowerPoint">
-            <div class="accordion-body p-0">
+            <div class="accordion-body small p-0">
               <div class="contoh-box">
-                <strong><i class="bi bi-file-earmark"></i> Langkah Praktik:</strong>
-                <ol class="mt-2 mb-0 ps-3">
-                  <div class="accordion accordion-flush" id="accordionPraktikPowerPointSesi1">
-                    <!-- Dasar -->
-                    <li>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#sesi1Dasar" aria-expanded="false" aria-controls="sesi1Dasar">
-                            <strong class="text-success me-2">Dasar:</strong> Buat 3 slide
-                            presentasi diri: (1) Cover nama &amp; foto, (2) Pendidikan
-                            &amp; pengalaman, (3) Hobi &amp; minat. Gunakan tema bawaan
-                            PowerPoint.
-                          </button>
-                        </h2>
-                        <div id="sesi1Dasar" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionPraktikPowerPointSesi1">
-                          <div class="accordion-body">
-                            <ol>
+                <div class="mb-3">
+                  <strong><i class="bi bi-file-earmark"></i> Langkah Praktik:</strong>
+                </div>
+                <!-- <ol class="mt-2 mb-0 ps-3"> -->
+                <div class="accordion accordion-flush" id="accordionPraktikPowerPointSesi1">
+                  <!-- Dasar -->
+                  <!-- <li> -->
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sesi1Dasar" aria-expanded="false" aria-controls="sesi1Dasar">
+                        <strong class="text-success me-2">Dasar:</strong> Buat 3 slide
+                        presentasi diri: (1) Cover nama &amp; foto, (2) Pendidikan
+                        &amp; pengalaman, (3) Hobi &amp; minat. Gunakan tema bawaan
+                        PowerPoint.
+                      </button>
+                    </h2>
+                    <div id="sesi1Dasar" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionPraktikPowerPointSesi1">
+                      <div class="accordion-body">
+                        <ol>
+                          <li>
+                            <strong>Buka PowerPoint</strong> → pilih
+                            <strong>Blank Presentation</strong>.
+                          </li>
+                          <li>
+                            <strong>Pilih tema:</strong> Tab
+                            <strong>Design</strong> → pilih salah satu tema
+                            (misal: <strong>Ion</strong>,
+                            <strong>Retrospect</strong>, atau
+                            <strong>Frame</strong>).
+                          </li>
+                          <li>
+                            <strong>Slide 1 — Cover:</strong>
+                            <ul>
                               <li>
-                                <strong>Buka PowerPoint</strong> → pilih
-                                <strong>Blank Presentation</strong>.
+                                "Click to add title" ketik:
+                                <strong>"PRESENTASI DIRI"</strong> (font besar
+                                44 pt).
+                              </li>
+                              <!-- <li>Tab <strong>Insert</strong> → <strong>Text Box</strong> → </li> -->
+                              <li>
+                                Klik <strong>Insert</strong> →
+                                <strong>Pictures</strong> →
+                                <strong>This Device</strong>.
                               </li>
                               <li>
-                                <strong>Pilih tema:</strong> Tab
-                                <strong>Design</strong> → pilih salah satu tema
-                                (misal: <strong>Ion</strong>,
-                                <strong>Retrospect</strong>, atau
-                                <strong>Frame</strong>).
+                                Atur foto: klik 2x pada Foto →
+                                <strong>Picture Format</strong> →
+                                <strong>Crop</strong> →
+                                <strong>Crop to Shape</strong> → pilih
+                                <strong>Oval</strong>.
                               </li>
+                              <!-- <li>Tambahkan teks tambahan: jurusan/kelas, font 20 pt.</li> -->
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Slide 2 — Pendidikan &amp; Pengalaman:</strong>
+                            <ul>
+                              <li>Klik tab <strong>Home</strong>.</li>
+                              <li>Klik <strong>New Slide</strong>.</li>
                               <li>
-                                <strong>Slide 1 — Cover:</strong>
-                                <ul>
-                                  <li>
-                                    "Click to add title" ketik:
-                                    <strong>"PRESENTASI DIRI"</strong> (font besar
-                                    44 pt).
-                                  </li>
-                                  <!-- <li>Tab <strong>Insert</strong> → <strong>Text Box</strong> → </li> -->
-                                  <li>
-                                    Klik <strong>Insert</strong> →
-                                    <strong>Pictures</strong> →
-                                    <strong>This Device</strong>.
-                                  </li>
-                                  <li>
-                                    Atur foto: klik 2x pada Foto →
-                                    <strong>Picture Format</strong> →
-                                    <strong>Crop</strong> →
-                                    <strong>Crop to Shape</strong> → pilih
-                                    <strong>Oval</strong>.
-                                  </li>
-                                  <!-- <li>Tambahkan teks tambahan: jurusan/kelas, font 20 pt.</li> -->
-                                </ul>
+                                Pilih layout <strong>Two Content</strong>.
                               </li>
-                              <li>
-                                <strong>Slide 2 — Pendidikan &amp; Pengalaman:</strong>
-                                <ul>
-                                  <li>Klik tab <strong>Home</strong>.</li>
-                                  <li>Klik <strong>New Slide</strong>.</li>
-                                  <li>
-                                    Pilih layout <strong>Two Content</strong>.
-                                  </li>
-                                </ul>
+                            </ul>
 
-                                Akan muncul slide baru dengan dua kotak:
-                                <ul>
-                                  <li>Kotak judul di atas.</li>
-                                  <li>Kotak isi di tengah.</li>
-                                </ul>
+                            Akan muncul slide baru dengan dua kotak:
+                            <ul>
+                              <li>Kotak judul di atas.</li>
+                              <li>Kotak isi di tengah.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Slide 3 — Hobi &amp; Minat:</strong>
+                            <ul>
+                              <li>
+                                Klik <strong>Home</strong> →
+                                <strong>New Slide</strong>.
                               </li>
                               <li>
-                                <strong>Slide 3 — Hobi &amp; Minat:</strong>
+                                Pilih layout
+                                <strong>Title and Content</strong> → judul:
+                                "Hobi &amp; Minat".
+                              </li>
+                              <li>
+                                Tambahkan Ikon:
                                 <ul>
+                                  <li>Klik Insert → Icons.</li>
                                   <li>
-                                    Klik <strong>Home</strong> →
-                                    <strong>New Slide</strong>.
-                                  </li>
-                                  <li>
-                                    Pilih layout
-                                    <strong>Title and Content</strong> → judul:
-                                    "Hobi &amp; Minat".
-                                  </li>
-                                  <li>
-                                    Tambahkan Ikon:
+                                    Pada kotak pencarian, cari:
                                     <ul>
-                                      <li>Klik Insert → Icons.</li>
-                                      <li>
-                                        Pada kotak pencarian, cari:
-                                        <ul>
-                                          <li>Music</li>
-                                          <li>Sport</li>
-                                          <li>Book</li>
-                                        </ul>
-                                      </li>
-                                      <li>Pilih beberapa ikon.</li>
-                                      <li>Klik Insert.</li>
-                                    </ul>
-                                    Atur posisi ikon berjajar secara horizontal.
-                                  </li>
-                                  <li>
-                                    Gunakan Text Box di bawah masing-masing ikon.
-                                    <ul>
-                                      <li>
-                                        <strong>Musik</strong>
-                                        <br />
-                                        Mendengarkan musik <br />
-                                        untuk hiburan dan relaksasi.
-                                      </li>
-                                      <li>
-                                        <strong>Olahraga</strong>
-                                        <br />
-                                        Bermain badminton <br />
-                                        untuk menjaga kesehatan.
-                                      </li>
-                                      <li>
-                                        <strong>Membaca</strong>
-                                        <br />
-                                        Membaca buku teknologi <br />
-                                        dan pengembangan diri.
-                                      </li>
+                                      <li>Music</li>
+                                      <li>Sport</li>
+                                      <li>Book</li>
                                     </ul>
                                   </li>
+                                  <li>Pilih beberapa ikon.</li>
+                                  <li>Klik Insert.</li>
+                                </ul>
+                                Atur posisi ikon berjajar secara horizontal.
+                              </li>
+                              <li>
+                                Gunakan Text Box di bawah masing-masing ikon.
+                                <ul>
+                                  <li>
+                                    <strong>Musik</strong>
+                                    <br />
+                                    Mendengarkan musik <br />
+                                    untuk hiburan dan relaksasi.
+                                  </li>
+                                  <li>
+                                    <strong>Olahraga</strong>
+                                    <br />
+                                    Bermain badminton <br />
+                                    untuk menjaga kesehatan.
+                                  </li>
+                                  <li>
+                                    <strong>Membaca</strong>
+                                    <br />
+                                    Membaca buku teknologi <br />
+                                    dan pengembangan diri.
+                                  </li>
                                 </ul>
                               </li>
-                              <li>
-                                <strong>Simpan file:</strong>
-                                <strong>File → Save As</strong> → beri nama
-                                <strong>Presentasi_Diri.pptx</strong>.
-                              </li>
-                              <li>
-                                Hasil:
-                                <div id="carouselExample" class="carousel slide">
-                                  <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                      <img src="assets/img/Presentasi_Diri/Slide1.PNG" class="d-block w-100"
-                                        alt="..." />
-                                    </div>
-                                    <div class="carousel-item">
-                                      <img src="assets/img/Presentasi_Diri/Slide2.PNG" class="d-block w-100"
-                                        alt="..." />
-                                    </div>
-                                    <div class="carousel-item">
-                                      <img src="assets/img/Presentasi_Diri/Slide3.PNG" class="d-block w-100"
-                                        alt="..." />
-                                    </div>
-                                  </div>
-                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                  </button>
-                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                  </button>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Simpan file:</strong>
+                            <strong>File → Save As</strong> → beri nama
+                            <strong>Presentasi_Diri.pptx</strong>.
+                          </li>
+                          <li>
+                            Hasil:
+                            <div id="carouselExample" class="carousel slide">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="assets/img/Presentasi_Diri/Slide1.PNG" class="d-block w-100" alt="..." />
                                 </div>
-                              </li>
-                            </ol>
-                            <div class="mt-4">
-                              <a class="btn btn-sm btn-outline-secondary" style="
+                                <div class="carousel-item">
+                                  <img src="assets/img/Presentasi_Diri/Slide2.PNG" class="d-block w-100" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="assets/img/Presentasi_Diri/Slide3.PNG" class="d-block w-100" alt="..." />
+                                </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                            </div>
+                          </li>
+                        </ol>
+                        <div class="mt-4">
+                          <a class="btn btn-sm btn-outline-secondary" style="
                           --bs-btn-padding-y: 0.25rem;
                           --bs-btn-padding-x: 0.5rem;
                           --bs-btn-font-size: 0.75rem;
                         " href="assets/files/Presentasi_Diri.pptx" role="button" download><i
-                                  class="bi bi-file-earmark-ppt-fill"></i> Contoh
-                                Latihan</a>
-                            </div>
-                          </div>
+                              class="bi bi-file-earmark-ppt-fill"></i> Contoh
+                            Latihan</a>
                         </div>
                       </div>
-                    </li>
-                    <!-- Menengah -->
-                    <li>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#sesi1Menengah" aria-expanded="false" aria-controls="sesi1Menengah">
-                            <strong class="text-warning me-2">Menengah:</strong> Buat
-                            SmartArt Hierarchy struktur organisasi (Direktur → Manager →
-                            Staff). Buat diagram proses bisnis (Prospek → Penawaran →
-                            Negosiasi → Deal) menggunakan shapes + panah. Gunakan
-                            SmartArt Cycle.
-                          </button>
-                        </h2>
-                        <div id="sesi1Menengah" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionPraktikPowerPointSesi1">
-                          <div class="accordion-body">
-                            <strong>Bagian 1 — Struktur Organisasi (SmartArt
-                              Hierarchy)</strong>
-                            <ol>
-                              <li>
-                                Buat slide baru → judul: "Struktur Organisasi".
-                              </li>
-                              <li>
-                                Tab <strong>Insert</strong> →
-                                <strong>SmartArt</strong> → pilih
-                                <strong>Hierarchy</strong> → pilih
-                                <strong>Organization Chart</strong>.
-                              </li>
-                              <li>
-                                Klik kotak paling atas → ketik:
-                                <strong>Direktur</strong>.
-                              </li>
-                              <li>
-                                Klik kotak level 2 → ketik:
-                                <strong>Manager</strong>. Ulangi untuk manager
-                                kedua.
-                              </li>
-                              <li>
-                                Klik kotak level 3 → ketik:
-                                <strong>Staff</strong> untuk masing-masing
-                                manager.
-                              </li>
-                              <li>
-                                <strong>Menambah kotak:</strong> klik kanan pada
-                                kotak → <strong>Add Shape</strong> → pilih
-                                <strong>Add Shape Below</strong> atau
-                                <strong>Add Assistant</strong>.
-                              </li>
-                              <li>
-                                Ubah warna: Tab <strong>SmartArt Design</strong> →
-                                <strong>Change Colors</strong> → pilih skema
-                                warna.
-                              </li>
-                            </ol>
-                            <strong class="mt-3 d-block">Bagian 2 — Diagram Proses Bisnis (Shapes +
-                              Panah)</strong>
-                            <ol>
-                              <li>Buat slide baru → judul: "Proses Bisnis".</li>
-                              <li>
-                                Tab <strong>Insert</strong> →
-                                <strong>Shapes</strong> → pilih
-                                <strong>Rounded Rectangle</strong>.
-                              </li>
-                              <li>
-                                Gambar 4 kotak secara horizontal beri jarak.
-                              </li>
-                              <li>
-                                Klik kanan masing-masing →
-                                <strong>Edit Text</strong> → ketik: Prospek,
-                                Penawaran, Negosiasi, Deal.
-                              </li>
-                              <li>
-                                Insert → Shapes → pilih
-                                <strong>Arrow (Right)</strong> → gambar panah dari
-                                kotak 1 ke 2, 2 ke 3, 3 ke 4.
-                              </li>
-                              <li>
-                                Blok semua shapes + panah → Tab
-                                <strong>Shape Format</strong> →
-                                <strong>Align</strong> →
-                                <strong>Align Middle</strong>, lalu
-                                <strong>Distribute Horizontally</strong> agar
-                                jarak antar kotak sama rata.
-                              </li>
-                              <li>
-                                Ubah warna shapes: <strong>Shape Fill</strong> →
-                                pilih warna biru gradasi.
-                              </li>
-                            </ol>
-                            <strong class="mt-3 d-block">Bagian 3 — SmartArt Cycle</strong>
-                            <ol>
-                              <li>
-                                Buat slide baru → judul: "Siklus Penjualan".
-                              </li>
-                              <li>
-                                Insert → SmartArt → pilih <strong>Cycle</strong> →
-                                <strong>Basic Cycle</strong> atau
-                                <strong>Continuous Cycle</strong>.
-                              </li>
-                              <li>
-                                Ketik teks di masing-masing lingkaran: Prospek,
-                                Penawaran, Negosiasi, Deal.
-                              </li>
-                              <li>
-                                Ubah warna dan gaya dari tab
-                                <strong>SmartArt Design</strong>.
-                              </li>
-                            </ol>
-                            <div class="py-2">
-                              <a class="btn btn-sm btn-outline-secondary" style="
+                    </div>
+                  </div>
+                  <!-- </li> -->
+                  <!-- Menengah -->
+                  <!-- <li> -->
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sesi1Menengah" aria-expanded="false" aria-controls="sesi1Menengah">
+                        <strong class="text-warning me-2">Menengah:</strong> Buat
+                        SmartArt Hierarchy struktur organisasi (Direktur → Manager →
+                        Staff). Buat diagram proses bisnis (Prospek → Penawaran →
+                        Negosiasi → Deal) menggunakan shapes + panah. Gunakan
+                        SmartArt Cycle.
+                      </button>
+                    </h2>
+                    <div id="sesi1Menengah" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionPraktikPowerPointSesi1">
+                      <div class="accordion-body">
+                        <strong>Bagian 1 — Struktur Organisasi (SmartArt
+                          Hierarchy)</strong>
+                        <ol>
+                          <li>
+                            Buat slide baru → judul: <strong>Struktur Organisasi</strong>.
+                          </li>
+                          <li>
+                            Tab <strong>Insert</strong> →
+                            <strong>SmartArt</strong> → pilih
+                            <strong>Hierarchy</strong> → pilih
+                            <strong>Organization Chart</strong>.
+                          </li>
+                          <li>
+                            Klik kotak paling atas → ketik:
+                            <strong>Direktur</strong>.
+                          </li>
+                          <li>
+                            Klik kotak level 2 → ketik:
+                            <strong>Manager</strong>. Ulangi untuk manager
+                            kedua.
+                          </li>
+                          <li>
+                            Klik kotak level 3 → ketik:
+                            <strong>Staff</strong> untuk masing-masing
+                            manager.
+                          </li>
+                          <li>
+                            <strong>Menambah kotak:</strong> klik kanan pada
+                            kotak → <strong>Add Shape</strong> → pilih
+                            <strong>Add Shape Below</strong> atau
+                            <strong>Add Assistant</strong>.
+                          </li>
+                          <li>
+                            Ubah warna: Tab <strong>SmartArt Design</strong> →
+                            <strong>Change Colors</strong> → pilih skema
+                            warna.
+                          </li>
+                        </ol>
+                        <strong class="mt-3 d-block">Bagian 2 — Diagram Proses Bisnis (Shapes +
+                          Panah)</strong>
+                        <ol>
+                          <li>Buat slide baru → judul: "Proses Bisnis".</li>
+                          <li>
+                            Tab <strong>Insert</strong> →
+                            <strong>Shapes</strong> → pilih
+                            <strong>Rounded Rectangle</strong>.
+                          </li>
+                          <li>
+                            Gambar 4 kotak secara horizontal beri jarak.
+                          </li>
+                          <li>
+                            Klik kanan masing-masing →
+                            <strong>Edit Text</strong> → ketik: Prospek,
+                            Penawaran, Negosiasi, Deal.
+                          </li>
+                          <li>
+                            Insert → Shapes → pilih
+                            <strong>Arrow (Right)</strong> → gambar panah dari
+                            kotak 1 ke 2, 2 ke 3, 3 ke 4.
+                          </li>
+                          <li>
+                            Blok semua shapes + panah → Tab
+                            <strong>Shape Format</strong> →
+                            <strong>Align</strong> →
+                            <strong>Align Middle</strong>, lalu
+                            <strong>Distribute Horizontally</strong> agar
+                            jarak antar kotak sama rata.
+                          </li>
+                          <li>
+                            Ubah warna shapes: <strong>Shape Fill</strong> →
+                            pilih warna biru gradasi.
+                          </li>
+                        </ol>
+                        <strong class="mt-3 d-block">Bagian 3 — SmartArt Cycle</strong>
+                        <ol>
+                          <li>
+                            Buat slide baru → judul: "Siklus Penjualan".
+                          </li>
+                          <li>
+                            Insert → SmartArt → pilih <strong>Cycle</strong> →
+                            <strong>Basic Cycle</strong> atau
+                            <strong>Continuous Cycle</strong>.
+                          </li>
+                          <li>
+                            Ketik teks di masing-masing lingkaran: Prospek,
+                            Penawaran, Negosiasi, Deal.
+                          </li>
+                          <li>
+                            Ubah warna dan gaya dari tab
+                            <strong>SmartArt Design</strong>.
+                          </li>
+                        </ol>
+                        <div class="py-2">
+                          <a class="btn btn-sm btn-outline-secondary" style="
                           --bs-btn-padding-y: 0.25rem;
                           --bs-btn-padding-x: 0.5rem;
                           --bs-btn-font-size: 0.75rem;
                         " href="assets/files/SmartArt-Hierarchy-struktur-organisasi.pptx" role="button" download><i
-                                  class="bi bi-file-earmark-ppt-fill"></i> Contoh
-                                Latihan</a>
-                            </div>
-                          </div>
+                              class="bi bi-file-earmark-ppt-fill"></i> Contoh
+                            Latihan</a>
                         </div>
                       </div>
-                    </li>
-                    <!-- Lanjutan -->
-                    <li>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#sesi1Lanjutan" aria-expanded="false" aria-controls="sesi1Lanjutan">
-                            <strong class="text-danger me-2">Lanjutan:</strong> Buat profil
-                            perusahaan 5 slide: (1) Cover dengan logo, (2) Visi-Misi,
-                            (3) Struktur organisasi (SmartArt), (4) Produk &amp;
-                            layanan, (5) Penutup. Gunakan tema kustom dengan warna
-                            korporat.
-                          </button>
-                        </h2>
-                        <div id="sesi1Lanjutan" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionPraktikPowerPointSesi1">
-                          <div class="accordion-body">
-                            <ol>
-                              <li>
-                                <strong>Tentukan skema warna korporat</strong>
-                                (misal: biru #005A9E + abu #F2F2F2).
-                              </li>
-                              <li>
-                                <strong>Slide 1 — Cover:</strong>
-                                <ul>
-                                  <li>Judul: "Nama Perusahaan".</li>
-                                  <li>Subtitle: "Profil Perusahaan 2025".</li>
-                                  <li>
-                                    Insert → Pictures → logo perusahaan (atau buat
-                                    dengan Shapes + Text Box).
-                                  </li>
-                                  <li>
-                                    Atur tata letak: logo di kiri, teks di kanan.
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Slide 2 — Visi &amp; Misi:</strong>
-                                <ul>
-                                  <li>Judul: "Visi &amp; Misi".</li>
-                                  <li>Visi: 1 kalimat tebal di tengah.</li>
-                                  <li>Misi: 3-5 bullet point.</li>
-                                  <li>
-                                    Gunakan ikon (Insert → Icons) untuk
-                                    mempercantik.
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Slide 3 — Struktur Organisasi
-                                  (SmartArt):</strong>
-                                <ul>
-                                  <li>
-                                    Insert → SmartArt → Hierarchy → Organization
-                                    Chart.
-                                  </li>
-                                  <li>Isi: Direktur Utama → Manager → Staff.</li>
-                                  <li>Ubah warna sesuai tema korporat.</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Slide 4 — Produk &amp; Layanan:</strong>
-                                <ul>
-                                  <li>
-                                    Gunakan layout 2 kolom atau grid shapes.
-                                  </li>
-                                  <li>
-                                    Setiap produk: ikon + nama + deskripsi
-                                    singkat.
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Slide 5 — Penutup:</strong>
-                                <ul>
-                                  <li>"Terima Kasih" besar di tengah.</li>
-                                  <li>Kontak: Email, Telepon, Website.</li>
-                                  <li>
-                                    Sosial media: ikon Instagram, LinkedIn, dll.
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Menerapkan tema kustom:</strong> Tab
-                                <strong>Design</strong> →
-                                <strong>Variants</strong> → sesuaikan warna
-                                (Colors → Customize Colors) dan font.
-                              </li>
-                            </ol>
-                            <div class="py-2">
-                              <a class="btn btn-sm btn-outline-secondary"
-                                style="--bs-btn-padding-y: 0.25rem;--bs-btn-padding-x: 0.5rem;--bs-btn-font-size: 0.75rem;"
-                                href="assets/files/ppt_profil_perusahaan.pptx" role="button" download><i
-                                  class="bi bi-file-earmark-ppt-fill"></i> Contoh Latihan</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                    </div>
                   </div>
-                </ol>
+                  <!-- </li> -->
+                  <!-- Lanjutan -->
+                  <!-- <li> -->
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sesi1Lanjutan" aria-expanded="false" aria-controls="sesi1Lanjutan">
+                        <strong class="text-danger me-2">Lanjutan:</strong> Buat profil
+                        perusahaan 5 slide: (1) Cover dengan logo, (2) Visi-Misi,
+                        (3) Struktur organisasi (SmartArt), (4) Produk &amp;
+                        layanan, (5) Penutup. Gunakan tema kustom dengan warna
+                        korporat.
+                      </button>
+                    </h2>
+                    <div id="sesi1Lanjutan" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionPraktikPowerPointSesi1">
+                      <div class="accordion-body">
+                        <ol>
+                          <li>
+                            <strong>Tentukan skema warna korporat</strong>
+                            (misal: biru #005A9E + abu #F2F2F2).
+                          </li>
+                          <li>
+                            <strong>Slide 1 — Cover:</strong>
+                            <ul>
+                              <li>Judul: "Nama Perusahaan".</li>
+                              <li>Subtitle: "Profil Perusahaan 2025".</li>
+                              <li>
+                                Insert → Pictures → logo perusahaan (atau buat
+                                dengan Shapes + Text Box).
+                              </li>
+                              <li>
+                                Atur tata letak: logo di kiri, teks di kanan.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Slide 2 — Visi &amp; Misi:</strong>
+                            <ul>
+                              <li>Judul: "Visi &amp; Misi".</li>
+                              <li>Visi: 1 kalimat tebal di tengah.</li>
+                              <li>Misi: 3-5 bullet point.</li>
+                              <li>
+                                Gunakan ikon (Insert → Icons) untuk
+                                mempercantik.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Slide 3 — Struktur Organisasi
+                              (SmartArt):</strong>
+                            <ul>
+                              <li>
+                                Insert → SmartArt → Hierarchy → Organization
+                                Chart.
+                              </li>
+                              <li>Isi: Direktur Utama → Manager → Staff.</li>
+                              <li>Ubah warna sesuai tema korporat.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Slide 4 — Produk &amp; Layanan:</strong>
+                            <ul>
+                              <li>
+                                Gunakan layout 2 kolom atau grid shapes.
+                              </li>
+                              <li>
+                                Setiap produk: ikon + nama + deskripsi
+                                singkat.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Slide 5 — Penutup:</strong>
+                            <ul>
+                              <li>"Terima Kasih" besar di tengah.</li>
+                              <li>Kontak: Email, Telepon, Website.</li>
+                              <li>
+                                Sosial media: ikon Instagram, LinkedIn, dll.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Menerapkan tema kustom:</strong> Tab
+                            <strong>Design</strong> →
+                            <strong>Variants</strong> → sesuaikan warna
+                            (Colors → Customize Colors) dan font.
+                          </li>
+                        </ol>
+                        <div class="py-2">
+                          <a class="btn btn-sm btn-outline-secondary"
+                            style="--bs-btn-padding-y: 0.25rem;--bs-btn-padding-x: 0.5rem;--bs-btn-font-size: 0.75rem;"
+                            href="assets/files/ppt_profil_perusahaan.pptx" role="button" download><i
+                              class="bi bi-file-earmark-ppt-fill"></i> Contoh Latihan</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- </li> -->
+                </div>
+                <!-- </ol> -->
               </div>
             </div>
           </div>
