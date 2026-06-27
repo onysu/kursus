@@ -183,6 +183,23 @@
     .dash-list li::before {
       content: "- ";
     }
+
+    .bd-callout-warning {
+      --bd-callout-color: var(--bs-warning-text-emphasis);
+      --bd-callout-bg: var(--bs-warning-bg-subtle);
+      --bd-callout-border: var(--bs-warning-border-subtle);
+    }
+
+    .bd-callout {
+      --bs-link-color-rgb: var(--bd-callout-link);
+      --bs-code-color: var(--bd-callout-code-color);
+      padding: 1.25rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      color: var(--bd-callout-color, inherit);
+      background-color: var(--bd-callout-bg, var(--bs-gray-100));
+      border-left: .25rem solid var(--bd-callout-border, var(--bs-gray-300));
+    }
   </style>
 </head>
 
@@ -323,10 +340,8 @@
                 <div class="mb-3">
                   <strong><i class="bi bi-file-earmark"></i> Langkah Praktik:</strong>
                 </div>
-                <!-- <ol class="mt-2 mb-0 ps-3"> -->
                 <div class="accordion accordion-flush" id="accordionPraktikPowerPointSesi1">
                   <!-- Dasar -->
-                  <!-- <li> -->
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
@@ -490,9 +505,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- </li> -->
                   <!-- Menengah -->
-                  <!-- <li> -->
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
@@ -659,9 +672,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- </li> -->
                   <!-- Lanjutan -->
-                  <!-- <li> -->
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
@@ -1268,7 +1279,7 @@
                 <div class="mb-3">
                   <strong><i class="bi bi-file-earmark"></i> Langkah Praktik:</strong>
                 </div>
-                <div class="alert alert-info py-2 px-3 mb-3 small">
+                <div class="alert alert-info py-2 px-3 mb-3">
                   <i class="bi bi-camera"></i> <strong>Panduan visual:</strong>
                   Pertemuan 3 belum dilengkapi tangkapan layar. Gunakan
                   petunjuk teks di bawah dan contoh file yang bisa diunduh
@@ -1721,22 +1732,82 @@
                     </h2>
                     <div id="sesi4Dasar" class="accordion-collapse collapse"
                       data-bs-parent="#accordionPraktikPowerPointSesi4">
-                      <div class="accordion-body">
+                      <div class="accordion-body lh-base">
                         <ol>
                           <li>
                             <strong>Buat 5 slide presentasi produk:</strong>
                             <ul class="dash-list">
-                              <li>Slide 1: Cover — Nama Produk + Tagline.</li>
-                              <li>
-                                Slide 2: Fitur Utama — 3 fitur dengan ikon.
+                              <li><strong>Slide 1</strong>: Cover — Nama Produk + Tagline.
+                                <ul>
+                                  <li>Judul: <strong>SmartBottle</strong></li>
+                                  <li>Tagline: "Botol Minum Pintar untuk Gaya Hidup Sehat"</li>
+                                  <li>Tambahkan gambar produk.
+                                    <div class="py-2">
+                                      <a class="btn btn-sm btn-outline-secondary" style="
+                          --bs-btn-padding-y: 0.25rem;
+                          --bs-btn-padding-x: 0.5rem;
+                          --bs-btn-font-size: 0.75rem;
+                        " href="assets/img/SmartBottles.png" role="button" download><i
+                                          class="bi bi-file-earmark-ppt-fill"></i> Download Contoh Gambar</a>
+                                    </div>
+                                  </li>
+                                </ul>
                               </li>
-                              <li>
-                                Slide 3: Manfaat — bullet point manfaat
-                                produk.
+                              <li><strong>Slide 2</strong>: Fitur Utama — 3 fitur dengan ikon.
+                                <ul>Gunakan <strong>Insert</strong> → <strong>Icons</strong>. Tambahkan 3 ikon beserta
+                                  keterangannya.
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <th>Ikon</th>
+                                        <th>Fitur</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>💧</td>
+                                        <td>Pengingat Minum</td>
+                                      </tr>
+                                      <tr>
+                                        <td>🌡</td>
+                                        <td>Menampilkan Suhu Air</td>
+                                      </tr>
+                                      <tr>
+                                        <td>🔋</td>
+                                        <td>Baterai Tahan 7 Hari</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </ul>
                               </li>
-                              <li>Slide 4: Testimoni — quote pelanggan.</li>
-                              <li>
-                                Slide 5: Call to Action — kontak + harga.
+                              <li><strong>Slide 3</strong>: Manfaat — bullet point <strong>Manfaat Produk</strong>.
+                                <ul>
+                                  Gunakan Bullet List.
+                                  <ul>
+                                    <li>Membantu menjaga hidrasi tubuh</li>
+                                    <li>Praktis dibawa ke mana saja</li>
+                                    <li>Ramah lingkungan</li>
+                                    <li>Mengurangi penggunaan botol plastik</li>
+                                  </ul>
+                                </ul>
+                              </li>
+                              <li><strong>Slide 4</strong>: Testimoni — quote pelanggan. <br>
+                                <div class="ms-3">
+                                  Tambahkan quote. <br>
+                                  "Sejak memakai SmartBottle saya jadi lebih rutin minum air setiap hari." <br>
+                                  — Andi, Jakarta
+                                </div>
+                              </li>
+                              <li><strong>Slide 5</strong>: Call to Action — kontak + harga. <br>
+                                <div class="ms-3">
+                                Judul: <strong>Dapatkan Sekarang!</strong> <br>
+                                Isi: <strong>Harga Rp299.000</strong> <br>
+                                Kontak <br>
+                                * WhatsApp : 0123456789 <br>
+                                * Email : contoh@email.com <br>
+                                * Website : website.com <br>
+                                Tambahkan tombol atau shape bertuliskan Pesan Sekarang.
+                                </div>
                               </li>
                             </ul>
                           </li>
@@ -1751,13 +1822,15 @@
                                 Ketik skrip presentasi di notes tiap slide.
                               </li>
                             </ul>
-                            Catatan: <br>
-                            Speaker Notes berarti:
-                            <ul class="dash-list">
-                              <li>Speaker = orang yang berbicara (presenter/pembicara)</li>
-                              <li>Notes = catatan</li>
-                            </ul>
-                            Jadi artinya adalah: <strong>Catatan untuk pembicara</strong>, bukan suara atau audio.
+                            <div class="bd-callout bd-callout-warning lh-sm">
+                              Catatan:
+                              <strong>Speaker Notes</strong> berarti:
+                              <ul class="dash-list">
+                                <li>Speaker = orang yang berbicara (presenter/pembicara)</li>
+                                <li>Notes = catatan</li>
+                              </ul>
+                              Jadi artinya adalah: <strong>Catatan untuk pembicara</strong>, bukan suara atau audio.
+                            </div>
                           </li>
                           <li>
                             <strong>Gunakan Presenter View:</strong>
