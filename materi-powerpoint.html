@@ -174,6 +174,15 @@
     .accordion-button:not(.collapsed) {
       background-color: transparent;
     }
+
+    .dash-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .dash-list li::before {
+      content: "- ";
+    }
   </style>
 </head>
 
@@ -345,7 +354,7 @@
                           </li>
                           <li>
                             <strong>Slide 1 — Cover:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 "Click to add title" ketik:
                                 <strong>"PRESENTASI DIRI"</strong> (font besar
@@ -369,7 +378,7 @@
                           </li>
                           <li>
                             <strong>Slide 2 — Pendidikan &amp; Pengalaman:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Klik tab <strong>Home</strong>.</li>
                               <li>Klik <strong>New Slide</strong>.</li>
                               <li>
@@ -378,14 +387,14 @@
                             </ul>
 
                             Akan muncul slide baru dengan dua kotak:
-                            <ul>
+                            <ul class="dash-list">
                               <li>Kotak judul di atas.</li>
                               <li>Kotak isi di tengah.</li>
                             </ul>
                           </li>
                           <li>
                             <strong>Slide 3 — Hobi &amp; Minat:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik <strong>Home</strong> →
                                 <strong>New Slide</strong>.
@@ -397,11 +406,11 @@
                               </li>
                               <li>
                                 Tambahkan Ikon:
-                                <ul>
+                                <ul class="dash-list">
                                   <li>Klik Insert → Icons.</li>
                                   <li>
                                     Pada kotak pencarian, cari:
-                                    <ul>
+                                    <ul class="dash-list">
                                       <li>Music</li>
                                       <li>Sport</li>
                                       <li>Book</li>
@@ -414,7 +423,7 @@
                               </li>
                               <li>
                                 Gunakan Text Box di bawah masing-masing ikon.
-                                <ul>
+                                <ul class="dash-list">
                                   <li>
                                     <strong>Musik</strong>
                                     <br />
@@ -674,7 +683,7 @@
                           </li>
                           <li>
                             <strong>Slide 1 — Cover:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Judul: "Nama Perusahaan".</li>
                               <li>Subtitle: "Profil Perusahaan 2025".</li>
                               <li>
@@ -688,7 +697,7 @@
                           </li>
                           <li>
                             <strong>Slide 2 — Visi &amp; Misi:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Judul: "Visi &amp; Misi".</li>
                               <li>Visi: 1 kalimat tebal di tengah.</li>
                               <li>Misi: 3-5 bullet point.</li>
@@ -701,7 +710,7 @@
                           <li>
                             <strong>Slide 3 — Struktur Organisasi
                               (SmartArt):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Insert → SmartArt → Hierarchy → Organization
                                 Chart.
@@ -712,7 +721,7 @@
                           </li>
                           <li>
                             <strong>Slide 4 — Produk &amp; Layanan:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Gunakan layout 2 kolom atau grid shapes.
                               </li>
@@ -724,7 +733,7 @@
                           </li>
                           <li>
                             <strong>Slide 5 — Penutup:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>"Terima Kasih" besar di tengah.</li>
                               <li>Kontak: Email, Telepon, Website.</li>
                               <li>
@@ -829,7 +838,7 @@
                           </li>
                           <li>
                             <strong>Sisipkan gambar:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab <strong>Insert</strong> →
                                 <strong>Pictures</strong> →
@@ -871,7 +880,7 @@
                           </li>
                           <li>
                             <strong>Crop gambar menjadi bentuk circle:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik gambar → Tab
                                 <strong>Picture Format</strong> →
@@ -900,7 +909,7 @@
                           </li>
                           <li>
                             <strong>Atur posisi dan ukuran:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik gambar → drag sudut untuk mengubah ukuran
                                 (tahan <kbd>Ctrl</kbd> agar proporsional).
@@ -915,7 +924,7 @@
                           </li>
                           <li>
                             <strong>Tambahkan efek gambar (opsional):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab <strong>Picture Format</strong> →
                                 <strong>Picture Border</strong> → beri border
@@ -957,7 +966,7 @@
                         <ol>
                           <li>
                             <strong>Buat struktur slide:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Slide 1: Menu Utama</li>
                               <li>Slide 2: Bab 1 — Pendahuluan</li>
                               <li>Slide 3: Bab 2 — Materi</li>
@@ -967,7 +976,7 @@
                           </li>
                           <li>
                             <strong>Slide 1 — Menu Utama:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Judul: "Menu Presentasi".</li>
                               <li>Buat 3 teks: "Bab 1", "Bab 2", "Bab 3".</li>
                               <li>
@@ -988,7 +997,7 @@
                           <li>
                             <strong>Tambahkan Action Button "Kembali" di setiap
                               slide:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Buka Slide 2 (Bab 1).</li>
                               <li>
                                 Tab <strong>Insert</strong> →
@@ -1012,7 +1021,7 @@
                           </li>
                           <li>
                             <strong>Tambahkan video dari YouTube:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Buka Slide 5 → judul: "Video".</li>
                               <li>
                                 Tab <strong>Insert</strong> →
@@ -1094,7 +1103,7 @@
                           </li>
                           <li>
                             <strong>Buat objek di slide:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Buat 4 kotak (Insert → Shapes → Rounded
                                 Rectangle) secara horizontal berjauhan.
@@ -1114,7 +1123,7 @@
                           </li>
                           <li>
                             <strong>Tambahkan animasi Entrance (Fade):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik kotak "Prospek" → Tab
                                 <strong>Animations</strong> → pilih
@@ -1135,7 +1144,7 @@
                           </li>
                           <li>
                             <strong>Atur timing animasi:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Buka <strong>Animation Pane</strong> (Tab
                                 Animations → Animation Pane).
@@ -1179,7 +1188,7 @@
                           </li>
                           <li>
                             <strong>Tambahkan Emphasis (Grow) pada "Deal":</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik kotak "Deal" → Tab Animations →
                                 <strong>Add Animation</strong>.
@@ -1205,7 +1214,7 @@
                           <li>
                             <strong>Tambahkan Motion Path pada "Prospek"
                               (opsional):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik "Prospek" → Add Animation →
                                 <strong>Motion Paths</strong> →
@@ -1297,7 +1306,7 @@
                           </li>
                           <li>
                             <strong>Terapkan transisi:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik Slide 1 → Tab
                                 <strong>Transitions</strong> → pilih
@@ -1316,7 +1325,7 @@
                           </li>
                           <li>
                             <strong>Atur durasi transisi:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Di tab <strong>Transitions</strong>, pada grup
                                 <strong>Timing</strong>:
@@ -1332,7 +1341,7 @@
                           </li>
                           <li>
                             <strong>Atur auto-advance:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Pada grup Timing, centang
                                 <strong>After</strong> → ketik
@@ -1383,7 +1392,7 @@
                         <ol>
                           <li>
                             <strong>Buat Slide 1:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Hapus semua placeholder default.</li>
                               <li>
                                 <strong>Insert</strong> → <strong>Text Box</strong> → ketik:
@@ -1400,7 +1409,7 @@
                           </li>
                           <li>
                             <strong>Duplikat Slide 1 menjadi Slide 2:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik kanan Slide 1 di panel →
                                 <strong>Duplicate Slide</strong>.
@@ -1409,7 +1418,7 @@
                           </li>
                           <li>
                             <strong>Edit Slide 2:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Pindahkan teks "IDE" ke
                                 <strong>pojok kanan atas</strong>.
@@ -1440,7 +1449,7 @@
                           </li>
                           <li>
                             <strong>Terapkan Morph transition pada Slide 2:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik Slide 2 → Tab
                                 <strong>Transitions</strong> → pilih
@@ -1499,7 +1508,7 @@
                         <ol>
                           <li>
                             <strong>Buka Slide Master:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab <strong>View</strong> →
                                 <strong>Slide Master</strong>.
@@ -1515,7 +1524,7 @@
                           </li>
                           <li>
                             <strong>Tambahkan logo di semua slide:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Pilih slide paling atas (Slide Master).</li>
                               <li>
                                 <strong>Insert</strong> → <strong>Pictures</strong> → pilih logo perusahaan.
@@ -1548,7 +1557,7 @@
                           </li>
                           <li>
                             <strong>Kustomisasi warna korporat:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab <strong>Slide Master</strong> →
                                 <strong>Colors</strong> →
@@ -1568,7 +1577,7 @@
                           </li>
                           <li>
                             <strong>Atur font korporat:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab <strong>Slide Master</strong> →
                                 <strong>Fonts</strong> →
@@ -1588,7 +1597,7 @@
                           <li>
                             <strong>Buat layout kustom "Judul + Gambar
                               Kiri":</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Di panel Slide Master, klik
                                 <strong>Insert Layout</strong> (atau klik kanan pada Slide Master →
@@ -1643,7 +1652,7 @@
                           </li>
                           <li>
                             <strong>Simpan sebagai template:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>File → <strong>Save As</strong>.</li>
                               <li>
                                 Pilih file type:
@@ -1716,7 +1725,7 @@
                         <ol>
                           <li>
                             <strong>Buat 5 slide presentasi produk:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Slide 1: Cover — Nama Produk + Tagline.</li>
                               <li>
                                 Slide 2: Fitur Utama — 3 fitur dengan ikon.
@@ -1733,7 +1742,7 @@
                           </li>
                           <li>
                             <strong>Tambahkan Speaker Notes:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Klik <strong>Notes</strong> di bagian bawah
                                 slide (atau View → Notes Page).
@@ -1742,10 +1751,17 @@
                                 Ketik skrip presentasi di notes tiap slide.
                               </li>
                             </ul>
+                            Catatan: <br>
+                            Speaker Notes berarti:
+                            <ul class="dash-list">
+                              <li>Speaker = orang yang berbicara (presenter/pembicara)</li>
+                              <li>Notes = catatan</li>
+                            </ul>
+                            Jadi artinya adalah: <strong>Catatan untuk pembicara</strong>, bukan suara atau audio.
                           </li>
                           <li>
                             <strong>Gunakan Presenter View:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tekan <strong>Alt+F5</strong> (atau Slide Show
                                 → Presenter View).
@@ -1768,7 +1784,7 @@
                           </li>
                           <li>
                             <strong>Latih Rehearsal Timing:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab <strong>Slide Show</strong> →
                                 <strong>Rehearse Timings</strong>.
@@ -1924,7 +1940,7 @@
                           </li>
                           <li>
                             <strong>Gunakan Morph transisi antar slide:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Morph paling halus jika diterapkan pada
                                 <strong>slide duplikat</strong>. Buat slide
@@ -1947,14 +1963,14 @@
                           </li>
                           <li>
                             <strong>Tambahkan animasi Entrance (Fade):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Pilih judul slide → <strong>Animations</strong>
                                 → <strong>Fade</strong>.
                               </li>
                               <li>
                                 Atur <strong>Start:</strong>
-                                <ul>
+                                <ul class="dash-list">
                                   <li>
                                     <strong>After Previous</strong> — elemen
                                     muncul otomatis bergantian (judul dulu,
@@ -1976,7 +1992,7 @@
                           </li>
                           <li>
                             <strong>Slide 4 — Market Size:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab Insert → <strong>Chart</strong> → pilih
                                 <strong>Bar</strong> atau
@@ -1991,7 +2007,7 @@
                           </li>
                           <li>
                             <strong>Slide 6 — Tim:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Insert → SmartArt → <strong>Picture</strong> →
                                 <strong>Picture Organization Chart</strong>
@@ -2040,7 +2056,7 @@
                           <li>
                             <strong>Buat template kustom (Slide Master) — rujuk
                               Pertemuan 3:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Buka Slide Master (View → Slide Master).
                               </li>
@@ -2065,7 +2081,7 @@
                             <strong>Buat 7 slide dengan konten pilihan bebas
                               (profil perusahaan, produk, project sekolah,
                               dll):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Slide 1: Cover — judul + subtitle + logo.
                               </li>
@@ -2086,7 +2102,7 @@
                           </li>
                           <li>
                             <strong>Hyperlink navigasi (rujuk Pertemuan 2):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Di Slide 2 (Daftar Isi), buat hyperlink
                                 masing-masing item ke slide tujuan.
@@ -2106,7 +2122,7 @@
                           </li>
                           <li>
                             <strong>Animasi Entrance:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>Judul: Fade, Start: After Previous.</li>
                               <li>
                                 Konten: Fade, Start: After Previous (agar
@@ -2120,7 +2136,7 @@
                           </li>
                           <li>
                             <strong>Record Slide Show:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tab <strong>Slide Show</strong> →
                                 <strong>Record Slide Show</strong> (PPT 2024
@@ -2154,7 +2170,7 @@
                           </li>
                           <li>
                             <strong>Presentasikan dengan Presenter View:</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 Tekan <strong>Alt+F5</strong> untuk Presenter
                                 View.
@@ -2173,7 +2189,7 @@
                           </li>
                           <li>
                             <strong>Export sebagai video (opsional):</strong>
-                            <ul>
+                            <ul class="dash-list">
                               <li>
                                 File → <strong>Export</strong> →
                                 <strong>Create a Video</strong>.
