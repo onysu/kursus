@@ -205,6 +205,26 @@
     /* ul li {
       margin-bottom: 8px;
     } */
+    .number-top {
+      counter-reset: item;
+      list-style: none;
+      padding-left: 2rem;
+    }
+
+    .number-top li {
+      counter-increment: item;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .number-top li::before {
+      content: counter(item) ".";
+      position: absolute;
+      left: -1.5rem;
+      top: 0;
+      /* angka berada di atas */
+      /* font-weight: bold; */
+    }
   </style>
 </head>
 
@@ -2159,11 +2179,16 @@
                                           <li>Picture 3: <strong>Zoom</strong>, Start After Previous</li>
                                           <li>Picture 5: <strong>Zoom</strong>, Start After Previous</li>
                                           <li>Picture 9: <strong>Zoom</strong>, Start After Previous</li>
-                                          <li>Text Box: <strong>Wipe</strong>, Start After Previous, 🕒 Duration 2 / Timming 2 seconds (Medium).
-                                            <div class="my-2">
-                                              <img src="assets/img/produk-kami-animation-pane.png" alt=""
-                                                class="img-fluid">
-                                            </div>
+                                          <li>Text Box: <strong>Wipe</strong>, Start After Previous,
+                                            <ol class="number-top">
+                                              <li><img src="assets/img/Duration.png" alt="" class="img-fluid"></li>
+                                              <li><img src="assets/img/Timming-PRODUK.png" alt="" class="img-fluid">
+                                                <div class="my-2">
+                                                  <img src="assets/img/produk-kami-animation-pane.png" alt=""
+                                                    class="img-fluid">
+                                                </div>
+                                              </li>
+                                            </ol>
                                           </li>
                                         </ul>
                                       </li>
