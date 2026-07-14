@@ -2056,14 +2056,14 @@
                           </div>
                         </div><!-- /row -->
 
-                        <ol start="4">
-                          <li>
-                            <strong>Buat objek di Slide:</strong>
-                            <div class="row">
-                              <div class="col-md-6">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <ol start="4">
+                              <li><strong>Buat objek di Slide:</strong>
                                 <ol>
                                   <li>
-                                    Buat 4 kotak (<strong>Insert</strong> → <strong>Shapes</strong> → <strong>Rounded
+                                    Buat 4 kotak (<strong>Insert</strong> → <strong>Shapes</strong> →
+                                    <strong>Rounded
                                       Rectangle</strong>) secara horizontal berjauhan.
                                     <div class="my-3">
                                       <img src="assets/img/proses-bisnis-animasi1.png" alt=""
@@ -2079,248 +2079,268 @@
                                     </div>
                                   </li>
                                 </ol>
-                              </div>
-                              <div class="col-md-6">
-                                <ol start="5">
-                                  <li>
-                                    Buat 3 panah (<strong>Insert</strong> → <strong>Shapes</strong> → <strong>Arrow:
-                                      Right Arrow</strong>) di antara kotak.
-                                    <div class="my-3">
-                                      <img src="assets/img/Insert-Shapes-Arrow.png" alt=""
-                                        class="img-fluid shadow rounded">
-                                    </div>
-                                    <div class="my-3">
-                                      <img src="assets/img/proses-bisnis-animasi3.png" alt=""
-                                        class="img-fluid shadow rounded">
-                                    </div>
-                                  </li>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="col-md-6">
+                            <ol start="5">
+                              <li>
+                                Buat 3 panah (<strong>Insert</strong> → <strong>Shapes</strong> → <strong>Arrow:
+                                  Right Arrow</strong>) di antara kotak.
+                                <div class="my-3">
+                                  <img src="assets/img/Insert-Shapes-Arrow.png" alt="" class="img-fluid shadow rounded">
+                                </div>
+                                <div class="my-3">
+                                  <img src="assets/img/proses-bisnis-animasi3.png" alt=""
+                                    class="img-fluid shadow rounded">
+                                </div>
+                              </li>
+                            </ol>
+                          </div>
+                        </div><!-- /row -->
+
+                        <div>
+                          <ol>
+                            <li>
+                              Tambahkan <strong>Animasi Entrance (Fade):</strong>
+                              <div class="row">
+                                <ol>
+                                  <div class="col-md-6">
+                                    <ol>
+                                      <li>
+                                        <i class="bi bi-app"></i> Klik kotak "<strong>PROSPEK</strong>" → Tab
+                                        <strong>Animations</strong> → pilih
+                                        <strong>Fade</strong>.
+                                      </li>
+                                      <li>
+                                        <i class="bi bi-arrow-right-square"></i> Klik <strong>Panah</strong> setelah
+                                        "<strong>PROSPEK</strong>" → pilih
+                                        <strong>Fade</strong>.
+                                      </li>
+                                      <li>
+                                        <i class="bi bi-app"></i> Klik kotak "<strong>PENAWARAN</strong>" → pilih
+                                        <strong>Fade</strong>.
+                                      </li>
+                                      <li>
+                                        <i class="bi bi-arrow-right-square"></i> Klik <strong>Panah</strong> setelah
+                                        "<strong>PENAWARAN</strong>" → pilih
+                                        <strong>Fade</strong>.
+                                      </li>
+                                      <li>
+                                        <i class="bi bi-app"></i> Klik kotak "<strong>NEGOSIASI</strong>" → pilih
+                                        <strong>Fade</strong>.
+                                      </li>
+                                      <li>
+                                        <i class="bi bi-arrow-right-square"></i> Klik <strong>Panah</strong> setelah
+                                        "<strong>NEGOSIASI</strong>" → pilih
+                                        <strong>Fade</strong>.
+                                      </li>
+                                      <li>
+                                        <i class="bi bi-app"></i> Klik kotak "<strong>DEAL</strong>" → pilih
+                                        <strong>Fade</strong>.
+                                      </li>
+                                    </ol>
+                                  </div>
+                                  <div class="col-md-6">
+                                    ....
+                                  </div>
                                 </ol>
+                              </div><!-- /row -->
+                            </li>
+                            <li>
+                              <strong>Atur Timing Animasi:</strong>
+                              <ul class="list-unstyled">
+                                <li>
+                                  Tab <strong>Animations</strong> → <strong>Animation Pane</strong>.
+                                </li>
+                                <li>
+                                  Klik panah bawah pada masing-masing animasi di
+                                  panel → atur:
+                                  <ul class="dash-list">
+                                    <li>
+                                      <i class="bi bi-app"></i> "<strong>PROSPEK</strong>" →
+                                      <strong>Start: On Click</strong> (muncul saat
+                                      klik).
+                                    </li>
+                                    <li>
+                                      <i class="bi bi-arrow-right-square"></i> "<strong>Panah 1 </strong>" →
+                                      <strong>Start: After Previous</strong>
+                                      (otomatis setelah Prospek).
+                                      <div class="my-3">
+                                        <img src="assets/img/Start-After-Previous.png" alt=""
+                                          class="img-fluid shadow rounded">
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <i class="bi bi-app"></i> "<strong>PENAWARAN</strong>" →
+                                      <strong>Start: After Previous</strong>
+                                    </li>
+                                    <li>
+                                      <i class="bi bi-arrow-right-square"></i> "<strong>Panah 2 </strong>" →
+                                      <strong>Start: After Previous</strong>.
+                                    </li>
+                                    <li>
+                                      <i class="bi bi-app"></i> "<strong>NEGOSIASI</strong>" →
+                                      <strong>Start: After Previous</strong>.
+                                    </li>
+                                    <li>
+                                      <i class="bi bi-arrow-right-square"></i> "<strong>Panah 3 </strong>" →
+                                      <strong>Start: After Previous</strong>.
+                                    </li>
+                                    <li>
+                                      <i class="bi bi-app"></i> "<strong>DEAL</strong>" →
+                                      <strong>Start: After Previous</strong>.
+                                      <div class="my-3">
+                                        <img src="assets/img/Animation-Pane.png" alt=""
+                                          class="img-fluid shadow rounded">
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+
+                            <li>
+                              Tambahkan <strong>Emphasis (Grow)</strong> pada "<strong>DEAL</strong>":</strong>
+                              <ul class="list-unstyled">
+                                <li>
+                                  Klik kotak <i class="bi bi-app"></i> "<strong>DEAL</strong>" → Tab
+                                  <strong>Animations</strong> →
+                                  <strong>Add Animation</strong>.
+                                  <div class="my-3">
+                                    <img src="assets/img/Add-Animation.png" alt="" class="img-fluid shadow rounded">
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      Pilih <strong>Grow/Shrink</strong> (dalam group <strong>Emphasis</strong>).
+                                      <div class="my-3">
+                                        <img src="assets/img/Grow-Shrink.png" alt="" class="img-fluid shadow rounded">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      Atur Start: <strong>With Previous</strong>.
+                                      <div class="my-3">
+                                        <img src="assets/img/Animation-Pane-Deal.png" alt=""
+                                          class="img-fluid shadow rounded">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      Kemudian klik <strong>Effect Options</strong>
+                                      <div class="my-3">
+                                        <img src="assets/img/Animation-Pane-Effect-Options.png" alt=""
+                                          class="img-fluid shadow rounded">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      Beri centang pada <strong>Auto-reverse</strong> untuk efek grow-shrink kembali
+                                      ke
+                                      ukuran
+                                      semula.
+                                      <div class="my-3">
+                                        <img src="assets/img/effect-options.png" alt=""
+                                          class="img-fluid shadow rounded">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  Tab <strong>Timing</strong> Duration: <strong>1s</strong>.
+                                  <div class="my-3">
+                                    <img src="assets/img/Animation-Pane-Timming.png" alt=""
+                                      class="img-fluid shadow rounded">
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              Tambahkan <strong>Motion Path</strong> pada "<strong>PROSPEK</strong>", ini
+                              <strong>Opsional</strong> <br>
+                              Geser posisi <i class="bi bi-app"></i> "<strong>PROSPEK</strong>" menjadi seperti contoh
+                              gambar
+                              <div class="my-3">
+                                <img src="assets/img/ubah-letak-shape.png" alt="" class="img-fluid shadow rounded">
                               </div>
-                            </div>
-                          </li>
-
-
-                          <li>
-                            <strong>Tambahkan Animasi Entrance (Fade):</strong>
-                            <ul class="dash-list">
-                              <li>
-                                <i class="bi bi-app"></i> Klik kotak "<strong>PROSPEK</strong>" → Tab
-                                <strong>Animations</strong> → pilih
-                                <strong>Fade</strong>.
-                              </li>
-                              <li>
-                                <i class="bi bi-arrow-right-square"></i> Klik <strong>Panah</strong> setelah
-                                "<strong>PROSPEK</strong>" → pilih
-                                <strong>Fade</strong>.
-                              </li>
-                              <li>
-                                <i class="bi bi-app"></i> Klik kotak "<strong>PENAWARAN</strong>" → pilih
-                                <strong>Fade</strong>.
-                              </li>
-                              <li>
-                                <i class="bi bi-arrow-right-square"></i> Klik <strong>Panah</strong> setelah
-                                "<strong>PENAWARAN</strong>" → pilih
-                                <strong>Fade</strong>.
-                              </li>
-                              <li>
-                                <i class="bi bi-app"></i> Klik kotak "<strong>NEGOSIASI</strong>" → pilih
-                                <strong>Fade</strong>.
-                              </li>
-                              <li>
-                                <i class="bi bi-arrow-right-square"></i> Klik <strong>Panah</strong> setelah
-                                "<strong>NEGOSIASI</strong>" → pilih
-                                <strong>Fade</strong>.
-                              </li>
-                              <li>
-                                <i class="bi bi-app"></i> Klik kotak "<strong>DEAL</strong>" → pilih
-                                <strong>Fade</strong>.
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Atur Timing Animasi:</strong>
-                            <ul class="list-unstyled">
-                              <li>
-                                Tab <strong>Animations</strong> → <strong>Animation Pane</strong>.
-                              </li>
-                              <li>
-                                Klik panah bawah pada masing-masing animasi di
-                                panel → atur:
-                                <ul class="dash-list">
-                                  <li>
-                                    <i class="bi bi-app"></i> "<strong>PROSPEK</strong>" →
-                                    <strong>Start: On Click</strong> (muncul saat
-                                    klik).
-                                  </li>
-                                  <li>
-                                    <i class="bi bi-arrow-right-square"></i> "<strong>Panah 1 </strong>" →
-                                    <strong>Start: After Previous</strong>
-                                    (otomatis setelah Prospek).
-                                    <div class="my-3">
-                                      <img src="assets/img/Start-After-Previous.png" alt=""
-                                        class="img-fluid shadow rounded">
-                                    </div>
-                                  </li>
-                                  <li>
-                                    <i class="bi bi-app"></i> "<strong>PENAWARAN</strong>" →
-                                    <strong>Start: After Previous</strong>
-                                  </li>
-                                  <li>
-                                    <i class="bi bi-arrow-right-square"></i> "<strong>Panah 2 </strong>" →
-                                    <strong>Start: After Previous</strong>.
-                                  </li>
-                                  <li>
-                                    <i class="bi bi-app"></i> "<strong>NEGOSIASI</strong>" →
-                                    <strong>Start: After Previous</strong>.
-                                  </li>
-                                  <li>
-                                    <i class="bi bi-arrow-right-square"></i> "<strong>Panah 3 </strong>" →
-                                    <strong>Start: After Previous</strong>.
-                                  </li>
-                                  <li>
-                                    <i class="bi bi-app"></i> "<strong>DEAL</strong>" →
-                                    <strong>Start: After Previous</strong>.
-                                    <div class="my-3">
-                                      <img src="assets/img/Animation-Pane.png" alt="" class="img-fluid shadow rounded">
-                                    </div>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            Tambahkan <strong>Emphasis (Grow)</strong> pada "<strong>DEAL</strong>":</strong>
-                            <ul class="list-unstyled">
-                              <li>
-                                Klik kotak <i class="bi bi-app"></i> "<strong>DEAL</strong>" → Tab
-                                <strong>Animations</strong> →
-                                <strong>Add Animation</strong>.
-                                <div class="my-3">
-                                  <img src="assets/img/Add-Animation.png" alt="" class="img-fluid shadow rounded">
-                                </div>
-                              </li>
-                              <li>
-                                <div class="row">
-                                  <div class="col-md-6">
-                                    Pilih <strong>Grow/Shrink</strong> (dalam group <strong>Emphasis</strong>).
-                                    <div class="my-3">
-                                      <img src="assets/img/Grow-Shrink.png" alt="" class="img-fluid shadow rounded">
-                                    </div>
+                              <ul class="list-unstyled">
+                                <li>
+                                  Klik kotak <i class="bi bi-app"></i> "<strong>PROSPEK</strong>" → Tab
+                                  <strong>Animations</strong> →
+                                  <strong>Motion Paths</strong> →
+                                  <strong>Lines</strong>.
+                                  <div class="my-3">
+                                    <img src="assets/img/Animation-Pane-Motion-Path.png" alt=""
+                                      class="img-fluid shadow rounded">
                                   </div>
-                                  <div class="col-md-6">
-                                    Atur Start: <strong>With Previous</strong>.
-                                    <div class="my-3">
-                                      <img src="assets/img/Animation-Pane-Deal.png" alt=""
-                                        class="img-fluid shadow rounded">
-                                    </div>
+                                </li>
+                                <li>
+                                  Klik garis motion path → tarik ujung garis ke arah kanan
+                                  (atau geser sesuai keinginan).
+                                  <div class="my-3">
+                                    <img src="assets/img/motion-path-line1.png" alt="" class="img-fluid shadow rounded">
                                   </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="row">
-                                  <div class="col-md-6">
-                                    Kemudian klik <strong>Effect Options</strong>
-                                    <div class="my-3">
-                                      <img src="assets/img/Animation-Pane-Effect-Options.png" alt=""
-                                        class="img-fluid shadow rounded">
-                                    </div>
+                                  Menjadi sepertri ini:
+                                  <div class="my-3">
+                                    <img src="assets/img/motion-path-line2.png" alt="" class="img-fluid shadow rounded">
                                   </div>
-                                  <div class="col-md-6">
-                                    Beri centang pada <strong>Auto-reverse</strong> untuk efek grow-shrink kembali ke
-                                    ukuran
-                                    semula.
-                                    <div class="my-3">
-                                      <img src="assets/img/effect-options.png" alt="" class="img-fluid shadow rounded">
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                              <li>
-                                Tab <strong>Timing</strong> Duration: <strong>1s</strong>.
-                                <div class="my-3">
-                                  <img src="assets/img/Animation-Pane-Timming.png" alt=""
-                                    class="img-fluid shadow rounded">
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            Tambahkan <strong>Motion Path</strong> pada "<strong>PROSPEK</strong>", ini
-                            <strong>Opsional</strong> <br>
-                            Geser posisi <i class="bi bi-app"></i> "<strong>PROSPEK</strong>" menjadi seperti contoh
-                            gambar
-                            <div class="my-3">
-                              <img src="assets/img/ubah-letak-shape.png" alt="" class="img-fluid shadow rounded">
-                            </div>
-                            <ul class="list-unstyled">
-                              <li>
-                                Klik kotak <i class="bi bi-app"></i> "<strong>PROSPEK</strong>" → Tab
-                                <strong>Animations</strong> →
-                                <strong>Motion Paths</strong> →
-                                <strong>Lines</strong>.
-                                <div class="my-3">
-                                  <img src="assets/img/Animation-Pane-Motion-Path.png" alt=""
-                                    class="img-fluid shadow rounded">
-                                </div>
-                              </li>
-                              <li>
-                                Klik garis motion path → tarik ujung garis ke arah kanan
-                                (atau geser sesuai keinginan).
-                                <div class="my-3">
-                                  <img src="assets/img/motion-path-line1.png" alt="" class="img-fluid shadow rounded">
-                                </div>
-                                Menjadi sepertri ini:
-                                <div class="my-3">
-                                  <img src="assets/img/motion-path-line2.png" alt="" class="img-fluid shadow rounded">
-                                </div>
-                              </li>
-                              <!-- <li>
+                                </li>
+                                <!-- <li>
                                 Klik kanan <i class="bi bi-mouse2"></i>  pada garis motion path → pilih <strong>Effect Options</strong> → pilih <strong>Reverse Path Direction</strong>.
                                 <div class="my-3">
                                   <img src="assets/img/reverse-path-direction.png" alt="" class="img-fluid shadow rounded">
                                 </div>
                               </li> -->
-                              <li>
-                                Tab <strong>Timing</strong> Start: <strong>With Previous</strong>,
-                                Duration: <strong>1s</strong>.
-                                <div class="my-3">
-                                  <img src="assets/img/Grow-Shrink2.png" alt="" class="img-fluid shadow rounded">
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Uji coba:</strong> Tekan
-                            <strong>F5</strong> → klik sekali → animasi
-                            berjalan otomatis berurutan.
-                          </li>
-                          <li>
-                            <strong>Tambahkan Tema</strong> (opsional (jika diperlukan)): Tab <strong>Design</strong> →
-                            pilih Tema
-                            bawaan untuk mempercantik slide.
-                          </li>
-                          <li>
-                            <strong>Simpan file:</strong> <strong>File</strong> → <strong>Save</strong> → beri nama
-                            misalnya <strong>Animasi_Proses_Bisnis.pptx</strong>.
-                          </li>
-                        </ol>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/animasi-proses-bisnis.pptx" role="button" download><i
-                              class="bi bi-download me-1"></i> Contoh Animasi</a>
-                          <a class="btn fs-3" href="#sesi2LanjutanContent" role="button" aria-label="Scroll to top">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                          </a>
+                                <li>
+                                  Tab <strong>Timing</strong> Start: <strong>With Previous</strong>,
+                                  Duration: <strong>1s</strong>.
+                                  <div class="my-3">
+                                    <img src="assets/img/Grow-Shrink2.png" alt="" class="img-fluid shadow rounded">
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <strong>Uji coba:</strong> Tekan
+                              <strong>F5</strong> → klik sekali → animasi
+                              berjalan otomatis berurutan.
+                            </li>
+                            <li>
+                              <strong>Tambahkan Tema</strong> (opsional (jika diperlukan)): Tab
+                              <strong>Design</strong> →
+                              pilih Tema
+                              bawaan untuk mempercantik slide.
+                            </li>
+                            <li>
+                              <strong>Simpan file:</strong> <strong>File</strong> → <strong>Save</strong> → beri nama
+                              misalnya <strong>Animasi_Proses_Bisnis.pptx</strong>.
+                            </li>
+                          </ol>
                         </div>
+
+                      </div><!-- /accordion-body -->
+
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <a class="btn btn-sm btn-outline-secondary"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                          href="assets/files/animasi-proses-bisnis.pptx" role="button" download><i
+                            class="bi bi-download me-1"></i> Contoh Animasi</a>
+                        <a class="btn fs-3" href="#sesi2LanjutanContent" role="button" aria-label="Scroll to top">
+                          <i class="bi bi-arrow-up-circle-fill"></i>
+                        </a>
                       </div>
+
                     </div>
                   </div><!-- Lanjutan -->
-                </div>
-              </div><!-- contoh-box -->
-            </div>
+                </div><!-- /accordion accordion-flush -->
+              </div><!-- /contoh-box -->
+            </div><!-- /accordion-body small p-0 -->
           </div>
         </div>
+
         <!-- Pertemuan 3 -->
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -2670,7 +2690,8 @@
                           <a class="btn btn-sm btn-outline-secondary"
                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                             href="assets/files/3_Morph_Ide.pptx" role="button" download><i
-                              class="bi bi-download me-1"></i> Contoh Latihan</a>
+                              class="bi bi-download me-1"></i>
+                            Contoh Latihan</a>
                           <a class="btn fs-3" href="#sesi3MenengahContent" role="button" aria-label="Scroll to top">
                             <i class="bi bi-arrow-up-circle-fill"></i>
                           </a>
@@ -2864,7 +2885,8 @@
                                 <ul class="list-unstyled">
                                   <li>
                                     <strong>Tab Slide Master</strong> beri centang pada <i
-                                      class="bi bi-check-square"></i> <strong>Title</strong>.
+                                      class="bi bi-check-square"></i>
+                                    <strong>Title</strong>.
                                     <div class="my-3">
                                       <img src="assets/img/Insert-Placeholder-Title.png" alt=""
                                         class="img-fluid shadow rounded">
@@ -2983,6 +3005,7 @@
             </div>
           </div>
         </div>
+
         <!-- Pertemuan 4 -->
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -4955,7 +4978,6 @@
           </div>
         </div>
       </div>
-
 
       <!-- Tugas -->
       <div class="mt-4">
