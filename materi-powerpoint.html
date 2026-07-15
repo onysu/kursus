@@ -229,6 +229,24 @@
     .accordion-button {
       font-size: 16px;
     }
+
+    .anchor-link:focus,
+    .anchor-link:hover,
+    :hover>.anchor-link,
+    :target>.anchor-link {
+      color: #0d6efd;
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    .anchor-link {
+      padding: 0 .175rem;
+      font-weight: 400;
+      color: #0d6efd80;
+      text-decoration: none;
+      opacity: 0;
+      transition: color .15s ease-in-out, opacity .15s ease-in-out;
+    }
   </style>
 </head>
 
@@ -2438,7 +2456,6 @@
                               </div>
                             </div><!-- /row -->
                           </li>
-
                           <li class="mb-3">
                             <strong>Terapkan Transisi:</strong>
                             <ol>
@@ -2462,7 +2479,6 @@
                               </li>
                             </ol>
                           </li>
-
                           <li class="mb-3">
                             <strong>Atur Durasi Transisi:</strong>
                             <ol>
@@ -2485,7 +2501,6 @@
                               </li>
                             </ol>
                           </li>
-
                           <li class="mb-3">
                             <strong>Atur Auto-Advance:</strong>
                             <ol>
@@ -2513,23 +2528,20 @@
                               </li>
                             </ol>
                           </li>
-
-                          <li>
+                          <li class="mb-3">
                             <div class="mt-2 p-2 bg-light border-start border-4 border-info rounded">
                               <strong><i class="bi bi-info-circle"></i> Catatan Morph:</strong>
                               Transisi <strong>Morph</strong> di Slide 4 akan bekerja optimal jika
                               Slide 3 dan Slide 4 memiliki objek dengan <strong>nama yang sama</strong>
                               (misal: hasil duplikasi Slide). Lihat 👉 latihan <strong>Pertemuan 3 Menengah</strong> ini
-                              untuk teknik Morph lengkap.
+                              untuk teknik Morph lengkap.                              
                             </div>
                           </li>
-
-                          <li>
+                          <li class="mb-3">
                             <strong>Simpan file:</strong> <strong>File</strong> → <strong>Save</strong> → beri nama
                             misalnya <strong>4_Slide_Transisi.pptx</strong>.
                           </li>
                         </ol>
-                        
                         <div class="d-flex justify-content-between align-items-center mb-3">
                           <a class="btn btn-sm btn-outline-secondary"
                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
