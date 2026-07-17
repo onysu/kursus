@@ -456,7 +456,62 @@
                     <div id="sesi1DasarExcel" class="accordion-collapse collapse"
                       data-bs-parent="#accordionPraktikPowerPointSesi1">
                       <div class="accordion-body small">
-                        ...
+                        <div class="row">
+                          <div class="col-md-6">
+                            <strong>Langkah Pengerjaan</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat Judul Kolom:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A1</code>: No</li>
+                                  <li><code>B1</code>: Nama</li>
+                                  <li><code>C1</code>: Kelas</li>
+                                  <li><code>D1</code>: Nilai</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi Nomor Urut:</strong>
+                                <ul class="dash-list">
+                                  <li>Ketik 1 pada <code>A2</code>.</li>
+                                  <li>Ketik 2 pada <code>A3</code>.</li>
+                                  <li>
+                                    Blok <code>A2:A3</code> lalu tarik
+                                    <strong>AutoFill Handle</strong> (kotak
+                                    kecil di pojok kanan bawah sel) hingga <code>A11</code>.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                Masukkan Data Siswa pada Kolom <strong>Nama, Kelas,
+                                  dan Nilai.</strong>
+                              </li>
+                              <li>
+                                <strong>Format Kolom Nilai menjadi 2 Angka
+                                  Desimal:</strong>
+                                <ul class="dash-list">
+                                  <li>Blok <code>D2:D11</code>.</li>
+                                  <li>Klik Tab <strong>Home</strong> → grup <strong>Number</strong>.</li>
+                                  <li>Pilih <strong>Number</strong>.</li>
+                                  <li>Atur Decimal Places menjadi 2.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Hitung Total Nilai:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada sel <code>D12</code> ketik: <code>=SUM(D2:D11)</code></li>
+                                  <li>Tekan <kbd>Enter</kbd>.</li>
+                                </ul>
+                                Hasil Total Nilai <br />
+                                Dengan Data di atas, Hasilnya: 842,75
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="my-3">
+                              <img src="assets/img/sesi1dasar.png" alt="" class="img-fluid shadow rounded">
+                            </div>
+                          </div>
+                        </div>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                           <a class="btn btn-sm btn-outline-secondary"
                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
@@ -663,7 +718,7 @@
                                 desimal:</strong>
                               <ul class="dash-list">
                                 <li>Blok D2:D11.</li>
-                                <li>Klik tab Home → grup Number.</li>
+                                <li>Klik Tab Home → grup Number.</li>
                                 <li>Pilih Number.</li>
                                 <li>Atur Decimal Places menjadi 2.</li>
                               </ul>
@@ -672,7 +727,7 @@
                               <strong>Hitung total nilai:</strong>
                               <ul class="dash-list">
                                 <li>Pada sel D12 ketik: =SUM(D2:D11)</li>
-                                <li>Tekan Enter.</li>
+                                <li>Tekan <kbd>Enter</kbd>.</li>
                               </ul>
                               Hasil Total Nilai <br />
                               Dengan data di atas, hasilnya: 842,75
@@ -1015,7 +1070,7 @@
                                   <li>Pada sel <strong>D3</strong> ketik:
                                     <code>=IF(C3&gt;=75,"LULUS","TIDAK LULUS")</code>
                                   </li>
-                                  <li>Tekan Enter, maka akan muncul hasil "LULUS" jika nilai ≥ 75, atau "TIDAK LULUS"
+                                  <li>Tekan <kbd>Enter</kbd>, maka akan muncul hasil "LULUS" jika nilai ≥ 75, atau "TIDAK LULUS"
                                     jika kurang.</li>
                                   <li>Salin rumus ke bawah hingga <strong>D11</strong> menggunakan Fill Handle.</li>
                                 </ul>
@@ -1026,7 +1081,7 @@
                                   <li>Pada sel <strong>C14</strong> ketik:
                                     <code>=COUNTIF(D3:D12,"LULUS")</code>
                                   </li>
-                                  <li>Tekan Enter.</li>
+                                  <li>Tekan <kbd>Enter</kbd>.</li>
                                 </ul>
                                 Hasil: 5 siswa lulus (dari contoh data di atas).
                               </li>
@@ -1036,7 +1091,7 @@
                                   <li>Pada sel <strong>C15</strong> ketik:
                                     <code>=COUNTIF(D3:D12,"TIDAK LULUS")</code>
                                   </li>
-                                  <li>Tekan Enter.</li>
+                                  <li>Tekan <kbd>Enter</kbd>.</li>
                                 </ul>
                                 Hasil: 5 siswa tidak lulus.
                               </li>
@@ -1107,7 +1162,7 @@
                                   <li>Pada sel <strong>D3</strong> ketik:
                                     <code>=IF(C3>=90;"A";IF(C3>=80;"B";IF(C3>=70;"C";"D")))</code>
                                   </li>
-                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>D12</strong>.</li>
+                                  <li>Tekan <kbd>Enter</kbd>, lalu salin ke bawah hingga <strong>D12</strong>.</li>
                                 </ul>
                               </li>
                               <li>
@@ -1116,7 +1171,7 @@
                                   <li>Pada sel <strong>F3</strong> ketik:
                                     <code>=IF(AND(C3>=80;E3="Aktif");"Bonus";"-")</code>
                                   </li>
-                                  <li>Tekan Enter, lalu salin ke bawah hingga <strong>F12</strong>.</li>
+                                  <li>Tekan <kbd>Enter</kbd>, lalu salin ke bawah hingga <strong>F12</strong>.</li>
                                 </ul>
                               </li>
                             </ol>
@@ -2637,7 +2692,7 @@
                                   <li>Pada <strong>F1</strong> ketik: <strong>Jenis</strong></li>
                                   <li>Pada <strong>F2</strong> ketik:
                                     <code>=IF(OR(B2="Makanan",B2="Tagihan",B2="Transport"),"Kebutuhan","Keinginan")</code>
-                                    → Enter, lalu salin ke bawah.
+                                    → <kbd>Enter</kbd>, lalu salin ke bawah.
                                   </li>
                                   <li>IF ini otomatis mengelompokkan: <strong>"Kebutuhan"</strong> (Makanan, Tagihan,
                                     Transport) atau <strong>"Keinginan"</strong> (Belanja, Hiburan).
