@@ -427,258 +427,7 @@
         <i class="bi bi-filetype-xlsx"></i> Materi Lengkap
       </h2>
 
-      <div class="accordion accordion-flush" id="materiPertemuanPertamaExcel">
-        <!-- Pertemuan 1 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseSatu" aria-expanded="false" aria-controls="flush-collapseSatu">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 1</span> — Pengenalan, Data Entry
-              &amp; Formula Dasar</span>
-            </button>
-          </h2>
-          <div id="flush-collapseSatu" class="accordion-collapse collapse"
-            data-bs-parent="#materiPertemuanPertamaExcel">
-            <div class="accordion-body p-0">
-              <div class="contoh-box">
-                <div class="accordion accordion-flush" id="accordionPraktikPowerPointSesi1">
-                  <!-- Dasar -->
-                  <div class="accordion-item" id="sesi1DasarContentExcel">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed d-grid" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sesi1DasarExcel" aria-expanded="false" aria-controls="sesi1DasarExcel">
-                        <strong style="color: #06D6A0;">DASAR:</strong> Buat Tabel
-                        Data Siswa 10 Baris (Nama, Kelas, Nilai). Gunakan AutoFill
-                        untuk No Urut. Format kolom Nilai dengan Number 2 desimal.
-                        Hitung Total Nilai dengan =SUM(D2:D11).
-                      </button>
-                    </h2>
-                    <div id="sesi1DasarExcel" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionPraktikPowerPointSesi1">
-                      <div class="accordion-body small">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <strong>Langkah Pengerjaan</strong>
-                            <ol>
-                              <li>
-                                <strong>Buat Judul Kolom:</strong>
-                                <ul class="dash-list">
-                                  <li><code>A1</code>: No</li>
-                                  <li><code>B1</code>: Nama</li>
-                                  <li><code>C1</code>: Kelas</li>
-                                  <li><code>D1</code>: Nilai</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Isi Nomor Urut:</strong>
-                                <ul class="dash-list">
-                                  <li>Ketik 1 pada <code>A2</code>.</li>
-                                  <li>Ketik 2 pada <code>A3</code>.</li>
-                                  <li>
-                                    Blok <code>A2:A3</code> lalu tarik
-                                    <strong>AutoFill Handle</strong> (kotak
-                                    kecil di pojok kanan bawah sel) hingga <code>A11</code>.
-                                    <div class="my-3">
-                                      <img src="assets/img/AutoFill-Handle.png" alt="" class="img-fluid shadow rounded">
-                                    </div>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                Masukkan Data Siswa pada Kolom <strong>Nama, Kelas,
-                                  dan Nilai.</strong>
-                              </li>
-                            </ol>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="my-3">
-                              <img src="assets/img/sesi1dasar.png" alt="" class="img-fluid shadow">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <ol start="4">
-                              <li>Format Kolom Nilai menjadi 2 Angka Desimal:
-                                <ol>
-                                  <li>Blok <code>D2:D12</code></li>
-                                  <li>Klik Tab <strong>Home</strong> → grup <strong>Number</strong>.</li>
-                                  <li>Pilih <strong>Number</strong>.</li>
-                                  <li>Atur Decimal Places menjadi 2.</li>
-                                </ol>
-                              </li>
-                            </ol>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="my-3">
-                              <img src="assets/img/Blok-D2-D11.png" alt="" class="img-fluid shadow">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <ol start="5">
-                              <li><strong>Hitung Total Nilai:</strong>
-                                <ul class="dash-list">
-                                  <li>Pada sel <code>D12</code> ketik: <code>=SUM(D2:D11)</code></li>
-                                  <li>Tekan <kbd>Enter</kbd>.</li>
-                                </ul>
-                                Hasil Total Nilai <br />
-                                Dengan Data di atas, Hasilnya: 842,75
-                              </li>
-                            </ol>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="my-3">
-                              <img src="assets/img/Hitung-Total-Nilai.png" alt="" class="img-fluid shadow">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/data_siswa.xlsx" role="button" download><i
-                              class="bi bi-download me-1"></i> Contoh
-                            Latihan</a>
-                          <a class="btn fs-3" href="#sesi1DasarContentExcel">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Menengah -->
-                  <div class="accordion-item" id="sesi1MenengahContentExcel">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed d-grid" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sesi1MenengahExcel" aria-expanded="false" aria-controls="sesi1MenengahExcel">
-                        <strong style="color: #F77F00;">MENENGAH:</strong>
-                        Buat Tabel
-                        Penjualan 12 Bulan. Hitung Total Tahunan
-                        =Sum(B2:B13), Rata-Rata
-                        =Average(B2:B13), Tertinggi
-                        =Max(B2:B13). Komisi
-                        =B2*$C$1 (Absolut). Format Currency.
-                      </button>
-                    </h2>
-                    <div id="sesi1MenengahExcel" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionPraktikPowerPointSesi1">
-                      <div class="accordion-body small">
-                        ...
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/" role="button" download><i class="bi bi-download me-1"></i> Contoh
-                            Latihan</a>
-                          <a class="btn fs-3" href="#sesi1MenengahContentExcel">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Lanjutan -->
-                  <div class="accordion-item mb-2 " id="sesi1LanjutanContentExcel">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed d-grid" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sesi1LanjutanExcel" aria-expanded="false" aria-controls="sesi1LanjutanExcel">
-                        <strong style="color: #D62828;">LANJUTAN:</strong>
-                        Buat
-                        Laporan Keuangan Pribadi 1 Bulan. Gunakan
-                        =Round Untuk Pembulatan,
-                        =Today() Untuk Tanggal Otomatis,
-                        =Countif Untuk Menghitung Kategori
-                        Pengeluaran. Terapkan Conditional Formatting Untuk Sel
-                        Negatif (Merah).
-                      </button>
-                    </h2>
-                    <div id="sesi1LanjutanExcel" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionPraktikPowerPointSesi1">
-                      <div class="accordion-body small">
-                        ...
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/Profil-Perusahaan-5-Slide.pptx" role="button" download><i
-                              class="bi bi-download me-1"></i> Contoh
-                            Latihan</a>
-                          <a class="btn fs-3" href="#sesi1LanjutanContentExcel">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pertemuan 2 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseDua" aria-expanded="false" aria-controls="flush-collapseDua">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 2</span> — IF, VLOOKUP &amp;
-              Fungsi
-              Logika</span>
-            </button>
-          </h2>
-          <div id="flush-collapseDua" class="accordion-collapse collapse" data-bs-parent="#materiPertemuanPertamaExcel">
-            <div class="accordion-body d-grid">Placeholder content for this accordion, which is intended to demonstrate
-              the
-              <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being
-              filled with some actual content.
-            </div>
-          </div>
-        </div>
-        <!-- Pertemuan 3 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTiga" aria-expanded="false" aria-controls="flush-collapseTiga">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 3</span> — Chart, Grafik &amp;
-              Conditional Formatting</span>
-            </button>
-          </h2>
-          <div id="flush-collapseTiga" class="accordion-collapse collapse"
-            data-bs-parent="#materiPertemuanPertamaExcel">
-            <div class="accordion-body d-grid">Placeholder content for this accordion, which is intended to demonstrate
-              the
-              <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting
-              happening here in terms of content, but just filling up the space to make it look, at least at first
-              glance, a bit more representative of how this would look in a real-world application.
-            </div>
-          </div>
-        </div>
-        <!-- Pertemuan 4 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseEmpat" aria-expanded="false" aria-controls="flush-collapseEmpat">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 4</span> — PivotTable, Sorting,
-              Filter &amp; Final Project</span>
-            </button>
-          </h2>
-          <div id="flush-collapseEmpat" class="accordion-collapse collapse"
-            data-bs-parent="#materiPertemuanPertamaExcel">
-            <div class="accordion-body d-grid">Placeholder content for this accordion, which is intended to demonstrate
-              the
-              <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting
-              happening here in terms of content, but just filling up the space to make it look, at least at first
-              glance, a bit more representative of how this would look in a real-world application.
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       <div class="accordion accordion-flush" id="programexcel">
         <!-- PERTEMUAN 1 (Excel) -->
@@ -759,6 +508,38 @@
                               Dengan data di atas, hasilnya: 842,75
                             </li>
                           </ol>
+
+                          <div class="mb-3 p-3 bg-light border-start border-4 border-info rounded">
+                            <strong><i class="bi bi-info-circle"></i> Catatan Penting — Pemisah Argument Rumus Excel</strong>
+                            <p class="mb-2 small">Dalam mengetik rumus Excel, terdapat perbedaan pemisah (separator) antar versi/region:</p>
+                            <table class="table table-bordered table-sm small mb-2">
+                              <thead>
+                                <tr>
+                                  <th>Versi Excel</th>
+                                  <th>Pemisah Argument</th>
+                                  <th>Contoh</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Excel Indonesia / Eropa</td>
+                                  <td><strong>Titik koma <code>;</code></strong></td>
+                                  <td><code>=SUM(B2:B13)</code></td>
+                                </tr>
+                                <tr>
+                                  <td>Excel Inggris / Amerika</td>
+                                  <td><strong>Koma <code>,</code></strong></td>
+                                  <td><code>=SUM(B2:B13)</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p class="mb-1 small">Contoh perbedaan pada rumus dengan 2 argument:</p>
+                            <ul class="mb-0 small dash-list">
+                              <li>Indonesia: <code>=IF(C3>=75;"LULUS";"TIDAK LULUS")</code></li>
+                              <li>Amerika: <code>=IF(C3>=75,"LULUS","TIDAK LULUS")</code></li>
+                            </ul>
+                            <p class="mb-0 small mt-2"><strong>Tips:</strong> Jika rumus error atau tidak bisa diketik, cek <strong>File → Options → Advanced → Use system separators</strong>, atau ganti <code>;</code> dengan <code>,</code> (atau sebaliknya) sesuai versi Excel Anda.</p>
+                          </div>
                           <div class="mt-3">
                             Hasil Akhir: <br />
                             <img src="assets/files/sesi1dasar.png" alt="" />
@@ -799,12 +580,68 @@
                             <strong>Kompetensi yang Dipelajari:</strong>
                             <ol>
                               <li>AutoFill data bulanan.</li>
-                              <li>Fungsi `SUM()`.</li>
-                              <li>Fungsi `AVERAGE()`.</li>
-                              <li>Fungsi `MAX()`.</li>
-                              <li>Referensi absolut `$C$1`.</li>
+                              <li>Fungsi <code>SUM()</code>.</li>
+                              <li>Fungsi <code>AVERAGE()</code>.</li>
+                              <li>Fungsi <code>MAX()</code>.</li>
+                              <li>Referensi absolut <code>$C$1</code>.</li>
                               <li>Format mata uang (Currency/Accounting).</li>
                               <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat Tabel Penjualan Tahunan</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat judul kolom di baris 1:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A1</code>: Bulan</li>
+                                  <li><code>B1</code>: Penjualan</li>
+                                  <li><code>C1</code>: Komisi (%)</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data Komisi di sel <code>C1</code>:</strong>
+                                <ul class="dash-list">
+                                  <li>Ketik <code>5%</code> atau <code>0,05</code> pada sel <code>C1</code>.</li>
+                                  <li>Sel ini akan dirujuk dengan referensi absolut <code>$C$1</code> nanti.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data bulan di kolom A (A2:A13):</strong>
+                                <ul class="dash-list">
+                                  <li>Ketik <code>Januari</code> di <code>A2</code>.</li>
+                                  <li>Ketik <code>Februari</code> di <code>A3</code>.</li>
+                                  <li>Blok <code>A2:A3</code> lalu tarik <strong>AutoFill Handle</strong> hingga <code>A13</code> (Desember).</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data Penjualan di kolom B (B2:B13):</strong>
+                                <br />
+                                Masukkan nilai penjualan contoh berikut:
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Sel</th><th>Bulan</th><th>Penjualan (Rp)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td><code>B2</code></td><td>Januari</td><td>12.500.000</td></tr>
+                                      <tr><td><code>B3</code></td><td>Februari</td><td>14.200.000</td></tr>
+                                      <tr><td><code>B4</code></td><td>Maret</td><td>13.800.000</td></tr>
+                                      <tr><td><code>B5</code></td><td>April</td><td>15.000.000</td></tr>
+                                      <tr><td><code>B6</code></td><td>Mei</td><td>16.500.000</td></tr>
+                                      <tr><td><code>B7</code></td><td>Juni</td><td>14.800.000</td></tr>
+                                      <tr><td><code>B8</code></td><td>Juli</td><td>15.300.000</td></tr>
+                                      <tr><td><code>B9</code></td><td>Agustus</td><td>16.000.000</td></tr>
+                                      <tr><td><code>B10</code></td><td>September</td><td>14.500.000</td></tr>
+                                      <tr><td><code>B11</code></td><td>Oktober</td><td>17.200.000</td></tr>
+                                      <tr><td><code>B12</code></td><td>November</td><td>18.000.000</td></tr>
+                                      <tr><td><code>B13</code></td><td>Desember</td><td>18.500.000</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </li>
                             </ol>
                           </div>
                           <div class="mb-3">
@@ -831,24 +668,25 @@
                           <div class="mb-3">
                             Menghitung Komisi (Referensi Absolut) <br />
                             Tambahkan kolom Komisi pada kolom
-                            <strong>E</strong> (lihat di gambar). <br />
+                            <strong>C</strong> (lihat di gambar). <br />
 
-                            Pada sel <strong>C2</strong> ketik: =B2*$C$1
+                            Pada sel <strong>C2</strong> ketik: <code>=B2*$C$1</code>
                             <br />
-                            Lalu salin ke bawah hingga <strong>C13</strong>.
+                            Lalu salin ke bawah hingga <strong>C13</strong>
+                            menggunakan <strong>Fill Handle</strong> (klik sel C2, tarik kotak kecil pojok kanan bawah hingga C13).
                             <br />
-                            Mengapa menggunakan `$C$1`? <br />
+                            Mengapa menggunakan <code>$C$1</code>? <br />
 
-                            Tanda `$` membuat referensi menjadi absolut,
+                            Tanda <code>$</code> membuat referensi menjadi absolut,
                             sehingga saat rumus disalin ke bawah, Excel
                             <br />
                             tetap mengambil nilai komisi dari sel
-                            <strong>E1</strong>. <br />
+                            <strong>C1</strong>. <br />
 
                             Contoh: <br />
-                            =B3*$C$1 <br />
-                            =B4*$C$1 <br />
-                            =B5*$C$1
+                            <code>=B3*$C$1</code> <br />
+                            <code>=B4*$C$1</code> <br />
+                            <code>=B5*$C$1</code>
                           </div>
                           <strong>Format Currency</strong>
                           <ol>
@@ -867,6 +705,10 @@
                               atau 2).
                             </li>
                           </ol>
+                          <div class="mt-3">
+                            <strong>Hasil Akhir:</strong> <br />
+                            <img src="assets/files/sesi1menengah.png" alt="Hasil akhir tabel penjualan tahunan" class="img-fluid shadow" />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -912,14 +754,58 @@
                             </ul>
                           </div>
                           <div class="mb-3">
+                            <strong>Buat Tabel Laporan Keuangan Pribadi</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat bagian Tanggal (baris 1):</strong>
+                                <ul class="dash-list">
+                                  <li><code>A1</code>: <code>Tanggal Laporan</code></li>
+                                  <li><code>B1</code>: ketik <code>=TODAY()</code> (akan ditampilkan tanggal hari ini)</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat header kolom di baris 3:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A3</code>: No</li>
+                                  <li><code>B3</code>: Kategori</li>
+                                  <li><code>C3</code>: Deskripsi</li>
+                                  <li><code>D3</code>: Jumlah</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi 10 baris data pengeluaran (baris 4-13):</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>No</th><th>Kategori (B)</th><th>Deskripsi (C)</th><th>Jumlah (D)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td>1</td><td>Makan</td><td>Nasi Goreng</td><td>25.000</td></tr>
+                                      <tr><td>2</td><td>Transport</td><td>Bensin</td><td>50.000</td></tr>
+                                      <tr><td>3</td><td>Belanja</td><td>Sabun</td><td>15.000</td></tr>
+                                      <tr><td>4</td><td>Makan</td><td>Mie Ayam</td><td>20.000</td></tr>
+                                      <tr><td>5</td><td>Tagihan</td><td>Listrik</td><td>150.000</td></tr>
+                                      <tr><td>6</td><td>Transport</td><td>Grab</td><td>35.000</td></tr>
+                                      <tr><td>7</td><td>Hiburan</td><td>Nonton Bioskop</td><td>75.000</td></tr>
+                                      <tr><td>8</td><td>Makan</td><td>Kopi</td><td>18.000</td></tr>
+                                      <tr><td>9</td><td>Belanja</td><td>Shampoo</td><td>22.000</td></tr>
+                                      <tr><td>10</td><td>Makan</td><td>Makan Siang</td><td>35.000</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
                             <strong>Langkah pengerjaan:</strong> <br />
                             <ol>
                               <li>
                                 Membuat Tabel Laporan Keuangan <br />
-                                Pada sel <strong>A1</strong>: Tanggal Laporan
-                                <br />
-                                Pada sel <strong>B1</strong> ketik rumus:
-                                <strong>=TODAY()</strong> <br />
+                                Setelah membuat tabel sesuai struktur di atas,
+                                pada sel <strong>B1</strong> ketik rumus:
+                                <code>=TODAY()</code> <br />
                                 Hasil akan menampilkan tanggal hari ini secara
                                 otomatis. <br />
                                 Formatkan sebagai Short Date
@@ -936,43 +822,60 @@
                               </li>
                               <li>
                                 Total Pengeluaran <br />
-                                Pada sel <strong>C14</strong>:
-                                <strong>=SUM(C4:C13)</strong>
+                                Pada sel <strong>D14</strong>:
+                                <code>=SUM(D4:D13)</code>
+                                <br />
+                                <small class="text-muted">Catatan: Kolom <strong>D</strong> berisi data Jumlah pengeluaran.</small>
                               </li>
                               <li>
                                 Pembulatan dengan <strong>ROUND</strong>
                                 <br />
                                 Misalkan hasil total berada di
-                                <strong>C16</strong>. <br />
-                                Pada <strong>C16</strong>:
-                                <strong>=ROUND(C14;-3)</strong> <br />
+                                <strong>D16</strong>. <br />
+                                Pada <strong>D16</strong>:
+                                <code>=ROUND(D14;-3)</code> <br />
                                 Artinya: Dibulatkan ke ribuan terdekat. <br />
                                 Contoh: <br />
-                                845,600 → 846,000 <br />
-                                842,100 → 842,000
+                                845.600 &rarr; 846.000 <br />
+                                842.100 &rarr; 842.000
                               </li>
                               <li>
-                                Menghitung Jumlah Pengeluaran Kategori
-                                Tertentu <br />
-                                <div class="mb-3">
+                                Menghitung Jumlah Pengeluaran per Kategori <br />
+                                <small class="text-muted">Catatan: Kolom <strong>B</strong> berisi data <strong>Kategori</strong> (Makan, Transport, Belanja, Tagihan, Hiburan).</small>
+                                <div class="mb-3 mt-2">
                                   Jumlah transaksi kategori Makan <br />
-                                  Pada <strong>F2</strong>: <strong>=COUNTIF(B4:B13;"Makan")</strong> <br />
+                                  Pada <strong>F2</strong>: <code>=COUNTIF(B4:B13;"Makan")</code> <br />
                                   Hasil: 4
                                 </div>
                                 <div class="mb-3">
                                   Jumlah transaksi kategori Transport <br />
-                                  Pada <strong>F3</strong>: <strong>=COUNTIF(B4:B13;"Transport")</strong> <br />
+                                  Pada <strong>F3</strong>: <code>=COUNTIF(B4:B13;"Transport")</code> <br />
+                                  Hasil: 2
+                                </div>
+                                <div class="mb-3">
+                                  Jumlah transaksi kategori Belanja <br />
+                                  Pada <strong>F4</strong>: <code>=COUNTIF(B4:B13;"Belanja")</code> <br />
                                   Hasil: 2
                                 </div>
                               </li>
-                              <li>Membuat Saldo <br>
-                                <div class="mb-3">
-                                  <img src="assets/files/sesi1lanjutan3.png" alt="">
+                              <li>Membuat Rekap Saldo <br>
+                                Buat rekap saldo di area terpisah (kolom F):
+                                <div class="table-responsive mt-2 mb-3">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr><th>Sel</th><th>Label</th><th>Isi / Rumus</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td><code>F5</code></td><td>Total Pemasukan</td><td>Isi nilai tetap, misal: <code>500000</code></td></tr>
+                                      <tr><td><code>F6</code></td><td>Total Pengeluaran</td><td><code>=D14</code> (merujuk ke Total Pengeluaran)</td></tr>
+                                      <tr><td><code>F7</code></td><td>Saldo</td><td><code>=F5-F6</code></td></tr>
+                                    </tbody>
+                                  </table>
                                 </div>
                                 <div class="mb-3">
-                                  Rumus saldo: <strong>=F5-F6</strong> <br>
-                                  Pengeluaran diambil dari Total Pengeluaran: <strong>=C14</strong>
+                                  <img src="assets/files/sesi1lanjutan3.png" alt="Rekap saldo laporan keuangan">
                                 </div>
+                                Contoh: Jika pemasukan 500.000 dan pengeluaran 750.000, maka saldo = -250.000 (negatif).
                               </li>
                               <li>
                                 Conditional Formatting untuk Nilai Negatif <br>
@@ -990,11 +893,16 @@
                             </ol>
                           </div>
                           <div class="mb-3">
-                            <strong>Laporan Keuangan</strong> <br />
-                            <img src="assets/files/sesi1lanjutan.png" alt="" />
+                            <strong>Hasil Akhir Laporan Keuangan:</strong> <br />
+                            <img src="assets/files/sesi1lanjutan.png" alt="Hasil akhir laporan keuangan" class="img-fluid shadow" />
                           </div>
-                          Jika saldo: -250.000 maka sel akan otomatis berwarna merah. <br>
-                          Jika saldo: 500.000 maka tetap normal.
+                          <div class="mb-3 p-3 bg-light border-start border-4 border-success rounded">
+                            <strong>Penjelasan:</strong>
+                            <ul class="mb-0 small dash-list">
+                              <li>Jika saldo: <strong class="text-danger">-250.000</strong> maka sel akan otomatis berwarna merah (karena &lt; 0).</li>
+                              <li>Jika saldo: <strong class="text-success">500.000</strong> maka tetap normal (tidak berwarna).</li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
