@@ -962,6 +962,45 @@
                             </ol>
                           </div>
                           <div class="mb-3">
+                            <strong>Buat Tabel Data Nilai Siswa</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat judul kolom di baris 2:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A2</code>: No</li>
+                                  <li><code>B2</code>: Nama</li>
+                                  <li><code>C2</code>: Nilai</li>
+                                  <li><code>D2</code>: Keterangan</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data siswa di baris 3-12:</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>No (A)</th><th>Nama (B)</th><th>Nilai (C)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td>1</td><td>Andi</td><td>80</td></tr>
+                                      <tr><td>2</td><td>Budi</td><td>65</td></tr>
+                                      <tr><td>3</td><td>Cici</td><td>90</td></tr>
+                                      <tr><td>4</td><td>Dodi</td><td>72</td></tr>
+                                      <tr><td>5</td><td>Eka</td><td>88</td></tr>
+                                      <tr><td>6</td><td>Fani</td><td>55</td></tr>
+                                      <tr><td>7</td><td>Gita</td><td>78</td></tr>
+                                      <tr><td>8</td><td>Hadi</td><td>60</td></tr>
+                                      <tr><td>9</td><td>Indah</td><td>95</td></tr>
+                                      <tr><td>10</td><td>Joko</td><td>70</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Catatan: Kolom A diisi AutoFill 1-10, kolom D masih kosong (akan diisi dengan rumus IF).</small>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
                             <strong>Tabel Data Nilai Siswa</strong>
                             <div class="my-3">
                               <img src="assets/files/excelSesi2dasar.png" alt="Tabel data nilai siswa" />
@@ -970,34 +1009,6 @@
                           <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
-                              <!-- <li>
-                                <strong>Buat judul kolom:</strong>
-                                <ul class="dash-list">
-                                  <li>A1: No</li>
-                                  <li>B1: Nama</li>
-                                  <li>C1: Nilai</li>
-                                  <li>D1: Keterangan</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Isi nomor urut (A2:A11):</strong> AutoFill seperti pertemuan sebelumnya.
-                              </li>
-                              <li>
-                                <strong>Masukkan data nama dan nilai</strong> 10 siswa pada kolom B dan C.
-                                <br />Contoh data:
-                                <ul class="dash-list">
-                                  <li>Andi — 80</li>
-                                  <li>Budi — 65</li>
-                                  <li>Cici — 90</li>
-                                  <li>Dodi — 72</li>
-                                  <li>Eka — 88</li>
-                                  <li>Fani — 55</li>
-                                  <li>Gita — 78</li>
-                                  <li>Hadi — 60</li>
-                                  <li>Indah — 95</li>
-                                  <li>Joko — 70</li>
-                                </ul>
-                              </li> -->
                               <li>
                                 <strong>Tentukan kelulusan dengan IF:</strong>
                                 <ul class="dash-list">
@@ -1082,6 +1093,47 @@
                               <li>Fungsi <code>AND()</code> untuk kondisi ganda.</li>
                               <li>Kombinasi <code>IF</code> + <code>AND</code>.</li>
                               <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat Tabel Data Nilai &amp; Status Siswa</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat judul kolom di baris 2:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A2</code>: No</li>
+                                  <li><code>B2</code>: Nama</li>
+                                  <li><code>C2</code>: Nilai</li>
+                                  <li><code>D2</code>: Grade</li>
+                                  <li><code>E2</code>: Status</li>
+                                  <li><code>F2</code>: Bonus</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data siswa di baris 3-12:</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>No (A)</th><th>Nama (B)</th><th>Nilai (C)</th><th>Status (E)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td>1</td><td>Andi</td><td>92</td><td>Aktif</td></tr>
+                                      <tr><td>2</td><td>Budi</td><td>75</td><td>Aktif</td></tr>
+                                      <tr><td>3</td><td>Cici</td><td>85</td><td>Tidak Aktif</td></tr>
+                                      <tr><td>4</td><td>Dodi</td><td>68</td><td>Aktif</td></tr>
+                                      <tr><td>5</td><td>Eka</td><td>90</td><td>Tidak Aktif</td></tr>
+                                      <tr><td>6</td><td>Fani</td><td>55</td><td>Aktif</td></tr>
+                                      <tr><td>7</td><td>Gita</td><td>78</td><td>Aktif</td></tr>
+                                      <tr><td>8</td><td>Hadi</td><td>62</td><td>Tidak Aktif</td></tr>
+                                      <tr><td>9</td><td>Indah</td><td>88</td><td>Aktif</td></tr>
+                                      <tr><td>10</td><td>Joko</td><td>71</td><td>Aktif</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Catatan: Kolom A diisi AutoFill 1-10, kolom D (Grade) dan F (Bonus) masih kosong (akan diisi dengan rumus).</small>
+                              </li>
                             </ol>
                           </div>
                           <div class="mb-3">
@@ -1175,53 +1227,69 @@
                             </ol>
                           </div>
                           <div class="mb-3">
+                            <strong>Buat Tabel Data Karyawan &amp; Tabel Referensi Golongan</strong>
+                            <ol>
+                              <li>
+                                <strong>Tabel 1 — Data Karyawan (kolom A-D, mulai baris 3):</strong>
+                                <ul class="dash-list">
+                                  <li><code>A3</code>: Kode, <code>B3</code>: Nama, <code>C3</code>: Golongan, <code>D3</code>: Gaji Pokok</li>
+                                </ul>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr><th>Kode (A)</th><th>Nama (B)</th><th>Golongan (C)</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td>K001</td><td>Andi</td><td>III</td></tr>
+                                      <tr><td>K002</td><td>Budi</td><td>II</td></tr>
+                                      <tr><td>K003</td><td>Cici</td><td>V</td></tr>
+                                      <tr><td>K004</td><td>Dodi</td><td>I</td></tr>
+                                      <tr><td>K005</td><td>Eka</td><td>IV</td></tr>
+                                      <tr><td>K006</td><td>Fani</td><td>III</td></tr>
+                                      <tr><td>K007</td><td>Gita</td><td> II</td></tr>
+                                      <tr><td>K008</td><td>Hadi</td><td>VI</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Catatan: Golongan " II" (dengan spasi) dan "VI" sengaja salah agar IFERROR berfungsi. Kolom D (Gaji Pokok) masih kosong.</small>
+                              </li>
+                              <li>
+                                <strong>Tabel 2 — Referensi Golongan &amp; Gaji (kolom F-G, mulai baris 3):</strong>
+                                <ul class="dash-list">
+                                  <li><code>F3</code>: Kode Golongan, <code>G3</code>: Gaji Pokok</li>
+                                </ul>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr><th>Kode Golongan (F)</th><th>Gaji Pokok (G)</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td>I</td><td>5.000.000</td></tr>
+                                      <tr><td>II</td><td>7.000.000</td></tr>
+                                      <tr><td>III</td><td>9.000.000</td></tr>
+                                      <tr><td>IV</td><td>12.000.000</td></tr>
+                                      <tr><td>V</td><td>15.000.000</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range referensi: <code>$F$4:$G$8</code> (5 baris data).</small>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
                             <strong>Langkah Pengerjaan:</strong>
                             <ol>
                               <li>
-                                <p><strong>Buat tabel data karyawan</strong>:</p>
+                                <p><strong>Tabel Data Karyawan:</strong></p>
                                 <div class="mb-3">
                                   <img src="assets/img/tabel_data_karyawan.png" alt="">
                                 </div>
-                                <!-- <ul class="dash-list">
-                                  <li>A2: judul <strong>TABEL DATA KARYAWAN</strong>, blok <strong>A2</strong> -
-                                    <strong>D2</strong> klik <strong>Merge & Center</strong>
-                                    <img src="assets/files/merge_center.png" alt="">
-                                  </li>
-                                  <li>A3: <strong>Kode</strong>, B3: <strong>Nama</strong>, C3:
-                                    <strong>Golongan</strong>, D3: <strong>Gaji Pokok</strong>
-                                  </li>
-                                </ul>
-                                <strong>Isi data karyawan</strong> (contoh 8-10 baris):
-                                <ul class="dash-list">
-                                  <li>A4: K001 — Andi — III</li>
-                                  <li>A5: K002 — Budi — II</li>
-                                  <li>A6: K003 — Cici — V</li>
-                                  <li>A7: 004 — Dodi — I</li>
-                                  <li>A8: K005 — Eka — IV</li>
-                                  <li>A9: K006 — Fani — III</li>
-                                  <li>A10: K007 — Gita — ll (sengaja salah ketik "II" bukan golongan valid) → untuk
-                                    demo
-                                    IFERROR</li>
-                                  <li>A11: K008 — Hadi — VI (golongan tidak ada di referensi) → menampilkan error</li>
-                                </ul> -->
                               </li>
                               <li>
-                                <p><strong>Buat tabel referensi golongan &amp; gaji</strong>:</p>
+                                <p><strong>Tabel Referensi Golongan &amp; Gaji:</strong></p>
                                 <div class="mb-3">
                                   <img src="assets/img/tabel_referensi_golongan_&_gaji.png" alt="">
                                 </div>
-                                <!-- <ul class="dash-list">
-                                  <li>F2: judul <strong>TABLE REFERENSI GAJI</strong>, blok <strong>F2</strong> -
-                                    <strong>G2</strong> klik <strong>Merge & Center</strong>
-                                    <img src="assets/files/merge_center.png" alt="">
-                                  </li>
-                                  <li>F3: <strong>Kode Golongan</strong>, G3: <strong>Gaji Pokok</strong></li>
-                                  <li>F4: I, G4: 5000000</li>
-                                  <li>F5: II, G5: 7000000</li>
-                                  <li>F6: III, G6: 9000000</li>
-                                  <li>F7: IV, G7: 12000000</li>
-                                  <li>F8: V, G8: 15000000</li>
-                                </ul> -->
                               </li>
                               <li>
                                 <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
@@ -1255,7 +1323,7 @@
                                     <li><strong>VLOOKUP:</strong>
                                       <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
                                       <br />→ <code>C4</code> = nilai yang dicari (golongan)
-                                      <br />→ <code>$F$4:$G$4</code> = tabel referensi (absolut agar tidak berubah
+                                      <br />→ <code>$F$4:$G$8</code> = tabel referensi (absolut agar tidak berubah
                                       saat
                                       disalin)
                                       <br />→ <code>2</code> = kolom ke-2 dari tabel referensi (Gaji Pokok)
@@ -1266,16 +1334,14 @@
                               </li>
                               <li>
                                 <strong>Tambahkan IFERROR untuk menangani error:</strong>
+                                <p class="small text-muted">Ubah rumus yang sama di <strong>D4</strong> menjadi versi yang lebih aman:</p>
                                 <ul class="dash-list">
-                                  <li>Ubah rumus di <strong>D16</strong> menjadi:
-                                    <code>=IFERROR(VLOOKUP(C16;$F$16:$G$20;2;FALSE);"Golongan tidak ditemukan")</code>
+                                  <li>Pada sel <strong>D4</strong> ketik:
+                                    <code>=IFERROR(VLOOKUP(C4;$F$4:$G$8;2;FALSE);"Golongan tidak ditemukan")</code>
                                   </li>
-                                  <li>Salin sel <strong>D16</strong> - <strong>D23</strong> atau klik 2x pada kotak
-                                    kecil di pojok
-                                    kanan di sel <strong>D16</strong>.
-                                  </li>
-                                  <li>Sekarang data "II" dan "VI" akan menampilkan teks "Golongan tidak ditemukan" bukan
-                                    error <code>#N/A</code>
+                                  <li>Salin ke bawah hingga <strong>D11</strong>.</li>
+                                  <li>Sekarang data " II" (spasi) dan "VI" akan menampilkan teks <strong>"Golongan tidak ditemukan"</strong> bukan
+                                    error <code>#N/A</code>.
                                     <div class="my-3">
                                       <img src="assets/files/tabel_data_karyawan_iferror.png" alt="">
                                     </div>
@@ -1286,26 +1352,22 @@
                                   <ul class="dash-list">
                                     <li><strong>IFERROR:</strong>
                                       <code>=IFERROR(value, value_if_error)</code>
-                                      <br />→ Jika <strong>VLOOKUP:</strong> menghasilkan error (#N/A), tampilkan teks
-                                      "Golongan tidak
-                                      ditemukan".
+                                      <br />→ Jika <strong>VLOOKUP</strong> menghasilkan error (#N/A), tampilkan teks
+                                      "Golongan tidak ditemukan".
                                     </li>
                                   </ul>
                                 </div>
                               </li>
                               <li>
-                                <strong>Menampilkan ERROR typo dan Golongan tidak ditemukan</strong>
+                                <strong>Tingkatkan pesan error dengan COUNTIF + VLOOKUP:</strong>
+                                <p class="small text-muted">Ubah lagi rumus di <strong>D4</strong> agar pesan error lebih informatif (menampilkan golongan yang salah):</p>
                                 <ul class="dash-list">
-                                  <li>Ubah rumus di <strong>D28</strong> menjadi:
-                                    <code>=IF(COUNTIF($F$28:$G$32;C28)=0;"Golongan '"&C28&"' tidak ditemukan";VLOOKUP(C28;$F$28:$G$32;2;FALSE))</code>
+                                  <li>Pada sel <strong>D4</strong> ketik:
+                                    <code>=IF(COUNTIF($F$4:$F$8;C4)=0;"Golongan '"&C4&"' tidak ditemukan";VLOOKUP(C4;$F$4:$G$8;2;FALSE))</code>
                                   </li>
-                                  <li>Salin sel <strong>D28</strong> - <strong>D35</strong> atau klik 2x pada kotak
-                                    kecil di pojok
-                                    kanan di sel <strong>D28</strong>.
+                                  <li>Salin ke bawah hingga <strong>D11</strong>.
                                   </li>
-                                  <li>Sekarang data "II" dan "VI" akan tidak lagi menampilkan teks "Golongan tidak
-                                    ditemukan" dan bukan
-                                    error <code>#N/A</code>
+                                  <li>Sekarang data " II" akan menampilkan <strong>"Golongan ' II' tidak ditemukan"</strong> dan "VI" menampilkan <strong>"Golongan 'VI' tidak ditemukan"</strong>.
                                   </li>
                                 </ul>
                                 <div class="my-3">
@@ -1318,9 +1380,7 @@
                           <div class="mb-3">
                             <strong>Tips:</strong>
                             <ul class="dash-list">
-                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match (cocok
-                                persis) (cocok
-                                persis), terutama
+                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match (cocok persis), terutama
                                 untuk kode/golongan.</li>
                               <li>Gunakan referensi absolut <code>$</code> pada tabel referensi agar tidak bergeser saat
                                 rumus disalin. Untuk cara cepat absolut <code>$</code>, drag range kemudian tekan
@@ -1371,46 +1431,97 @@
                             </ol>
                           </div>
                           <div class="mb-3">
-                            <strong>Buat Tabel Data Siswa</strong>
+                            <strong>Buat 3 Tabel Referensi + Tabel Data Siswa</strong>
+                            <ol>
+                              <li>
+                                <strong>Tabel 1 — Referensi Predikat Horizontal (baris 13-14):</strong>
+                                <p class="small text-muted">Digunakan oleh HLOOKUP. Baris 13 = batas bawah nilai, Baris 14 = predikat.</p>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td><strong>13</strong></td><td>0</td><td>60</td><td>70</td><td>80</td><td>90</td></tr>
+                                      <tr><td><strong>14</strong></td><td>E</td><td>D</td><td>C</td><td>B</td><td>A</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range: <code>$A$13:$E$14</code>. Nilai 0-59 → E, 60-69 → D, 70-79 → C, 80-89 → B, 90+ → A.</small>
+                              </li>
+                              <li>
+                                <strong>Tabel 2 — Data Siswa (baris 2-10, kolom A-F):</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr><th>No (A)</th><th>Nama (B)</th><th>Nilai (C)</th><th>Predikat (D)</th><th>Nilai Huruf (E)</th><th>Status (F)</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td>1</td><td>Andi</td><td>85</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                      <tr><td>2</td><td>Budi</td><td>92</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                      <tr><td>3</td><td>Cici</td><td>67</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                      <tr><td>4</td><td>Dodi</td><td>45</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                      <tr><td>5</td><td>Eka</td><td>78</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                      <tr><td>6</td><td>Fani</td><td>55</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                      <tr><td>7</td><td>Gita</td><td>73</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                      <tr><td>8</td><td>Hadi</td><td>88</td><td colspan="3"><em>(diisi dengan rumus)</em></td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </li>
+                              <li>
+                                <strong>Tabel 3 — Referensi Nilai Huruf / Matriks (baris 17-25):</strong>
+                                <p class="small text-muted">Digunakan oleh INDEX+MATCH. Kolom A = Nama, Kolom B-F = Kategori A/B/C/D/E.</p>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr><th></th><th>A (baris)</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td><strong>17</strong></td><td><em>(kosong)</em></td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td></tr>
+                                      <tr><td><strong>18</strong></td><td>Andi</td><td>85</td><td>90</td><td>78</td><td>92</td><td>88</td></tr>
+                                      <tr><td><strong>19</strong></td><td>Budi</td><td>80</td><td>88</td><td>75</td><td>85</td><td>92</td></tr>
+                                      <tr><td><strong>20</strong></td><td>Cici</td><td>70</td><td>72</td><td>67</td><td>80</td><td>85</td></tr>
+                                      <tr><td><strong>21</strong></td><td>Dodi</td><td>50</td><td>55</td><td>45</td><td>60</td><td>65</td></tr>
+                                      <tr><td><strong>22</strong></td><td>Eka</td><td>78</td><td>82</td><td>72</td><td>85</td><td>88</td></tr>
+                                      <tr><td><strong>23</strong></td><td>Fani</td><td>55</td><td>60</td><td>50</td><td>65</td><td>70</td></tr>
+                                      <tr><td><strong>24</strong></td><td>Gita</td><td>73</td><td>78</td><td>68</td><td>80</td><td>85</td></tr>
+                                      <tr><td><strong>25</strong></td><td>Hadi</td><td>88</td><td>92</td><td>82</td><td>90</td><td>95</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range data: <code>$B$18:$F$25</code>, Range nama: <code>$A$18:$A$25</code>, Range header: <code>$B$17:$F$17</code>.</small>
+                              </li>
+                              <li>
+                                <strong>Tabel 4 — Referensi Status Kelulusan (kolom H-I):</strong>
+                                <p class="small text-muted">Digunakan oleh XLOOKUP. Kolom H = batas bawah nilai, Kolom I = status.</p>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr><th>Batas Nilai (H)</th><th>Status (I)</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td>0</td><td>Tidak Lulus</td></tr>
+                                      <tr><td>60</td><td>Lulus</td></tr>
+                                      <tr><td>75</td><td>Lulus Baik</td></tr>
+                                      <tr><td>85</td><td>Lulus Memuaskan</td></tr>
+                                      <tr><td>95</td><td>Lulus Terpuji</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range: <code>$H$4:$H$8</code> (nilai) dan <code>$I$4:$I$8</code> (status).</small>
+                              </li>
+                            </ol>
                           </div>
                           <div class="mb-3">
-                            <img src="assets/files/sesi2_lanjutan2.png" alt="Tabel HLOOKUP INDEX MATCH" />
+                            <strong>Tabel Data Siswa (gambar):</strong>
+                            <div class="mb-3">
+                              <img src="assets/files/sesi2_lanjutan2.png" alt="Tabel HLOOKUP INDEX MATCH" />
+                            </div>
                           </div>
-                          <!-- <div class="mb-3"> -->
-                          <strong>Langkah Pengerjaan:</strong>
-                          <ol>
-                            <!-- <li>
-                                <strong>Buat tabel referensi horizontal untuk predikat nilai</strong> (misal di baris
-                                1-2):
-                                <ul class="dash-list">
-                                  <li>A1: 0, B1: 60, C1: 70, D1: 80, E1: 90</li>
-                                  <li>A2: E, B2: D, C2: C, D2: B, E2: A</li>
-                                </ul>
-                                Range referensi: <code>$A$1:$E$2</code>
-                              </li>
-                              <li>
-                                <strong>Buat tabel data siswa</strong> (mulai dari A4):
-                                <ul class="dash-list">
-                                  <li>A4: No, B4: Nama, C4: Nilai, D4: Predikat (HLOOKUP), E4: Nilai Huruf
-                                    (INDEX-MATCH),
-                                    F4: Status (XLOOKUP)</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong>Isi data siswa</strong> (contoh 8 baris):
-                                <ul class="dash-list">
-                                  <li>Andi — 85</li>
-                                  <li>Budi — 92</li>
-                                  <li>Cici — 67</li>
-                                  <li>Dodi — 45</li>
-                                  <li>Eka — 78</li>
-                                  <li>Fani — 55</li>
-                                  <li>Gita — 73</li>
-                                  <li>Hadi — 88</li>
-                                </ul>
-                              </li> -->
-                            <li>
-                              <strong>Gunakan HLOOKUP untuk predikat:</strong>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
                               <ul class="dash-list">
                                 <li>Pada sel <strong>D3</strong> ketik:
                                   <code>=HLOOKUP(C3;$A$13:$E$14;2;TRUE)</code>
@@ -1491,7 +1602,7 @@
                                 <li>Penjelasan singkat:
                                   <ul class="dash-list">
                                     <li>XLOOKUP mencari nilai <code>C3</code> (85) di <code>$H$4:$H$8</code>.</li>
-                                    <li>Karena tidak ada nilai 85 tepat di kolom G, dengan <code>-1</code> ia mencari
+                                    <li>Karena tidak ada nilai 85 tepat di kolom H, dengan <code>-1</code> ia mencari
                                       nilai terdekat yang lebih kecil — yaitu 75 → mengembalikan "Lulus Baik".</li>
                                     <li>Parameter <code>-1</code> (match_mode) berarti exact match (cocok persis) atau
                                       terdekat lebih
