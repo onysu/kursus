@@ -1,252 +1,3284 @@
-<div class="accordion accordion-flush" id="materiPertemuanPertamaExcel">
-        <!-- Pertemuan 1 -->
-        <div class="accordion-item">
+<div class="accordion accordion-flush" id="programexcel">
+        <!-- PERTEMUAN 1 (Excel) -->
+        <div class="accordion-item mt-2">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseSatu" aria-expanded="false" aria-controls="flush-collapseSatu">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 1</span> — Pengenalan, Data Entry
-              &amp; Formula Dasar</span>
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <span class="fw-semibold"><span class="badge badge-excel me-2">Pertemuan 1</span>
+                Pengenalan, Data Entry &amp; Formula Dasar</span>
             </button>
           </h2>
-          <div id="flush-collapseSatu" class="accordion-collapse collapse"
-            data-bs-parent="#materiPertemuanPertamaExcel">
+
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#programexcel">
             <div class="accordion-body p-0">
-              <div class="contoh-box">
-                <div class="accordion accordion-flush" id="accordionPraktikPowerPointSesi1">
+              <div class="contoh-box mt-0">
+                <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
+                <ol class="mt-2 mb-0 ps-3">
                   <!-- Dasar -->
-                  <div class="accordion-item" id="sesi1DasarContentExcel">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed d-grid" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sesi1DasarExcel" aria-expanded="false" aria-controls="sesi1DasarExcel">
-                        <strong style="color: #06D6A0;">DASAR:</strong> Buat Tabel
-                        Data Siswa 10 Baris (Nama, Kelas, Nilai). Gunakan AutoFill
-                        untuk No Urut. Format kolom Nilai dengan Number 2 desimal.
-                        Hitung Total Nilai dengan =SUM(D2:D11).
-                      </button>
-                    </h2>
-                    <div id="sesi1DasarExcel" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionPraktikPowerPointSesi1">
-                      <div class="accordion-body small">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <strong>Langkah Pengerjaan</strong>
+                  <li>
+                    <strong class="text-success">Dasar:</strong> Buat tabel
+                    data siswa 10 baris (Nama, Kelas, Nilai). Gunakan AutoFill
+                    untuk no urut. Format kolom Nilai dengan Number 2 desimal.
+                    Hitung total nilai dengan <code>=SUM(D2:D11)</code>.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Langkah Pengerjaan</strong>
+                          <ol>
+                            <li>
+                              <strong>Buat judul kolom:</strong>
+                              <ul class="dash-list">
+                                <li>A1: No</li>
+                                <li>B1: Nama</li>
+                                <li>C1: Kelas</li>
+                                <li>D1: Nilai</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <strong>Isi nomor urut:</strong>
+                              <ul class="dash-list">
+                                <li>Ketik 1 pada A2.</li>
+                                <li>Ketik 2 pada A3.</li>
+                                <li>
+                                  Blok A2:A3 lalu tarik
+                                  <strong>AutoFill Handle</strong> (kotak
+                                  kecil di pojok kanan bawah sel) hingga A11.
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <strong>Masukkan data siswa pada kolom Nama, Kelas,
+                                dan Nilai.</strong>
+                            </li>
+                            <li>
+                              <strong>Format kolom Nilai menjadi 2 angka
+                                desimal:</strong>
+                              <ul class="dash-list">
+                                <li>Blok D2:D11.</li>
+                                <li>Klik Tab Home → grup Number.</li>
+                                <li>Pilih Number.</li>
+                                <li>Atur Decimal Places menjadi 2.</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <strong>Hitung total nilai:</strong>
+                              <ul class="dash-list">
+                                <li>Pada sel D12 ketik: =SUM(D2:D11)</li>
+                                <li>Tekan <kbd>Enter</kbd>.</li>
+                              </ul>
+                              Hasil Total Nilai <br />
+                              Dengan data di atas, hasilnya: 842,75
+                            </li>
+                          </ol>
+
+                          <div class="mb-3 p-3 bg-light border-start border-4 border-info rounded">
+                            <strong><i class="bi bi-info-circle"></i> Catatan Penting — Pemisah Argument Rumus
+                              Excel</strong>
+                            <p class="mb-2 small">Dalam mengetik rumus Excel, terdapat perbedaan pemisah (separator)
+                              antar versi/region:</p>
+                            <table class="table table-bordered table-sm small mb-2">
+                              <thead>
+                                <tr>
+                                  <th>Versi Excel</th>
+                                  <th>Pemisah Argument</th>
+                                  <th>Contoh</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Excel Indonesia / Eropa</td>
+                                  <td><strong>Titik koma <code>;</code></strong></td>
+                                  <td><code>=SUM(B2:B13)</code></td>
+                                </tr>
+                                <tr>
+                                  <td>Excel Inggris / Amerika</td>
+                                  <td><strong>Koma <code>,</code></strong></td>
+                                  <td><code>=SUM(B2:B13)</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p class="mb-1 small">Contoh perbedaan pada rumus dengan 2 argument:</p>
+                            <ul class="mb-0 small dash-list">
+                              <li>Indonesia: <code>=IF(C3>=75;"LULUS";"TIDAK LULUS")</code></li>
+                              <li>Amerika: <code>=IF(C3>=75,"LULUS","TIDAK LULUS")</code></li>
+                            </ul>
+                            <p class="mb-0 small mt-2"><strong>Tips:</strong> Jika rumus error atau tidak bisa diketik,
+                              cek <strong>File → Options → Advanced → Use system separators</strong>, atau ganti
+                              <code>;</code> dengan <code>,</code> (atau sebaliknya) sesuai versi Excel Anda.
+                            </p>
+                          </div>
+                          <div class="mt-3">
+                            Hasil Akhir: <br />
+                            <img src="assets/files/sesi1dasar.png" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/data_siswa.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
+                  </li>
+                  <!-- Menengah -->
+                  <li>
+                    <strong class="text-warning">Menengah:</strong> Buat tabel
+                    penjualan 12 bulan. Hitung total tahunan
+                    <code>=SUM(B2:B13)</code>, rata-rata
+                    <code>=AVERAGE(B2:B13)</code>, tertinggi
+                    <code>=MAX(B2:B13)</code>. Komisi
+                    <code>=B2*$C$1</code> (absolut). Format currency.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>AutoFill data bulanan.</li>
+                              <li>Fungsi <code>SUM()</code>.</li>
+                              <li>Fungsi <code>AVERAGE()</code>.</li>
+                              <li>Fungsi <code>MAX()</code>.</li>
+                              <li>Referensi absolut <code>$C$1</code>.</li>
+                              <li>Format mata uang (Currency/Accounting).</li>
+                              <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat Tabel Penjualan Tahunan</strong>
                             <ol>
                               <li>
-                                <strong>Buat Judul Kolom:</strong>
+                                <strong>Buat judul kolom di baris 1:</strong>
                                 <ul class="dash-list">
-                                  <li><code>A1</code>: No</li>
-                                  <li><code>B1</code>: Nama</li>
-                                  <li><code>C1</code>: Kelas</li>
-                                  <li><code>D1</code>: Nilai</li>
+                                  <li><code>A1</code>: Bulan</li>
+                                  <li><code>B1</code>: Penjualan</li>
+                                  <li><code>C1</code>: Komisi (%)</li>
                                 </ul>
                               </li>
                               <li>
-                                <strong>Isi Nomor Urut:</strong>
+                                <strong>Isi data Komisi di sel <code>C1</code>:</strong>
                                 <ul class="dash-list">
-                                  <li>Ketik 1 pada <code>A2</code>.</li>
-                                  <li>Ketik 2 pada <code>A3</code>.</li>
+                                  <li>Ketik <code>5%</code> atau <code>0,05</code> pada sel <code>C1</code>.</li>
+                                  <li>Sel ini akan dirujuk dengan referensi absolut <code>$C$1</code> nanti.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data bulan di kolom A (A2:A13):</strong>
+                                <ul class="dash-list">
+                                  <li>Ketik <code>Januari</code> di <code>A2</code>.</li>
+                                  <li>Ketik <code>Februari</code> di <code>A3</code>.</li>
+                                  <li>Blok <code>A2:A3</code> lalu tarik <strong>AutoFill Handle</strong> hingga
+                                    <code>A13</code> (Desember).
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data Penjualan di kolom B (B2:B13):</strong>
+                                <br />
+                                Masukkan nilai penjualan contoh berikut:
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Sel</th>
+                                        <th>Bulan</th>
+                                        <th>Penjualan (Rp)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><code>B2</code></td>
+                                        <td>Januari</td>
+                                        <td>12.500.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B3</code></td>
+                                        <td>Februari</td>
+                                        <td>14.200.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B4</code></td>
+                                        <td>Maret</td>
+                                        <td>13.800.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B5</code></td>
+                                        <td>April</td>
+                                        <td>15.000.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B6</code></td>
+                                        <td>Mei</td>
+                                        <td>16.500.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B7</code></td>
+                                        <td>Juni</td>
+                                        <td>14.800.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B8</code></td>
+                                        <td>Juli</td>
+                                        <td>15.300.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B9</code></td>
+                                        <td>Agustus</td>
+                                        <td>16.000.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B10</code></td>
+                                        <td>September</td>
+                                        <td>14.500.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B11</code></td>
+                                        <td>Oktober</td>
+                                        <td>17.200.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B12</code></td>
+                                        <td>November</td>
+                                        <td>18.000.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>B13</code></td>
+                                        <td>Desember</td>
+                                        <td>18.500.000</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Penjualan Tahunan</strong> <br />
+                            <img src="assets/files/sesi1menengah.png" alt="" />
+                          </div>
+                          <div class="mb-3">
+                            Menghitung Total Penjualan Tahunan <br />
+                            Pada sel <strong>B14</strong>: =SUM(B2:B13) <br />
+                            Hasil: 180300000 atau Rp 180.300.000 setelah
+                            diformat Currency.
+                          </div>
+                          <div class="mb-3">
+                            Menghitung Rata-rata Penjualan <br />
+                            Pada sel <strong>B16</strong>: =AVERAGE(B2:B13)
+                            <br />
+                            Hasil: 15025000 atau Rp 15.025.000
+                          </div>
+                          <div class="mb-3">
+                            Mencari Penjualan Tertinggi <br />
+                            Pada sel <strong>B17</strong>: =MAX(B2:B13) <br />
+                            Hasil: 18500000 atau Rp 18.500.000
+                          </div>
+                          <div class="mb-3">
+                            Menghitung Komisi (Referensi Absolut) <br />
+                            Tambahkan kolom Komisi pada kolom
+                            <strong>C</strong> (lihat di gambar). <br />
+
+                            Pada sel <strong>C2</strong> ketik: <code>=B2*$C$1</code>
+                            <br />
+                            Lalu salin ke bawah hingga <strong>C13</strong>
+                            menggunakan <strong>Fill Handle</strong> (klik sel C2, tarik kotak kecil pojok kanan bawah
+                            hingga C13).
+                            <br />
+                            Mengapa menggunakan <code>$C$1</code>? <br />
+
+                            Tanda <code>$</code> membuat referensi menjadi absolut,
+                            sehingga saat rumus disalin ke bawah, Excel
+                            <br />
+                            tetap mengambil nilai komisi dari sel
+                            <strong>C1</strong>. <br />
+
+                            Contoh: <br />
+                            <code>=B3*$C$1</code> <br />
+                            <code>=B4*$C$1</code> <br />
+                            <code>=B5*$C$1</code>
+                          </div>
+                          <strong>Format Currency</strong>
+                          <ol>
+                            <li>Blok sel <strong>B2:C13</strong>.</li>
+                            <li>Tab <strong>Home</strong> → grup Number.</li>
+                            <li>
+                              Pilih <strong>Currency</strong> atau
+                              <strong>Accounting</strong>.
+                            </li>
+                            <li>
+                              Pilih simbol
+                              <strong>Rp (Indonesian Rupiah)</strong>.
+                            </li>
+                            <li>
+                              Atur jumlah desimal sesuai kebutuhan (biasanya 0
+                              atau 2).
+                            </li>
+                          </ol>
+                          <div class="mt-3">
+                            <strong>Hasil Akhir:</strong> <br />
+                            <img src="assets/files/sesi1menengah.png" alt="Hasil akhir tabel penjualan tahunan"
+                              class="img-fluid shadow" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/tabel_penjualan.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
+                  </li>
+                  <!-- Lanjutan -->
+                  <li>
+                    <strong class="text-danger">Lanjutan:</strong> Buat
+                    laporan keuangan pribadi 1 bulan. Gunakan
+                    <code>=ROUND</code> untuk pembulatan,
+                    <code>=TODAY()</code> untuk tanggal otomatis,
+                    <code>=COUNTIF</code> untuk menghitung kategori
+                    pengeluaran. Terapkan Conditional Formatting untuk sel
+                    negatif (merah).
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                          <div class="mb-3">
+                            <strong>Tujuan</strong> <br />
+                            Murid dapat menggunakan: <br />
+                            <ul class="dash-list">
+                              <li>Fungsi <strong>TODAY()</strong></li>
+                              <li>Fungsi <strong>ROUND()</strong></li>
+                              <li>Fungsi <strong>COUNTIF()</strong></li>
+                              <li>Conditional Formatting</li>
+                              <li>Format Currency</li>
+                            </ul>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat Tabel Laporan Keuangan Pribadi</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat bagian Tanggal (baris 1):</strong>
+                                <ul class="dash-list">
+                                  <li><code>A1</code>: <code>Tanggal Laporan</code></li>
+                                  <li><code>B1</code>: ketik <code>=TODAY()</code> (akan ditampilkan tanggal hari ini)
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Buat header kolom di baris 3:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A3</code>: No</li>
+                                  <li><code>B3</code>: Kategori</li>
+                                  <li><code>C3</code>: Deskripsi</li>
+                                  <li><code>D3</code>: Jumlah</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi 10 baris data pengeluaran (baris 4-13):</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>No</th>
+                                        <th>Kategori (B)</th>
+                                        <th>Deskripsi (C)</th>
+                                        <th>Jumlah (D)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Makan</td>
+                                        <td>Nasi Goreng</td>
+                                        <td>25.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>Transport</td>
+                                        <td>Bensin</td>
+                                        <td>50.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Belanja</td>
+                                        <td>Sabun</td>
+                                        <td>15.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>Makan</td>
+                                        <td>Mie Ayam</td>
+                                        <td>20.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>5</td>
+                                        <td>Tagihan</td>
+                                        <td>Listrik</td>
+                                        <td>150.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>6</td>
+                                        <td>Transport</td>
+                                        <td>Grab</td>
+                                        <td>35.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>7</td>
+                                        <td>Hiburan</td>
+                                        <td>Nonton Bioskop</td>
+                                        <td>75.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>8</td>
+                                        <td>Makan</td>
+                                        <td>Kopi</td>
+                                        <td>18.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>9</td>
+                                        <td>Belanja</td>
+                                        <td>Shampoo</td>
+                                        <td>22.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>10</td>
+                                        <td>Makan</td>
+                                        <td>Makan Siang</td>
+                                        <td>35.000</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah pengerjaan:</strong> <br />
+                            <ol>
+                              <li>
+                                Membuat Tabel Laporan Keuangan <br />
+                                Setelah membuat tabel sesuai struktur di atas,
+                                pada sel <strong>B1</strong> ketik rumus:
+                                <code>=TODAY()</code> <br />
+                                Hasil akan menampilkan tanggal hari ini secara
+                                otomatis. <br />
+                                Formatkan sebagai Short Date
+                                <ul class="dash-list">
                                   <li>
-                                    Blok <code>A2:A3</code> lalu tarik
-                                    <strong>AutoFill Handle</strong> (kotak
-                                    kecil di pojok kanan bawah sel) hingga <code>A11</code>.
+                                    Pada Tab <strong>Home</strong> di bagian
+                                    group <strong>Number</strong>
+                                  </li>
+                                  <li>Pilih <strong>Short Date</strong></li>
+                                </ul>
+                                <div class="mt-3">
+                                  <img src="assets/files/sesi1lanjutan2.png" alt="" />
+                                </div>
+                              </li>
+                              <li>
+                                Total Pengeluaran <br />
+                                Pada sel <strong>D14</strong>:
+                                <code>=SUM(D4:D13)</code>
+                                <br />
+                                <small class="text-muted">Catatan: Kolom <strong>D</strong> berisi data Jumlah
+                                  pengeluaran.</small>
+                              </li>
+                              <li>
+                                Pembulatan dengan <strong>ROUND</strong>
+                                <br />
+                                Misalkan hasil total berada di
+                                <strong>D16</strong>. <br />
+                                Pada <strong>D16</strong>:
+                                <code>=ROUND(D14;-3)</code> <br />
+                                Artinya: Dibulatkan ke ribuan terdekat. <br />
+                                Contoh: <br />
+                                845.600 &rarr; 846.000 <br />
+                                842.100 &rarr; 842.000
+                              </li>
+                              <li>
+                                Menghitung Jumlah Pengeluaran per Kategori <br />
+                                <small class="text-muted">Catatan: Kolom <strong>B</strong> berisi data
+                                  <strong>Kategori</strong> (Makan, Transport, Belanja, Tagihan, Hiburan).</small>
+                                <div class="mb-3 mt-2">
+                                  Jumlah transaksi kategori Makan <br />
+                                  Pada <strong>F2</strong>: <code>=COUNTIF(B4:B13;"Makan")</code> <br />
+                                  Hasil: 4
+                                </div>
+                                <div class="mb-3">
+                                  Jumlah transaksi kategori Transport <br />
+                                  Pada <strong>F3</strong>: <code>=COUNTIF(B4:B13;"Transport")</code> <br />
+                                  Hasil: 2
+                                </div>
+                                <div class="mb-3">
+                                  Jumlah transaksi kategori Belanja <br />
+                                  Pada <strong>F4</strong>: <code>=COUNTIF(B4:B13;"Belanja")</code> <br />
+                                  Hasil: 2
+                                </div>
+                              </li>
+                              <li>Membuat Rekap Saldo <br>
+                                Buat rekap saldo di area terpisah (kolom F):
+                                <div class="table-responsive mt-2 mb-3">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Sel</th>
+                                        <th>Label</th>
+                                        <th>Isi / Rumus</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><code>F5</code></td>
+                                        <td>Total Pemasukan</td>
+                                        <td>Isi nilai tetap, misal: <code>500000</code></td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>F6</code></td>
+                                        <td>Total Pengeluaran</td>
+                                        <td><code>=D14</code> (merujuk ke Total Pengeluaran)</td>
+                                      </tr>
+                                      <tr>
+                                        <td><code>F7</code></td>
+                                        <td>Saldo</td>
+                                        <td><code>=F5-F6</code></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <div class="mb-3">
+                                  <img src="assets/files/sesi1lanjutan3.png" alt="Rekap saldo laporan keuangan">
+                                </div>
+                                Contoh: Jika pemasukan 500.000 dan pengeluaran 750.000, maka saldo = -250.000 (negatif).
+                              </li>
+                              <li>
+                                Conditional Formatting untuk Nilai Negatif <br>
+                                Misalnya saldo berada pada <strong>F7</strong>.
+                                <ol>
+                                  <li>Pilih sel <strong>F7</strong>.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
+                                  <li>Pilih <strong>Highlight Cells Rules</strong>.</li>
+                                  <li>Pilih <strong>Less Than</strong>.</li>
+                                  <li>Isi: <strong>0</strong></li>
+                                  <li>Pilih format Light Red Fill with Dark Red Text.</li>
+                                  <li>Klik <strong>OK</strong>.</li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Hasil Akhir Laporan Keuangan:</strong> <br />
+                            <img src="assets/files/sesi1lanjutan.png" alt="Hasil akhir laporan keuangan"
+                              class="img-fluid shadow" />
+                          </div>
+                          <div class="mb-3 p-3 bg-light border-start border-4 border-success rounded">
+                            <strong>Penjelasan:</strong>
+                            <ul class="mb-0 small dash-list">
+                              <li>Jika saldo: <strong class="text-danger">-250.000</strong> maka sel akan otomatis
+                                berwarna merah (karena &lt; 0).</li>
+                              <li>Jika saldo: <strong class="text-success">500.000</strong> maka tetap normal (tidak
+                                berwarna).</li>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/laporan_keuangan.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PERTEMUAN 2 (Excel) -->
+        <div class="accordion-item mt-2">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <span class="fw-semibold"><span class="badge badge-excel me-2">Pertemuan 2</span> IF,
+                VLOOKUP &amp; Fungsi Logika</span>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#programexcel">
+            <div class="accordion-body p-0">
+              <div class="contoh-box mt-0">
+                <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
+                <ol class="mt-2 mb-0 ps-3">
+                  <!-- Dasar -->
+                  <li>
+                    <strong class="text-success">Dasar:</strong> Buat tabel
+                    nilai 10 siswa. Gunakan
+                    <code>=IF(C3>=75,"LULUS","TIDAK LULUS")</code>. Hitung
+                    jumlah lulus dengan <code>=COUNTIF</code>.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>IF()</code> untuk menentukan kelulusan.</li>
+                              <li>Fungsi <code>COUNTIF()</code> untuk menghitung jumlah lulus.</li>
+                              <li>Referensi relatif sel.</li>
+                              <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat Tabel Data Nilai Siswa</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat judul kolom di baris 2:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A2</code>: No</li>
+                                  <li><code>B2</code>: Nama</li>
+                                  <li><code>C2</code>: Nilai</li>
+                                  <li><code>D2</code>: Keterangan</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data siswa di baris 3-12:</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>No (A)</th>
+                                        <th>Nama (B)</th>
+                                        <th>Nilai (C)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Andi</td>
+                                        <td>80</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>Budi</td>
+                                        <td>65</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Cici</td>
+                                        <td>90</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>Dodi</td>
+                                        <td>72</td>
+                                      </tr>
+                                      <tr>
+                                        <td>5</td>
+                                        <td>Eka</td>
+                                        <td>88</td>
+                                      </tr>
+                                      <tr>
+                                        <td>6</td>
+                                        <td>Fani</td>
+                                        <td>55</td>
+                                      </tr>
+                                      <tr>
+                                        <td>7</td>
+                                        <td>Gita</td>
+                                        <td>78</td>
+                                      </tr>
+                                      <tr>
+                                        <td>8</td>
+                                        <td>Hadi</td>
+                                        <td>60</td>
+                                      </tr>
+                                      <tr>
+                                        <td>9</td>
+                                        <td>Indah</td>
+                                        <td>95</td>
+                                      </tr>
+                                      <tr>
+                                        <td>10</td>
+                                        <td>Joko</td>
+                                        <td>70</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Catatan: Kolom A diisi AutoFill 1-10, kolom D masih kosong
+                                  (akan diisi dengan rumus IF).</small>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Nilai Siswa</strong>
+                            <div class="my-3">
+                              <img src="assets/files/excelSesi2dasar.png" alt="Tabel data nilai siswa" />
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Tentukan kelulusan dengan IF:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>D3</strong> ketik:
+                                    <code>=IF(C3&gt;=75,"LULUS","TIDAK LULUS")</code>
+                                  </li>
+                                  <li>Tekan <kbd>Enter</kbd>, maka akan muncul hasil "LULUS" jika nilai ≥ 75, atau
+                                    "TIDAK LULUS"
+                                    jika kurang.</li>
+                                  <li>Salin rumus ke bawah hingga <strong>D11</strong> menggunakan Fill Handle.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Hitung jumlah siswa lulus:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>C14</strong> ketik:
+                                    <code>=COUNTIF(D3:D12,"LULUS")</code>
+                                  </li>
+                                  <li>Tekan <kbd>Enter</kbd>.</li>
+                                </ul>
+                                Hasil: 5 siswa lulus (dari contoh data di atas).
+                              </li>
+                              <li>
+                                <strong>Hitung jumlah siswa tidak lulus:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>C15</strong> ketik:
+                                    <code>=COUNTIF(D3:D12,"TIDAK LULUS")</code>
+                                  </li>
+                                  <li>Tekan <kbd>Enter</kbd>.</li>
+                                </ul>
+                                Hasil: 5 siswa tidak lulus.
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Penjelasan Rumus:</strong>
+                            <ul class="dash-list">
+                              <li><code>=IF(C3&gt;=75,"LULUS","TIDAK LULUS")</code> — Jika nilai di
+                                <code>C3 ≥ 75</code>, tampilkan
+                                "LULUS", jika tidak tampilkan "TIDAK LULUS".
+                              </li>
+                              <li><code>=COUNTIF(D3:D12,"LULUS")</code> — Hitung berapa banyak sel dalam range
+                                <code>D3:D12</code>
+                                yang berisi teks "LULUS".
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/tabel_nilai_10_siswa.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
+                  </li>
+                  <!-- Menengah -->
+                  <li>
+                    <strong class="text-warning">Menengah:</strong> Buat
+                    nested IF untuk grade:
+                    <code>=IF(C3>=90;"A";IF(C3>=80;"B";IF(C3>=70;"C";"D")))</code>. Gabungkan dengan AND untuk bonus:
+                    <code>=IF(AND(C3>=80;E3="Aktif");"Bonus";"-")</code>.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>IF()</code> bersarang (nested IF).</li>
+                              <li>Fungsi <code>AND()</code> untuk kondisi ganda.</li>
+                              <li>Kombinasi <code>IF</code> + <code>AND</code>.</li>
+                              <li>Menyalin rumus dengan Fill Handle.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat Tabel Data Nilai &amp; Status Siswa</strong>
+                            <ol>
+                              <li>
+                                <strong>Buat judul kolom di baris 2:</strong>
+                                <ul class="dash-list">
+                                  <li><code>A2</code>: No</li>
+                                  <li><code>B2</code>: Nama</li>
+                                  <li><code>C2</code>: Nilai</li>
+                                  <li><code>D2</code>: Grade</li>
+                                  <li><code>E2</code>: Status</li>
+                                  <li><code>F2</code>: Bonus</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Isi data siswa di baris 3-12:</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>No (A)</th>
+                                        <th>Nama (B)</th>
+                                        <th>Nilai (C)</th>
+                                        <th>Status (E)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Andi</td>
+                                        <td>92</td>
+                                        <td>Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>Budi</td>
+                                        <td>75</td>
+                                        <td>Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Cici</td>
+                                        <td>85</td>
+                                        <td>Tidak Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>Dodi</td>
+                                        <td>68</td>
+                                        <td>Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>5</td>
+                                        <td>Eka</td>
+                                        <td>90</td>
+                                        <td>Tidak Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>6</td>
+                                        <td>Fani</td>
+                                        <td>55</td>
+                                        <td>Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>7</td>
+                                        <td>Gita</td>
+                                        <td>78</td>
+                                        <td>Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>8</td>
+                                        <td>Hadi</td>
+                                        <td>62</td>
+                                        <td>Tidak Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>9</td>
+                                        <td>Indah</td>
+                                        <td>88</td>
+                                        <td>Aktif</td>
+                                      </tr>
+                                      <tr>
+                                        <td>10</td>
+                                        <td>Joko</td>
+                                        <td>71</td>
+                                        <td>Aktif</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Catatan: Kolom A diisi AutoFill 1-10, kolom D (Grade) dan F
+                                  (Bonus) masih kosong (akan diisi dengan rumus).</small>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Nilai &amp; Status Siswa</strong> <br />
+                            <img src="assets/files/nested_IF_untuk_grade.png" alt="Tabel nested IF grade" />
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <strong>Tentukan Grade dengan Nested IF:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>D3</strong> ketik:
+                                    <code>=IF(C3>=90;"A";IF(C3>=80;"B";IF(C3>=70;"C";"D")))</code>
+                                  </li>
+                                  <li>Tekan <kbd>Enter</kbd>, lalu salin ke bawah hingga <strong>D12</strong>.</li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Tentukan Bonus dengan IF + AND:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>F3</strong> ketik:
+                                    <code>=IF(AND(C3>=80;E3="Aktif");"Bonus";"-")</code>
+                                  </li>
+                                  <li>Tekan <kbd>Enter</kbd>, lalu salin ke bawah hingga <strong>F12</strong>.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Penjelasan Rumus:</strong>
+                            <ul class="dash-list">
+                              <li><strong>Nested IF:</strong>
+                                <code>=IF(C3>=90;"A";IF(C3>=80;"B";IF(C3>=70;"C";"D")))</code>
+                                <br />→ Jika nilai ≥ 90 → A, jika ≥ 80 → B, jika ≥ 70 → C, selain itu → D.
+                              </li>
+                              <li><strong>IF + AND:</strong>
+                                <code>=IF(AND(C3>=80;E3="Aktif");"Bonus";"-")</code>
+                                <br />→ Jika nilai ≥ 80 DAN status "Aktif", maka dapat "Bonus", jika tidak tampilkan
+                                "-".
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Hasil Contoh:</strong>
+                            <ul class="dash-list">
+                              <li>Andi (92, Aktif) → Grade A, Bonus: Bonus</li>
+                              <li>Eka (90, Tidak Aktif) → Grade A, Bonus: - (karena tidak aktif)</li>
+                              <li>Fani (55, Aktif) → Grade D, Bonus: - (karena nilai &lt; 80)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/nested_IF_untuk_grade.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
+                  </li>
+                  <!-- Lanjutan 1 : VLOOKUP, IFERROR -->
+                  <li>
+                    <strong class="text-danger">Lanjutan 1:</strong> Buat sistem
+                    penggajian: tabel karyawan dengan kode, nama, golongan.
+                    Tabel referensi golongan &amp; gaji. Gunakan
+                    <code>=VLOOKUP(C4;$F$4:$G$8;2;FALSE)</code> untuk mengisi
+                    gaji otomatis. Tambahkan IFERROR untuk menangani data
+                    tidak ditemukan.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>VLOOKUP()</code> untuk mencari data dari tabel referensi.</li>
+                              <li>Fungsi <code>IFERROR()</code> untuk menangani error.</li>
+                              <li>Referensi absolut <code>$</code> pada tabel lookup.</li>
+                              <li>Membuat tabel referensi di sheet yang sama.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat Tabel Data Karyawan &amp; Tabel Referensi Golongan</strong>
+                            <ol>
+                              <li>
+                                <strong>Tabel 1 — Data Karyawan (kolom A-D, mulai baris 3):</strong>
+                                <ul class="dash-list">
+                                  <li><code>A3</code>: Kode, <code>B3</code>: Nama, <code>C3</code>: Golongan,
+                                    <code>D3</code>: Gaji Pokok
+                                  </li>
+                                </ul>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Kode (A)</th>
+                                        <th>Nama (B)</th>
+                                        <th>Golongan (C)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>K001</td>
+                                        <td>Andi</td>
+                                        <td>III</td>
+                                      </tr>
+                                      <tr>
+                                        <td>K002</td>
+                                        <td>Budi</td>
+                                        <td>II</td>
+                                      </tr>
+                                      <tr>
+                                        <td>K003</td>
+                                        <td>Cici</td>
+                                        <td>V</td>
+                                      </tr>
+                                      <tr>
+                                        <td>K004</td>
+                                        <td>Dodi</td>
+                                        <td>I</td>
+                                      </tr>
+                                      <tr>
+                                        <td>K005</td>
+                                        <td>Eka</td>
+                                        <td>IV</td>
+                                      </tr>
+                                      <tr>
+                                        <td>K006</td>
+                                        <td>Fani</td>
+                                        <td>III</td>
+                                      </tr>
+                                      <tr>
+                                        <td>K007</td>
+                                        <td>Gita</td>
+                                        <td> II</td>
+                                      </tr>
+                                      <tr>
+                                        <td>K008</td>
+                                        <td>Hadi</td>
+                                        <td>VI</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Catatan: Golongan " II" (dengan spasi) dan "VI" sengaja salah
+                                  agar IFERROR berfungsi. Kolom D (Gaji Pokok) masih kosong.</small>
+                              </li>
+                              <li>
+                                <strong>Tabel 2 — Referensi Golongan &amp; Gaji (kolom F-G, mulai baris 3):</strong>
+                                <ul class="dash-list">
+                                  <li><code>F3</code>: Kode Golongan, <code>G3</code>: Gaji Pokok</li>
+                                </ul>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Kode Golongan (F)</th>
+                                        <th>Gaji Pokok (G)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>I</td>
+                                        <td>5.000.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>II</td>
+                                        <td>7.000.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>III</td>
+                                        <td>9.000.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>IV</td>
+                                        <td>12.000.000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>V</td>
+                                        <td>15.000.000</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range referensi: <code>$F$4:$G$8</code> (5 baris
+                                  data).</small>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <li>
+                                <p><strong>Tabel Data Karyawan:</strong></p>
+                                <div class="mb-3">
+                                  <img src="assets/img/tabel_data_karyawan.png" alt="">
+                                </div>
+                              </li>
+                              <li>
+                                <p><strong>Tabel Referensi Golongan &amp; Gaji:</strong></p>
+                                <div class="mb-3">
+                                  <img src="assets/img/tabel_referensi_golongan_&_gaji.png" alt="">
+                                </div>
+                              </li>
+                              <li>
+                                <strong>Gunakan VLOOKUP untuk mengisi gaji otomatis:</strong>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>D4</strong> ketik:
+                                    <code>=VLOOKUP(C4;$F$4:$G$8;2;FALSE)</code>
+                                  </li>
+                                  <li>Salin sel <strong>D4</strong> - <strong>D11</strong> atau klik 2x pada kotak kecil
+                                    di pojok
+                                    kanan di sel <strong>D4</strong>.
+                                  </li>
+                                  <li>Perhatikan: data "II" (dengan spasi) dan "VI" akan menghasilkan error
+                                    <code>#N/A</code> karena tidak ditemukan di tabel referensi.
                                     <div class="my-3">
-                                      <img src="assets/img/AutoFill-Handle.png" alt="" class="img-fluid shadow rounded">
+                                      <img src="assets/img/tabel_data_karyawan_vlookup.png" alt="">
                                     </div>
                                   </li>
                                 </ul>
                               </li>
                               <li>
-                                Masukkan Data Siswa pada Kolom <strong>Nama, Kelas,
-                                  dan Nilai.</strong>
-                              </li>
-                            </ol>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="my-3">
-                              <img src="assets/img/sesi1dasar.png" alt="" class="img-fluid shadow">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <ol start="4">
-                              <li>Format Kolom Nilai menjadi 2 Angka Desimal:
-                                <ol>
-                                  <li>Blok <code>D2:D12</code></li>
-                                  <li>Klik Tab <strong>Home</strong> → grup <strong>Number</strong>.</li>
-                                  <li>Pilih <strong>Number</strong>.</li>
-                                  <li>Atur Decimal Places menjadi 2.</li>
-                                </ol>
-                              </li>
-                            </ol>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="my-3">
-                              <img src="assets/img/Blok-D2-D11.png" alt="" class="img-fluid shadow">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <ol start="5">
-                              <li><strong>Hitung Total Nilai:</strong>
+                                <strong>Format Gaji:</strong>
                                 <ul class="dash-list">
-                                  <li>Pada sel <code>D12</code> ketik: <code>=SUM(D2:D11)</code></li>
-                                  <li>Tekan <kbd>Enter</kbd>.</li>
+                                  <li>Blok sel <strong>D4</strong>-<strong>D11</strong>.</li>
+                                  <li>Tab <strong>Home</strong> → <strong>Number</strong> → pilih
+                                    <strong>Currency</strong> atau <strong>Accounting</strong> dengan simbol Rp.
+                                  </li>
                                 </ul>
-                                Hasil Total Nilai <br />
-                                Dengan Data di atas, Hasilnya: 842,75
+                                <div class="mb-3">
+                                  <strong>Penjelasan Rumus:</strong>
+                                  <ul class="dash-list">
+                                    <li><strong>VLOOKUP:</strong>
+                                      <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
+                                      <br />→ <code>C4</code> = nilai yang dicari (golongan)
+                                      <br />→ <code>$F$4:$G$8</code> = tabel referensi (absolut agar tidak berubah
+                                      saat
+                                      disalin)
+                                      <br />→ <code>2</code> = kolom ke-2 dari tabel referensi (Gaji Pokok)
+                                      <br />→ <code>FALSE</code> = mencari kecocokan tepat (exact match (cocok persis))
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li>
+                                <strong>Tambahkan IFERROR untuk menangani error:</strong>
+                                <p class="small text-muted">Ubah rumus yang sama di <strong>D4</strong> menjadi versi
+                                  yang lebih aman:</p>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>D4</strong> ketik:
+                                    <code>=IFERROR(VLOOKUP(C4;$F$4:$G$8;2;FALSE);"Golongan tidak ditemukan")</code>
+                                  </li>
+                                  <li>Salin ke bawah hingga <strong>D11</strong>.</li>
+                                  <li>Sekarang data " II" (spasi) dan "VI" akan menampilkan teks <strong>"Golongan tidak
+                                      ditemukan"</strong> bukan
+                                    error <code>#N/A</code>.
+                                    <div class="my-3">
+                                      <img src="assets/files/tabel_data_karyawan_iferror.png" alt="">
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="mb-3">
+                                  <strong>Penjelasan Rumus:</strong>
+                                  <ul class="dash-list">
+                                    <li><strong>IFERROR:</strong>
+                                      <code>=IFERROR(value, value_if_error)</code>
+                                      <br />→ Jika <strong>VLOOKUP</strong> menghasilkan error (#N/A), tampilkan teks
+                                      "Golongan tidak ditemukan".
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li>
+                                <strong>Tingkatkan pesan error dengan COUNTIF + VLOOKUP:</strong>
+                                <p class="small text-muted">Ubah lagi rumus di <strong>D4</strong> agar pesan error
+                                  lebih informatif (menampilkan golongan yang salah):</p>
+                                <ul class="dash-list">
+                                  <li>Pada sel <strong>D4</strong> ketik:
+                                    <code>=IF(COUNTIF($F$4:$F$8;C4)=0;"Golongan '"&C4&"' tidak ditemukan";VLOOKUP(C4;$F$4:$G$8;2;FALSE))</code>
+                                  </li>
+                                  <li>Salin ke bawah hingga <strong>D11</strong>.
+                                  </li>
+                                  <li>Sekarang data " II" akan menampilkan <strong>"Golongan ' II' tidak
+                                      ditemukan"</strong> dan "VI" menampilkan <strong>"Golongan 'VI' tidak
+                                      ditemukan"</strong>.
+                                  </li>
+                                </ul>
+                                <div class="my-3">
+                                  <img src="assets/files/Menampilkan_ERROR_typo_dan_Golongan_tidak_ditemukan.png"
+                                    alt="">
+                                </div>
                               </li>
                             </ol>
                           </div>
-                          <div class="col-md-6">
-                            <div class="my-3">
-                              <img src="assets/img/Hitung-Total-Nilai.png" alt="" class="img-fluid shadow">
+                          <div class="mb-3">
+                            <strong>Tips:</strong>
+                            <ul class="dash-list">
+                              <li>Selalu gunakan <code>FALSE</code> pada VLOOKUP untuk pencarian exact match (cocok
+                                persis), terutama
+                                untuk kode/golongan.</li>
+                              <li>Gunakan referensi absolut <code>$</code> pada tabel referensi agar tidak bergeser saat
+                                rumus disalin. Untuk cara cepat absolut <code>$</code>, drag range kemudian tekan
+                                <strong>F4</strong>
+                              </li>
+                              <li>IFERROR sangat berguna untuk membuat laporan yang rapi tanpa menampilkan error.</li>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- file download -->
+                    <div class="py-2">
+                      <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/sistem_penggajian2.xlsx" role="button" download><i
+                          class="bi bi-file-earmark-word-fill"></i> Contoh
+                        Latihan</a>
+                    </div>
+                  </li>
+                  <!-- Lanjutan 2: HLOOKUP, INDEX-MATCH, XLOOKUP -->
+                  <li>
+                    <strong class="text-danger">Lanjutan 2:</strong> Buat tabel
+                    data nilai siswa dengan tabel referensi nilai dalam bentuk
+                    horizontal. Gunakan <code>=HLOOKUP</code> untuk mencari
+                    predikat, <code>=INDEX + MATCH</code> untuk pencarian
+                    dua-arah (two-way lookup), dan
+                    <code>=XLOOKUP</code> untuk pencarian modern.
+
+                    <div class="accordion-item mt-2 small">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse6b" aria-expanded="false" aria-controls="collapse6b">
+                          Langkah-langkah
+                        </button>
+                      </h2>
+                      <div id="collapse6b" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <strong>Kompetensi yang Dipelajari:</strong>
+                            <ol>
+                              <li>Fungsi <code>HLOOKUP()</code> untuk pencarian horizontal.</li>
+                              <li>Fungsi <code>INDEX()</code> + <code>MATCH()</code> untuk two-way lookup.</li>
+                              <li>Fungsi <code>XLOOKUP()</code> alternatif modern VLOOKUP/HLOOKUP.</li>
+                              <li>Perbandingan ketiga metode pencarian.</li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Buat 3 Tabel Referensi + Tabel Data Siswa</strong>
+                            <ol>
+                              <li>
+                                <strong>Tabel 1 — Referensi Predikat Horizontal (baris 13-14):</strong>
+                                <p class="small text-muted">Digunakan oleh HLOOKUP. Baris 13 = batas bawah nilai, Baris
+                                  14 = predikat.</p>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th></th>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>C</th>
+                                        <th>D</th>
+                                        <th>E</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><strong>13</strong></td>
+                                        <td>0</td>
+                                        <td>60</td>
+                                        <td>70</td>
+                                        <td>80</td>
+                                        <td>90</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>14</strong></td>
+                                        <td>E</td>
+                                        <td>D</td>
+                                        <td>C</td>
+                                        <td>B</td>
+                                        <td>A</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range: <code>$A$13:$E$14</code>. Nilai 0-59 → E, 60-69 → D,
+                                  70-79 → C, 80-89 → B, 90+ → A.</small>
+                              </li>
+                              <li>
+                                <strong>Tabel 2 — Data Siswa (baris 2-10, kolom A-F):</strong>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>No (A)</th>
+                                        <th>Nama (B)</th>
+                                        <th>Nilai (C)</th>
+                                        <th>Predikat (D)</th>
+                                        <th>Nilai Huruf (E)</th>
+                                        <th>Status (F)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Andi</td>
+                                        <td>85</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>Budi</td>
+                                        <td>92</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Cici</td>
+                                        <td>67</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>Dodi</td>
+                                        <td>45</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                      <tr>
+                                        <td>5</td>
+                                        <td>Eka</td>
+                                        <td>78</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                      <tr>
+                                        <td>6</td>
+                                        <td>Fani</td>
+                                        <td>55</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                      <tr>
+                                        <td>7</td>
+                                        <td>Gita</td>
+                                        <td>73</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                      <tr>
+                                        <td>8</td>
+                                        <td>Hadi</td>
+                                        <td>88</td>
+                                        <td colspan="3"><em>(diisi dengan rumus)</em></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </li>
+                              <li>
+                                <strong>Tabel 3 — Referensi Nilai Huruf / Matriks (baris 17-25):</strong>
+                                <p class="small text-muted">Digunakan oleh INDEX+MATCH. Kolom A = Nama, Kolom B-F =
+                                  Kategori A/B/C/D/E.</p>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th></th>
+                                        <th>A (baris)</th>
+                                        <th>B</th>
+                                        <th>C</th>
+                                        <th>D</th>
+                                        <th>E</th>
+                                        <th>F</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><strong>17</strong></td>
+                                        <td><em>(kosong)</em></td>
+                                        <td>A</td>
+                                        <td>B</td>
+                                        <td>C</td>
+                                        <td>D</td>
+                                        <td>E</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>18</strong></td>
+                                        <td>Andi</td>
+                                        <td>85</td>
+                                        <td>90</td>
+                                        <td>78</td>
+                                        <td>92</td>
+                                        <td>88</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>19</strong></td>
+                                        <td>Budi</td>
+                                        <td>80</td>
+                                        <td>88</td>
+                                        <td>75</td>
+                                        <td>85</td>
+                                        <td>92</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>20</strong></td>
+                                        <td>Cici</td>
+                                        <td>70</td>
+                                        <td>72</td>
+                                        <td>67</td>
+                                        <td>80</td>
+                                        <td>85</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>21</strong></td>
+                                        <td>Dodi</td>
+                                        <td>50</td>
+                                        <td>55</td>
+                                        <td>45</td>
+                                        <td>60</td>
+                                        <td>65</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>22</strong></td>
+                                        <td>Eka</td>
+                                        <td>78</td>
+                                        <td>82</td>
+                                        <td>72</td>
+                                        <td>85</td>
+                                        <td>88</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>23</strong></td>
+                                        <td>Fani</td>
+                                        <td>55</td>
+                                        <td>60</td>
+                                        <td>50</td>
+                                        <td>65</td>
+                                        <td>70</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>24</strong></td>
+                                        <td>Gita</td>
+                                        <td>73</td>
+                                        <td>78</td>
+                                        <td>68</td>
+                                        <td>80</td>
+                                        <td>85</td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong>25</strong></td>
+                                        <td>Hadi</td>
+                                        <td>88</td>
+                                        <td>92</td>
+                                        <td>82</td>
+                                        <td>90</td>
+                                        <td>95</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range data: <code>$B$18:$F$25</code>, Range nama:
+                                  <code>$A$18:$A$25</code>, Range header: <code>$B$17:$F$17</code>.</small>
+                              </li>
+                              <li>
+                                <strong>Tabel 4 — Referensi Status Kelulusan (kolom H-I):</strong>
+                                <p class="small text-muted">Digunakan oleh XLOOKUP. Kolom H = batas bawah nilai, Kolom I
+                                  = status.</p>
+                                <div class="table-responsive mt-2">
+                                  <table class="table table-bordered table-sm small mb-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Batas Nilai (H)</th>
+                                        <th>Status (I)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>0</td>
+                                        <td>Tidak Lulus</td>
+                                      </tr>
+                                      <tr>
+                                        <td>60</td>
+                                        <td>Lulus</td>
+                                      </tr>
+                                      <tr>
+                                        <td>75</td>
+                                        <td>Lulus Baik</td>
+                                      </tr>
+                                      <tr>
+                                        <td>85</td>
+                                        <td>Lulus Memuaskan</td>
+                                      </tr>
+                                      <tr>
+                                        <td>95</td>
+                                        <td>Lulus Terpuji</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <small class="text-muted">Range: <code>$H$4:$H$8</code> (nilai) dan
+                                  <code>$I$4:$I$8</code> (status).</small>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="mb-3">
+                            <strong>Tabel Data Siswa (gambar):</strong>
+                            <div class="mb-3">
+                              <img src="assets/files/sesi2_lanjutan2.png" alt="Tabel HLOOKUP INDEX MATCH" />
                             </div>
                           </div>
-                        </div>
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/data_siswa.xlsx" role="button" download><i
-                              class="bi bi-download me-1"></i> Contoh
-                            Latihan</a>
-                          <a class="btn fs-3" href="#sesi1DasarContentExcel">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                          </a>
-                        </div>
-                      </div>
+                          <div class="mb-3">
+                            <strong>Langkah Pengerjaan:</strong>
+                            <ol>
+                              <ul class="dash-list">
+                                <li>Pada sel <strong>D3</strong> ketik:
+                                  <code>=HLOOKUP(C3;$A$13:$E$14;2;TRUE)</code>
+                                </li>
+                                <li>Salin ke bawah hingga <strong>D10</strong>.</li>
+                                <li>Parameter <code>TRUE</code> (range lookup) karena nilai dicocokkan ke dalam
+                                  rentang
+                                  (0-59, 60-69, 70-79, 80-89, 90+).</li>
+                              </ul>
+                              <div class="my-3">
+                                <img src="assets/files/sesi2_lanjutan2_hlookup.png" alt="Tabel HLOOKUP" />
+                              </div>
+                              <div class="mb-3">
+                                <strong>Penjelasan Rumus:</strong>
+                                <ul class="dash-list">
+                                  <li><strong>HLOOKUP:</strong>
+                                    <code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code>
+                                    <br />→ Mirip VLOOKUP tetapi mencari secara horizontal (baris pertama tabel sebagai
+                                    kunci).
+                                    <br />→ <code>TRUE</code> untuk pencarian perkiraan (range), <code>FALSE</code>
+                                    untuk
+                                    exact match (cocok persis).
+                                  </li>
+                                </ul>
+                              </div>
+                  </li>
+                  <li>
+                    <strong>Gunakan INDEX + MATCH untuk two-way lookup (Nilai Huruf):</strong>
+                    <ul class="dash-list">
+                      <!-- <li>Buat tabel referensi dua dimensi di <strong>$A$15:$E$19</strong>:
+                                  <ul class="dash-list">
+                                    <li>Baris 15: , A, B, C, D</li>
+                                    <li>B16: Andi, 85, 90, 78, 92</li>
+                                    <li>B17: Budi, 80, 88, 75, 85</li>
+                                    <li>... dan seterusnya.</li>
+                                  </ul>
+                                </li> -->
+                      <li>Pada sel <strong>E3</strong> ketik:
+                        <code>=INDEX($B$18:$F$25; MATCH(B3;$A$18:$A$25;0); MATCH(D3;$B$17:$F$17;0))</code>
+                      </li>
+                      <li>Penjelasan: <strong>INDEX</strong> mengambil nilai dari range tabel,
+                        <strong>MATCH</strong> pertama mencari baris
+                        berdasarkan nama, <strong>MATCH</strong> kedua mencari kolom berdasarkan kategori.
+                      </li>
+                    </ul>
+                    <div class="my-3">
+                      <img src="assets/files/sesi2_lanjutan2_index_match.png" alt="Tabel HLOOKUP" />
                     </div>
-                  </div>
-
-                  <!-- Menengah -->
-                  <div class="accordion-item" id="sesi1MenengahContentExcel">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed d-grid" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sesi1MenengahExcel" aria-expanded="false" aria-controls="sesi1MenengahExcel">
-                        <strong style="color: #F77F00;">MENENGAH:</strong>
-                        Buat Tabel
-                        Penjualan 12 Bulan. Hitung Total Tahunan
-                        =Sum(B2:B13), Rata-Rata
-                        =Average(B2:B13), Tertinggi
-                        =Max(B2:B13). Komisi
-                        =B2*$C$1 (Absolut). Format Currency.
-                      </button>
-                    </h2>
-                    <div id="sesi1MenengahExcel" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionPraktikPowerPointSesi1">
-                      <div class="accordion-body small">
-                        ...
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/" role="button" download><i class="bi bi-download me-1"></i> Contoh
-                            Latihan</a>
-                          <a class="btn fs-3" href="#sesi1MenengahContentExcel">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                          </a>
-                        </div>
-                      </div>
+                    <div class="mb-3">
+                      <strong>Penjelasan Rumus:</strong>
+                      <ul class="dash-list">
+                        <li><strong>INDEX + MATCH:</strong>
+                          <code>=INDEX(array, MATCH(row_value, row_array, 0), MATCH(col_value, col_array, 0))</code>
+                          <br />→ Kombinasi ini lebih fleksibel daripada VLOOKUP karena bisa mencari ke kiri
+                          atau
+                          ke kanan.
+                          <br />→ <code>INDEX</code> mengambil nilai dari array pada baris dan kolom tertentu.
+                          <br />→ <code>MATCH</code> mencari posisi (baris/kolom) dari nilai yang dicari.
+                        </li>
+                      </ul>
                     </div>
-                  </div>
-
-                  <!-- Lanjutan -->
-                  <div class="accordion-item mb-2 " id="sesi1LanjutanContentExcel">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed d-grid" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sesi1LanjutanExcel" aria-expanded="false" aria-controls="sesi1LanjutanExcel">
-                        <strong style="color: #D62828;">LANJUTAN:</strong>
-                        Buat
-                        Laporan Keuangan Pribadi 1 Bulan. Gunakan
-                        =Round Untuk Pembulatan,
-                        =Today() Untuk Tanggal Otomatis,
-                        =Countif Untuk Menghitung Kategori
-                        Pengeluaran. Terapkan Conditional Formatting Untuk Sel
-                        Negatif (Merah).
-                      </button>
-                    </h2>
-                    <div id="sesi1LanjutanExcel" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionPraktikPowerPointSesi1">
-                      <div class="accordion-body small">
-                        ...
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/Profil-Perusahaan-5-Slide.pptx" role="button" download><i
-                              class="bi bi-download me-1"></i> Contoh
-                            Latihan</a>
-                          <a class="btn fs-3" href="#sesi1LanjutanContentExcel">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                          </a>
-                        </div>
-                      </div>
+                  </li>
+                  <li>
+                    <strong>Gunakan XLOOKUP untuk status kelulusan:</strong>
+                    <ul class="dash-list">
+                      <!-- <li>Buat tabel referensi status di <strong>$G$5:$H$9</strong>:
+                                  <ul class="dash-list">
+                                    <li>G5: 0, H5: Tidak Lulus</li>
+                                    <li>G6: 60, H6: Lulus</li>
+                                    <li>G7: 75, H7: Lulus Baik</li>
+                                    <li>G8: 85, H8: Lulus Memuaskan</li>
+                                    <li>G9: 95, H9: Lulus Terpuji</li>
+                                  </ul>
+                                </li> -->
+                      <li>Pada sel <strong>F3</strong> ketik:
+                        <code>=XLOOKUP(C3;$H$4:$H$8;$I$4:$I$8;"Tidak Valid";-1)</code>
+                      </li>
+                      <li>Penjelasan singkat:
+                        <ul class="dash-list">
+                          <li>XLOOKUP mencari nilai <code>C3</code> (85) di <code>$H$4:$H$8</code>.</li>
+                          <li>Karena tidak ada nilai 85 tepat di kolom H, dengan <code>-1</code> ia mencari
+                            nilai terdekat yang lebih kecil — yaitu 75 → mengembalikan "Lulus Baik".</li>
+                          <li>Parameter <code>-1</code> (match_mode) berarti exact match (cocok persis) atau
+                            terdekat lebih
+                            kecil — sama seperti <code>TRUE</code> di VLOOKUP untuk rentang nilai.</li>
+                          <li>Jika nilai di bawah 0, mengembalikan "Tidak Valid".</li>
+                        </ul>
+                      </li>
+                      <!-- <li>Atau contoh array tetap (tanpa tabel referensi):
+                                  <code>=XLOOKUP(C3,{0,60,75,85,95},{"E","D","C","B","A"})</code>
+                                  <ul class="dash-list">
+                                    <li>Array <code>{0,60,75,85,95}</code> dan <code>{"E","D","C","B","A"}</code>
+                                      harus sama-sama horizontal (pakai koma) dan sama panjang.</li>
+                                  </ul>
+                                </li> -->
+                    </ul>
+                    <div class="my-3">
+                      <img src="assets/files/sesi2_lanjutan2_xlookup.png" alt="Tabel HLOOKUP" />
                     </div>
-                  </div>
+                    <div class="mb-3">
+                      <strong>Penjelasan Rumus:</strong>
+                      <ul class="dash-list">
+                        <li><strong>XLOOKUP:</strong>
+                          <code>=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code>
+                          <br />→ Fungsi modern pengganti VLOOKUP/HLOOKUP (tersedia Excel 365/2021+).
+                          <br />→ <code>match_mode</code>: 0 = exact, -1 = exact atau terdekat lebih kecil, 1
+                          =
+                          exact
+                          atau terdekat lebih besar, 2 = wildcard.
+                          <br />→ Tidak memerlukan referensi absolut yang rumit dan bisa mencari ke kiri.
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
+                <!-- </div> -->
+                <!-- <div class="mb-3">
+                            <strong>Penjelasan Rumus:</strong>
+                            <ul class="dash-list">
+                              <li><strong>HLOOKUP:</strong>
+                                <code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code>
+                                <br />→ Mirip VLOOKUP tetapi mencari secara horizontal (baris pertama tabel sebagai
+                                kunci).
+                                <br />→ <code>TRUE</code> untuk pencarian perkiraan (range), <code>FALSE</code> untuk
+                                exact match (cocok persis).
+                              </li>
+                              <li><strong>INDEX + MATCH:</strong>
+                                <code>=INDEX(array, MATCH(row_value, row_array, 0), MATCH(col_value, col_array, 0))</code>
+                                <br />→ Kombinasi ini lebih fleksibel daripada VLOOKUP karena bisa mencari ke kiri atau
+                                ke kanan.
+                                <br />→ <code>INDEX</code> mengambil nilai dari array pada baris dan kolom tertentu.
+                                <br />→ <code>MATCH</code> mencari posisi (baris/kolom) dari nilai yang dicari.
+                              </li>
+                              <li><strong>XLOOKUP:</strong>
+                                <code>=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code>
+                                <br />→ Fungsi modern pengganti VLOOKUP/HLOOKUP (tersedia Excel 365/2021+).
+                                <br />→ <code>match_mode</code>: 0 = exact, -1 = exact atau terdekat lebih kecil, 1 =
+                                exact
+                                atau terdekat lebih besar, 2 = wildcard.
+                                <br />→ Tidak memerlukan referensi absolut yang rumit dan bisa mencari ke kiri.
+                              </li>
+                            </ul>
+                          </div> -->
+                <div class="mb-3">
+                  <strong>Perbandingan:</strong>
+                  <table class="table table-bordered table-sm small">
+                    <thead>
+                      <tr>
+                        <th>Fungsi</th>
+                        <th>Kelebihan</th>
+                        <th>Kekurangan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>HLOOKUP</td>
+                        <td>Sederhana untuk data horizontal</td>
+                        <td>Hanya lookup di baris pertama; tidak bisa ke kiri</td>
+                      </tr>
+                      <tr>
+                        <td>INDEX+MATCH</td>
+                        <td>Fleksibel (two-way, lookup ke kiri)</td>
+                        <td>Rumus lebih panjang; kurangi readable</td>
+                      </tr>
+                      <tr>
+                        <td>XLOOKUP</td>
+                        <td>Modern, fleksibel, built-in error handling</td>
+                        <td>Hanya di Excel 365/2021+</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mb-3">
+                  <strong>Tips:</strong>
+                  <ul class="dash-list">
+                    <li>Gunakan <code>TRUE</code> pada HLOOKUP jika data referensi berupa rentang nilai
+                      (seperti
+                      predikat).</li>
+                    <li>INDEX+MATCH sangat berguna untuk two-way lookup (mencari berdasarkan baris DAN kolom).
+                    </li>
+                    <li>XLOOKUP adalah rekomendasi terbaru — dukung dengan catatan versi Excel yang
+                      mendukung.</li>
+                    <li>Selalu gunakan referensi absolut <code>$</code> pada tabel referensi.</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
+          <!-- file download -->
+          <div class="py-2">
+            <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/Tabel_HLOOKUP_INDEX_MATCH_XLOOKUP.xlsx" role="button" download><i
+                class="bi bi-file-earmark-word-fill"></i> Contoh
+              Latihan</a>
+          </div>
+          </li>
+          </ol>
         </div>
+      </div>
+    </div>
+    </div>
+    <!-- PERTEMUAN 3 (Excel) -->
+    <div class="accordion-item mt-2">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          <span class="fw-semibold"><span class="badge badge-excel me-2">Pertemuan 3</span>
+            Chart, Grafik &amp; Conditional Formatting</span>
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#programexcel">
+        <div class="accordion-body p-0">
+          <div class="contoh-box mt-0">
+            <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
+            <ol class="mt-2 mb-0 ps-3">
+              <!-- Dasar -->
+              <li>
+                <strong class="text-success">Dasar:</strong> Buat Column
+                chart penjualan 6 bulan. Tambahkan judul, label sumbu, dan
+                data label. Ubah warna kolom menjadi biru gradasi.
 
-        <!-- Pertemuan 2 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseDua" aria-expanded="false" aria-controls="flush-collapseDua">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 2</span> — IF, VLOOKUP &amp;
-              Fungsi
-              Logika</span>
-            </button>
-          </h2>
-          <div id="flush-collapseDua" class="accordion-collapse collapse" data-bs-parent="#materiPertemuanPertamaExcel">
-            <div class="accordion-body d-grid">Placeholder content for this accordion, which is intended to demonstrate
-              the
-              <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being
-              filled with some actual content.
-            </div>
-          </div>
-        </div>
-        <!-- Pertemuan 3 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTiga" aria-expanded="false" aria-controls="flush-collapseTiga">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 3</span> — Chart, Grafik &amp;
-              Conditional Formatting</span>
-            </button>
-          </h2>
-          <div id="flush-collapseTiga" class="accordion-collapse collapse"
-            data-bs-parent="#materiPertemuanPertamaExcel">
-            <div class="accordion-body d-grid">Placeholder content for this accordion, which is intended to demonstrate
-              the
-              <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting
-              happening here in terms of content, but just filling up the space to make it look, at least at first
-              glance, a bit more representative of how this would look in a real-world application.
-            </div>
-          </div>
-        </div>
-        <!-- Pertemuan 4 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseEmpat" aria-expanded="false" aria-controls="flush-collapseEmpat">
-              <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 4</span> — PivotTable, Sorting,
-              Filter &amp; Final Project</span>
-            </button>
-          </h2>
-          <div id="flush-collapseEmpat" class="accordion-collapse collapse"
-            data-bs-parent="#materiPertemuanPertamaExcel">
-            <div class="accordion-body d-grid">Placeholder content for this accordion, which is intended to demonstrate
-              the
-              <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting
-              happening here in terms of content, but just filling up the space to make it look, at least at first
-              glance, a bit more representative of how this would look in a real-world application.
-            </div>
+                <div class="accordion-item mt-2 small">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                      Langkah-langkah
+                    </button>
+                  </h2>
+                  <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="mb-3">
+                        <strong>Kompetensi yang Dipelajari:</strong>
+                        <ol>
+                          <li>Membuat Column chart dari data tabel.</li>
+                          <li>Menambahkan judul chart, label sumbu, dan data label.</li>
+                          <li>Mengubah warna dan gaya chart.</li>
+                          <li>Memformat chart agar profesional.</li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Tabel Data Penjualan 6 Bulan</strong>
+                        <p class="small text-muted">Buat tabel berikut di sheet Excel Anda sebelum membuat chart.</p>
+                        <div class="table-responsive mt-2">
+                          <table class="table table-bordered table-sm small mb-0">
+                            <thead>
+                              <tr>
+                                <th>Bulan (A)</th>
+                                <th>Penjualan (B)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Jan</td>
+                                <td>12.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Feb</td>
+                                <td>15.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mar</td>
+                                <td>11.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Apr</td>
+                                <td>18.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mei</td>
+                                <td>14.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Jun</td>
+                                <td>16.000.000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <small class="text-muted">A1: Bulan, B1: Penjualan. Data diisi pada baris 2–7.</small>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Langkah Pengerjaan:</strong>
+                        <ol>
+                          <li>
+                            Blok data <strong>A1</strong>:<strong>B7</strong>.
+                          </li>
+                          <li>
+                            <strong>Insert Column Chart:</strong>
+                            <ul class="dash-list">
+                              <li>Tab <strong>Insert</strong> → grup Charts → pilih <strong>Clustered
+                                  Column</strong> (kolom pertama).
+                                <div class="my-2">
+                                  <img src="assets/files/Clustered_Column.png" alt="">
+                                </div>
+                              </li>
+                              <li>Chart akan langsung muncul di sheet.</li>
+                              <li>
+                                Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Chart-Tabel-Data-Penjualan-6-Bulan.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan judul chart:</strong>
+                            <ul class="dash-list">
+                              <li>Klik 2x pada judul chart (default: "Chart Title").</li>
+                              <li>Ketik: <strong>Penjualan 6 Bulan Pertama</strong>.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan label sumbu:</strong>
+                            <ul class="dash-list">
+                              <li>Klik Chart 2x akan menampilkan Tab <strong>Chart Design</strong> → <strong>Add
+                                  Chart Element</strong>.
+                              </li>
+                              <li>Atau klik Chart kemudian klik <i class="bi bi-plus-lg"></i> di kanan atas Chart →
+                                centang <strong>Axis Titles</strong></li>
+                              <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Horizontal</strong> → ketik:
+                                Bulan.</li>
+                              <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Vertical</strong> → ketik:
+                                Nominal (Rp).</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan Data Label:</strong>
+                            <ul class="dash-list">
+                              <li>Klik Chart 2x akan menampilkan Tab <strong>Chart Design</strong> → <strong>Add
+                                  Chart
+                                  Element</strong>.</li>
+                              <li>Pilih <strong>Data Labels</strong> → <strong>Outside End</strong>.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Chart-Tabel-Data-Penjualan-6-Bulan2.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><strong>Ubah warna kolom menjadi biru gradasi:</strong>
+                            <ul class="dash-list">
+                              <li>Klik salah satu kolom di Chart (semua kolom akan terseleksi).</li>
+                              <li>Klik kanan → pilih <strong>Format Data Series</strong>.</li>
+                              <li>Pilih <strong>Fill</strong> → <strong>Gradient fill</strong>.</li>
+                              <li>Atur warna: <strong>Light Blue</strong> ke <strong>Dark Blue</strong>.</li>
+                              <li>Atur arah gradasi (misal: Linear Down).
+                                <div class="my-2">
+                                  <img src="assets/img/Format-Data-Series.png" alt="">
+                                </div>
+                              </li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Hasil_Tabel_Data_Penjualan_6_Bulan.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Rapikan chart:</strong>
+                            <ul class="dash-list">
+                              <li>Tambahkan border pada chart area jika perlu.</li>
+                              <li>Sesuaikan ukuran font judul dan label.</li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- file download -->
+                <div class="py-2">
+                  <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/Tabel_Data_Penjualan_6_Bulan.xlsx" role="button" download><i
+                      class="bi bi-file-earmark-word-fill"></i> Contoh
+                    Latihan</a>
+                </div>
+              </li>
+              <!-- Menengah -->
+              <li>
+                <strong class="text-warning">Menengah:</strong> Buat
+                multi-series chart (Column + Line) untuk target vs
+                realisasi. Terapkan Data Bars pada sel realisasi. Gunakan
+                Icon Sets (hijau ≥ target, kuning = 90%, merah &lt; 90%).
+
+                <div class="accordion-item mt-2 small">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                      Langkah-langkah
+                    </button>
+                  </h2>
+                  <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="mb-3">
+                        <strong>Kompetensi yang Dipelajari:</strong>
+                        <ol>
+                          <li>Membuat combo chart (Column + Line) / multi-series chart.</li>
+                          <li>Conditional Formatting: Data Bars.</li>
+                          <li>Conditional Formatting: Icon Sets.</li>
+                          <li>Mengelola beberapa series dalam satu chart.</li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Tabel Data Target vs Realisasi</strong>
+                        <p class="small text-muted">Buat tabel berikut di sheet Excel Anda.</p>
+                        <div class="table-responsive mt-2">
+                          <table class="table table-bordered table-sm small mb-0">
+                            <thead>
+                              <tr>
+                                <th>Bulan (A)</th>
+                                <th>Target (B)</th>
+                                <th>Realisasi (C)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Jan</td>
+                                <td>15.000.000</td>
+                                <td>14.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Feb</td>
+                                <td>15.000.000</td>
+                                <td>16.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mar</td>
+                                <td>15.000.000</td>
+                                <td>13.500.000</td>
+                              </tr>
+                              <tr>
+                                <td>Apr</td>
+                                <td>20.000.000</td>
+                                <td>19.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mei</td>
+                                <td>20.000.000</td>
+                                <td>18.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Jun</td>
+                                <td>20.000.000</td>
+                                <td>21.000.000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <small class="text-muted">A1: Bulan, B1: Target, C1: Realisasi. Data diisi pada baris
+                          2–7.</small>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Langkah Pengerjaan:</strong>
+                        <ol>
+                          <li>
+                            <strong>Buat Column Chart:</strong>
+                            <ul class="dash-list">
+                              <li>Blok <strong>A1</strong>:<strong>C7</strong> → <strong>Insert</strong> →
+                                <strong>Clustered Column</strong>.
+                                <div class="my-2">
+                                  <img src="assets/img/Clustered_Column.png" alt="">
+                                </div>
+                              </li>
+                              <li>Target dan Realisasi tampil sebagai 2 kolom berbeda.</li>
+                            </ul>
+                            <div class="my-2">
+                              <img src="assets/img/hasil_chart.png" alt="">
+                            </div>
+                          </li>
+                          <li>
+                            <strong>Ubah seri Realisasi menjadi Line:</strong>
+                            <ul class="dash-list">
+                              <li>Klik kanan pada Chart → Tab <strong>Chart Design</strong> → <strong>Change Chart
+                                  Type</strong>.
+                                <div class="my-2">
+                                  <img src="assets/img/Change_Chart_Type.png" alt="">
+                                </div>
+                              </li>
+                              <li>Pilih <strong>Line with Markers</strong> untuk seri Realisasi.
+                                <div class="my-2">
+                                  <img src="assets/img/Line_with_Markers.png" alt="">
+                                </div>
+                              </li>
+                              <li>Klik <strong>OK</strong>.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/hasil_ubah_chart.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan judul chart:</strong>
+                            <ul class="dash-list">
+                              <li>Klik 2x pada judul chart (default: "Chart Title").</li>
+                              <li>Ketik: <strong>Target vs Realisasi 2025</strong>.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan label sumbu:</strong>
+                            <ul class="dash-list">
+                              <li>Klik Chart 2x akan menampilkan Tab <strong>Chart Design</strong> → <strong>Add
+                                  Chart Element</strong>.
+                              </li>
+                              <li>Atau klik Chart kemudian klik <i class="bi bi-plus-lg"></i> di kanan atas Chart →
+                                centang <strong>Axis Titles</strong></li>
+                              <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Horizontal</strong> → ketik:
+                                Bulan.</li>
+                              <li>Pilih <strong>Axis Titles</strong> → <strong>Primary Vertical</strong> → ketik:
+                                Nominal (Rp).</li>
+                              <li>
+                                <div class="my-2">
+                                  <img src="assets/img/Chart-Table-Data-Target-vs-Realisasi.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Terapkan Data Bars pada sel Realisasi:</strong>
+                            <ul class="dash-list">
+                              <li>Blok <strong>C2</strong>:<strong>C7</strong>.</li>
+                              <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
+                              <li>Pilih <strong>Data Bars</strong> → pilih warna misal <strong>Blue Data
+                                  Bar</strong>.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Data-Bars-pada-sel-Realisasi.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat kolom bantu persentase pencapaian:</strong>
+                            <ul class="dash-list">
+                              <li>Pada sel <strong>D1</strong> ketik: <strong>%</strong></li>
+                              <li>Pada sel <strong>D2</strong> ketik rumus: <code>=C2/B2</code></li>
+                              <li>Salin rumus ke bawah hingga sel <strong>D7</strong>.</li>
+                              <li>Blok <strong>D2</strong>:<strong>D7</strong> → Tab <strong>Home</strong> → grup
+                                <strong>Number</strong> → pilih <strong>% Percentage</strong>.
+                              </li>
+                            </ul>
+                            <div class="my-2">
+                              <img src="assets/img/Tabel_Data_Target_vs_Realisasi_kolom_bantu.png" alt="">
+                            </div>
+                          </li>
+                          <li>
+                            <strong>Terapkan Icon Sets pada kolom persentase:</strong>
+                            <ul class="dash-list">
+                              <li>Blok <strong>D2</strong>:<strong>D7</strong>.</li>
+                              <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong> → <strong>Icon
+                                  Sets</strong> → pilih <strong>3 Traffic Lights (Unrimmed)</strong>.</li>
+                              <li>Klik <strong>Conditional Formatting</strong> → <strong>Manage Rules</strong> →
+                                pilih rule → <strong>Edit Rule</strong>.</li>
+                              <li>Ubah <strong>Type</strong> menjadi <strong>Percent</strong> untuk semua threshold.
+                              </li>
+                              <li>Atur: hijau ≥ <strong>100</strong>, kuning ≥ <strong>90</strong>, merah &lt;
+                                <strong>90</strong>.
+                              </li>
+                              <li>Klik <strong>OK</strong>.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Tabel_Data_Target_vs_Realisasi_kolom_bantu_icon.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="mb-3 p-3 bg-light border-start border-4 border-success rounded">
+                        <strong>Penjelasan:</strong>
+                        <ul class="mb-0 dash-list">
+                          <li><strong>Target</strong> — Nilai penjualan yang direncanakan/ditargetkan per bulan
+                            (angka acuan).</li>
+                          <li><strong>Realisasi</strong> — Nilai penjualan yang benar-benar tercapai pada bulan
+                            tersebut (kenyataan di lapangan).</li>
+                          <li><strong>% (Persentase)</strong> — Perbandingan realisasi terhadap target, dihitung
+                            dengan rumus <code>=Realisasi/Target</code>.
+                            <br>→ <strong class="text-success">≥ 100%</strong> = target tercapai atau terlampaui.
+                            <br>→ <strong class="text-warning">90% – 99%</strong> = hampir mencapai target.
+                            <br>→ <strong class="text-danger">&lt; 90%</strong> = belum mencapai target, perlu
+                            evaluasi.
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- file download -->
+                <div class="py-2">
+                  <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/Tabel_Data_Target_vs_Realisasi.xlsx" role="button" download><i
+                      class="bi bi-file-earmark-word-fill"></i> Contoh
+                    Latihan</a>
+                </div>
+              </li>
+              <!-- Lanjutan -->
+              <li>
+                <strong class="text-danger">Lanjutan:</strong> Buat mini
+                dashboard 1 sheet: Line chart tren penjualan, Pie chart
+                komposisi produk, Bar chart per region. Tambahkan Color
+                Scales gradasi pada data. Gunakan Slicer untuk memfilter
+                chart secara interaktif.
+
+                <div class="accordion-item mt-2 small">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                      Langkah-langkah
+                    </button>
+                  </h2>
+                  <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="mb-3">
+                        <strong>Kompetensi yang Dipelajari:</strong>
+                        <ol>
+                          <li>Membuat Line chart, Pie chart, dan Bar chart.</li>
+                          <li>Color Scales (Conditional Formatting).</li>
+                          <li>Menggunakan Slicer untuk interaktivitas chart.</li>
+                          <li>Merancang tata letak mini dashboard dalam 1 sheet.</li>
+                          <li>Fungsi SUMIF untuk membuat tabel rekap.</li>
+                        </ol>
+                      </div>
+                      <div class="mb-3 p-3 bg-light border-start border-4 border-danger rounded">
+                        <strong>Apa itu Mini Dashboard?</strong>
+                        <p class="mb-1 small">Mini dashboard adalah kumpulan beberapa chart dalam 1 sheet untuk
+                          melihat data dari berbagai sudut pandang sekaligus.</p>
+                        <ul class="mb-0 small dash-list">
+                          <li><strong>Line chart</strong> — melihat tren naik/turun penjualan dari bulan ke bulan.
+                          </li>
+                          <li><strong>Pie chart</strong> — melihat komposisi/kontribusi tiap produk terhadap total
+                            penjualan.</li>
+                          <li><strong>Bar chart</strong> — membandingkan penjualan antar region secara visual.</li>
+                          <li><strong>Slicer</strong> — tombol filter interaktif; klik region/produk, semua chart
+                            langsung berubah.</li>
+                        </ul>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Data Penjualan Multi-Dimensi</strong>
+                        <p class="small text-muted">Buat tabel berikut di sheet Excel Anda (baris 1 = header, baris 2–13
+                          = data).</p>
+                        <div class="table-responsive mt-2">
+                          <table class="table table-bordered table-sm small mb-0">
+                            <thead>
+                              <tr>
+                                <th>Bulan (A)</th>
+                                <th>Region (B)</th>
+                                <th>Produk (C)</th>
+                                <th>Penjualan (D)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Jan</td>
+                                <td>Jakarta</td>
+                                <td>Laptop</td>
+                                <td>50.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Jan</td>
+                                <td>Jakarta</td>
+                                <td>HP</td>
+                                <td>30.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Jan</td>
+                                <td>Bandung</td>
+                                <td>Laptop</td>
+                                <td>25.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Jan</td>
+                                <td>Bandung</td>
+                                <td>HP</td>
+                                <td>20.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Feb</td>
+                                <td>Jakarta</td>
+                                <td>Laptop</td>
+                                <td>55.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Feb</td>
+                                <td>Jakarta</td>
+                                <td>HP</td>
+                                <td>28.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Feb</td>
+                                <td>Bandung</td>
+                                <td>Laptop</td>
+                                <td>27.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Feb</td>
+                                <td>Bandung</td>
+                                <td>HP</td>
+                                <td>22.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mar</td>
+                                <td>Jakarta</td>
+                                <td>Laptop</td>
+                                <td>60.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mar</td>
+                                <td>Jakarta</td>
+                                <td>HP</td>
+                                <td>32.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mar</td>
+                                <td>Bandung</td>
+                                <td>Laptop</td>
+                                <td>30.000.000</td>
+                              </tr>
+                              <tr>
+                                <td>Mar</td>
+                                <td>Bandung</td>
+                                <td>HP</td>
+                                <td>25.000.000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Langkah Pengerjaan:</strong>
+                        <ol>
+                          <li>
+                            <strong>Buat tabel rekap per bulan (untuk Line Chart):</strong>
+                            <ul class="dash-list">
+                              <li>F1: <strong>Bulan</strong>, G1: <strong>Total</strong></li>
+                              <li>F2: Jan, F3: Feb, F4: Mar</li>
+                              <li>G2 ketik: <code>=SUMIF($A$2:$A$13;F2;$D$2:$D$13)</code></li>
+                              <li>Salin G2 ke G3 dan G4 → hasil total penjualan Jan–Mar.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/tabel-rekap-per-bulan.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat Line Chart:</strong>
+                            <ul class="dash-list">
+                              <li>Blok <strong>F1</strong>:<strong>G4</strong> → Tab <strong>Insert</strong> → pilih
+                                <strong>Line Chart</strong>.
+                                <div class="my-2">
+                                  <img src="assets/img/Line-Chart.png" alt="">
+                                </div>
+                              </li>
+                              <li>Klik 2x judul chart → ganti: <strong>Tren Penjualan per Bulan</strong>.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Tren-Penjualan-per-Bulan.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat tabel rekap per produk (untuk Pie Chart):</strong>
+                            <ul class="dash-list">
+                              <li>I1: <strong>Produk</strong>, J1: <strong>Total</strong></li>
+                              <li>I2: Laptop, I3: HP</li>
+                              <li>J2 ketik: <code>=SUMIF($C$2:$C$13;I2;$D$2:$D$13)</code></li>
+                              <li>Salin J2 ke J3.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/tabel-rekap-per-produk.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat Pie Chart:</strong>
+                            <ul class="dash-list">
+                              <li>Blok <strong>I1</strong>:<strong>J3</strong> → <strong>Insert</strong> →
+                                <strong>Pie Chart</strong>.
+                              </li>
+                              <li>Ganti judul: <strong>Komposisi Penjualan per Produk</strong>.</li>
+                              <li>Klik pada Chart Pie → klik kanan pilih <strong>Add Data Label</strong> >
+                                <strong>Add Data Label</strong> → Klik pada Chart Pie kembali → <strong>Format Data
+                                  Labels</strong> →
+                                centang <strong>Percentage</strong>. Jika masih menampilkan nilai coba centang Value
+                                kemudian hilangkan centang Value kembali agar tampilan menampilkan % bukan
+                                menampilkan nilai uang.
+                              </li>
+                              <li>
+                                <div class="my-2">
+                                  <div class="my-2">
+                                    <img src="assets/img/Insert-Pie-Chart.png" alt="">
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                Untuk merubah warna teks persentase: <br>
+                                Klik pada teks prosentase → <strong>Font...</strong> → <strong>Font
+                                  color</strong> pilih warna putih → <strong>OK</strong>
+                                <div class="my-2">
+                                  <img class="img-fluid" src="assets/img/merubah-warna-font.png" alt="">
+                                </div>
+                              </li>
+                              <li>
+                                Hasil:
+                                <div class="my-2">
+                                  <img class="img-fluid" src="assets/img/Chart-Komposisi-Penjualan-per-Produk.png"
+                                    alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat tabel rekap per region (untuk Bar Chart):</strong>
+                            <ul class="dash-list">
+                              <li>L1: <strong>Region</strong>, M1: <strong>Total</strong></li>
+                              <li>L2: Jakarta, L3: Bandung</li>
+                              <li>M2 ketik: <code>=SUMIF($B$2:$B$13;L2;$D$2:$D$13)</code></li>
+                              <li>Salin M2 ke M3.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/tabel-rekap-per-region.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat Bar Chart:</strong>
+                            <ul class="dash-list">
+                              <li>Blok <strong>L1</strong>:<strong>M3</strong> → <strong>Insert</strong> → pilih
+                                <strong>Clustered Bar</strong> (ikon
+                                bar horizontal).
+                                <div class="my-2">
+                                  <img src="assets/img/Clustered-Bar.png" alt="">
+                                </div>
+                              </li>
+                              <li>Ganti judul: <strong>Penjualan per Region</strong>.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Penjualan-per-Region.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Atur tata letak dashboard dalam 1 sheet:</strong>
+                            <ul class="dash-list">
+                              <li>Seret chart ke posisi: Line di kiri atas, Pie di kanan atas, Bar di kiri bawah.
+                              </li>
+                              <li>Beri jarak rapi, sesuaikan ukuran chart agar proporsional.</li>
+                              <li>Tab <strong>View</strong> → hilangkan centang <strong>Gridlines</strong> agar
+                                tampak seperti dashboard.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Terapkan Color Scales pada data Penjualan:</strong>
+                            <ul class="dash-list">
+                              <li>Blok D2:D13.</li>
+                              <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong> →
+                                <strong>Color Scales</strong>.
+                              </li>
+                              <li>Pilih <strong>Green - Yellow - Red Color Scale</strong>.</li>
+                              <li>Otomatis: nilai
+                                <ul>
+                                  <li>Hijau : Tertinggi</li>
+                                  <li>Kuning : Sedang</li>
+                                  <li>Merah : Terendah</li>
+                                </ul>
+                              </li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Color-Scales-pada-data-Penjualan.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Ubah data menjadi Table (syarat Slicer):</strong>
+                            <ul class="dash-list">
+                              <li>Blok A1:D13 → tekan <strong>Ctrl+T</strong> → klik OK.</li>
+                              <li>Sekarang data berbentuk Table (ada ikon filter di setiap header).</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan Slicer untuk filter interaktif:</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam Table → Tab <strong>Table Design</strong> → <strong>Insert
+                                  Slicer</strong>.</li>
+                              <li>Centang <strong>Region</strong> dan <strong>Produk</strong> → klik OK.</li>
+                              <li>Akan muncul 2 kotak Slicer: Region dan Produk.</li>
+                              <li>Coba klik <strong>"Jakarta"</strong> di Slicer Region → semua chart otomatis
+                                menampilkan data Jakarta saja.</li>
+                              <li>Klik ikon <strong>filter silang</strong> di pojok kanan atas Slicer untuk
+                                menghapus filter.</li>
+                              <li>Hasil:
+                                <div class="my-2">
+                                  <img src="assets/img/Slicer.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Tampilan Mini Dashboard:</strong> <br />
+                        <img class="img-fluid" src="assets/img/Mini-Dashboard.png" alt="Mini dashboard" />
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- file download -->
+                <div class="py-2">
+                  <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/Mini-Dashboard.xlsx" role="button" download><i
+                      class="bi bi-file-earmark-word-fill"></i> Contoh
+                    Latihan</a>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
+    </div>
+    <!-- PERTEMUAN 4 (Excel) -->
+    <div class="accordion-item mt-2">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+          <span class="fw-semibold"><span class="badge badge-excel me-2">Pertemuan 4</span>
+            PivotTable, Sorting, Filter &amp; Final Project</span>
+        </button>
+      </h2>
+      <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#programexcel">
+        <div class="accordion-body p-0">
+          <div class="contoh-box mt-0">
+            <strong><i class="bi bi-file-earmark"></i> Praktik:</strong>
+            <ol class="mt-2 mb-0 ps-3">
+              <!-- Dasar -->
+              <li>
+                <strong class="text-success">Dasar:</strong> Buat tabel
+                data 20 baris. Lakukan sorting A-Z berdasarkan nama, lalu
+                sorting multi-level (kota → nama). Gunakan Filter untuk
+                menampilkan data tertentu.
+
+                <div class="accordion-item mt-2 small">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                      Langkah-langkah
+                    </button>
+                  </h2>
+                  <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="mb-3">
+                        <strong>Kompetensi yang Dipelajari:</strong>
+                        <ol>
+                          <li>Sorting data A-Z / Z-A.</li>
+                          <li>Multi-level sorting (Kota → Nama).</li>
+                          <li>Filter data untuk menampilkan baris tertentu.</li>
+                          <li>Mengelola data tabel dengan cepat.</li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Tabel Data Karyawan 20 Baris</strong>
+                        <p class="small text-muted">Buat tabel berikut di sheet Excel Anda. Kolom A–E, baris 1 = header,
+                          baris 2–21 = data (20 karyawan).</p>
+                        <div class="table-responsive mt-2">
+                          <table class="table table-bordered table-sm small mb-0">
+                            <thead>
+                              <tr>
+                                <th>No (A)</th>
+                                <th>Nama (B)</th>
+                                <th>Kota (C)</th>
+                                <th>Usia (D)</th>
+                                <th>Divisi (E)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Andi</td>
+                                <td>Jakarta</td>
+                                <td>28</td>
+                                <td>IT</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Budi</td>
+                                <td>Bandung</td>
+                                <td>32</td>
+                                <td>Marketing</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>Cici</td>
+                                <td>Jakarta</td>
+                                <td>25</td>
+                                <td>HRD</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>Dodi</td>
+                                <td>Surabaya</td>
+                                <td>30</td>
+                                <td>IT</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>Eka</td>
+                                <td>Bandung</td>
+                                <td>27</td>
+                                <td>Marketing</td>
+                              </tr>
+                              <tr>
+                                <td>6</td>
+                                <td>Fani</td>
+                                <td>Jakarta</td>
+                                <td>35</td>
+                                <td>HRD</td>
+                              </tr>
+                              <tr>
+                                <td>7</td>
+                                <td>Gita</td>
+                                <td>Surabaya</td>
+                                <td>29</td>
+                                <td>Finance</td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>Hadi</td>
+                                <td>Jakarta</td>
+                                <td>31</td>
+                                <td>IT</td>
+                              </tr>
+                              <tr>
+                                <td>9</td>
+                                <td>Ira</td>
+                                <td>Bandung</td>
+                                <td>26</td>
+                                <td>Finance</td>
+                              </tr>
+                              <tr>
+                                <td>10</td>
+                                <td>Joko</td>
+                                <td>Surabaya</td>
+                                <td>33</td>
+                                <td>Marketing</td>
+                              </tr>
+                              <tr>
+                                <td>11</td>
+                                <td>Kira</td>
+                                <td>Jakarta</td>
+                                <td>24</td>
+                                <td>IT</td>
+                              </tr>
+                              <tr>
+                                <td>12</td>
+                                <td>Lina</td>
+                                <td>Bandung</td>
+                                <td>28</td>
+                                <td>HRD</td>
+                              </tr>
+                              <tr>
+                                <td>13</td>
+                                <td>Maya</td>
+                                <td>Surabaya</td>
+                                <td>30</td>
+                                <td>Finance</td>
+                              </tr>
+                              <tr>
+                                <td>14</td>
+                                <td>Nana</td>
+                                <td>Jakarta</td>
+                                <td>27</td>
+                                <td>Marketing</td>
+                              </tr>
+                              <tr>
+                                <td>15</td>
+                                <td>Omar</td>
+                                <td>Bandung</td>
+                                <td>34</td>
+                                <td>IT</td>
+                              </tr>
+                              <tr>
+                                <td>16</td>
+                                <td>Petri</td>
+                                <td>Surabaya</td>
+                                <td>26</td>
+                                <td>HRD</td>
+                              </tr>
+                              <tr>
+                                <td>17</td>
+                                <td>Qori</td>
+                                <td>Jakarta</td>
+                                <td>29</td>
+                                <td>Finance</td>
+                              </tr>
+                              <tr>
+                                <td>18</td>
+                                <td>Rina</td>
+                                <td>Bandung</td>
+                                <td>31</td>
+                                <td>Marketing</td>
+                              </tr>
+                              <tr>
+                                <td>19</td>
+                                <td>Sari</td>
+                                <td>Surabaya</td>
+                                <td>25</td>
+                                <td>IT</td>
+                              </tr>
+                              <tr>
+                                <td>20</td>
+                                <td>Tono</td>
+                                <td>Jakarta</td>
+                                <td>32</td>
+                                <td>HRD</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <small class="text-muted">Anda bisa menambah/mengubah data sendiri. Yang penting ada kolom: No,
+                          Nama, Kota, Usia, Divisi.</small>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Langkah Pengerjaan:</strong>
+                        <ol>
+                          <li>
+                            <strong>Sorting A-Z berdasarkan Nama:</strong>
+                            <ul class="dash-list">
+                              <li>Blok seluruh data (<strong>A1</strong>:<strong>E21</strong>) atau klik di dalam
+                                tabel.</li>
+                              <li>Tab <strong>Data</strong> → <strong>Sort A to Z</strong> (ikon A↓Z).
+                                <div class="my-2">
+                                  <img src="assets/img/Sorting.png" alt="">
+                                </div>
+                              </li>
+                              <li>Data akan terurut berdasarkan nama secara alfabet.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Sorting multi-level (Kota → Nama):</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam tabel → Tab <strong>Data</strong> → <strong>Sort</strong>.</li>
+                              <li>Pada dialog Sort:
+                                <div class="my-2">
+                                  <img src="assets/img/dialog-Sort.png" alt="">
+                                </div>
+                                <ul class="dash-list">
+                                  <li>Sort by: <strong>Kota</strong> → A to Z.</li>
+                                  <li>Klik <strong>Add Level</strong>.</li>
+                                  <li>Then by: <strong>Nama</strong> → A to Z.</li>
+                                </ul>
+                              </li>
+                              <li>Klik OK → data akan diurutkan berdasarkan kota, lalu per nama dalam kota yang
+                                sama.
+                                <div class="my-2">
+                                  <img src="assets/img/kotak-dialog-Sort.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Gunakan Filter:</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam tabel → Tab <strong>Data</strong> → <strong>Filter</strong> (ikon
+                                corong).
+                                <div class="my-2">
+                                  <img src="assets/img/Filter.png" alt="">
+                                </div>
+                              </li>
+                              <li>Panah filter akan muncul di setiap header kolom.
+                                <div class="my-2">
+                                  <img src="assets/img/header-kolom.png" alt="">
+                                </div>
+                              </li>
+                              <li>Klik panah pada kolom <strong>Kota</strong> → centang hanya
+                                <strong>Jakarta</strong> → OK.
+                              </li>
+                              <li>Data hanya menampilkan karyawan dari Jakarta.</li>
+                              <li>Klik panah pada kolom <strong>Divisi</strong> → centang hanya <strong>IT</strong>
+                                → OK.</li>
+                              <li>Sekarang data menampilkan karyawan IT dari Jakarta.</li>
+                              <li>Untuk menghapus filter: klik panah → <strong>Clear Filter from ...</strong>.</li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- file download -->
+                <div class="py-2">
+                  <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/Tabel-Data-Karyawan-20-Baris.xlsx" role="button" download><i
+                      class="bi bi-file-earmark-word-fill"></i> Contoh
+                    Latihan</a>
+                </div>
+              </li>
+              <!-- Menengah -->
+              <li>
+                <strong class="text-warning">Menengah:</strong> Buat
+                PivotTable dari data penjualan: rekap total per region
+                &amp; per produk. Tambahkan PivotChart Column. Gunakan
+                Slicer untuk filter region interaktif.
+
+                <div class="accordion-item mt-2 small">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                      Langkah-langkah
+                    </button>
+                  </h2>
+                  <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="mb-3">
+                        <strong>Kompetensi yang Dipelajari:</strong>
+                        <ol>
+                          <li>Membuat PivotTable dari data mentah.</li>
+                          <li>Mengatur Row, Column, Values, dan Filter di PivotTable.</li>
+                          <li>Membuat PivotChart dari PivotTable.</li>
+                          <li>Menambahkan Slicer untuk filter interaktif.</li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Data Penjualan per Region &amp; Produk</strong>
+                        <div class="my-2">
+                          <img src="assets/img/Data-Penjualan-per-Region-&-Produk.png" alt="Data penjualan" />
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Langkah Pengerjaan:</strong>
+                        <ol>
+                          <li>
+                            <strong>Download & buka file latihan:</strong>
+                            <ul class="dash-list">
+                              <li>Klik tombol <strong>"Contoh Latihan"</strong> di bawah halaman ini.</li>
+                              <li>Buka file <code>Data-Penjualan-per-Region-dan-Produk.xlsx</code> yang sudah
+                                didownload.</li>
+                              <li>File berisi data penjualan dengan kolom: Tanggal, Region, Produk, Qty, Harga
+                                Satuan, dan Total (20+ baris).</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat PivotTable:</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam tabel data → Tab <strong>Insert</strong> →
+                                <strong>PivotTable</strong>.
+                              </li>
+                              <li>Pilih <strong>New Worksheet</strong> → OK.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Atur PivotTable Fields:</strong>
+                            <ul class="dash-list">
+                              <li>Drag <strong>Region</strong> ke <strong>Rows</strong>.</li>
+                              <li>Drag <strong>Produk</strong> ke <strong>Columns</strong>.</li>
+                              <li>Drag <strong>Total</strong> ke <strong>Values</strong> (pastikan fungsinya Sum).
+                              </li>
+                              <li>Sekarang PivotTable menampilkan total penjualan per region (baris) dan per produk
+                                (kolom).</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat PivotChart:</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> →
+                                <strong>PivotChart</strong>.
+                              </li>
+                              <li>Pilih <strong>Clustered Column</strong> → OK.</li>
+                              <li>Chart akan menampilkan perbandingan penjualan per region per produk.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan Slicer untuk filter region:</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam PivotTable → Tab <strong>PivotTable Analyze</strong> →
+                                <strong>Insert Slicer</strong>.
+                              </li>
+                              <li>Centang <strong>Region</strong> → OK.</li>
+                              <li>Slicer akan muncul sebagai kotak dengan tombol region.</li>
+                              <li>Klik "Jakarta" → PivotTable dan PivotChart akan menampilkan hanya data Jakarta.
+                              </li>
+                              <li>Klik tombol dengan ikon silang di Slicer untuk menghapus filter.</li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Hasil Akhir:</strong>
+                        <p class="mb-1">Setelah selesai, Anda akan memiliki:</p>
+                        <ul class="dash-list mb-0">
+                          <li>PivotTable yang merangkum total penjualan per Region (baris) dan per Produk (kolom).
+                          </li>
+                          <li>PivotChart Column yang menampilkan perbandingan visual penjualan.</li>
+                          <li>Slicer untuk menyaring data berdasarkan Region secara interaktif.
+                            <div class="my-2">
+                              <img src="assets/img/PivotTable.png" alt="">
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- file download -->
+                <div class="py-2">
+                  <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/Data-Penjualan-per-Region-dan-Produk.xlsx" role="button" download><i
+                      class="bi bi-file-earmark-word-fill"></i> Contoh
+                    Latihan</a>
+                </div>
+              </li>
+              <!-- Lanjutan (Final) -->
+              <li>
+                <strong class="text-danger">Lanjutan (Final):</strong>
+                Buat aplikasi pencatatan pengeluaran (20+ baris): dropdown
+                kategori (Data Validation), IF untuk kategori otomatis,
+                PivotTable rekap per kategori + Pie chart + Conditional
+                Formatting (merah jika &gt; rata-rata). Gunakan Slicer
+                untuk filter bulan.
+
+                <div class="accordion-item mt-2 small">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                      Langkah-langkah
+                    </button>
+                  </h2>
+                  <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="mb-3">
+                        <strong>Kompetensi yang Dipelajari:</strong>
+                        <ol>
+                          <li>Data Validation (Dropdown list).</li>
+                          <li>Fungsi IF untuk kategori otomatis.</li>
+                          <li>PivotTable dan PivotChart (Pie).</li>
+                          <li>Conditional Formatting (merah jika &gt; rata-rata).</li>
+                          <li>Slicer untuk filter bulan interaktif.</li>
+                          <li>Menggabungkan semua skill Excel dalam satu project.</li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Struktur Aplikasi Pencatatan Pengeluaran</strong>
+                        <p class="mb-1 mt-1">Aplikasi terdiri dari beberapa bagian:</p>
+                        <ul class="dash-list mb-0">
+                          <li><strong>Sheet "Data Pengeluaran"</strong>: kolom Tanggal, Kategori (dropdown),
+                            Deskripsi, Jumlah, Bulan (TEXT), Jenis (IF).</li>
+                          <li><strong>PivotTable</strong> di sheet terpisah: rekap jumlah per kategori.</li>
+                          <li><strong>Pie Chart</strong> dari PivotTable: visualisasi proporsi pengeluaran.</li>
+                          <li><strong>Slicer</strong>: filter interaktif berdasarkan bulan.</li>
+                          <li><strong>Conditional Formatting</strong>: sorot merah pengeluaran di atas rata-rata.
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Data Pengeluaran</strong>
+                        <p class="small text-muted">Buat tabel berikut di sheet Excel Anda (baris 1 = header, baris 2–21
+                          = data).</p>
+                        <div class="table-responsive mt-2">
+                          <table class="table table-bordered table-sm small mb-0">
+                            <thead>
+                              <tr>
+                                <th>Tanggal (A)</th>
+                                <th>Kategori (B)</th>
+                                <th>Deskripsi (C)</th>
+                                <th>Jumlah (D)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01/01/2025</td>
+                                <td>Makanan</td>
+                                <td>Nasi goreng</td>
+                                <td>25.000</td>
+                              </tr>
+                              <tr>
+                                <td>02/01/2025</td>
+                                <td>Transport</td>
+                                <td>Bensin</td>
+                                <td>50.000</td>
+                              </tr>
+                              <tr>
+                                <td>03/01/2025</td>
+                                <td>Belanja</td>
+                                <td>Sabun</td>
+                                <td>15.000</td>
+                              </tr>
+                              <tr>
+                                <td>05/01/2025</td>
+                                <td>Tagihan</td>
+                                <td>Listrik</td>
+                                <td>250.000</td>
+                              </tr>
+                              <tr>
+                                <td>07/01/2025</td>
+                                <td>Hiburan</td>
+                                <td>Nonton bioskop</td>
+                                <td>75.000</td>
+                              </tr>
+                              <tr>
+                                <td>10/01/2025</td>
+                                <td>Makanan</td>
+                                <td>Mie ayam</td>
+                                <td>20.000</td>
+                              </tr>
+                              <tr>
+                                <td>12/01/2025</td>
+                                <td>Transport</td>
+                                <td>Grab bike</td>
+                                <td>18.000</td>
+                              </tr>
+                              <tr>
+                                <td>15/01/2025</td>
+                                <td>Belanja</td>
+                                <td>Sepatu</td>
+                                <td>350.000</td>
+                              </tr>
+                              <tr>
+                                <td>18/01/2025</td>
+                                <td>Tagihan</td>
+                                <td>Internet</td>
+                                <td>200.000</td>
+                              </tr>
+                              <tr>
+                                <td>20/01/2025</td>
+                                <td>Makanan</td>
+                                <td>Kopi</td>
+                                <td>15.000</td>
+                              </tr>
+                              <tr>
+                                <td>01/02/2025</td>
+                                <td>Hiburan</td>
+                                <td>Spotify</td>
+                                <td>55.000</td>
+                              </tr>
+                              <tr>
+                                <td>03/02/2025</td>
+                                <td>Transport</td>
+                                <td>Parkir</td>
+                                <td>10.000</td>
+                              </tr>
+                              <tr>
+                                <td>05/02/2025</td>
+                                <td>Makanan</td>
+                                <td>Soto betawi</td>
+                                <td>30.000</td>
+                              </tr>
+                              <tr>
+                                <td>08/02/2025</td>
+                                <td>Belanja</td>
+                                <td>Buku</td>
+                                <td>85.000</td>
+                              </tr>
+                              <tr>
+                                <td>10/02/2025</td>
+                                <td>Tagihan</td>
+                                <td>Air</td>
+                                <td>75.000</td>
+                              </tr>
+                              <tr>
+                                <td>12/02/2025</td>
+                                <td>Transport</td>
+                                <td>Bensin</td>
+                                <td>50.000</td>
+                              </tr>
+                              <tr>
+                                <td>15/02/2025</td>
+                                <td>Makanan</td>
+                                <td>Bakso</td>
+                                <td>22.000</td>
+                              </tr>
+                              <tr>
+                                <td>18/02/2025</td>
+                                <td>Hiburan</td>
+                                <td>Game</td>
+                                <td>100.000</td>
+                              </tr>
+                              <tr>
+                                <td>20/02/2025</td>
+                                <td>Belanja</td>
+                                <td>Baju</td>
+                                <td>200.000</td>
+                              </tr>
+                              <tr>
+                                <td>25/02/2025</td>
+                                <td>Tagihan</td>
+                                <td>Listrik</td>
+                                <td>275.000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <small class="text-muted">Anda bisa menambah/mengubah data sendiri. Yang penting ada kolom:
+                          Tanggal, Kategori, Deskripsi, Jumlah. Kategori harus dipilih dari dropdown (Makanan,
+                          Transport, Belanja, Tagihan, Hiburan).</small>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Langkah Pengerjaan:</strong>
+                        <ol>
+                          <li>
+                            <strong>Buat sheet utama "Data Pengeluaran" dengan kolom:</strong>
+                            <ul class="dash-list">
+                              <li>A1: Tanggal, B1: Kategori, C1: Deskripsi, D1: Jumlah</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Terapkan Conditional Formatting (merah jika &gt; rata-rata):</strong>
+                            <ul class="dash-list">
+                              <li>Blok kolom Jumlah (D2:D30) di sheet data.</li>
+                              <li>Tab Home → Conditional Formatting → <strong>Top/Bottom Rules</strong>.</li>
+                              <li>Pilih <strong>Above Average</strong>.</li>
+                              <li>Pilih format <strong>Light Red Fill with Dark Red Text</strong>.</li>
+                              <li>Klik <strong>OK</strong> → semua pengeluaran di atas rata-rata akan berwarna
+                                merah.
+                                <div class="my-2">
+                                  <img class="img-fluid" src="assets/img/Conditional-Formatting.png"
+                                    alt="Data penjualan" />
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat dropdown kategori dengan Data Validation:</strong>
+                            <ul class="dash-list">
+                              <li>Di sel terpisah (misal H1:H5) ketik daftar kategori: Makanan, Transport, Belanja,
+                                Tagihan, Hiburan.</li>
+                              <li>Blok <strong>B2</strong>:<strong>B30</strong> → Tab <strong>Data</strong> → cari
+                                grup <strong>Data Tools</strong> →
+                                klik <strong>Data Validation</strong> (ikon centang di kotak).</li>
+                              <li class="text-muted small"><i class="bi bi-info-circle"></i> <strong>Tips Excel
+                                  2024:</strong> Jika tidak menemukan tombolnya, gunakan shortcut <kbd>Alt</kbd> +
+                                <kbd>A</kbd> + <kbd>V</kbd> (tekan berurutan), atau ketik "Data Validation" di
+                                <strong>Tell Me</strong> (kotak search di atas ribbon).
+                              </li>
+                              <li>Allow: <strong>List</strong> → Source: <strong>=$H$1:$H$5</strong> → OK.</li>
+                              <li>Sekarang kolom Kategori memiliki dropdown pilihan.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Isi 20+ baris data pengeluaran:</strong>
+                            <ul class="dash-list">
+                              <li>01/01/2025 — Makanan — Nasi goreng — 25000</li>
+                              <li>02/01/2025 — Transport — Bensin — 50000</li>
+                              <li>03/01/2025 — Belanja — Sabun — 15000</li>
+                              <li>... dan seterusnya untuk 2-3 bulan (Januari, Februari, Maret).</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat kolom bantu untuk Bulan (opsional jika ingin filter per bulan):</strong>
+                            <ul class="dash-list">
+                              <li>Pada <strong>E1</strong> ketik: <strong>Bulan</strong></li>
+                              <li>Pada <strong>E2</strong> ketik: <code>=TEXT(A2,"MMMM")</code> → salin ke bawah.
+                              </li>
+                              <li>Ini akan menghasilkan nama bulan dari kolom Tanggal.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat kolom "Jenis" dengan IF untuk kategori otomatis:</strong>
+                            <ul class="dash-list">
+                              <li>Pada <strong>F1</strong> ketik: <strong>Jenis</strong></li>
+                              <li>Pada <strong>F2</strong> ketik:
+                                <code>=IF(OR(B2="Makanan",B2="Tagihan",B2="Transport"),"Kebutuhan","Keinginan")</code>
+                                → <kbd>Enter</kbd>, lalu salin ke bawah.
+                              </li>
+                              <li>IF ini otomatis mengelompokkan: <strong>"Kebutuhan"</strong> (Makanan, Tagihan,
+                                Transport) atau <strong>"Keinginan"</strong> (Belanja, Hiburan).
+                                <div class="my-2">
+                                  <img class="img-fluid" src="assets/img/kolom-bantu.png" alt="Data penjualan" />
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat PivotTable rekap per kategori:</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam tabel data (pastikan range mencakup kolom <strong>A</strong> sampai
+                                <strong>F</strong>) → <strong>Insert</strong> →
+                                <strong>PivotTable</strong> → <strong>From Table/Range</strong> → <strong>New
+                                  Worksheet</strong> → <strong>OK</strong>.
+                              </li>
+                              <li>Centang <strong>Kategori</strong>.</li>
+                              <li>Centang <strong>Jumlah</strong> ke Values (Sum).</li>
+                              <li>Sort PivotTable descending berdasarkan nilai untuk melihat kategori pengeluaran
+                                terbesar.
+                                <div class="my-2">
+                                  <img class="img-fluid" src="assets/img/Sort-PivotTable-descending.png"
+                                    alt="Data penjualan" />
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Buat Pie Chart dari PivotTable:</strong>
+                            <ul class="dash-list">
+                              <li>Klik pada tabel PivotTable
+                                <div class="my-2">
+                                  <img src="assets/img/Klik-PivotTable.png" alt="">
+                                </div>
+                              </li>
+                              <li>Klik Tab <strong>PivotTable Analyze</strong> → <strong>PivotChart</strong>.</li>
+                              <li>Pilih <strong>Pie</strong> → <strong>OK</strong>.</li>
+                              <li>Klik pada lingkaran Chart Pie, klik kanan <strong>Add Data Label > Add Data
+                                  Label</strong></li>
+                              <li>Kembali Klik pada lingkaran Chart Pie, klik kanan <strong>Format Data
+                                  Label</strong></li>
+                              <li>Pada kotak Format Data Label, beri centang <strong>Category
+                                  Name</strong> dan <strong>Percentage</strong> hapus centang
+                                <strong>Value</strong>.
+                                <div class="my-2">
+                                  <img src="assets/img/hasil-Pie-Chart-dari-PivotTable.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Tambahkan Slicer untuk filter bulan:</strong>
+                            <ul class="dash-list">
+                              <li>Klik di dalam <strong>PivotTable</strong> → <strong>PivotTable Analyze</strong> →
+                                <strong>Insert Slicer</strong>.
+                                <div class="my-2">
+                                  <img src="assets/img/Klik-PivotTable.png" alt="">
+                                </div>
+                              </li>
+                              <li>Centang <strong>Bulan</strong> (dari kolom bantu) → <strong>OK</strong>.</li>
+                              <li>Klik "Januari" → <strong>PivotTable</strong> dan <strong>Pie chart</strong>
+                                menampilkan hanya data Januari.
+                                <div class="my-2">
+                                  <img src="assets/img/PivotTable-Analyze-Insert-Slicer.png" alt="">
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Hasil Akhir Final Project:</strong>
+                        <p class="mb-1">Setelah selesai, Anda akan memiliki:</p>
+                        <ul class="dash-list mb-0">
+                          <li>Data pengeluaran 20+ baris dengan dropdown kategori dan kolom bantu otomatis (Bulan,
+                            Jenis).</li>
+                          <li>PivotTable rekap total pengeluaran per kategori, diurutkan dari terbesar.</li>
+                          <li>Pie Chart dengan label persentase dan nama kategori.</li>
+                          <li>Conditional Formatting merah pada sel Jumlah yang di atas rata-rata.</li>
+                          <li>Slicer untuk memfilter PivotTable dan Chart per bulan.
+                            <div class="my-2">
+                              <img class="img-fluid" src="assets/img/Struktur-Aplikasi-Pencatatan-Pengeluaran.png"
+                                alt="">
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mb-3">
+                        <strong>Ringkasan Skill yang Digunakan:</strong>
+                        <ul class="dash-list">
+                          <li>Data Entry &amp; Formatting (Pertemuan 1)</li>
+                          <li>Fungsi IF, TEXT (Pertemuan 2)</li>
+                          <li>Chart &amp; Conditional Formatting (Pertemuan 3)</li>
+                          <li>PivotTable, Slicer, Data Validation (Pertemuan 4)</li>
+                        </ul>
+                        <p class="mt-2 mb-0 text-muted fst-italic">
+                          Project ini menggabungkan seluruh materi dari Pertemuan 1-4.
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- file download -->
+                <div class="py-2">
+                  <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/Struktur-Aplikasi-Pencatatan-Pengeluaran.xlsx" role="button" download><i
+                      class="bi bi-file-earmark-word-fill"></i> Contoh
+                    Latihan</a>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    </div>
