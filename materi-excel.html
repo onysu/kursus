@@ -820,7 +820,254 @@
                     <div id="sesi1LanjutanExcel" class="accordion-collapse collapse"
                       data-bs-parent="#accordionPraktikPowerPointSesi1">
                       <div class="accordion-body small">
-                        ...
+
+                        <div class="mb-3">
+                          <strong>Tujuan</strong> <br />
+                          Murid dapat menggunakan: <br />
+                          <ul class="dash-list">
+                            <li>Fungsi <strong>TODAY()</strong></li>
+                            <li>Fungsi <strong>ROUND()</strong></li>
+                            <li>Fungsi <strong>COUNTIF()</strong></li>
+                            <li>Conditional Formatting</li>
+                            <li>Format Currency</li>
+                          </ul>
+                        </div>
+                        <div class="mb-3">
+                          <strong>Buat Tabel Laporan Keuangan Pribadi</strong>
+                          <ol>
+                            <li>
+                              <strong>Buat bagian Tanggal (baris 1):</strong>
+                              <ul class="dash-list">
+                                <li><code>A1</code>: <code>Tanggal Laporan</code></li>
+                                <li><code>B1</code>: ketik <code>=TODAY()</code> (akan ditampilkan tanggal hari ini)
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <strong>Buat header kolom di baris 3:</strong>
+                              <ul class="dash-list">
+                                <li><code>A3</code>: No</li>
+                                <li><code>B3</code>: Kategori</li>
+                                <li><code>C3</code>: Deskripsi</li>
+                                <li><code>D3</code>: Jumlah</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <strong>Isi 10 baris data pengeluaran (baris 4-13):</strong>
+                              <div class="table-responsive mt-2">
+                                <table class="table table-bordered table-sm small mb-0">
+                                  <thead>
+                                    <tr>
+                                      <th>No</th>
+                                      <th>Kategori (B)</th>
+                                      <th>Deskripsi (C)</th>
+                                      <th>Jumlah (D)</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Makan</td>
+                                      <td>Nasi Goreng</td>
+                                      <td>25.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>Transport</td>
+                                      <td>Bensin</td>
+                                      <td>50.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>Belanja</td>
+                                      <td>Sabun</td>
+                                      <td>15.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>Makan</td>
+                                      <td>Mie Ayam</td>
+                                      <td>20.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>Tagihan</td>
+                                      <td>Listrik</td>
+                                      <td>150.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td>Transport</td>
+                                      <td>Grab</td>
+                                      <td>35.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td>Hiburan</td>
+                                      <td>Nonton Bioskop</td>
+                                      <td>75.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>8</td>
+                                      <td>Makan</td>
+                                      <td>Kopi</td>
+                                      <td>18.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>9</td>
+                                      <td>Belanja</td>
+                                      <td>Shampoo</td>
+                                      <td>22.000</td>
+                                    </tr>
+                                    <tr>
+                                      <td>10</td>
+                                      <td>Makan</td>
+                                      <td>Makan Siang</td>
+                                      <td>35.000</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </li>
+                          </ol>
+                        </div>
+                        <div class="mb-3">
+                          <strong>Langkah pengerjaan:</strong> <br />
+                          <ol>
+                            <li>
+                              Membuat Tabel Laporan Keuangan <br />
+                              Setelah membuat tabel sesuai struktur di atas,
+                              pada sel <strong>B1</strong> ketik rumus:
+                              <code>=TODAY()</code> <br />
+                              Hasil akan menampilkan tanggal hari ini secara
+                              otomatis. <br />
+                              Formatkan sebagai Short Date
+                              <ul class="dash-list">
+                                <li>
+                                  Pada Tab <strong>Home</strong> di bagian
+                                  group <strong>Number</strong>
+                                </li>
+                                <li>Pilih <strong>Short Date</strong></li>
+                              </ul>
+                              <div class="mt-3">
+                                <img src="assets/files/sesi1lanjutan2.png" alt="" />
+                              </div>
+                            </li>
+                            <li>
+                              Total Pengeluaran <br />
+                              Pada sel <strong>D14</strong>:
+                              <code>=SUM(D4:D13)</code>
+                              <br />
+                              <small class="text-muted">Catatan: Kolom <strong>D</strong> berisi data Jumlah
+                                pengeluaran.</small>
+                            </li>
+                            <li>
+                              Pembulatan dengan <strong>ROUND</strong>
+                              <br />
+                              Misalkan hasil total berada di
+                              <strong>D16</strong>. <br />
+                              Pada <strong>D16</strong>:
+                              <code>=ROUND(D14;-3)</code> <br />
+                              Artinya: Dibulatkan ke ribuan terdekat. <br />
+                              Contoh: <br />
+                              845.600 &rarr; 846.000 <br />
+                              842.100 &rarr; 842.000
+                            </li>
+                            <li>
+                              Menghitung Jumlah Pengeluaran per Kategori <br />
+                              <small class="text-muted">Catatan: Kolom <strong>B</strong> berisi data
+                                <strong>Kategori</strong> (Makan, Transport, Belanja, Tagihan, Hiburan).</small>
+                              <div class="mb-3 mt-2">
+                                Jumlah transaksi kategori Makan <br />
+                                Pada <strong>F2</strong>: <code>=COUNTIF(B4:B13;"Makan")</code> <br />
+                                Hasil: 4
+                              </div>
+                              <div class="mb-3">
+                                Jumlah transaksi kategori Transport <br />
+                                Pada <strong>F3</strong>: <code>=COUNTIF(B4:B13;"Transport")</code> <br />
+                                Hasil: 2
+                              </div>
+                              <div class="mb-3">
+                                Jumlah transaksi kategori Belanja <br />
+                                Pada <strong>F4</strong>: <code>=COUNTIF(B4:B13;"Belanja")</code> <br />
+                                Hasil: 2
+                              </div>
+                            </li>
+                            <li>Membuat Rekap Saldo <br>
+                              Buat rekap saldo di area terpisah (kolom F):
+                              <div class="table-responsive mt-2 mb-3">
+                                <table class="table table-bordered table-sm small mb-0">
+                                  <thead>
+                                    <tr>
+                                      <th>Sel</th>
+                                      <th>Label</th>
+                                      <th>Isi / Rumus</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td><code>F5</code></td>
+                                      <td>Total Pemasukan</td>
+                                      <td>Isi nilai tetap, misal: <code>500000</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>F6</code></td>
+                                      <td>Total Pengeluaran</td>
+                                      <td><code>=D14</code> (merujuk ke Total Pengeluaran)</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>F7</code></td>
+                                      <td>Saldo</td>
+                                      <td><code>=F5-F6</code></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="mb-3">
+                                <img src="assets/files/sesi1lanjutan3.png" alt="Rekap saldo laporan keuangan">
+                              </div>
+                              Contoh: Jika pemasukan 500.000 dan pengeluaran 750.000, maka saldo = -250.000 (negatif).
+                            </li>
+                            <li>
+                              Conditional Formatting untuk Nilai Negatif <br>
+                              Misalnya saldo berada pada <strong>F7</strong>.
+                              <ol>
+                                <li>Pilih sel <strong>F7</strong>.</li>
+                                <li>Tab <strong>Home</strong> → <strong>Conditional Formatting</strong>.</li>
+                                <li>Pilih <strong>Highlight Cells Rules</strong>.</li>
+                                <li>Pilih <strong>Less Than</strong>.</li>
+                                <li>Isi: <strong>0</strong></li>
+                                <li>Pilih format Light Red Fill with Dark Red Text.</li>
+                                <li>Klik <strong>OK</strong>.</li>
+                              </ol>
+                            </li>
+                          </ol>
+                        </div>
+                        <div class="mb-3">
+                          <strong>Hasil Akhir Laporan Keuangan:</strong> <br />
+                          <img src="assets/files/sesi1lanjutan.png" alt="Hasil akhir laporan keuangan"
+                            class="img-fluid shadow" />
+                        </div>
+                        <div class="mb-3 p-3 bg-light border-start border-4 border-success rounded">
+                          <strong>Penjelasan:</strong>
+                          <ul class="mb-0 small dash-list">
+                            <li>Jika saldo: <strong class="text-danger">-250.000</strong> maka sel akan otomatis
+                              berwarna merah (karena &lt; 0).</li>
+                            <li>Jika saldo: <strong class="text-success">500.000</strong> maka tetap normal (tidak
+                              berwarna).</li>
+                          </ul>
+                        </div>
+
+                        <!-- file download -->
+                        <div class="py-2">
+                          <a class="btn btn-sm btn-outline-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " href="assets/files/laporan_keuangan.xlsx" role="button" download><i
+                              class="bi bi-file-earmark-word-fill"></i> Contoh
+                            Latihan</a>
+                        </div>
 
                         <div class="d-flex justify-content-between align-items-center mb-3">
                           <a class="btn btn-sm btn-outline-secondary"
@@ -1273,6 +1520,7 @@
                       </h2>
                       <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
+
                           <div class="mb-3">
                             <strong>Tujuan</strong> <br />
                             Murid dapat menggunakan: <br />
@@ -1509,6 +1757,7 @@
                                 berwarna).</li>
                             </ul>
                           </div>
+
                         </div>
                       </div>
                     </div>
