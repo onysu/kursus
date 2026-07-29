@@ -358,7 +358,7 @@
       </p>
       <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
         <!-- <a href="#silabus" class="btn btn-light btn-lg px-4"><i class="bi bi-calendar-check"></i> Lihat Silabus</a> -->
-        <a href="materi-word.html" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-filetype-xlsx"></i> Kursus
+        <a href="materi-word.html" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-filetype-docx"></i> Kursus
           Word</a>
         <a href="materi-excel.html" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-filetype-xlsx"></i> Kursus
           Excel</a>
@@ -1072,11 +1072,6 @@
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                          <a class="btn btn-sm btn-outline-secondary"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            href="assets/files/Profil-Perusahaan-5-Slide.pptx" role="button" download><i
-                              class="bi bi-download me-1"></i> Contoh
-                            Latihan</a>
                           <a class="btn fs-3" href="#sesi1LanjutanContentExcel">
                             <i class="bi bi-arrow-up-circle-fill"></i>
                           </a>
@@ -1738,12 +1733,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#pertemuan3DasarExcel" aria-expanded="false" aria-controls="pertemuan3DasarExcel">
+              data-bs-target="#pertemuan3Excel" aria-expanded="false" aria-controls="pertemuan3Excel">
               <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 3</span> — Chart, Grafik &amp;
               Conditional Formatting</span>
             </button>
           </h2>
-          <div id="pertemuan3DasarExcel" class="accordion-collapse collapse" data-bs-parent="#materiPertemuanExcel">
+          <div id="pertemuan3Excel" class="accordion-collapse collapse" data-bs-parent="#materiPertemuanExcel">
             <div class="accordion-body p-0">
               <div class="contoh-box">
                 <div class="accordion accordion-flush" id="accordionPraktikExcelSesi3">
@@ -2045,7 +2040,7 @@
                                   Nominal (Rp).</li>
                                 <li>
                                   <div class="my-2">
-                                    <img src="assets/img/Chart-Table-Data-Target-vs-Realisasi.png" alt="">
+                                    <img src="assets/img/Chart-Tabe-Data-Target-vs-Realisasi.png" alt="">
                                   </div>
                                 </li>
                               </ul>
@@ -2471,12 +2466,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#pertemuan4DasarExcel" aria-expanded="false" aria-controls="pertemuan4DasarExcel">
+              data-bs-target="#pertemuan4Excel" aria-expanded="false" aria-controls="pertemuan4Excel">
               <span class="fw-bold me-2" style="color: var(--excel-color);">PERTEMUAN 4</span> — PivotTable, Sorting,
               Filter &amp; Final Project</span>
             </button>
           </h2>
-          <div id="pertemuan4DasarExcel" class="accordion-collapse collapse" data-bs-parent="#materiPertemuanExcel">
+          <div id="pertemuan4Excel" class="accordion-collapse collapse" data-bs-parent="#materiPertemuanExcel">
             <div class="accordion-body p-0">
               <div class="contoh-box">
                 <div class="accordion accordion-flush" id="accordionPraktikExcelSesi4">
@@ -3237,6 +3232,185 @@
 
   </section>
 
+  <!-- Tugas / Soal Praktik -->
+  <section id="tugas" class="py-5">
+    <div class="container">
+      <h2 class="section-title" style="color: var(--excel-color)">
+        <i class="bi bi-pencil-square"></i> 5 Tugas Praktik
+      </h2>
+      <p class="text-muted mb-4">
+        Kerjakan kelima tugas berikut secara berurutan. Setiap tugas menguji
+        keterampilan dari Pertemuan 1–4.
+      </p>
+
+      <div class="accordion accordion-flush" id="accordionTugasExcel">
+
+        <!-- Tugas 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#tugas1Excel" aria-expanded="false" aria-controls="tugas1Excel">
+              <span class="fw-bold me-2" style="color: #06D6A0;">TUGAS 1</span> —
+              Laporan Penjualan Bulanan
+              <span class="badge bg-secondary ms-2">Pertemuan 1</span>
+            </button>
+          </h2>
+          <div id="tugas1Excel" class="accordion-collapse collapse" data-bs-parent="#accordionTugasExcel">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <strong>Tujuan:</strong> Menguji kemampuan Data Entry, AutoFill, Formula Dasar &amp; Format Cell.
+              </div>
+              <ol>
+                <li>Buat tabel penjualan 12 bulan (Jan–Des) dengan kolom: <strong>Bulan</strong>, <strong>Pendapatan</strong>, <strong>Biaya</strong>, <strong>Laba</strong>.</li>
+                <li>Gunakan <strong>AutoFill</strong> untuk mengisi bulan.</li>
+                <li>Isi data Pendapatan dan Biaya (12 baris, nilai bebas tetapi realistis).</li>
+                <li>Pada kolom <strong>Laba</strong>, hitung <code>=Pendapatan - Biaya</code>.</li>
+                <li>Hitung <strong>Total</strong>, <strong>Rata-rata</strong>, <strong>Pendapatan Tertinggi</strong>, dan <strong>Biaya Terendah</strong> di baris terpisah.</li>
+                <li>Format semua nilai menggunakan <strong>Currency Rp</strong> dengan 0 desimal.</li>
+                <li>Beri <strong>border</strong> rapi dan <strong>bold</strong> pada header tabel.</li>
+              </ol>
+              <div class="bg-light p-3 rounded border-start border-4 border-success">
+                <strong>Skill yang Diuji:</strong> AutoFill, SUM, AVERAGE, MAX, MIN, Format Currency, Border.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tugas 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#tugas2Excel" aria-expanded="false" aria-controls="tugas2Excel">
+              <span class="fw-bold me-2" style="color: #F77F00;">TUGAS 2</span> —
+              Sistem Penilaian Karyawan
+              <span class="badge bg-secondary ms-2">Pertemuan 2</span>
+            </button>
+          </h2>
+          <div id="tugas2Excel" class="accordion-collapse collapse" data-bs-parent="#accordionTugasExcel">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <strong>Tujuan:</strong> Menguji fungsi IF, Nested IF, VLOOKUP, dan IFERROR.
+              </div>
+              <ol>
+                <li>Buat tabel <strong>Data Karyawan</strong> (10 baris) dengan kolom: <strong>Kode</strong>, <strong>Nama</strong>, <strong>Golongan</strong> (I–V), <strong>Masa Kerja</strong> (tahun).</li>
+                <li>Buat tabel <strong>Referensi Gaji</strong> di area terpisah: Golongan I = 4.000.000, II = 6.000.000, III = 8.000.000, IV = 11.000.000, V = 15.000.000.</li>
+                <li>Gunakan <strong>VLOOKUP</strong> untuk mengisi <strong>Gaji Pokok</strong> secara otomatis berdasarkan Golongan.</li>
+                <li>Tambahkan kolom <strong>Status</strong>: <code>=IF(Masa Kerja>=5;"Tetap";"Kontrak")</code>.</li>
+                <li>Tambahkan kolom <strong>Tunjangan</strong>: Jika Status "Tetap" maka 10% dari Gaji Pokok, selain itu 0.</li>
+                <li>Tambahkan kolom <strong>Total Gaji</strong>: Gaji Pokok + Tunjangan.</li>
+                <li>Bungkus VLOOKUP dengan <strong>IFERROR</strong> untuk menangani golongan yang tidak terdaftar.</li>
+                <li>Buat satu data dengan golongan yang salah/typo untuk membuktikan IFERROR bekerja.</li>
+              </ol>
+              <div class="bg-light p-3 rounded border-start border-4 border-warning">
+                <strong>Skill yang Diuji:</strong> IF, Nested IF, VLOOKUP, IFERROR, Referensi Absolut.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tugas 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#tugas3Excel" aria-expanded="false" aria-controls="tugas3Excel">
+              <span class="fw-bold me-2" style="color: #D62828;">TUGAS 3</span> —
+              Visualisasi Data Realisasi vs Target
+              <span class="badge bg-secondary ms-2">Pertemuan 3</span>
+            </button>
+          </h2>
+          <div id="tugas3Excel" class="accordion-collapse collapse" data-bs-parent="#accordionTugasExcel">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <strong>Tujuan:</strong> Menguji kemampuan membuat chart dan conditional formatting.
+              </div>
+              <ol>
+                <li>Buat tabel <strong>Target vs Realisasi</strong> untuk 6 bulan (Jan–Jun) dengan kolom: <strong>Bulan</strong>, <strong>Target</strong>, <strong>Realisasi</strong>.</li>
+                <li>Buat <strong>Combo Chart</strong> (Column untuk Target, Line dengan Markers untuk Realisasi).</li>
+                <li>Tambahkan <strong>judul chart</strong>, <strong>label sumbu</strong>, dan <strong>data label</strong>.</li>
+                <li>Terapkan <strong>Data Bars</strong> pada kolom Realisasi (warna biru).</li>
+                <li>Buat kolom bantu <strong>% Pencapaian</strong> (<code>=Realisasi/Target</code>), format sebagai <strong>%</strong>.</li>
+                <li>Terapkan <strong>Icon Sets</strong> (3 Traffic Lights) pada kolom % dengan aturan: Hijau ≥ 100%, Kuning ≥ 90%, Merah &lt; 90%.</li>
+                <li>Ubah warna chart agar terlihat profesional (gradasi biru untuk column, merah untuk line).</li>
+              </ol>
+              <div class="bg-light p-3 rounded border-start border-4 border-danger">
+                <strong>Skill yang Diuji:</strong> Combo Chart, Data Bars, Icon Sets, Format Chart, Conditional Formatting.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tugas 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#tugas4Excel" aria-expanded="false" aria-controls="tugas4Excel">
+              <span class="fw-bold me-2" style="color: #06D6A0;">TUGAS 4</span> —
+              Analisis Data dengan PivotTable
+              <span class="badge bg-secondary ms-2">Pertemuan 4</span>
+            </button>
+          </h2>
+          <div id="tugas4Excel" class="accordion-collapse collapse" data-bs-parent="#accordionTugasExcel">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <strong>Tujuan:</strong> Menguji kemampuan Sorting, Filter, PivotTable, dan PivotChart.
+              </div>
+              <ol>
+                <li>Buat data transaksi (min 20 baris) dengan kolom: <strong>Tanggal</strong>, <strong>Region</strong> (Jakarta, Bandung, Surabaya), <strong>Produk</strong> (A, B, C), <strong>Qty</strong>, <strong>Harga Satuan</strong>, <strong>Total</strong>.</li>
+                <li>Lakukan <strong>Sorting multi-level</strong>: Region A-Z, lalu Total terbesar ke terkecil.</li>
+                <li>Gunakan <strong>Filter</strong> untuk menampilkan hanya Region "Jakarta".</li>
+                <li>Buat <strong>PivotTable</strong> di sheet baru: Region di Rows, Produk di Columns, Total di Values (Sum).</li>
+                <li>Buat <strong>PivotChart Clustered Column</strong> dari PivotTable tersebut.</li>
+                <li>Tambahkan <strong>Slicer</strong> untuk filter Region.</li>
+                <li>Ubah data menjadi <strong>Table (Ctrl+T)</strong> sebelum membuat PivotTable.</li>
+              </ol>
+              <div class="bg-light p-3 rounded border-start border-4 border-info">
+                <strong>Skill yang Diuji:</strong> Sorting, Filter, PivotTable, PivotChart, Slicer, Table.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tugas 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#tugas5Excel" aria-expanded="false" aria-controls="tugas5Excel">
+              <span class="fw-bold me-2" style="color: #D62828;">TUGAS 5</span> —
+              Aplikasi Pengelolaan Keuangan Pribadi (Integrasi)
+              <span class="badge bg-danger ms-2">Semua Pertemuan</span>
+            </button>
+          </h2>
+          <div id="tugas5Excel" class="accordion-collapse collapse" data-bs-parent="#accordionTugasExcel">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <strong>Tujuan:</strong> Mengintegrasikan seluruh keterampilan dari Pertemuan 1–4 dalam satu project utuh.
+              </div>
+              <ol>
+                <li>Buat sheet <strong>"Data Transaksi"</strong> dengan kolom: <strong>Tanggal</strong>, <strong>Kategori</strong> (dropdown: Makanan, Transport, Belanja, Tagihan, Hiburan), <strong>Deskripsi</strong>, <strong>Jumlah</strong>, <strong>Jenis</strong> (IF otomatis: Kebutuhan/Keinginan).</li>
+                <li>Terapkan <strong>Data Validation (List)</strong> pada kolom Kategori.</li>
+                <li>Buat kolom bantu <strong>Bulan</strong> dengan rumus <code>=TEXT(Tanggal;"MMMM")</code>.</li>
+                <li>Isi minimal 25 baris data transaksi (2–3 bulan).</li>
+                <li>Terapkan <strong>Conditional Formatting</strong>: merah untuk sel Jumlah yang di atas rata-rata.</li>
+                <li>Buat <strong>PivotTable</strong> rekap total per Kategori, urut descending.</li>
+                <li>Buat <strong>Pie Chart</strong> dari PivotTable dengan label % dan nama kategori.</li>
+                <li>Tambahkan <strong>Slicer</strong> untuk filter Bulan.</li>
+                <li>Buat <strong>Line Chart</strong> tren pengeluaran per bulan di sheet terpisah.</li>
+                <li>Rapikan sheet agar terlihat seperti <strong>dashboard</strong> (sembunyikan gridlines, atur tata letak).</li>
+              </ol>
+              <div class="bg-light p-3 rounded border-start border-4 border-danger">
+                <strong>Skill yang Diuji:</strong> Data Entry, IF, TEXT, Data Validation, Conditional Formatting, PivotTable, Pie Chart, Line Chart, Slicer, Dashboard Layout.
+                <p class="mt-2 mb-0 text-muted fst-italic">
+                  Tugas ini menggabungkan seluruh materi dari Pertemuan 1 sampai 4.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Ringkasan -->
   <section class="py-5 bg-light">
     <div class="container">
@@ -3293,7 +3467,7 @@
         </div>
         <div class="col-md-3 text-center text-md-end">
           <small>
-            <a href="index.html" class="text-white-50 me-2">Word</a> &bull;
+            <a href="materi-word.html" class="text-white-50 me-2">Word</a> &bull;
             <a href="materi-powerpoint.html" class="text-white-50 ms-2">PowerPoint</a>
           </small>
         </div>
